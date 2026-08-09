@@ -1,0 +1,713 @@
+[
+  {
+    "id": "TH-1089",
+    "title": "网络基础实战精讲：TCP/IP详解：三次握手/拥塞控制/QUIC",
+    "category": "network",
+    "categoryLabel": "网络基础",
+    "description": "本课程系统讲解网络基础领域的TCP/IP详解：三次握手/拥塞控制/QUIC，由暗月MOON主讲，覆盖从理论到实战的完整链路。适合入门学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "网络基础实战精讲：TCP/IP详解：三次握手/拥塞控制/QUIC\n\n本课程由暗月MOON精心打造，系统讲解网络基础方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师暗月MOON多年实战经验总结\n\n【适合人群】\n• 入门水平的学习者\n• 希望系统提升网络基础能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对网络基础领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "暗月MOON",
+    "platform": "MIT OCW",
+    "level": "入门",
+    "price": 65,
+    "isFree": false,
+    "rating": 4.7,
+    "students": 42515,
+    "duration": "10-10 小时",
+    "lessons": 10,
+    "tags": [
+      "网络基础",
+      "入门",
+      "付费",
+      "network"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000704791?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.wireshark.org/docs/",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%20TCP",
+    "resourceUrl": "https://www.wireshark.org/docs/",
+    "updatedAt": "2026-06-06 05:14",
+    "featured": false,
+    "syllabus": [
+      "TCP/IP协议栈深度",
+      "三次握手与四次挥手",
+      "拥塞控制算法演进",
+      "HTTP/1.1到HTTP/3",
+      "TLS握手优化",
+      "DNS解析与DoH/DoT",
+      "QUIC协议原理",
+      "CDN与边缘计算",
+      "网络抓包与分析",
+      "无线网络协议与安全"
+    ],
+    "topics": [
+      "Wireshark",
+      "tcpdump",
+      "ss",
+      "iperf3",
+      "nftables"
+    ],
+    "faqs": [
+      {
+        "question": "TCP和UDP选哪个？",
+        "answer": "这是关于\"TCP和UDP选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "HTTP/3为什么用QUIC？",
+        "answer": "这是关于\"HTTP/3为什么用QUIC\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是零RTT？",
+        "answer": "这是关于\"什么是零RTT\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "TCP/IP协议栈深度",
+        "duration": "89分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解TCP/IP协议栈深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TCP/IP协议栈深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "三次握手与四次挥手",
+        "duration": "54分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解三次握手与四次挥手的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解三次握手与四次挥手的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "拥塞控制算法演进",
+        "duration": "58分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解拥塞控制算法演进的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解拥塞控制算法演进的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "HTTP/1.1到HTTP/3",
+        "duration": "83分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解HTTP/1.1到HTTP/3的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解HTTP/1.1到HTTP/3的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "TLS握手优化",
+        "duration": "80分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解TLS握手优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TLS握手优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "DNS解析与DoH/DoT",
+        "duration": "53分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解DNS解析与DoH/DoT的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解DNS解析与DoH/DoT的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "QUIC协议原理",
+        "duration": "48分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解QUIC协议原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解QUIC协议原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "CDN与边缘计算",
+        "duration": "48分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解CDN与边缘计算的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CDN与边缘计算的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "网络抓包与分析",
+        "duration": "79分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解网络抓包与分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络抓包与分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "无线网络协议与安全",
+        "duration": "74分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解无线网络协议与安全的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解无线网络协议与安全的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "网络基础权威指南",
+        "author": "暗月MOON",
+        "type": "book",
+        "difficulty": "入门"
+      },
+      {
+        "title": "深入理解网络基础实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "network实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Wireshark",
+        "purpose": "用于网络基础方向的Wireshark相关实践"
+      },
+      {
+        "name": "tcpdump",
+        "purpose": "用于网络基础方向的tcpdump相关实践"
+      },
+      {
+        "name": "ss",
+        "purpose": "用于网络基础方向的ss相关实践"
+      },
+      {
+        "name": "iperf3",
+        "purpose": "用于网络基础方向的iperf3相关实践"
+      },
+      {
+        "name": "nftables",
+        "purpose": "用于网络基础方向的nftables相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1090",
+    "title": "企业级网络基础：Wireshark抓包分析实战",
+    "category": "network",
+    "categoryLabel": "网络基础",
+    "description": "本课程系统讲解网络基础领域的Wireshark抓包分析实战，由合天网安主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "企业级网络基础：Wireshark抓包分析实战\n\n本课程由合天网安精心打造，系统讲解网络基础方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师合天网安多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升网络基础能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对网络基础领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "合天网安",
+    "platform": "极客时间",
+    "level": "中级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.7,
+    "students": 41772,
+    "duration": "16-34 小时",
+    "lessons": 31,
+    "tags": [
+      "网络基础",
+      "中级",
+      "免费",
+      "network"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000712710?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "githubUrl": "https://github.com/search?q=%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%20Wireshark%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98",
+    "resourceUrl": "https://www.wireshark.org/docs/",
+    "updatedAt": "2026-06-15 09:42",
+    "featured": false,
+    "syllabus": [
+      "TCP/IP协议栈深度",
+      "三次握手与四次挥手",
+      "拥塞控制算法演进",
+      "HTTP/1.1到HTTP/3",
+      "TLS握手优化",
+      "DNS解析与DoH/DoT",
+      "QUIC协议原理",
+      "CDN与边缘计算",
+      "网络抓包与分析",
+      "无线网络协议与安全"
+    ],
+    "topics": [
+      "Wireshark",
+      "tcpdump",
+      "ss",
+      "iperf3",
+      "nftables"
+    ],
+    "faqs": [
+      {
+        "question": "TCP和UDP选哪个？",
+        "answer": "这是关于\"TCP和UDP选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "HTTP/3为什么用QUIC？",
+        "answer": "这是关于\"HTTP/3为什么用QUIC\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是零RTT？",
+        "answer": "这是关于\"什么是零RTT\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "TCP/IP协议栈深度",
+        "duration": "32分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解TCP/IP协议栈深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TCP/IP协议栈深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "三次握手与四次挥手",
+        "duration": "37分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解三次握手与四次挥手的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解三次握手与四次挥手的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "拥塞控制算法演进",
+        "duration": "45分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解拥塞控制算法演进的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解拥塞控制算法演进的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "HTTP/1.1到HTTP/3",
+        "duration": "62分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解HTTP/1.1到HTTP/3的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解HTTP/1.1到HTTP/3的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "TLS握手优化",
+        "duration": "88分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解TLS握手优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TLS握手优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "DNS解析与DoH/DoT",
+        "duration": "58分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解DNS解析与DoH/DoT的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解DNS解析与DoH/DoT的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "QUIC协议原理",
+        "duration": "43分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解QUIC协议原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解QUIC协议原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "CDN与边缘计算",
+        "duration": "83分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解CDN与边缘计算的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CDN与边缘计算的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "网络抓包与分析",
+        "duration": "55分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解网络抓包与分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络抓包与分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "无线网络协议与安全",
+        "duration": "57分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解无线网络协议与安全的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解无线网络协议与安全的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "网络基础权威指南",
+        "author": "合天网安",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解企业级网络基础",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "network实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Wireshark",
+        "purpose": "用于网络基础方向的Wireshark相关实践"
+      },
+      {
+        "name": "tcpdump",
+        "purpose": "用于网络基础方向的tcpdump相关实践"
+      },
+      {
+        "name": "ss",
+        "purpose": "用于网络基础方向的ss相关实践"
+      },
+      {
+        "name": "iperf3",
+        "purpose": "用于网络基础方向的iperf3相关实践"
+      },
+      {
+        "name": "nftables",
+        "purpose": "用于网络基础方向的nftables相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1091",
+    "title": "网络基础实战精讲：HTTP/2与HTTP/3深度解析",
+    "category": "network",
+    "categoryLabel": "网络基础",
+    "description": "本课程系统讲解网络基础领域的HTTP/2与HTTP/3深度解析，由合天网安主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "网络基础实战精讲：HTTP/2与HTTP/3深度解析\n\n本课程由合天网安精心打造，系统讲解网络基础方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师合天网安多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升网络基础能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对网络基础领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "合天网安",
+    "platform": "慕课网",
+    "level": "高级",
+    "price": 45,
+    "isFree": false,
+    "rating": 4.6,
+    "students": 44519,
+    "duration": "41-53 小时",
+    "lessons": 9,
+    "tags": [
+      "网络基础",
+      "高级",
+      "付费",
+      "network"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000720629?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.wireshark.org/docs/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%20HTTP",
+    "resourceUrl": "https://www.wireshark.org/docs/",
+    "updatedAt": "2026-02-24 14:00",
+    "featured": false,
+    "syllabus": [
+      "TCP/IP协议栈深度",
+      "三次握手与四次挥手",
+      "拥塞控制算法演进",
+      "HTTP/1.1到HTTP/3",
+      "TLS握手优化",
+      "DNS解析与DoH/DoT",
+      "QUIC协议原理",
+      "CDN与边缘计算",
+      "网络抓包与分析",
+      "无线网络协议与安全"
+    ],
+    "topics": [
+      "Wireshark",
+      "tcpdump",
+      "ss",
+      "iperf3",
+      "nftables"
+    ],
+    "faqs": [
+      {
+        "question": "TCP和UDP选哪个？",
+        "answer": "这是关于\"TCP和UDP选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "HTTP/3为什么用QUIC？",
+        "answer": "这是关于\"HTTP/3为什么用QUIC\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是零RTT？",
+        "answer": "这是关于\"什么是零RTT\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "TCP/IP协议栈深度",
+        "duration": "46分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解TCP/IP协议栈深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TCP/IP协议栈深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "三次握手与四次挥手",
+        "duration": "47分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解三次握手与四次挥手的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解三次握手与四次挥手的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "拥塞控制算法演进",
+        "duration": "51分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解拥塞控制算法演进的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解拥塞控制算法演进的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "HTTP/1.1到HTTP/3",
+        "duration": "78分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解HTTP/1.1到HTTP/3的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解HTTP/1.1到HTTP/3的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "TLS握手优化",
+        "duration": "80分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解TLS握手优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TLS握手优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "DNS解析与DoH/DoT",
+        "duration": "65分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解DNS解析与DoH/DoT的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解DNS解析与DoH/DoT的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "QUIC协议原理",
+        "duration": "59分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解QUIC协议原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解QUIC协议原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "CDN与边缘计算",
+        "duration": "49分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解CDN与边缘计算的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CDN与边缘计算的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "网络抓包与分析",
+        "duration": "30分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解网络抓包与分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络抓包与分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "无线网络协议与安全",
+        "duration": "44分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解无线网络协议与安全的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解无线网络协议与安全的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "网络基础权威指南",
+        "author": "合天网安",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解网络基础实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "network实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Wireshark",
+        "purpose": "用于网络基础方向的Wireshark相关实践"
+      },
+      {
+        "name": "tcpdump",
+        "purpose": "用于网络基础方向的tcpdump相关实践"
+      },
+      {
+        "name": "ss",
+        "purpose": "用于网络基础方向的ss相关实践"
+      },
+      {
+        "name": "iperf3",
+        "purpose": "用于网络基础方向的iperf3相关实践"
+      },
+      {
+        "name": "nftables",
+        "purpose": "用于网络基础方向的nftables相关实践"
+      }
+    ]
+  }
+]

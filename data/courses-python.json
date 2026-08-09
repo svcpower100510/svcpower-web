@@ -1,0 +1,1661 @@
+[
+  {
+    "id": "TH-1047",
+    "title": "从零开始学Python：Python从入门到精通：语法/数据结构/面向对象",
+    "category": "python",
+    "categoryLabel": "Python",
+    "description": "本课程系统讲解Python领域的Python从入门到精通：语法/数据结构/面向对象，由廖雪峰主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学Python：Python从入门到精通：语法/数据结构/面向对象\n\n本课程由廖雪峰精心打造，系统讲解Python方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师廖雪峰多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升Python能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对Python领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "廖雪峰",
+    "platform": "学堂在线",
+    "level": "中级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.4,
+    "students": 35365,
+    "duration": "21-32 小时",
+    "lessons": 35,
+    "tags": [
+      "Python",
+      "中级",
+      "免费",
+      "python"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000372193?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "githubUrl": "https://github.com/search?q=Python%20Python%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%EF%BC%9A%E8%AF%AD%E6%B3%95",
+    "resourceUrl": "https://docs.python.org/3/tutorial/",
+    "updatedAt": "2026-03-25 13:10",
+    "featured": false,
+    "syllabus": [
+      "Python环境搭建与工具链",
+      "核心语法：数据类型/控制流/OOP",
+      "函数式编程与装饰器",
+      "并发编程：threading/asyncio",
+      "网络编程：socket/aiohttp",
+      "Web开发：Django/Flask/FastAPI",
+      "数据分析：Pandas/NumPy",
+      "自动化办公实战",
+      "爬虫与反反爬",
+      "安全脚本开发"
+    ],
+    "topics": [
+      "PEP8规范",
+      "虚拟环境",
+      "类型注解",
+      "pytest测试",
+      "CI/CD集成"
+    ],
+    "faqs": [
+      {
+        "question": "Python2和3的区别？",
+        "answer": "这是关于\"Python2和3的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "学Python要先学C吗？",
+        "answer": "这是关于\"学Python要先学C吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GIL？",
+        "answer": "这是关于\"什么是GIL\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python环境搭建与工具链",
+        "duration": "46分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Python环境搭建与工具链的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python环境搭建与工具链的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "核心语法：数据类型/控制流/OOP",
+        "duration": "35分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解核心语法：数据类型/控制流/OOP的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解核心语法：数据类型/控制流/OOP的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "函数式编程与装饰器",
+        "duration": "46分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解函数式编程与装饰器的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解函数式编程与装饰器的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "并发编程：threading/asyncio",
+        "duration": "61分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解并发编程：threading/asyncio的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解并发编程：threading/asyncio的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络编程：socket/aiohttp",
+        "duration": "74分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解网络编程：socket/aiohttp的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络编程：socket/aiohttp的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Web开发：Django/Flask/FastAPI",
+        "duration": "84分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Web开发：Django/Flask/FastAPI的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Web开发：Django/Flask/FastAPI的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "数据分析：Pandas/NumPy",
+        "duration": "77分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解数据分析：Pandas/NumPy的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据分析：Pandas/NumPy的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "自动化办公实战",
+        "duration": "40分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解自动化办公实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解自动化办公实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "爬虫与反反爬",
+        "duration": "52分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解爬虫与反反爬的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解爬虫与反反爬的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "安全脚本开发",
+        "duration": "80分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解安全脚本开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解安全脚本开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "Python权威指南",
+        "author": "廖雪峰",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解从零开始学Python",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "python实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "PEP8规范",
+        "purpose": "用于Python方向的PEP8规范相关实践"
+      },
+      {
+        "name": "虚拟环境",
+        "purpose": "用于Python方向的虚拟环境相关实践"
+      },
+      {
+        "name": "类型注解",
+        "purpose": "用于Python方向的类型注解相关实践"
+      },
+      {
+        "name": "pytest测试",
+        "purpose": "用于Python方向的pytest测试相关实践"
+      },
+      {
+        "name": "CI/CD集成",
+        "purpose": "用于Python方向的CI/CD集成相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1048",
+    "title": "Python实战精讲：Python数据分析：Pandas/NumPy/Matplotlib实战",
+    "category": "python",
+    "categoryLabel": "Python",
+    "description": "本课程系统讲解Python领域的Python数据分析：Pandas/NumPy/Matplotlib实战，由蒋旭主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "Python实战精讲：Python数据分析：Pandas/NumPy/Matplotlib实战\n\n本课程由蒋旭精心打造，系统讲解Python方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师蒋旭多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升Python能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对Python领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "蒋旭",
+    "platform": "Udemy",
+    "level": "初级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.5,
+    "students": 32408,
+    "duration": "8-19 小时",
+    "lessons": 24,
+    "tags": [
+      "Python",
+      "初级",
+      "免费",
+      "python"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000380112?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "githubUrl": "https://github.com/search?q=Python%20Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9APandas",
+    "resourceUrl": "https://docs.python.org/3/tutorial/",
+    "updatedAt": "2026-01-16 10:20",
+    "featured": false,
+    "syllabus": [
+      "Python环境搭建与工具链",
+      "核心语法：数据类型/控制流/OOP",
+      "函数式编程与装饰器",
+      "并发编程：threading/asyncio",
+      "网络编程：socket/aiohttp",
+      "Web开发：Django/Flask/FastAPI",
+      "数据分析：Pandas/NumPy",
+      "自动化办公实战",
+      "爬虫与反反爬",
+      "安全脚本开发"
+    ],
+    "topics": [
+      "PEP8规范",
+      "虚拟环境",
+      "类型注解",
+      "pytest测试",
+      "CI/CD集成"
+    ],
+    "faqs": [
+      {
+        "question": "Python2和3的区别？",
+        "answer": "这是关于\"Python2和3的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "学Python要先学C吗？",
+        "answer": "这是关于\"学Python要先学C吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GIL？",
+        "answer": "这是关于\"什么是GIL\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python环境搭建与工具链",
+        "duration": "47分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Python环境搭建与工具链的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python环境搭建与工具链的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "核心语法：数据类型/控制流/OOP",
+        "duration": "79分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解核心语法：数据类型/控制流/OOP的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解核心语法：数据类型/控制流/OOP的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "函数式编程与装饰器",
+        "duration": "82分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解函数式编程与装饰器的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解函数式编程与装饰器的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "并发编程：threading/asyncio",
+        "duration": "65分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解并发编程：threading/asyncio的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解并发编程：threading/asyncio的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络编程：socket/aiohttp",
+        "duration": "79分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解网络编程：socket/aiohttp的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络编程：socket/aiohttp的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Web开发：Django/Flask/FastAPI",
+        "duration": "88分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Web开发：Django/Flask/FastAPI的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Web开发：Django/Flask/FastAPI的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "数据分析：Pandas/NumPy",
+        "duration": "35分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解数据分析：Pandas/NumPy的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据分析：Pandas/NumPy的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "自动化办公实战",
+        "duration": "81分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解自动化办公实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解自动化办公实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "爬虫与反反爬",
+        "duration": "71分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解爬虫与反反爬的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解爬虫与反反爬的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "安全脚本开发",
+        "duration": "75分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解安全脚本开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解安全脚本开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "Python权威指南",
+        "author": "蒋旭",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解Python实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "python实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "PEP8规范",
+        "purpose": "用于Python方向的PEP8规范相关实践"
+      },
+      {
+        "name": "虚拟环境",
+        "purpose": "用于Python方向的虚拟环境相关实践"
+      },
+      {
+        "name": "类型注解",
+        "purpose": "用于Python方向的类型注解相关实践"
+      },
+      {
+        "name": "pytest测试",
+        "purpose": "用于Python方向的pytest测试相关实践"
+      },
+      {
+        "name": "CI/CD集成",
+        "purpose": "用于Python方向的CI/CD集成相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1049",
+    "title": "从零开始学Python：Python自动化办公：Excel/Word/PDF批量处理",
+    "category": "python",
+    "categoryLabel": "Python",
+    "description": "本课程系统讲解Python领域的Python自动化办公：Excel/Word/PDF批量处理，由老杨聊渗透主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学Python：Python自动化办公：Excel/Word/PDF批量处理\n\n本课程由老杨聊渗透精心打造，系统讲解Python方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师老杨聊渗透多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升Python能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对Python领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "老杨聊渗透",
+    "platform": "慕课网",
+    "level": "中级",
+    "price": 75,
+    "isFree": false,
+    "rating": 4.7,
+    "students": 24206,
+    "duration": "22-31 小时",
+    "lessons": 20,
+    "tags": [
+      "Python",
+      "中级",
+      "付费",
+      "python"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000388031?w=400&h=225&fit=crop",
+    "redirectUrl": "https://docs.python.org/3/tutorial/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=Python%20Python%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%EF%BC%9AExcel",
+    "resourceUrl": "https://docs.python.org/3/tutorial/",
+    "updatedAt": "2026-06-11 08:25",
+    "featured": false,
+    "syllabus": [
+      "Python环境搭建与工具链",
+      "核心语法：数据类型/控制流/OOP",
+      "函数式编程与装饰器",
+      "并发编程：threading/asyncio",
+      "网络编程：socket/aiohttp",
+      "Web开发：Django/Flask/FastAPI",
+      "数据分析：Pandas/NumPy",
+      "自动化办公实战",
+      "爬虫与反反爬",
+      "安全脚本开发"
+    ],
+    "topics": [
+      "PEP8规范",
+      "虚拟环境",
+      "类型注解",
+      "pytest测试",
+      "CI/CD集成"
+    ],
+    "faqs": [
+      {
+        "question": "Python2和3的区别？",
+        "answer": "这是关于\"Python2和3的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "学Python要先学C吗？",
+        "answer": "这是关于\"学Python要先学C吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GIL？",
+        "answer": "这是关于\"什么是GIL\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python环境搭建与工具链",
+        "duration": "70分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Python环境搭建与工具链的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python环境搭建与工具链的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "核心语法：数据类型/控制流/OOP",
+        "duration": "63分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解核心语法：数据类型/控制流/OOP的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解核心语法：数据类型/控制流/OOP的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "函数式编程与装饰器",
+        "duration": "60分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解函数式编程与装饰器的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解函数式编程与装饰器的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "并发编程：threading/asyncio",
+        "duration": "80分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解并发编程：threading/asyncio的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解并发编程：threading/asyncio的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络编程：socket/aiohttp",
+        "duration": "43分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解网络编程：socket/aiohttp的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络编程：socket/aiohttp的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Web开发：Django/Flask/FastAPI",
+        "duration": "86分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Web开发：Django/Flask/FastAPI的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Web开发：Django/Flask/FastAPI的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "数据分析：Pandas/NumPy",
+        "duration": "52分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解数据分析：Pandas/NumPy的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据分析：Pandas/NumPy的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "自动化办公实战",
+        "duration": "31分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解自动化办公实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解自动化办公实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "爬虫与反反爬",
+        "duration": "30分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解爬虫与反反爬的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解爬虫与反反爬的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "安全脚本开发",
+        "duration": "36分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解安全脚本开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解安全脚本开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "Python权威指南",
+        "author": "老杨聊渗透",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解从零开始学Python",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "python实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "PEP8规范",
+        "purpose": "用于Python方向的PEP8规范相关实践"
+      },
+      {
+        "name": "虚拟环境",
+        "purpose": "用于Python方向的虚拟环境相关实践"
+      },
+      {
+        "name": "类型注解",
+        "purpose": "用于Python方向的类型注解相关实践"
+      },
+      {
+        "name": "pytest测试",
+        "purpose": "用于Python方向的pytest测试相关实践"
+      },
+      {
+        "name": "CI/CD集成",
+        "purpose": "用于Python方向的CI/CD集成相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1050",
+    "title": "从零开始学Python：Python网络爬虫：Scrapy/Selenium/反反爬",
+    "category": "python",
+    "categoryLabel": "Python",
+    "description": "本课程系统讲解Python领域的Python网络爬虫：Scrapy/Selenium/反反爬，由尤雨溪主讲，覆盖从理论到实战的完整链路。适合入门学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学Python：Python网络爬虫：Scrapy/Selenium/反反爬\n\n本课程由尤雨溪精心打造，系统讲解Python方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师尤雨溪多年实战经验总结\n\n【适合人群】\n• 入门水平的学习者\n• 希望系统提升Python能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对Python领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "尤雨溪",
+    "platform": "慕课网",
+    "level": "入门",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.4,
+    "students": 23931,
+    "duration": "9-14 小时",
+    "lessons": 21,
+    "tags": [
+      "Python",
+      "入门",
+      "免费",
+      "python"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000395950?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=Python%20Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%EF%BC%9AScrapy",
+    "resourceUrl": "https://docs.python.org/3/tutorial/",
+    "updatedAt": "2026-04-24 23:52",
+    "featured": false,
+    "syllabus": [
+      "Python环境搭建与工具链",
+      "核心语法：数据类型/控制流/OOP",
+      "函数式编程与装饰器",
+      "并发编程：threading/asyncio",
+      "网络编程：socket/aiohttp",
+      "Web开发：Django/Flask/FastAPI",
+      "数据分析：Pandas/NumPy",
+      "自动化办公实战",
+      "爬虫与反反爬",
+      "安全脚本开发"
+    ],
+    "topics": [
+      "PEP8规范",
+      "虚拟环境",
+      "类型注解",
+      "pytest测试",
+      "CI/CD集成"
+    ],
+    "faqs": [
+      {
+        "question": "Python2和3的区别？",
+        "answer": "这是关于\"Python2和3的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "学Python要先学C吗？",
+        "answer": "这是关于\"学Python要先学C吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GIL？",
+        "answer": "这是关于\"什么是GIL\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python环境搭建与工具链",
+        "duration": "47分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Python环境搭建与工具链的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python环境搭建与工具链的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "核心语法：数据类型/控制流/OOP",
+        "duration": "41分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解核心语法：数据类型/控制流/OOP的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解核心语法：数据类型/控制流/OOP的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "函数式编程与装饰器",
+        "duration": "41分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解函数式编程与装饰器的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解函数式编程与装饰器的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "并发编程：threading/asyncio",
+        "duration": "47分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解并发编程：threading/asyncio的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解并发编程：threading/asyncio的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络编程：socket/aiohttp",
+        "duration": "47分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解网络编程：socket/aiohttp的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络编程：socket/aiohttp的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Web开发：Django/Flask/FastAPI",
+        "duration": "81分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Web开发：Django/Flask/FastAPI的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Web开发：Django/Flask/FastAPI的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "数据分析：Pandas/NumPy",
+        "duration": "64分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解数据分析：Pandas/NumPy的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据分析：Pandas/NumPy的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "自动化办公实战",
+        "duration": "77分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解自动化办公实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解自动化办公实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "爬虫与反反爬",
+        "duration": "74分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解爬虫与反反爬的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解爬虫与反反爬的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "安全脚本开发",
+        "duration": "66分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解安全脚本开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解安全脚本开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "Python权威指南",
+        "author": "尤雨溪",
+        "type": "book",
+        "difficulty": "入门"
+      },
+      {
+        "title": "深入理解从零开始学Python",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "python实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "PEP8规范",
+        "purpose": "用于Python方向的PEP8规范相关实践"
+      },
+      {
+        "name": "虚拟环境",
+        "purpose": "用于Python方向的虚拟环境相关实践"
+      },
+      {
+        "name": "类型注解",
+        "purpose": "用于Python方向的类型注解相关实践"
+      },
+      {
+        "name": "pytest测试",
+        "purpose": "用于Python方向的pytest测试相关实践"
+      },
+      {
+        "name": "CI/CD集成",
+        "purpose": "用于Python方向的CI/CD集成相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1051",
+    "title": "Python核心原理与实战：Python Web开发：Django/Flask/FastAPI",
+    "category": "python",
+    "categoryLabel": "Python",
+    "description": "本课程系统讲解Python领域的Python Web开发：Django/Flask/FastAPI，由Mike Meyers主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "Python核心原理与实战：Python Web开发：Django/Flask/FastAPI\n\n本课程由Mike Meyers精心打造，系统讲解Python方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Mike Meyers多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升Python能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对Python领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Mike Meyers",
+    "platform": "极客时间",
+    "level": "初级",
+    "price": 25,
+    "isFree": false,
+    "rating": 5,
+    "students": 43144,
+    "duration": "12-26 小时",
+    "lessons": 31,
+    "tags": [
+      "Python",
+      "初级",
+      "付费",
+      "python"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000403869?w=400&h=225&fit=crop",
+    "redirectUrl": "https://scrapy.org/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=Python%20Python%20Web%E5%BC%80%E5%8F%91%EF%BC%9ADjango",
+    "resourceUrl": "https://docs.python.org/3/tutorial/",
+    "updatedAt": "2026-02-16 17:03",
+    "featured": false,
+    "syllabus": [
+      "Python环境搭建与工具链",
+      "核心语法：数据类型/控制流/OOP",
+      "函数式编程与装饰器",
+      "并发编程：threading/asyncio",
+      "网络编程：socket/aiohttp",
+      "Web开发：Django/Flask/FastAPI",
+      "数据分析：Pandas/NumPy",
+      "自动化办公实战",
+      "爬虫与反反爬",
+      "安全脚本开发"
+    ],
+    "topics": [
+      "PEP8规范",
+      "虚拟环境",
+      "类型注解",
+      "pytest测试",
+      "CI/CD集成"
+    ],
+    "faqs": [
+      {
+        "question": "Python2和3的区别？",
+        "answer": "这是关于\"Python2和3的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "学Python要先学C吗？",
+        "answer": "这是关于\"学Python要先学C吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GIL？",
+        "answer": "这是关于\"什么是GIL\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python环境搭建与工具链",
+        "duration": "63分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Python环境搭建与工具链的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python环境搭建与工具链的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "核心语法：数据类型/控制流/OOP",
+        "duration": "53分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解核心语法：数据类型/控制流/OOP的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解核心语法：数据类型/控制流/OOP的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "函数式编程与装饰器",
+        "duration": "33分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解函数式编程与装饰器的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解函数式编程与装饰器的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "并发编程：threading/asyncio",
+        "duration": "64分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解并发编程：threading/asyncio的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解并发编程：threading/asyncio的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络编程：socket/aiohttp",
+        "duration": "57分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解网络编程：socket/aiohttp的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络编程：socket/aiohttp的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Web开发：Django/Flask/FastAPI",
+        "duration": "53分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Web开发：Django/Flask/FastAPI的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Web开发：Django/Flask/FastAPI的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "数据分析：Pandas/NumPy",
+        "duration": "86分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解数据分析：Pandas/NumPy的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据分析：Pandas/NumPy的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "自动化办公实战",
+        "duration": "66分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解自动化办公实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解自动化办公实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "爬虫与反反爬",
+        "duration": "65分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解爬虫与反反爬的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解爬虫与反反爬的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "安全脚本开发",
+        "duration": "45分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解安全脚本开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解安全脚本开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "Python权威指南",
+        "author": "Mike Meyers",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解Python核心原理与实战",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "python实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "PEP8规范",
+        "purpose": "用于Python方向的PEP8规范相关实践"
+      },
+      {
+        "name": "虚拟环境",
+        "purpose": "用于Python方向的虚拟环境相关实践"
+      },
+      {
+        "name": "类型注解",
+        "purpose": "用于Python方向的类型注解相关实践"
+      },
+      {
+        "name": "pytest测试",
+        "purpose": "用于Python方向的pytest测试相关实践"
+      },
+      {
+        "name": "CI/CD集成",
+        "purpose": "用于Python方向的CI/CD集成相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1052",
+    "title": "Python核心原理与实战：Python安全脚本：端口扫描/爆破/漏洞检测",
+    "category": "python",
+    "categoryLabel": "Python",
+    "description": "本课程系统讲解Python领域的Python安全脚本：端口扫描/爆破/漏洞检测，由老杨聊渗透主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "Python核心原理与实战：Python安全脚本：端口扫描/爆破/漏洞检测\n\n本课程由老杨聊渗透精心打造，系统讲解Python方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师老杨聊渗透多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升Python能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对Python领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "老杨聊渗透",
+    "platform": "Coursera",
+    "level": "中高级",
+    "price": 15,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 42151,
+    "duration": "27-30 小时",
+    "lessons": 8,
+    "tags": [
+      "Python",
+      "中高级",
+      "付费",
+      "python"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000411788?w=400&h=225&fit=crop",
+    "redirectUrl": "https://scrapy.org/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=Python%20Python%E5%AE%89%E5%85%A8%E8%84%9A%E6%9C%AC%EF%BC%9A%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F",
+    "resourceUrl": "https://docs.python.org/3/tutorial/",
+    "updatedAt": "2026-08-05 07:35",
+    "featured": false,
+    "syllabus": [
+      "Python环境搭建与工具链",
+      "核心语法：数据类型/控制流/OOP",
+      "函数式编程与装饰器",
+      "并发编程：threading/asyncio",
+      "网络编程：socket/aiohttp",
+      "Web开发：Django/Flask/FastAPI",
+      "数据分析：Pandas/NumPy",
+      "自动化办公实战",
+      "爬虫与反反爬",
+      "安全脚本开发"
+    ],
+    "topics": [
+      "PEP8规范",
+      "虚拟环境",
+      "类型注解",
+      "pytest测试",
+      "CI/CD集成"
+    ],
+    "faqs": [
+      {
+        "question": "Python2和3的区别？",
+        "answer": "这是关于\"Python2和3的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "学Python要先学C吗？",
+        "answer": "这是关于\"学Python要先学C吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GIL？",
+        "answer": "这是关于\"什么是GIL\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python环境搭建与工具链",
+        "duration": "70分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Python环境搭建与工具链的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python环境搭建与工具链的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "核心语法：数据类型/控制流/OOP",
+        "duration": "38分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解核心语法：数据类型/控制流/OOP的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解核心语法：数据类型/控制流/OOP的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "函数式编程与装饰器",
+        "duration": "81分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解函数式编程与装饰器的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解函数式编程与装饰器的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "并发编程：threading/asyncio",
+        "duration": "68分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解并发编程：threading/asyncio的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解并发编程：threading/asyncio的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络编程：socket/aiohttp",
+        "duration": "38分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解网络编程：socket/aiohttp的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络编程：socket/aiohttp的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Web开发：Django/Flask/FastAPI",
+        "duration": "89分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Web开发：Django/Flask/FastAPI的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Web开发：Django/Flask/FastAPI的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "数据分析：Pandas/NumPy",
+        "duration": "43分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解数据分析：Pandas/NumPy的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据分析：Pandas/NumPy的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "自动化办公实战",
+        "duration": "83分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解自动化办公实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解自动化办公实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "爬虫与反反爬",
+        "duration": "61分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解爬虫与反反爬的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解爬虫与反反爬的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "安全脚本开发",
+        "duration": "34分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解安全脚本开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解安全脚本开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "Python权威指南",
+        "author": "老杨聊渗透",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解Python核心原理与实战",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "python实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "PEP8规范",
+        "purpose": "用于Python方向的PEP8规范相关实践"
+      },
+      {
+        "name": "虚拟环境",
+        "purpose": "用于Python方向的虚拟环境相关实践"
+      },
+      {
+        "name": "类型注解",
+        "purpose": "用于Python方向的类型注解相关实践"
+      },
+      {
+        "name": "pytest测试",
+        "purpose": "用于Python方向的pytest测试相关实践"
+      },
+      {
+        "name": "CI/CD集成",
+        "purpose": "用于Python方向的CI/CD集成相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1053",
+    "title": "Python核心原理与实战：Python机器学习：Scikit-learn/TensorFlow入门",
+    "category": "python",
+    "categoryLabel": "Python",
+    "description": "本课程系统讲解Python领域的Python机器学习：Scikit-learn/TensorFlow入门，由合天网安主讲，覆盖从理论到实战的完整链路。适合入门学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "Python核心原理与实战：Python机器学习：Scikit-learn/TensorFlow入门\n\n本课程由合天网安精心打造，系统讲解Python方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师合天网安多年实战经验总结\n\n【适合人群】\n• 入门水平的学习者\n• 希望系统提升Python能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对Python领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "合天网安",
+    "platform": "实验楼",
+    "level": "入门",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.6,
+    "students": 46989,
+    "duration": "10-23 小时",
+    "lessons": 34,
+    "tags": [
+      "Python",
+      "入门",
+      "免费",
+      "python"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000419707?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=Python%20Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%9AScikit-learn",
+    "resourceUrl": "https://docs.python.org/3/tutorial/",
+    "updatedAt": "2026-04-02 17:12",
+    "featured": false,
+    "syllabus": [
+      "Python环境搭建与工具链",
+      "核心语法：数据类型/控制流/OOP",
+      "函数式编程与装饰器",
+      "并发编程：threading/asyncio",
+      "网络编程：socket/aiohttp",
+      "Web开发：Django/Flask/FastAPI",
+      "数据分析：Pandas/NumPy",
+      "自动化办公实战",
+      "爬虫与反反爬",
+      "安全脚本开发"
+    ],
+    "topics": [
+      "PEP8规范",
+      "虚拟环境",
+      "类型注解",
+      "pytest测试",
+      "CI/CD集成"
+    ],
+    "faqs": [
+      {
+        "question": "Python2和3的区别？",
+        "answer": "这是关于\"Python2和3的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "学Python要先学C吗？",
+        "answer": "这是关于\"学Python要先学C吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GIL？",
+        "answer": "这是关于\"什么是GIL\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python环境搭建与工具链",
+        "duration": "76分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Python环境搭建与工具链的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python环境搭建与工具链的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "核心语法：数据类型/控制流/OOP",
+        "duration": "81分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解核心语法：数据类型/控制流/OOP的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解核心语法：数据类型/控制流/OOP的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "函数式编程与装饰器",
+        "duration": "32分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解函数式编程与装饰器的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解函数式编程与装饰器的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "并发编程：threading/asyncio",
+        "duration": "52分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解并发编程：threading/asyncio的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解并发编程：threading/asyncio的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络编程：socket/aiohttp",
+        "duration": "84分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解网络编程：socket/aiohttp的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络编程：socket/aiohttp的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Web开发：Django/Flask/FastAPI",
+        "duration": "86分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Web开发：Django/Flask/FastAPI的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Web开发：Django/Flask/FastAPI的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "数据分析：Pandas/NumPy",
+        "duration": "89分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解数据分析：Pandas/NumPy的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据分析：Pandas/NumPy的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "自动化办公实战",
+        "duration": "80分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解自动化办公实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解自动化办公实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "爬虫与反反爬",
+        "duration": "39分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解爬虫与反反爬的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解爬虫与反反爬的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "安全脚本开发",
+        "duration": "64分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解安全脚本开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解安全脚本开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "Python权威指南",
+        "author": "合天网安",
+        "type": "book",
+        "difficulty": "入门"
+      },
+      {
+        "title": "深入理解Python核心原理与实战",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "python实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "PEP8规范",
+        "purpose": "用于Python方向的PEP8规范相关实践"
+      },
+      {
+        "name": "虚拟环境",
+        "purpose": "用于Python方向的虚拟环境相关实践"
+      },
+      {
+        "name": "类型注解",
+        "purpose": "用于Python方向的类型注解相关实践"
+      },
+      {
+        "name": "pytest测试",
+        "purpose": "用于Python方向的pytest测试相关实践"
+      },
+      {
+        "name": "CI/CD集成",
+        "purpose": "用于Python方向的CI/CD集成相关实践"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1212 @@
+[
+  {
+    "id": "TH-1025",
+    "title": "逆向工程大师课：Windows逆向：PE结构/脱壳/反调试技术",
+    "category": "reverse",
+    "categoryLabel": "逆向工程",
+    "description": "本课程系统讲解逆向工程领域的Windows逆向：PE结构/脱壳/反调试技术，由Atul Tiwari主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "逆向工程大师课：Windows逆向：PE结构/脱壳/反调试技术\n\n本课程由Atul Tiwari精心打造，系统讲解逆向工程方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Atul Tiwari多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升逆向工程能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对逆向工程领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Atul Tiwari",
+    "platform": "PortSwigger",
+    "level": "中级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.7,
+    "students": 45036,
+    "duration": "20-27 小时",
+    "lessons": 12,
+    "tags": [
+      "逆向工程",
+      "中级",
+      "免费",
+      "reverse"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000197975?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%20Windows%E9%80%86%E5%90%91%EF%BC%9APE%E7%BB%93%E6%9E%84",
+    "resourceUrl": "https://hex-rays.com/ida-pro/",
+    "updatedAt": "2026-01-08 08:56",
+    "featured": false,
+    "syllabus": [
+      "逆向工程基础概念",
+      "Windows PE文件结构深度",
+      "Linux ELF文件格式",
+      "IDA Pro高级技巧",
+      "Ghidra反编译实战",
+      "反调试与反反调试",
+      "脱壳技术：压缩壳/加密壳/VM壳",
+      "Android APK逆向",
+      "iOS应用逆向基础",
+      "固件逆向与IoT安全"
+    ],
+    "topics": [
+      "x86/x64汇编",
+      "ARM汇编",
+      "OllyDbg",
+      "x64dbg",
+      "Frida Hook",
+      "Radare2"
+    ],
+    "faqs": [
+      {
+        "question": "学逆向需要汇编基础吗？",
+        "answer": "这是关于\"学逆向需要汇编基础吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "IDA和Ghidra选哪个？",
+        "answer": "这是关于\"IDA和Ghidra选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Android逆向入门路线？",
+        "answer": "这是关于\"Android逆向入门路线\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "逆向工程基础概念",
+        "duration": "87分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解逆向工程基础概念的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解逆向工程基础概念的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Windows PE文件结构深度",
+        "duration": "42分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Windows PE文件结构深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Windows PE文件结构深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Linux ELF文件格式",
+        "duration": "53分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Linux ELF文件格式的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux ELF文件格式的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "IDA Pro高级技巧",
+        "duration": "53分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解IDA Pro高级技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解IDA Pro高级技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Ghidra反编译实战",
+        "duration": "52分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Ghidra反编译实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Ghidra反编译实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "反调试与反反调试",
+        "duration": "77分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解反调试与反反调试的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解反调试与反反调试的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "脱壳技术：压缩壳/加密壳/VM壳",
+        "duration": "72分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解脱壳技术：压缩壳/加密壳/VM壳的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解脱壳技术：压缩壳/加密壳/VM壳的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "Android APK逆向",
+        "duration": "48分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Android APK逆向的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Android APK逆向的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "iOS应用逆向基础",
+        "duration": "32分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解iOS应用逆向基础的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解iOS应用逆向基础的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "固件逆向与IoT安全",
+        "duration": "43分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解固件逆向与IoT安全的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解固件逆向与IoT安全的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "逆向工程权威指南",
+        "author": "Atul Tiwari",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解逆向工程大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "reverse实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "x86/x64汇编",
+        "purpose": "用于逆向工程方向的x86/x64汇编相关实践"
+      },
+      {
+        "name": "ARM汇编",
+        "purpose": "用于逆向工程方向的ARM汇编相关实践"
+      },
+      {
+        "name": "OllyDbg",
+        "purpose": "用于逆向工程方向的OllyDbg相关实践"
+      },
+      {
+        "name": "x64dbg",
+        "purpose": "用于逆向工程方向的x64dbg相关实践"
+      },
+      {
+        "name": "Frida Hook",
+        "purpose": "用于逆向工程方向的Frida Hook相关实践"
+      },
+      {
+        "name": "Radare2",
+        "purpose": "用于逆向工程方向的Radare2相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1026",
+    "title": "逆向工程实战精讲：Android逆向：APK脱壳/SMALI注入/Frida Hook",
+    "category": "reverse",
+    "categoryLabel": "逆向工程",
+    "description": "本课程系统讲解逆向工程领域的Android逆向：APK脱壳/SMALI注入/Frida Hook，由李沐主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "逆向工程实战精讲：Android逆向：APK脱壳/SMALI注入/Frida Hook\n\n本课程由李沐精心打造，系统讲解逆向工程方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师李沐多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升逆向工程能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对逆向工程领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "李沐",
+    "platform": "极客时间",
+    "level": "高级",
+    "price": 65,
+    "isFree": false,
+    "rating": 5,
+    "students": 21281,
+    "duration": "40-42 小时",
+    "lessons": 10,
+    "tags": [
+      "逆向工程",
+      "高级",
+      "付费",
+      "reverse"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000205894?w=400&h=225&fit=crop",
+    "redirectUrl": "https://frida.re/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%20Android%E9%80%86%E5%90%91%EF%BC%9AAPK%E8%84%B1%E5%A3%B3",
+    "resourceUrl": "https://hex-rays.com/ida-pro/",
+    "updatedAt": "2026-05-15 09:18",
+    "featured": false,
+    "syllabus": [
+      "逆向工程基础概念",
+      "Windows PE文件结构深度",
+      "Linux ELF文件格式",
+      "IDA Pro高级技巧",
+      "Ghidra反编译实战",
+      "反调试与反反调试",
+      "脱壳技术：压缩壳/加密壳/VM壳",
+      "Android APK逆向",
+      "iOS应用逆向基础",
+      "固件逆向与IoT安全"
+    ],
+    "topics": [
+      "x86/x64汇编",
+      "ARM汇编",
+      "OllyDbg",
+      "x64dbg",
+      "Frida Hook",
+      "Radare2"
+    ],
+    "faqs": [
+      {
+        "question": "学逆向需要汇编基础吗？",
+        "answer": "这是关于\"学逆向需要汇编基础吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "IDA和Ghidra选哪个？",
+        "answer": "这是关于\"IDA和Ghidra选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Android逆向入门路线？",
+        "answer": "这是关于\"Android逆向入门路线\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "逆向工程基础概念",
+        "duration": "51分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解逆向工程基础概念的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解逆向工程基础概念的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Windows PE文件结构深度",
+        "duration": "74分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Windows PE文件结构深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Windows PE文件结构深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Linux ELF文件格式",
+        "duration": "52分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Linux ELF文件格式的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux ELF文件格式的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "IDA Pro高级技巧",
+        "duration": "50分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解IDA Pro高级技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解IDA Pro高级技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Ghidra反编译实战",
+        "duration": "87分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Ghidra反编译实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Ghidra反编译实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "反调试与反反调试",
+        "duration": "69分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解反调试与反反调试的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解反调试与反反调试的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "脱壳技术：压缩壳/加密壳/VM壳",
+        "duration": "68分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解脱壳技术：压缩壳/加密壳/VM壳的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解脱壳技术：压缩壳/加密壳/VM壳的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "Android APK逆向",
+        "duration": "55分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Android APK逆向的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Android APK逆向的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "iOS应用逆向基础",
+        "duration": "43分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解iOS应用逆向基础的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解iOS应用逆向基础的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "固件逆向与IoT安全",
+        "duration": "83分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解固件逆向与IoT安全的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解固件逆向与IoT安全的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "逆向工程权威指南",
+        "author": "李沐",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解逆向工程实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "reverse实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "x86/x64汇编",
+        "purpose": "用于逆向工程方向的x86/x64汇编相关实践"
+      },
+      {
+        "name": "ARM汇编",
+        "purpose": "用于逆向工程方向的ARM汇编相关实践"
+      },
+      {
+        "name": "OllyDbg",
+        "purpose": "用于逆向工程方向的OllyDbg相关实践"
+      },
+      {
+        "name": "x64dbg",
+        "purpose": "用于逆向工程方向的x64dbg相关实践"
+      },
+      {
+        "name": "Frida Hook",
+        "purpose": "用于逆向工程方向的Frida Hook相关实践"
+      },
+      {
+        "name": "Radare2",
+        "purpose": "用于逆向工程方向的Radare2相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1027",
+    "title": "逆向工程进阶之路：恶意代码分析：静态+动态分析完整流程",
+    "category": "reverse",
+    "categoryLabel": "逆向工程",
+    "description": "本课程系统讲解逆向工程领域的恶意代码分析：静态+动态分析完整流程，由Gabriel Avramescu主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "逆向工程进阶之路：恶意代码分析：静态+动态分析完整流程\n\n本课程由Gabriel Avramescu精心打造，系统讲解逆向工程方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Gabriel Avramescu多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升逆向工程能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对逆向工程领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Gabriel Avramescu",
+    "platform": "Coursera",
+    "level": "初级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.3,
+    "students": 13794,
+    "duration": "15-15 小时",
+    "lessons": 15,
+    "tags": [
+      "逆向工程",
+      "初级",
+      "免费",
+      "reverse"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000213813?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%20%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%EF%BC%9A%E9%9D%99%E6%80%81%2B%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B",
+    "resourceUrl": "https://hex-rays.com/ida-pro/",
+    "updatedAt": "2026-03-11 21:24",
+    "featured": false,
+    "syllabus": [
+      "逆向工程基础概念",
+      "Windows PE文件结构深度",
+      "Linux ELF文件格式",
+      "IDA Pro高级技巧",
+      "Ghidra反编译实战",
+      "反调试与反反调试",
+      "脱壳技术：压缩壳/加密壳/VM壳",
+      "Android APK逆向",
+      "iOS应用逆向基础",
+      "固件逆向与IoT安全"
+    ],
+    "topics": [
+      "x86/x64汇编",
+      "ARM汇编",
+      "OllyDbg",
+      "x64dbg",
+      "Frida Hook",
+      "Radare2"
+    ],
+    "faqs": [
+      {
+        "question": "学逆向需要汇编基础吗？",
+        "answer": "这是关于\"学逆向需要汇编基础吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "IDA和Ghidra选哪个？",
+        "answer": "这是关于\"IDA和Ghidra选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Android逆向入门路线？",
+        "answer": "这是关于\"Android逆向入门路线\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "逆向工程基础概念",
+        "duration": "63分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解逆向工程基础概念的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解逆向工程基础概念的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Windows PE文件结构深度",
+        "duration": "63分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Windows PE文件结构深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Windows PE文件结构深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Linux ELF文件格式",
+        "duration": "83分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Linux ELF文件格式的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux ELF文件格式的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "IDA Pro高级技巧",
+        "duration": "58分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解IDA Pro高级技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解IDA Pro高级技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Ghidra反编译实战",
+        "duration": "33分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Ghidra反编译实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Ghidra反编译实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "反调试与反反调试",
+        "duration": "52分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解反调试与反反调试的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解反调试与反反调试的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "脱壳技术：压缩壳/加密壳/VM壳",
+        "duration": "74分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解脱壳技术：压缩壳/加密壳/VM壳的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解脱壳技术：压缩壳/加密壳/VM壳的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "Android APK逆向",
+        "duration": "51分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Android APK逆向的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Android APK逆向的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "iOS应用逆向基础",
+        "duration": "86分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解iOS应用逆向基础的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解iOS应用逆向基础的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "固件逆向与IoT安全",
+        "duration": "38分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解固件逆向与IoT安全的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解固件逆向与IoT安全的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "逆向工程权威指南",
+        "author": "Gabriel Avramescu",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解逆向工程进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "reverse实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "x86/x64汇编",
+        "purpose": "用于逆向工程方向的x86/x64汇编相关实践"
+      },
+      {
+        "name": "ARM汇编",
+        "purpose": "用于逆向工程方向的ARM汇编相关实践"
+      },
+      {
+        "name": "OllyDbg",
+        "purpose": "用于逆向工程方向的OllyDbg相关实践"
+      },
+      {
+        "name": "x64dbg",
+        "purpose": "用于逆向工程方向的x64dbg相关实践"
+      },
+      {
+        "name": "Frida Hook",
+        "purpose": "用于逆向工程方向的Frida Hook相关实践"
+      },
+      {
+        "name": "Radare2",
+        "purpose": "用于逆向工程方向的Radare2相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1028",
+    "title": "从零开始学逆向工程：固件逆向：IoT设备固件提取与分析",
+    "category": "reverse",
+    "categoryLabel": "逆向工程",
+    "description": "本课程系统讲解逆向工程领域的固件逆向：IoT设备固件提取与分析，由阮一峰主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学逆向工程：固件逆向：IoT设备固件提取与分析\n\n本课程由阮一峰精心打造，系统讲解逆向工程方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师阮一峰多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升逆向工程能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对逆向工程领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "阮一峰",
+    "platform": "B站",
+    "level": "初级",
+    "price": 65,
+    "isFree": false,
+    "rating": 4.4,
+    "students": 10887,
+    "duration": "9-26 小时",
+    "lessons": 11,
+    "tags": [
+      "逆向工程",
+      "初级",
+      "付费",
+      "reverse"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000221732?w=400&h=225&fit=crop",
+    "redirectUrl": "https://ghidra-sre.org/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "githubUrl": "https://github.com/search?q=%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%20%E5%9B%BA%E4%BB%B6%E9%80%86%E5%90%91%EF%BC%9AIoT%E8%AE%BE%E5%A4%87%E5%9B%BA%E4%BB%B6%E6%8F%90%E5%8F%96%E4%B8%8E%E5%88%86%E6%9E%90",
+    "resourceUrl": "https://hex-rays.com/ida-pro/",
+    "updatedAt": "2026-06-17 22:44",
+    "featured": false,
+    "syllabus": [
+      "逆向工程基础概念",
+      "Windows PE文件结构深度",
+      "Linux ELF文件格式",
+      "IDA Pro高级技巧",
+      "Ghidra反编译实战",
+      "反调试与反反调试",
+      "脱壳技术：压缩壳/加密壳/VM壳",
+      "Android APK逆向",
+      "iOS应用逆向基础",
+      "固件逆向与IoT安全"
+    ],
+    "topics": [
+      "x86/x64汇编",
+      "ARM汇编",
+      "OllyDbg",
+      "x64dbg",
+      "Frida Hook",
+      "Radare2"
+    ],
+    "faqs": [
+      {
+        "question": "学逆向需要汇编基础吗？",
+        "answer": "这是关于\"学逆向需要汇编基础吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "IDA和Ghidra选哪个？",
+        "answer": "这是关于\"IDA和Ghidra选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Android逆向入门路线？",
+        "answer": "这是关于\"Android逆向入门路线\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "逆向工程基础概念",
+        "duration": "72分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解逆向工程基础概念的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解逆向工程基础概念的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Windows PE文件结构深度",
+        "duration": "62分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Windows PE文件结构深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Windows PE文件结构深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Linux ELF文件格式",
+        "duration": "39分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Linux ELF文件格式的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux ELF文件格式的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "IDA Pro高级技巧",
+        "duration": "36分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解IDA Pro高级技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解IDA Pro高级技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Ghidra反编译实战",
+        "duration": "72分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Ghidra反编译实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Ghidra反编译实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "反调试与反反调试",
+        "duration": "52分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解反调试与反反调试的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解反调试与反反调试的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "脱壳技术：压缩壳/加密壳/VM壳",
+        "duration": "88分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解脱壳技术：压缩壳/加密壳/VM壳的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解脱壳技术：压缩壳/加密壳/VM壳的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "Android APK逆向",
+        "duration": "76分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Android APK逆向的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Android APK逆向的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "iOS应用逆向基础",
+        "duration": "78分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解iOS应用逆向基础的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解iOS应用逆向基础的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "固件逆向与IoT安全",
+        "duration": "68分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解固件逆向与IoT安全的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解固件逆向与IoT安全的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "逆向工程权威指南",
+        "author": "阮一峰",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解从零开始学逆向工程",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "reverse实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "x86/x64汇编",
+        "purpose": "用于逆向工程方向的x86/x64汇编相关实践"
+      },
+      {
+        "name": "ARM汇编",
+        "purpose": "用于逆向工程方向的ARM汇编相关实践"
+      },
+      {
+        "name": "OllyDbg",
+        "purpose": "用于逆向工程方向的OllyDbg相关实践"
+      },
+      {
+        "name": "x64dbg",
+        "purpose": "用于逆向工程方向的x64dbg相关实践"
+      },
+      {
+        "name": "Frida Hook",
+        "purpose": "用于逆向工程方向的Frida Hook相关实践"
+      },
+      {
+        "name": "Radare2",
+        "purpose": "用于逆向工程方向的Radare2相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1029",
+    "title": "逆向工程大师课：高级反编译：LLVM混淆还原与符号恢复",
+    "category": "reverse",
+    "categoryLabel": "逆向工程",
+    "description": "本课程系统讲解逆向工程领域的高级反编译：LLVM混淆还原与符号恢复，由Gabriel Avramescu主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "逆向工程大师课：高级反编译：LLVM混淆还原与符号恢复\n\n本课程由Gabriel Avramescu精心打造，系统讲解逆向工程方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Gabriel Avramescu多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升逆向工程能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对逆向工程领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Gabriel Avramescu",
+    "platform": "B站",
+    "level": "专家级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.9,
+    "students": 9500,
+    "duration": "53-54 小时",
+    "lessons": 14,
+    "tags": [
+      "逆向工程",
+      "专家级",
+      "免费",
+      "reverse"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000229651?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%20%E9%AB%98%E7%BA%A7%E5%8F%8D%E7%BC%96%E8%AF%91%EF%BC%9ALLVM%E6%B7%B7%E6%B7%86%E8%BF%98%E5%8E%9F%E4%B8%8E%E7%AC%A6%E5%8F%B7%E6%81%A2%E5%A4%8D",
+    "resourceUrl": "https://hex-rays.com/ida-pro/",
+    "updatedAt": "2026-06-15 01:31",
+    "featured": false,
+    "syllabus": [
+      "逆向工程基础概念",
+      "Windows PE文件结构深度",
+      "Linux ELF文件格式",
+      "IDA Pro高级技巧",
+      "Ghidra反编译实战",
+      "反调试与反反调试",
+      "脱壳技术：压缩壳/加密壳/VM壳",
+      "Android APK逆向",
+      "iOS应用逆向基础",
+      "固件逆向与IoT安全"
+    ],
+    "topics": [
+      "x86/x64汇编",
+      "ARM汇编",
+      "OllyDbg",
+      "x64dbg",
+      "Frida Hook",
+      "Radare2"
+    ],
+    "faqs": [
+      {
+        "question": "学逆向需要汇编基础吗？",
+        "answer": "这是关于\"学逆向需要汇编基础吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "IDA和Ghidra选哪个？",
+        "answer": "这是关于\"IDA和Ghidra选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Android逆向入门路线？",
+        "answer": "这是关于\"Android逆向入门路线\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "逆向工程基础概念",
+        "duration": "43分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解逆向工程基础概念的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解逆向工程基础概念的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Windows PE文件结构深度",
+        "duration": "31分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Windows PE文件结构深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Windows PE文件结构深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Linux ELF文件格式",
+        "duration": "69分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Linux ELF文件格式的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux ELF文件格式的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "IDA Pro高级技巧",
+        "duration": "72分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解IDA Pro高级技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解IDA Pro高级技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Ghidra反编译实战",
+        "duration": "52分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Ghidra反编译实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Ghidra反编译实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "反调试与反反调试",
+        "duration": "38分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解反调试与反反调试的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解反调试与反反调试的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "脱壳技术：压缩壳/加密壳/VM壳",
+        "duration": "38分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解脱壳技术：压缩壳/加密壳/VM壳的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解脱壳技术：压缩壳/加密壳/VM壳的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "Android APK逆向",
+        "duration": "35分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Android APK逆向的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Android APK逆向的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "iOS应用逆向基础",
+        "duration": "76分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解iOS应用逆向基础的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解iOS应用逆向基础的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "固件逆向与IoT安全",
+        "duration": "82分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解固件逆向与IoT安全的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解固件逆向与IoT安全的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "逆向工程权威指南",
+        "author": "Gabriel Avramescu",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解逆向工程大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "reverse实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "x86/x64汇编",
+        "purpose": "用于逆向工程方向的x86/x64汇编相关实践"
+      },
+      {
+        "name": "ARM汇编",
+        "purpose": "用于逆向工程方向的ARM汇编相关实践"
+      },
+      {
+        "name": "OllyDbg",
+        "purpose": "用于逆向工程方向的OllyDbg相关实践"
+      },
+      {
+        "name": "x64dbg",
+        "purpose": "用于逆向工程方向的x64dbg相关实践"
+      },
+      {
+        "name": "Frida Hook",
+        "purpose": "用于逆向工程方向的Frida Hook相关实践"
+      },
+      {
+        "name": "Radare2",
+        "purpose": "用于逆向工程方向的Radare2相关实践"
+      }
+    ]
+  }
+]

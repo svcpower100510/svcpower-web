@@ -1,0 +1,713 @@
+[
+  {
+    "id": "TH-1094",
+    "title": "工具链进阶之路：Git高级：rebase/ cherry-pick/ bisect/ submodule",
+    "category": "git",
+    "categoryLabel": "工具链",
+    "description": "本课程系统讲解工具链领域的Git高级：rebase/ cherry-pick/ bisect/ submodule，由合天网安主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "工具链进阶之路：Git高级：rebase/ cherry-pick/ bisect/ submodule\n\n本课程由合天网安精心打造，系统讲解工具链方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师合天网安多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升工具链能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对工具链领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "合天网安",
+    "platform": "edX",
+    "level": "高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.8,
+    "students": 26490,
+    "duration": "38-54 小时",
+    "lessons": 20,
+    "tags": [
+      "工具链",
+      "高级",
+      "免费",
+      "git"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000744386?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=%E5%B7%A5%E5%85%B7%E9%93%BE%20Git%E9%AB%98%E7%BA%A7%EF%BC%9Arebase",
+    "resourceUrl": "https://git-scm.com/book/zh/v2",
+    "updatedAt": "2026-04-27 12:34",
+    "featured": false,
+    "syllabus": [
+      "Git内部原理：blob/tree/commit",
+      "分支策略与工作流",
+      "高级操作：rebase/cherry-pick",
+      "二分查找bug：bisect",
+      "子模块与子树",
+      "Git钩子与自动化",
+      "大仓库优化",
+      "Git内部对象存储",
+      "协作工作流：GitHub Flow",
+      "Git安全：签名提交"
+    ],
+    "topics": [
+      "GitHub",
+      "GitLab",
+      "GPG签名",
+      "LFS",
+      "reflog"
+    ],
+    "faqs": [
+      {
+        "question": "rebase还是merge？",
+        "answer": "这是关于\"rebase还是merge\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何撤销错误提交？",
+        "answer": "这是关于\"如何撤销错误提交\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是detached HEAD？",
+        "answer": "这是关于\"什么是detached HEAD\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Git内部原理：blob/tree/commit",
+        "duration": "78分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Git内部原理：blob/tree/commit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git内部原理：blob/tree/commit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "分支策略与工作流",
+        "duration": "50分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解分支策略与工作流的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解分支策略与工作流的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "高级操作：rebase/cherry-pick",
+        "duration": "48分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解高级操作：rebase/cherry-pick的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解高级操作：rebase/cherry-pick的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "二分查找bug：bisect",
+        "duration": "53分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解二分查找bug：bisect的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解二分查找bug：bisect的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "子模块与子树",
+        "duration": "36分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解子模块与子树的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解子模块与子树的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Git钩子与自动化",
+        "duration": "52分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Git钩子与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git钩子与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "大仓库优化",
+        "duration": "87分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解大仓库优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大仓库优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "Git内部对象存储",
+        "duration": "40分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Git内部对象存储的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git内部对象存储的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "协作工作流：GitHub Flow",
+        "duration": "54分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解协作工作流：GitHub Flow的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解协作工作流：GitHub Flow的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "Git安全：签名提交",
+        "duration": "31分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Git安全：签名提交的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git安全：签名提交的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "工具链权威指南",
+        "author": "合天网安",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解工具链进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "git实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub",
+        "purpose": "用于工具链方向的GitHub相关实践"
+      },
+      {
+        "name": "GitLab",
+        "purpose": "用于工具链方向的GitLab相关实践"
+      },
+      {
+        "name": "GPG签名",
+        "purpose": "用于工具链方向的GPG签名相关实践"
+      },
+      {
+        "name": "LFS",
+        "purpose": "用于工具链方向的LFS相关实践"
+      },
+      {
+        "name": "reflog",
+        "purpose": "用于工具链方向的reflog相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1095",
+    "title": "从零开始学工具链：Vim/Neovim 高效编辑器配置与Lua脚本",
+    "category": "git",
+    "categoryLabel": "工具链",
+    "description": "本课程系统讲解工具链领域的Vim/Neovim 高效编辑器配置与Lua脚本，由svcliny主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学工具链：Vim/Neovim 高效编辑器配置与Lua脚本\n\n本课程由svcliny精心打造，系统讲解工具链方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师svcliny多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升工具链能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对工具链领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "svcliny",
+    "platform": "极客时间",
+    "level": "中高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.9,
+    "students": 2912,
+    "duration": "29-36 小时",
+    "lessons": 8,
+    "tags": [
+      "工具链",
+      "中高级",
+      "免费",
+      "git"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000752305?w=400&h=225&fit=crop",
+    "redirectUrl": "https://space.bilibili.com/3690972712012078",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=%E5%B7%A5%E5%85%B7%E9%93%BE%20Vim",
+    "resourceUrl": "https://git-scm.com/book/zh/v2",
+    "updatedAt": "2026-04-05 16:37",
+    "featured": false,
+    "syllabus": [
+      "Git内部原理：blob/tree/commit",
+      "分支策略与工作流",
+      "高级操作：rebase/cherry-pick",
+      "二分查找bug：bisect",
+      "子模块与子树",
+      "Git钩子与自动化",
+      "大仓库优化",
+      "Git内部对象存储",
+      "协作工作流：GitHub Flow",
+      "Git安全：签名提交"
+    ],
+    "topics": [
+      "GitHub",
+      "GitLab",
+      "GPG签名",
+      "LFS",
+      "reflog"
+    ],
+    "faqs": [
+      {
+        "question": "rebase还是merge？",
+        "answer": "这是关于\"rebase还是merge\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何撤销错误提交？",
+        "answer": "这是关于\"如何撤销错误提交\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是detached HEAD？",
+        "answer": "这是关于\"什么是detached HEAD\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Git内部原理：blob/tree/commit",
+        "duration": "55分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Git内部原理：blob/tree/commit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git内部原理：blob/tree/commit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "分支策略与工作流",
+        "duration": "35分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解分支策略与工作流的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解分支策略与工作流的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "高级操作：rebase/cherry-pick",
+        "duration": "87分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解高级操作：rebase/cherry-pick的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解高级操作：rebase/cherry-pick的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "二分查找bug：bisect",
+        "duration": "83分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解二分查找bug：bisect的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解二分查找bug：bisect的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "子模块与子树",
+        "duration": "68分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解子模块与子树的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解子模块与子树的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Git钩子与自动化",
+        "duration": "77分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Git钩子与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git钩子与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "大仓库优化",
+        "duration": "85分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解大仓库优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大仓库优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "Git内部对象存储",
+        "duration": "77分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Git内部对象存储的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git内部对象存储的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "协作工作流：GitHub Flow",
+        "duration": "72分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解协作工作流：GitHub Flow的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解协作工作流：GitHub Flow的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "Git安全：签名提交",
+        "duration": "35分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Git安全：签名提交的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git安全：签名提交的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "工具链权威指南",
+        "author": "svcliny",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解从零开始学工具链",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "git实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub",
+        "purpose": "用于工具链方向的GitHub相关实践"
+      },
+      {
+        "name": "GitLab",
+        "purpose": "用于工具链方向的GitLab相关实践"
+      },
+      {
+        "name": "GPG签名",
+        "purpose": "用于工具链方向的GPG签名相关实践"
+      },
+      {
+        "name": "LFS",
+        "purpose": "用于工具链方向的LFS相关实践"
+      },
+      {
+        "name": "reflog",
+        "purpose": "用于工具链方向的reflog相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1096",
+    "title": "工具链大师课：正则表达式精通：从入门到引擎原理",
+    "category": "git",
+    "categoryLabel": "工具链",
+    "description": "本课程系统讲解工具链领域的正则表达式精通：从入门到引擎原理，由Atul Tiwari主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "工具链大师课：正则表达式精通：从入门到引擎原理\n\n本课程由Atul Tiwari精心打造，系统讲解工具链方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Atul Tiwari多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升工具链能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对工具链领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Atul Tiwari",
+    "platform": "学堂在线",
+    "level": "高级",
+    "price": 5,
+    "isFree": false,
+    "rating": 4.8,
+    "students": 26754,
+    "duration": "39-51 小时",
+    "lessons": 16,
+    "tags": [
+      "工具链",
+      "高级",
+      "付费",
+      "git"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000760224?w=400&h=225&fit=crop",
+    "redirectUrl": "https://git-scm.com/book/zh/v2",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E5%B7%A5%E5%85%B7%E9%93%BE%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%B2%BE%E9%80%9A%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%BC%95%E6%93%8E%E5%8E%9F%E7%90%86",
+    "resourceUrl": "https://git-scm.com/book/zh/v2",
+    "updatedAt": "2026-03-02 06:39",
+    "featured": false,
+    "syllabus": [
+      "Git内部原理：blob/tree/commit",
+      "分支策略与工作流",
+      "高级操作：rebase/cherry-pick",
+      "二分查找bug：bisect",
+      "子模块与子树",
+      "Git钩子与自动化",
+      "大仓库优化",
+      "Git内部对象存储",
+      "协作工作流：GitHub Flow",
+      "Git安全：签名提交"
+    ],
+    "topics": [
+      "GitHub",
+      "GitLab",
+      "GPG签名",
+      "LFS",
+      "reflog"
+    ],
+    "faqs": [
+      {
+        "question": "rebase还是merge？",
+        "answer": "这是关于\"rebase还是merge\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何撤销错误提交？",
+        "answer": "这是关于\"如何撤销错误提交\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是detached HEAD？",
+        "answer": "这是关于\"什么是detached HEAD\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Git内部原理：blob/tree/commit",
+        "duration": "63分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Git内部原理：blob/tree/commit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git内部原理：blob/tree/commit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "分支策略与工作流",
+        "duration": "83分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解分支策略与工作流的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解分支策略与工作流的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "高级操作：rebase/cherry-pick",
+        "duration": "40分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解高级操作：rebase/cherry-pick的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解高级操作：rebase/cherry-pick的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "二分查找bug：bisect",
+        "duration": "88分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解二分查找bug：bisect的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解二分查找bug：bisect的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "子模块与子树",
+        "duration": "63分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解子模块与子树的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解子模块与子树的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Git钩子与自动化",
+        "duration": "88分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Git钩子与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git钩子与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "大仓库优化",
+        "duration": "41分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解大仓库优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大仓库优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "Git内部对象存储",
+        "duration": "76分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Git内部对象存储的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git内部对象存储的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "协作工作流：GitHub Flow",
+        "duration": "36分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解协作工作流：GitHub Flow的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解协作工作流：GitHub Flow的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "Git安全：签名提交",
+        "duration": "71分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Git安全：签名提交的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Git安全：签名提交的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "工具链权威指南",
+        "author": "Atul Tiwari",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解工具链大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "git实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub",
+        "purpose": "用于工具链方向的GitHub相关实践"
+      },
+      {
+        "name": "GitLab",
+        "purpose": "用于工具链方向的GitLab相关实践"
+      },
+      {
+        "name": "GPG签名",
+        "purpose": "用于工具链方向的GPG签名相关实践"
+      },
+      {
+        "name": "LFS",
+        "purpose": "用于工具链方向的LFS相关实践"
+      },
+      {
+        "name": "reflog",
+        "purpose": "用于工具链方向的reflog相关实践"
+      }
+    ]
+  }
+]

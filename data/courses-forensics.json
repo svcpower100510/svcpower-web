@@ -1,0 +1,468 @@
+[
+  {
+    "id": "TH-1045",
+    "title": "数字取证大师课：计算机取证：内存/磁盘/网络流量取证",
+    "category": "forensics",
+    "categoryLabel": "数字取证",
+    "description": "本课程系统讲解数字取证领域的计算机取证：内存/磁盘/网络流量取证，由阮一峰主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "数字取证大师课：计算机取证：内存/磁盘/网络流量取证\n\n本课程由阮一峰精心打造，系统讲解数字取证方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师阮一峰多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升数字取证能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对数字取证领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "阮一峰",
+    "platform": "MIT OCW",
+    "level": "初级",
+    "price": 15,
+    "isFree": false,
+    "rating": 4.9,
+    "students": 47010,
+    "duration": "12-23 小时",
+    "lessons": 9,
+    "tags": [
+      "数字取证",
+      "初级",
+      "付费",
+      "forensics"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000356355?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.sleuthkit.org/autopsy/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=%E6%95%B0%E5%AD%97%E5%8F%96%E8%AF%81%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%96%E8%AF%81%EF%BC%9A%E5%86%85%E5%AD%98",
+    "resourceUrl": "https://www.sleuthkit.org/autopsy/",
+    "updatedAt": "2026-05-12 04:25",
+    "featured": false,
+    "syllabus": [
+      "数字取证法律基础",
+      "计算机取证流程与规范",
+      "内存取证：Volatility实战",
+      "磁盘取证：文件系统分析",
+      "网络流量取证：PCAP分析",
+      "移动端取证：iOS/Android",
+      "云环境取证挑战",
+      "反取证技术识别",
+      "时间线分析",
+      "取证报告撰写"
+    ],
+    "topics": [
+      "Autopsy",
+      "FTK",
+      "EnCase",
+      "Wireshark",
+      "Bulk Extractor"
+    ],
+    "faqs": [
+      {
+        "question": "取证需要什么资质？",
+        "answer": "这是关于\"取证需要什么资质\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何保证证据链完整？",
+        "answer": "这是关于\"如何保证证据链完整\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "数字取证法律基础",
+        "duration": "71分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解数字取证法律基础的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数字取证法律基础的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "计算机取证流程与规范",
+        "duration": "54分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解计算机取证流程与规范的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解计算机取证流程与规范的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "内存取证：Volatility实战",
+        "duration": "84分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解内存取证：Volatility实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内存取证：Volatility实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "磁盘取证：文件系统分析",
+        "duration": "47分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解磁盘取证：文件系统分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解磁盘取证：文件系统分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络流量取证：PCAP分析",
+        "duration": "46分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解网络流量取证：PCAP分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络流量取证：PCAP分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "移动端取证：iOS/Android",
+        "duration": "86分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解移动端取证：iOS/Android的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解移动端取证：iOS/Android的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "云环境取证挑战",
+        "duration": "89分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解云环境取证挑战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解云环境取证挑战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "反取证技术识别",
+        "duration": "77分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解反取证技术识别的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解反取证技术识别的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "时间线分析",
+        "duration": "31分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解时间线分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解时间线分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "取证报告撰写",
+        "duration": "58分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解取证报告撰写的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解取证报告撰写的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "数字取证权威指南",
+        "author": "阮一峰",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解数字取证大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "forensics实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Autopsy",
+        "purpose": "用于数字取证方向的Autopsy相关实践"
+      },
+      {
+        "name": "FTK",
+        "purpose": "用于数字取证方向的FTK相关实践"
+      },
+      {
+        "name": "EnCase",
+        "purpose": "用于数字取证方向的EnCase相关实践"
+      },
+      {
+        "name": "Wireshark",
+        "purpose": "用于数字取证方向的Wireshark相关实践"
+      },
+      {
+        "name": "Bulk Extractor",
+        "purpose": "用于数字取证方向的Bulk Extractor相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1046",
+    "title": "数字取证进阶之路：移动端取证：iOS/Android 数据提取与分析",
+    "category": "forensics",
+    "categoryLabel": "数字取证",
+    "description": "本课程系统讲解数字取证领域的移动端取证：iOS/Android 数据提取与分析，由小迪安全主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "数字取证进阶之路：移动端取证：iOS/Android 数据提取与分析\n\n本课程由小迪安全精心打造，系统讲解数字取证方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师小迪安全多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升数字取证能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对数字取证领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "小迪安全",
+    "platform": "实验楼",
+    "level": "中高级",
+    "price": 75,
+    "isFree": false,
+    "rating": 4.6,
+    "students": 8345,
+    "duration": "26-32 小时",
+    "lessons": 9,
+    "tags": [
+      "数字取证",
+      "中高级",
+      "付费",
+      "forensics"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000364274?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.sleuthkit.org/autopsy/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "githubUrl": "https://github.com/search?q=%E6%95%B0%E5%AD%97%E5%8F%96%E8%AF%81%20%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%8F%96%E8%AF%81%EF%BC%9AiOS",
+    "resourceUrl": "https://www.sleuthkit.org/autopsy/",
+    "updatedAt": "2026-07-24 09:29",
+    "featured": false,
+    "syllabus": [
+      "数字取证法律基础",
+      "计算机取证流程与规范",
+      "内存取证：Volatility实战",
+      "磁盘取证：文件系统分析",
+      "网络流量取证：PCAP分析",
+      "移动端取证：iOS/Android",
+      "云环境取证挑战",
+      "反取证技术识别",
+      "时间线分析",
+      "取证报告撰写"
+    ],
+    "topics": [
+      "Autopsy",
+      "FTK",
+      "EnCase",
+      "Wireshark",
+      "Bulk Extractor"
+    ],
+    "faqs": [
+      {
+        "question": "取证需要什么资质？",
+        "answer": "这是关于\"取证需要什么资质\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何保证证据链完整？",
+        "answer": "这是关于\"如何保证证据链完整\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "数字取证法律基础",
+        "duration": "45分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解数字取证法律基础的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数字取证法律基础的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "计算机取证流程与规范",
+        "duration": "57分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解计算机取证流程与规范的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解计算机取证流程与规范的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "内存取证：Volatility实战",
+        "duration": "56分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解内存取证：Volatility实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内存取证：Volatility实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "磁盘取证：文件系统分析",
+        "duration": "32分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解磁盘取证：文件系统分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解磁盘取证：文件系统分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "网络流量取证：PCAP分析",
+        "duration": "46分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解网络流量取证：PCAP分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解网络流量取证：PCAP分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "移动端取证：iOS/Android",
+        "duration": "79分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解移动端取证：iOS/Android的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解移动端取证：iOS/Android的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "云环境取证挑战",
+        "duration": "55分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解云环境取证挑战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解云环境取证挑战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "反取证技术识别",
+        "duration": "59分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解反取证技术识别的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解反取证技术识别的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "时间线分析",
+        "duration": "85分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解时间线分析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解时间线分析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "取证报告撰写",
+        "duration": "61分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解取证报告撰写的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解取证报告撰写的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "数字取证权威指南",
+        "author": "小迪安全",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解数字取证进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "forensics实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Autopsy",
+        "purpose": "用于数字取证方向的Autopsy相关实践"
+      },
+      {
+        "name": "FTK",
+        "purpose": "用于数字取证方向的FTK相关实践"
+      },
+      {
+        "name": "EnCase",
+        "purpose": "用于数字取证方向的EnCase相关实践"
+      },
+      {
+        "name": "Wireshark",
+        "purpose": "用于数字取证方向的Wireshark相关实践"
+      },
+      {
+        "name": "Bulk Extractor",
+        "purpose": "用于数字取证方向的Bulk Extractor相关实践"
+      }
+    ]
+  }
+]

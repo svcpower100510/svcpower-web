@@ -1,0 +1,1187 @@
+[
+  {
+    "id": "TH-1068",
+    "title": "从零开始学数据库：MySQL高级：索引优化/慢SQL/分库分表",
+    "category": "database",
+    "categoryLabel": "数据库",
+    "description": "本课程系统讲解数据库领域的MySQL高级：索引优化/慢SQL/分库分表，由千锋网络安全主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学数据库：MySQL高级：索引优化/慢SQL/分库分表\n\n本课程由千锋网络安全精心打造，系统讲解数据库方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师千锋网络安全多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升数据库能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对数据库领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "千锋网络安全",
+    "platform": "学堂在线",
+    "level": "高级",
+    "price": 35,
+    "isFree": false,
+    "rating": 4.6,
+    "students": 46907,
+    "duration": "42-54 小时",
+    "lessons": 28,
+    "tags": [
+      "数据库",
+      "高级",
+      "付费",
+      "database"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000538492?w=400&h=225&fit=crop",
+    "redirectUrl": "https://redis.io/documentation",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=%E6%95%B0%E6%8D%AE%E5%BA%93%20MySQL%E9%AB%98%E7%BA%A7%EF%BC%9A%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96",
+    "resourceUrl": "https://dev.mysql.com/doc/",
+    "updatedAt": "2026-08-18 19:34",
+    "featured": false,
+    "syllabus": [
+      "MySQL架构与存储引擎",
+      "索引原理：B+树/Hash/全文",
+      "SQL优化与执行计划",
+      "事务隔离级别与锁",
+      "Redis数据结构与持久化",
+      "Redis集群与哨兵",
+      "MongoDB文档模型设计",
+      "PostgreSQL高级特性",
+      "数据库安全与审计",
+      "大数据存储方案对比"
+    ],
+    "topics": [
+      "EXPLAIN",
+      "慢查询日志",
+      "binlog",
+      "AOF/RDB",
+      "分片策略"
+    ],
+    "faqs": [
+      {
+        "question": "MySQL和PG选哪个？",
+        "answer": "这是关于\"MySQL和PG选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Redis为什么快？",
+        "answer": "这是关于\"Redis为什么快\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是MVCC？",
+        "answer": "这是关于\"什么是MVCC\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "MySQL架构与存储引擎",
+        "duration": "40分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解MySQL架构与存储引擎的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MySQL架构与存储引擎的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "索引原理：B+树/Hash/全文",
+        "duration": "52分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解索引原理：B+树/Hash/全文的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解索引原理：B+树/Hash/全文的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "SQL优化与执行计划",
+        "duration": "71分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解SQL优化与执行计划的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解SQL优化与执行计划的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "事务隔离级别与锁",
+        "duration": "49分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解事务隔离级别与锁的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解事务隔离级别与锁的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Redis数据结构与持久化",
+        "duration": "60分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Redis数据结构与持久化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis数据结构与持久化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Redis集群与哨兵",
+        "duration": "38分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Redis集群与哨兵的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis集群与哨兵的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "MongoDB文档模型设计",
+        "duration": "46分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解MongoDB文档模型设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MongoDB文档模型设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "PostgreSQL高级特性",
+        "duration": "64分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解PostgreSQL高级特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PostgreSQL高级特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "数据库安全与审计",
+        "duration": "70分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解数据库安全与审计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据库安全与审计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "大数据存储方案对比",
+        "duration": "54分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解大数据存储方案对比的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大数据存储方案对比的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "数据库权威指南",
+        "author": "千锋网络安全",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解从零开始学数据库",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "database实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "EXPLAIN",
+        "purpose": "用于数据库方向的EXPLAIN相关实践"
+      },
+      {
+        "name": "慢查询日志",
+        "purpose": "用于数据库方向的慢查询日志相关实践"
+      },
+      {
+        "name": "binlog",
+        "purpose": "用于数据库方向的binlog相关实践"
+      },
+      {
+        "name": "AOF/RDB",
+        "purpose": "用于数据库方向的AOF/RDB相关实践"
+      },
+      {
+        "name": "分片策略",
+        "purpose": "用于数据库方向的分片策略相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1069",
+    "title": "数据库进阶之路：Redis深度：数据结构/集群/持久化/缓存穿透",
+    "category": "database",
+    "categoryLabel": "数据库",
+    "description": "本课程系统讲解数据库领域的Redis深度：数据结构/集群/持久化/缓存穿透，由Atul Tiwari主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "数据库进阶之路：Redis深度：数据结构/集群/持久化/缓存穿透\n\n本课程由Atul Tiwari精心打造，系统讲解数据库方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Atul Tiwari多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升数据库能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对数据库领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Atul Tiwari",
+    "platform": "极客时间",
+    "level": "高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.8,
+    "students": 49147,
+    "duration": "40-55 小时",
+    "lessons": 23,
+    "tags": [
+      "数据库",
+      "高级",
+      "免费",
+      "database"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000546411?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "githubUrl": "https://github.com/search?q=%E6%95%B0%E6%8D%AE%E5%BA%93%20Redis%E6%B7%B1%E5%BA%A6%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84",
+    "resourceUrl": "https://dev.mysql.com/doc/",
+    "updatedAt": "2026-06-14 17:48",
+    "featured": false,
+    "syllabus": [
+      "MySQL架构与存储引擎",
+      "索引原理：B+树/Hash/全文",
+      "SQL优化与执行计划",
+      "事务隔离级别与锁",
+      "Redis数据结构与持久化",
+      "Redis集群与哨兵",
+      "MongoDB文档模型设计",
+      "PostgreSQL高级特性",
+      "数据库安全与审计",
+      "大数据存储方案对比"
+    ],
+    "topics": [
+      "EXPLAIN",
+      "慢查询日志",
+      "binlog",
+      "AOF/RDB",
+      "分片策略"
+    ],
+    "faqs": [
+      {
+        "question": "MySQL和PG选哪个？",
+        "answer": "这是关于\"MySQL和PG选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Redis为什么快？",
+        "answer": "这是关于\"Redis为什么快\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是MVCC？",
+        "answer": "这是关于\"什么是MVCC\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "MySQL架构与存储引擎",
+        "duration": "78分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解MySQL架构与存储引擎的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MySQL架构与存储引擎的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "索引原理：B+树/Hash/全文",
+        "duration": "56分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解索引原理：B+树/Hash/全文的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解索引原理：B+树/Hash/全文的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "SQL优化与执行计划",
+        "duration": "54分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解SQL优化与执行计划的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解SQL优化与执行计划的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "事务隔离级别与锁",
+        "duration": "88分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解事务隔离级别与锁的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解事务隔离级别与锁的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Redis数据结构与持久化",
+        "duration": "32分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Redis数据结构与持久化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis数据结构与持久化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Redis集群与哨兵",
+        "duration": "51分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Redis集群与哨兵的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis集群与哨兵的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "MongoDB文档模型设计",
+        "duration": "69分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解MongoDB文档模型设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MongoDB文档模型设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "PostgreSQL高级特性",
+        "duration": "42分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解PostgreSQL高级特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PostgreSQL高级特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "数据库安全与审计",
+        "duration": "77分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解数据库安全与审计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据库安全与审计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "大数据存储方案对比",
+        "duration": "69分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解大数据存储方案对比的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大数据存储方案对比的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "数据库权威指南",
+        "author": "Atul Tiwari",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解数据库进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "database实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "EXPLAIN",
+        "purpose": "用于数据库方向的EXPLAIN相关实践"
+      },
+      {
+        "name": "慢查询日志",
+        "purpose": "用于数据库方向的慢查询日志相关实践"
+      },
+      {
+        "name": "binlog",
+        "purpose": "用于数据库方向的binlog相关实践"
+      },
+      {
+        "name": "AOF/RDB",
+        "purpose": "用于数据库方向的AOF/RDB相关实践"
+      },
+      {
+        "name": "分片策略",
+        "purpose": "用于数据库方向的分片策略相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1070",
+    "title": "数据库核心原理与实战：MongoDB与NoSQL设计模式",
+    "category": "database",
+    "categoryLabel": "数据库",
+    "description": "本课程系统讲解数据库领域的MongoDB与NoSQL设计模式，由尤雨溪主讲，覆盖从理论到实战的完整链路。适合入门学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "数据库核心原理与实战：MongoDB与NoSQL设计模式\n\n本课程由尤雨溪精心打造，系统讲解数据库方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师尤雨溪多年实战经验总结\n\n【适合人群】\n• 入门水平的学习者\n• 希望系统提升数据库能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对数据库领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "尤雨溪",
+    "platform": "学堂在线",
+    "level": "入门",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.8,
+    "students": 28943,
+    "duration": "4-17 小时",
+    "lessons": 35,
+    "tags": [
+      "数据库",
+      "入门",
+      "免费",
+      "database"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000554330?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "githubUrl": "https://github.com/search?q=%E6%95%B0%E6%8D%AE%E5%BA%93%20MongoDB%E4%B8%8ENoSQL%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F",
+    "resourceUrl": "https://dev.mysql.com/doc/",
+    "updatedAt": "2026-06-01 21:55",
+    "featured": false,
+    "syllabus": [
+      "MySQL架构与存储引擎",
+      "索引原理：B+树/Hash/全文",
+      "SQL优化与执行计划",
+      "事务隔离级别与锁",
+      "Redis数据结构与持久化",
+      "Redis集群与哨兵",
+      "MongoDB文档模型设计",
+      "PostgreSQL高级特性",
+      "数据库安全与审计",
+      "大数据存储方案对比"
+    ],
+    "topics": [
+      "EXPLAIN",
+      "慢查询日志",
+      "binlog",
+      "AOF/RDB",
+      "分片策略"
+    ],
+    "faqs": [
+      {
+        "question": "MySQL和PG选哪个？",
+        "answer": "这是关于\"MySQL和PG选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Redis为什么快？",
+        "answer": "这是关于\"Redis为什么快\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是MVCC？",
+        "answer": "这是关于\"什么是MVCC\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "MySQL架构与存储引擎",
+        "duration": "79分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解MySQL架构与存储引擎的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MySQL架构与存储引擎的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "索引原理：B+树/Hash/全文",
+        "duration": "77分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解索引原理：B+树/Hash/全文的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解索引原理：B+树/Hash/全文的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "SQL优化与执行计划",
+        "duration": "58分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解SQL优化与执行计划的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解SQL优化与执行计划的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "事务隔离级别与锁",
+        "duration": "75分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解事务隔离级别与锁的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解事务隔离级别与锁的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Redis数据结构与持久化",
+        "duration": "77分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Redis数据结构与持久化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis数据结构与持久化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Redis集群与哨兵",
+        "duration": "73分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Redis集群与哨兵的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis集群与哨兵的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "MongoDB文档模型设计",
+        "duration": "48分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解MongoDB文档模型设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MongoDB文档模型设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "PostgreSQL高级特性",
+        "duration": "50分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解PostgreSQL高级特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PostgreSQL高级特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "数据库安全与审计",
+        "duration": "37分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解数据库安全与审计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据库安全与审计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "大数据存储方案对比",
+        "duration": "57分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解大数据存储方案对比的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大数据存储方案对比的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "数据库权威指南",
+        "author": "尤雨溪",
+        "type": "book",
+        "difficulty": "入门"
+      },
+      {
+        "title": "深入理解数据库核心原理与实战",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "database实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "EXPLAIN",
+        "purpose": "用于数据库方向的EXPLAIN相关实践"
+      },
+      {
+        "name": "慢查询日志",
+        "purpose": "用于数据库方向的慢查询日志相关实践"
+      },
+      {
+        "name": "binlog",
+        "purpose": "用于数据库方向的binlog相关实践"
+      },
+      {
+        "name": "AOF/RDB",
+        "purpose": "用于数据库方向的AOF/RDB相关实践"
+      },
+      {
+        "name": "分片策略",
+        "purpose": "用于数据库方向的分片策略相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1071",
+    "title": "数据库实战精讲：PostgreSQL高级特性与性能调优",
+    "category": "database",
+    "categoryLabel": "数据库",
+    "description": "本课程系统讲解数据库领域的PostgreSQL高级特性与性能调优，由湖科大教书匠主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "数据库实战精讲：PostgreSQL高级特性与性能调优\n\n本课程由湖科大教书匠精心打造，系统讲解数据库方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师湖科大教书匠多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升数据库能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对数据库领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "湖科大教书匠",
+    "platform": "TryHackMe",
+    "level": "初级",
+    "price": 5,
+    "isFree": false,
+    "rating": 4.7,
+    "students": 15028,
+    "duration": "11-25 小时",
+    "lessons": 8,
+    "tags": [
+      "数据库",
+      "初级",
+      "付费",
+      "database"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000562249?w=400&h=225&fit=crop",
+    "redirectUrl": "https://dev.mysql.com/doc/",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=%E6%95%B0%E6%8D%AE%E5%BA%93%20PostgreSQL%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7%E4%B8%8E%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98",
+    "resourceUrl": "https://dev.mysql.com/doc/",
+    "updatedAt": "2026-04-21 02:41",
+    "featured": false,
+    "syllabus": [
+      "MySQL架构与存储引擎",
+      "索引原理：B+树/Hash/全文",
+      "SQL优化与执行计划",
+      "事务隔离级别与锁",
+      "Redis数据结构与持久化",
+      "Redis集群与哨兵",
+      "MongoDB文档模型设计",
+      "PostgreSQL高级特性",
+      "数据库安全与审计",
+      "大数据存储方案对比"
+    ],
+    "topics": [
+      "EXPLAIN",
+      "慢查询日志",
+      "binlog",
+      "AOF/RDB",
+      "分片策略"
+    ],
+    "faqs": [
+      {
+        "question": "MySQL和PG选哪个？",
+        "answer": "这是关于\"MySQL和PG选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Redis为什么快？",
+        "answer": "这是关于\"Redis为什么快\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是MVCC？",
+        "answer": "这是关于\"什么是MVCC\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "MySQL架构与存储引擎",
+        "duration": "49分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解MySQL架构与存储引擎的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MySQL架构与存储引擎的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "索引原理：B+树/Hash/全文",
+        "duration": "66分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解索引原理：B+树/Hash/全文的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解索引原理：B+树/Hash/全文的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "SQL优化与执行计划",
+        "duration": "81分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解SQL优化与执行计划的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解SQL优化与执行计划的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "事务隔离级别与锁",
+        "duration": "79分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解事务隔离级别与锁的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解事务隔离级别与锁的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Redis数据结构与持久化",
+        "duration": "75分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Redis数据结构与持久化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis数据结构与持久化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Redis集群与哨兵",
+        "duration": "75分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Redis集群与哨兵的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis集群与哨兵的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "MongoDB文档模型设计",
+        "duration": "45分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解MongoDB文档模型设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MongoDB文档模型设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "PostgreSQL高级特性",
+        "duration": "68分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解PostgreSQL高级特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PostgreSQL高级特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "数据库安全与审计",
+        "duration": "56分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解数据库安全与审计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据库安全与审计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "大数据存储方案对比",
+        "duration": "85分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解大数据存储方案对比的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大数据存储方案对比的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "数据库权威指南",
+        "author": "湖科大教书匠",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解数据库实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "database实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "EXPLAIN",
+        "purpose": "用于数据库方向的EXPLAIN相关实践"
+      },
+      {
+        "name": "慢查询日志",
+        "purpose": "用于数据库方向的慢查询日志相关实践"
+      },
+      {
+        "name": "binlog",
+        "purpose": "用于数据库方向的binlog相关实践"
+      },
+      {
+        "name": "AOF/RDB",
+        "purpose": "用于数据库方向的AOF/RDB相关实践"
+      },
+      {
+        "name": "分片策略",
+        "purpose": "用于数据库方向的分片策略相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1072",
+    "title": "数据库大师课：数据库安全：SQL注入防御/权限管理/审计",
+    "category": "database",
+    "categoryLabel": "数据库",
+    "description": "本课程系统讲解数据库领域的数据库安全：SQL注入防御/权限管理/审计，由Zaid Sabih主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "数据库大师课：数据库安全：SQL注入防御/权限管理/审计\n\n本课程由Zaid Sabih精心打造，系统讲解数据库方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Zaid Sabih多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升数据库能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对数据库领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Zaid Sabih",
+    "platform": "FreeCodeCamp",
+    "level": "中高级",
+    "price": 90,
+    "isFree": false,
+    "rating": 5,
+    "students": 40369,
+    "duration": "30-29 小时",
+    "lessons": 19,
+    "tags": [
+      "数据库",
+      "中高级",
+      "付费",
+      "database"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000570168?w=400&h=225&fit=crop",
+    "redirectUrl": "https://dev.mysql.com/doc/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "githubUrl": "https://github.com/search?q=%E6%95%B0%E6%8D%AE%E5%BA%93%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%EF%BC%9ASQL%E6%B3%A8%E5%85%A5%E9%98%B2%E5%BE%A1",
+    "resourceUrl": "https://dev.mysql.com/doc/",
+    "updatedAt": "2026-07-18 01:16",
+    "featured": false,
+    "syllabus": [
+      "MySQL架构与存储引擎",
+      "索引原理：B+树/Hash/全文",
+      "SQL优化与执行计划",
+      "事务隔离级别与锁",
+      "Redis数据结构与持久化",
+      "Redis集群与哨兵",
+      "MongoDB文档模型设计",
+      "PostgreSQL高级特性",
+      "数据库安全与审计",
+      "大数据存储方案对比"
+    ],
+    "topics": [
+      "EXPLAIN",
+      "慢查询日志",
+      "binlog",
+      "AOF/RDB",
+      "分片策略"
+    ],
+    "faqs": [
+      {
+        "question": "MySQL和PG选哪个？",
+        "answer": "这是关于\"MySQL和PG选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Redis为什么快？",
+        "answer": "这是关于\"Redis为什么快\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是MVCC？",
+        "answer": "这是关于\"什么是MVCC\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "MySQL架构与存储引擎",
+        "duration": "56分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解MySQL架构与存储引擎的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MySQL架构与存储引擎的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "索引原理：B+树/Hash/全文",
+        "duration": "34分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解索引原理：B+树/Hash/全文的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解索引原理：B+树/Hash/全文的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "SQL优化与执行计划",
+        "duration": "34分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解SQL优化与执行计划的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解SQL优化与执行计划的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "事务隔离级别与锁",
+        "duration": "52分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解事务隔离级别与锁的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解事务隔离级别与锁的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Redis数据结构与持久化",
+        "duration": "87分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Redis数据结构与持久化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis数据结构与持久化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "Redis集群与哨兵",
+        "duration": "63分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Redis集群与哨兵的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Redis集群与哨兵的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "MongoDB文档模型设计",
+        "duration": "74分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解MongoDB文档模型设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解MongoDB文档模型设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "PostgreSQL高级特性",
+        "duration": "31分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解PostgreSQL高级特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PostgreSQL高级特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "数据库安全与审计",
+        "duration": "56分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解数据库安全与审计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数据库安全与审计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "大数据存储方案对比",
+        "duration": "80分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解大数据存储方案对比的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大数据存储方案对比的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "数据库权威指南",
+        "author": "Zaid Sabih",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解数据库大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "database实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "EXPLAIN",
+        "purpose": "用于数据库方向的EXPLAIN相关实践"
+      },
+      {
+        "name": "慢查询日志",
+        "purpose": "用于数据库方向的慢查询日志相关实践"
+      },
+      {
+        "name": "binlog",
+        "purpose": "用于数据库方向的binlog相关实践"
+      },
+      {
+        "name": "AOF/RDB",
+        "purpose": "用于数据库方向的AOF/RDB相关实践"
+      },
+      {
+        "name": "分片策略",
+        "purpose": "用于数据库方向的分片策略相关实践"
+      }
+    ]
+  }
+]

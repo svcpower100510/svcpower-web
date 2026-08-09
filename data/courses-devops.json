@@ -1,0 +1,1661 @@
+[
+  {
+    "id": "TH-1073",
+    "title": "DevOps进阶之路：Docker容器化：从入门到K8s编排",
+    "category": "devops",
+    "categoryLabel": "DevOps",
+    "description": "本课程系统讲解DevOps领域的Docker容器化：从入门到K8s编排，由Jason Dion主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "DevOps进阶之路：Docker容器化：从入门到K8s编排\n\n本课程由Jason Dion精心打造，系统讲解DevOps方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Jason Dion多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升DevOps能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对DevOps领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Jason Dion",
+    "platform": "TryHackMe",
+    "level": "初级",
+    "price": 65,
+    "isFree": false,
+    "rating": 4.7,
+    "students": 6999,
+    "duration": "11-22 小时",
+    "lessons": 18,
+    "tags": [
+      "DevOps",
+      "初级",
+      "付费",
+      "devops"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000578087?w=400&h=225&fit=crop",
+    "redirectUrl": "https://docs.docker.com/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=DevOps%20Docker%E5%AE%B9%E5%99%A8%E5%8C%96%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0K8s%E7%BC%96%E6%8E%92",
+    "resourceUrl": "https://docs.docker.com/",
+    "updatedAt": "2026-03-01 00:12",
+    "featured": false,
+    "syllabus": [
+      "Linux系统管理精要",
+      "Shell脚本与自动化",
+      "Docker容器化深度",
+      "Kubernetes架构与运维",
+      "CI/CD流水线设计",
+      "GitOps与ArgoCD",
+      "Terraform基础设施即代码",
+      "监控告警体系",
+      "日志聚合与追踪",
+      "混沌工程与可靠性"
+    ],
+    "topics": [
+      "GitHub Actions",
+      "Jenkins",
+      "GitLab CI",
+      "Ansible",
+      "Pulumi"
+    ],
+    "faqs": [
+      {
+        "question": "DevOps和SRE的区别？",
+        "answer": "这是关于\"DevOps和SRE的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "K8s学习曲线多陡？",
+        "answer": "这是关于\"K8s学习曲线多陡\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GitOps？",
+        "answer": "这是关于\"什么是GitOps\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Linux系统管理精要",
+        "duration": "64分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Linux系统管理精要的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux系统管理精要的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Shell脚本与自动化",
+        "duration": "46分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Shell脚本与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Shell脚本与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Docker容器化深度",
+        "duration": "60分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Docker容器化深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Docker容器化深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "Kubernetes架构与运维",
+        "duration": "36分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Kubernetes架构与运维的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Kubernetes架构与运维的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "CI/CD流水线设计",
+        "duration": "56分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解CI/CD流水线设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CI/CD流水线设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "GitOps与ArgoCD",
+        "duration": "53分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解GitOps与ArgoCD的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解GitOps与ArgoCD的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Terraform基础设施即代码",
+        "duration": "62分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Terraform基础设施即代码的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Terraform基础设施即代码的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "监控告警体系",
+        "duration": "86分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解监控告警体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解监控告警体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "日志聚合与追踪",
+        "duration": "74分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解日志聚合与追踪的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解日志聚合与追踪的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "混沌工程与可靠性",
+        "duration": "47分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解混沌工程与可靠性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解混沌工程与可靠性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "DevOps权威指南",
+        "author": "Jason Dion",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解DevOps进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "devops实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub Actions",
+        "purpose": "用于DevOps方向的GitHub Actions相关实践"
+      },
+      {
+        "name": "Jenkins",
+        "purpose": "用于DevOps方向的Jenkins相关实践"
+      },
+      {
+        "name": "GitLab CI",
+        "purpose": "用于DevOps方向的GitLab CI相关实践"
+      },
+      {
+        "name": "Ansible",
+        "purpose": "用于DevOps方向的Ansible相关实践"
+      },
+      {
+        "name": "Pulumi",
+        "purpose": "用于DevOps方向的Pulumi相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1074",
+    "title": "DevOps进阶之路：Kubernetes生产级集群部署与运维",
+    "category": "devops",
+    "categoryLabel": "DevOps",
+    "description": "本课程系统讲解DevOps领域的Kubernetes生产级集群部署与运维，由暗月MOON主讲，覆盖从理论到实战的完整链路。适合入门学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "DevOps进阶之路：Kubernetes生产级集群部署与运维\n\n本课程由暗月MOON精心打造，系统讲解DevOps方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师暗月MOON多年实战经验总结\n\n【适合人群】\n• 入门水平的学习者\n• 希望系统提升DevOps能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对DevOps领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "暗月MOON",
+    "platform": "极客时间",
+    "level": "入门",
+    "price": 45,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 18200,
+    "duration": "11-9 小时",
+    "lessons": 6,
+    "tags": [
+      "DevOps",
+      "入门",
+      "付费",
+      "devops"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000586006?w=400&h=225&fit=crop",
+    "redirectUrl": "https://aws.amazon.com/getting-started/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "githubUrl": "https://github.com/search?q=DevOps%20Kubernetes%E7%94%9F%E4%BA%A7%E7%BA%A7%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E4%B8%8E%E8%BF%90%E7%BB%B4",
+    "resourceUrl": "https://docs.docker.com/",
+    "updatedAt": "2026-06-16 10:38",
+    "featured": false,
+    "syllabus": [
+      "Linux系统管理精要",
+      "Shell脚本与自动化",
+      "Docker容器化深度",
+      "Kubernetes架构与运维",
+      "CI/CD流水线设计",
+      "GitOps与ArgoCD",
+      "Terraform基础设施即代码",
+      "监控告警体系",
+      "日志聚合与追踪",
+      "混沌工程与可靠性"
+    ],
+    "topics": [
+      "GitHub Actions",
+      "Jenkins",
+      "GitLab CI",
+      "Ansible",
+      "Pulumi"
+    ],
+    "faqs": [
+      {
+        "question": "DevOps和SRE的区别？",
+        "answer": "这是关于\"DevOps和SRE的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "K8s学习曲线多陡？",
+        "answer": "这是关于\"K8s学习曲线多陡\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GitOps？",
+        "answer": "这是关于\"什么是GitOps\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Linux系统管理精要",
+        "duration": "41分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Linux系统管理精要的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux系统管理精要的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Shell脚本与自动化",
+        "duration": "43分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Shell脚本与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Shell脚本与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Docker容器化深度",
+        "duration": "68分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Docker容器化深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Docker容器化深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "Kubernetes架构与运维",
+        "duration": "37分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Kubernetes架构与运维的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Kubernetes架构与运维的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "CI/CD流水线设计",
+        "duration": "35分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解CI/CD流水线设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CI/CD流水线设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "GitOps与ArgoCD",
+        "duration": "88分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解GitOps与ArgoCD的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解GitOps与ArgoCD的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Terraform基础设施即代码",
+        "duration": "85分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Terraform基础设施即代码的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Terraform基础设施即代码的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "监控告警体系",
+        "duration": "62分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解监控告警体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解监控告警体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "日志聚合与追踪",
+        "duration": "51分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解日志聚合与追踪的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解日志聚合与追踪的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "混沌工程与可靠性",
+        "duration": "36分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解混沌工程与可靠性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解混沌工程与可靠性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "DevOps权威指南",
+        "author": "暗月MOON",
+        "type": "book",
+        "difficulty": "入门"
+      },
+      {
+        "title": "深入理解DevOps进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "devops实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub Actions",
+        "purpose": "用于DevOps方向的GitHub Actions相关实践"
+      },
+      {
+        "name": "Jenkins",
+        "purpose": "用于DevOps方向的Jenkins相关实践"
+      },
+      {
+        "name": "GitLab CI",
+        "purpose": "用于DevOps方向的GitLab CI相关实践"
+      },
+      {
+        "name": "Ansible",
+        "purpose": "用于DevOps方向的Ansible相关实践"
+      },
+      {
+        "name": "Pulumi",
+        "purpose": "用于DevOps方向的Pulumi相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1075",
+    "title": "DevOps进阶之路：CI/CD流水线：GitHub Actions/Jenkins/GitLab CI",
+    "category": "devops",
+    "categoryLabel": "DevOps",
+    "description": "本课程系统讲解DevOps领域的CI/CD流水线：GitHub Actions/Jenkins/GitLab CI，由Atul Tiwari主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "DevOps进阶之路：CI/CD流水线：GitHub Actions/Jenkins/GitLab CI\n\n本课程由Atul Tiwari精心打造，系统讲解DevOps方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Atul Tiwari多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升DevOps能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对DevOps领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Atul Tiwari",
+    "platform": "TryHackMe",
+    "level": "中高级",
+    "price": 45,
+    "isFree": false,
+    "rating": 4.7,
+    "students": 22552,
+    "duration": "25-32 小时",
+    "lessons": 12,
+    "tags": [
+      "DevOps",
+      "中高级",
+      "付费",
+      "devops"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000593925?w=400&h=225&fit=crop",
+    "redirectUrl": "https://kubernetes.io/docs/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=DevOps%20CI",
+    "resourceUrl": "https://docs.docker.com/",
+    "updatedAt": "2026-02-10 18:29",
+    "featured": false,
+    "syllabus": [
+      "Linux系统管理精要",
+      "Shell脚本与自动化",
+      "Docker容器化深度",
+      "Kubernetes架构与运维",
+      "CI/CD流水线设计",
+      "GitOps与ArgoCD",
+      "Terraform基础设施即代码",
+      "监控告警体系",
+      "日志聚合与追踪",
+      "混沌工程与可靠性"
+    ],
+    "topics": [
+      "GitHub Actions",
+      "Jenkins",
+      "GitLab CI",
+      "Ansible",
+      "Pulumi"
+    ],
+    "faqs": [
+      {
+        "question": "DevOps和SRE的区别？",
+        "answer": "这是关于\"DevOps和SRE的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "K8s学习曲线多陡？",
+        "answer": "这是关于\"K8s学习曲线多陡\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GitOps？",
+        "answer": "这是关于\"什么是GitOps\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Linux系统管理精要",
+        "duration": "42分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Linux系统管理精要的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux系统管理精要的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Shell脚本与自动化",
+        "duration": "57分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Shell脚本与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Shell脚本与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Docker容器化深度",
+        "duration": "40分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Docker容器化深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Docker容器化深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "Kubernetes架构与运维",
+        "duration": "81分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Kubernetes架构与运维的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Kubernetes架构与运维的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "CI/CD流水线设计",
+        "duration": "44分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解CI/CD流水线设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CI/CD流水线设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "GitOps与ArgoCD",
+        "duration": "55分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解GitOps与ArgoCD的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解GitOps与ArgoCD的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Terraform基础设施即代码",
+        "duration": "56分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Terraform基础设施即代码的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Terraform基础设施即代码的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "监控告警体系",
+        "duration": "57分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解监控告警体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解监控告警体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "日志聚合与追踪",
+        "duration": "32分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解日志聚合与追踪的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解日志聚合与追踪的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "混沌工程与可靠性",
+        "duration": "62分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解混沌工程与可靠性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解混沌工程与可靠性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "DevOps权威指南",
+        "author": "Atul Tiwari",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解DevOps进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "devops实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub Actions",
+        "purpose": "用于DevOps方向的GitHub Actions相关实践"
+      },
+      {
+        "name": "Jenkins",
+        "purpose": "用于DevOps方向的Jenkins相关实践"
+      },
+      {
+        "name": "GitLab CI",
+        "purpose": "用于DevOps方向的GitLab CI相关实践"
+      },
+      {
+        "name": "Ansible",
+        "purpose": "用于DevOps方向的Ansible相关实践"
+      },
+      {
+        "name": "Pulumi",
+        "purpose": "用于DevOps方向的Pulumi相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1076",
+    "title": "DevOps进阶之路：Terraform基础设施即代码(IaC)实战",
+    "category": "devops",
+    "categoryLabel": "DevOps",
+    "description": "本课程系统讲解DevOps领域的Terraform基础设施即代码(IaC)实战，由蒋旭主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "DevOps进阶之路：Terraform基础设施即代码(IaC)实战\n\n本课程由蒋旭精心打造，系统讲解DevOps方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师蒋旭多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升DevOps能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对DevOps领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "蒋旭",
+    "platform": "TryHackMe",
+    "level": "中高级",
+    "price": 65,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 21297,
+    "duration": "31-42 小时",
+    "lessons": 13,
+    "tags": [
+      "DevOps",
+      "中高级",
+      "付费",
+      "devops"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000601844?w=400&h=225&fit=crop",
+    "redirectUrl": "https://aws.amazon.com/getting-started/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=DevOps%20Terraform%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%8D%B3%E4%BB%A3%E7%A0%81(IaC)%E5%AE%9E%E6%88%98",
+    "resourceUrl": "https://docs.docker.com/",
+    "updatedAt": "2026-03-23 16:28",
+    "featured": false,
+    "syllabus": [
+      "Linux系统管理精要",
+      "Shell脚本与自动化",
+      "Docker容器化深度",
+      "Kubernetes架构与运维",
+      "CI/CD流水线设计",
+      "GitOps与ArgoCD",
+      "Terraform基础设施即代码",
+      "监控告警体系",
+      "日志聚合与追踪",
+      "混沌工程与可靠性"
+    ],
+    "topics": [
+      "GitHub Actions",
+      "Jenkins",
+      "GitLab CI",
+      "Ansible",
+      "Pulumi"
+    ],
+    "faqs": [
+      {
+        "question": "DevOps和SRE的区别？",
+        "answer": "这是关于\"DevOps和SRE的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "K8s学习曲线多陡？",
+        "answer": "这是关于\"K8s学习曲线多陡\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GitOps？",
+        "answer": "这是关于\"什么是GitOps\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Linux系统管理精要",
+        "duration": "31分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Linux系统管理精要的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux系统管理精要的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Shell脚本与自动化",
+        "duration": "68分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Shell脚本与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Shell脚本与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Docker容器化深度",
+        "duration": "47分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Docker容器化深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Docker容器化深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "Kubernetes架构与运维",
+        "duration": "57分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Kubernetes架构与运维的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Kubernetes架构与运维的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "CI/CD流水线设计",
+        "duration": "44分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解CI/CD流水线设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CI/CD流水线设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "GitOps与ArgoCD",
+        "duration": "41分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解GitOps与ArgoCD的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解GitOps与ArgoCD的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Terraform基础设施即代码",
+        "duration": "74分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Terraform基础设施即代码的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Terraform基础设施即代码的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "监控告警体系",
+        "duration": "52分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解监控告警体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解监控告警体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "日志聚合与追踪",
+        "duration": "56分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解日志聚合与追踪的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解日志聚合与追踪的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "混沌工程与可靠性",
+        "duration": "66分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解混沌工程与可靠性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解混沌工程与可靠性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "DevOps权威指南",
+        "author": "蒋旭",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解DevOps进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "devops实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub Actions",
+        "purpose": "用于DevOps方向的GitHub Actions相关实践"
+      },
+      {
+        "name": "Jenkins",
+        "purpose": "用于DevOps方向的Jenkins相关实践"
+      },
+      {
+        "name": "GitLab CI",
+        "purpose": "用于DevOps方向的GitLab CI相关实践"
+      },
+      {
+        "name": "Ansible",
+        "purpose": "用于DevOps方向的Ansible相关实践"
+      },
+      {
+        "name": "Pulumi",
+        "purpose": "用于DevOps方向的Pulumi相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1077",
+    "title": "DevOps进阶之路：Prometheus + Grafana 监控告警体系",
+    "category": "devops",
+    "categoryLabel": "DevOps",
+    "description": "本课程系统讲解DevOps领域的Prometheus + Grafana 监控告警体系，由合天网安主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "DevOps进阶之路：Prometheus + Grafana 监控告警体系\n\n本课程由合天网安精心打造，系统讲解DevOps方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师合天网安多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升DevOps能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对DevOps领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "合天网安",
+    "platform": "edX",
+    "level": "专家级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.4,
+    "students": 17967,
+    "duration": "54-65 小时",
+    "lessons": 33,
+    "tags": [
+      "DevOps",
+      "专家级",
+      "免费",
+      "devops"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000609763?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "githubUrl": "https://github.com/search?q=DevOps%20Prometheus%20%2B%20Grafana%20%E7%9B%91%E6%8E%A7%E5%91%8A%E8%AD%A6%E4%BD%93%E7%B3%BB",
+    "resourceUrl": "https://docs.docker.com/",
+    "updatedAt": "2026-08-18 17:29",
+    "featured": false,
+    "syllabus": [
+      "Linux系统管理精要",
+      "Shell脚本与自动化",
+      "Docker容器化深度",
+      "Kubernetes架构与运维",
+      "CI/CD流水线设计",
+      "GitOps与ArgoCD",
+      "Terraform基础设施即代码",
+      "监控告警体系",
+      "日志聚合与追踪",
+      "混沌工程与可靠性"
+    ],
+    "topics": [
+      "GitHub Actions",
+      "Jenkins",
+      "GitLab CI",
+      "Ansible",
+      "Pulumi"
+    ],
+    "faqs": [
+      {
+        "question": "DevOps和SRE的区别？",
+        "answer": "这是关于\"DevOps和SRE的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "K8s学习曲线多陡？",
+        "answer": "这是关于\"K8s学习曲线多陡\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GitOps？",
+        "answer": "这是关于\"什么是GitOps\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Linux系统管理精要",
+        "duration": "37分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Linux系统管理精要的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux系统管理精要的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Shell脚本与自动化",
+        "duration": "44分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Shell脚本与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Shell脚本与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Docker容器化深度",
+        "duration": "56分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Docker容器化深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Docker容器化深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "Kubernetes架构与运维",
+        "duration": "51分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Kubernetes架构与运维的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Kubernetes架构与运维的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "CI/CD流水线设计",
+        "duration": "88分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解CI/CD流水线设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CI/CD流水线设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "GitOps与ArgoCD",
+        "duration": "48分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解GitOps与ArgoCD的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解GitOps与ArgoCD的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Terraform基础设施即代码",
+        "duration": "40分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Terraform基础设施即代码的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Terraform基础设施即代码的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "监控告警体系",
+        "duration": "34分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解监控告警体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解监控告警体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "日志聚合与追踪",
+        "duration": "58分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解日志聚合与追踪的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解日志聚合与追踪的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "混沌工程与可靠性",
+        "duration": "76分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解混沌工程与可靠性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解混沌工程与可靠性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "DevOps权威指南",
+        "author": "合天网安",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解DevOps进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "devops实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub Actions",
+        "purpose": "用于DevOps方向的GitHub Actions相关实践"
+      },
+      {
+        "name": "Jenkins",
+        "purpose": "用于DevOps方向的Jenkins相关实践"
+      },
+      {
+        "name": "GitLab CI",
+        "purpose": "用于DevOps方向的GitLab CI相关实践"
+      },
+      {
+        "name": "Ansible",
+        "purpose": "用于DevOps方向的Ansible相关实践"
+      },
+      {
+        "name": "Pulumi",
+        "purpose": "用于DevOps方向的Pulumi相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1078",
+    "title": "从零开始学DevOps：AWS云架构：EC2/S3/Lambda/RDS实战",
+    "category": "devops",
+    "categoryLabel": "DevOps",
+    "description": "本课程系统讲解DevOps领域的AWS云架构：EC2/S3/Lambda/RDS实战，由李沐主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学DevOps：AWS云架构：EC2/S3/Lambda/RDS实战\n\n本课程由李沐精心打造，系统讲解DevOps方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师李沐多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升DevOps能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对DevOps领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "李沐",
+    "platform": "Coursera",
+    "level": "初级",
+    "price": 25,
+    "isFree": false,
+    "rating": 4.9,
+    "students": 49875,
+    "duration": "13-13 小时",
+    "lessons": 29,
+    "tags": [
+      "DevOps",
+      "初级",
+      "付费",
+      "devops"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000617682?w=400&h=225&fit=crop",
+    "redirectUrl": "https://kubernetes.io/docs/",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=DevOps%20AWS%E4%BA%91%E6%9E%B6%E6%9E%84%EF%BC%9AEC2",
+    "resourceUrl": "https://docs.docker.com/",
+    "updatedAt": "2026-05-01 01:25",
+    "featured": false,
+    "syllabus": [
+      "Linux系统管理精要",
+      "Shell脚本与自动化",
+      "Docker容器化深度",
+      "Kubernetes架构与运维",
+      "CI/CD流水线设计",
+      "GitOps与ArgoCD",
+      "Terraform基础设施即代码",
+      "监控告警体系",
+      "日志聚合与追踪",
+      "混沌工程与可靠性"
+    ],
+    "topics": [
+      "GitHub Actions",
+      "Jenkins",
+      "GitLab CI",
+      "Ansible",
+      "Pulumi"
+    ],
+    "faqs": [
+      {
+        "question": "DevOps和SRE的区别？",
+        "answer": "这是关于\"DevOps和SRE的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "K8s学习曲线多陡？",
+        "answer": "这是关于\"K8s学习曲线多陡\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GitOps？",
+        "answer": "这是关于\"什么是GitOps\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Linux系统管理精要",
+        "duration": "43分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Linux系统管理精要的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux系统管理精要的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Shell脚本与自动化",
+        "duration": "66分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Shell脚本与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Shell脚本与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Docker容器化深度",
+        "duration": "78分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解Docker容器化深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Docker容器化深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "Kubernetes架构与运维",
+        "duration": "43分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Kubernetes架构与运维的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Kubernetes架构与运维的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "CI/CD流水线设计",
+        "duration": "59分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解CI/CD流水线设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CI/CD流水线设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "GitOps与ArgoCD",
+        "duration": "86分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解GitOps与ArgoCD的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解GitOps与ArgoCD的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Terraform基础设施即代码",
+        "duration": "30分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Terraform基础设施即代码的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Terraform基础设施即代码的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "监控告警体系",
+        "duration": "57分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解监控告警体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解监控告警体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "日志聚合与追踪",
+        "duration": "56分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解日志聚合与追踪的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解日志聚合与追踪的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "混沌工程与可靠性",
+        "duration": "49分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解混沌工程与可靠性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解混沌工程与可靠性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "DevOps权威指南",
+        "author": "李沐",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解从零开始学DevOps",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "devops实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub Actions",
+        "purpose": "用于DevOps方向的GitHub Actions相关实践"
+      },
+      {
+        "name": "Jenkins",
+        "purpose": "用于DevOps方向的Jenkins相关实践"
+      },
+      {
+        "name": "GitLab CI",
+        "purpose": "用于DevOps方向的GitLab CI相关实践"
+      },
+      {
+        "name": "Ansible",
+        "purpose": "用于DevOps方向的Ansible相关实践"
+      },
+      {
+        "name": "Pulumi",
+        "purpose": "用于DevOps方向的Pulumi相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1079",
+    "title": "企业级DevOps：Linux系统管理：从用户到内核调优",
+    "category": "devops",
+    "categoryLabel": "DevOps",
+    "description": "本课程系统讲解DevOps领域的Linux系统管理：从用户到内核调优，由Mike Meyers主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "企业级DevOps：Linux系统管理：从用户到内核调优\n\n本课程由Mike Meyers精心打造，系统讲解DevOps方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Mike Meyers多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升DevOps能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对DevOps领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Mike Meyers",
+    "platform": "TryHackMe",
+    "level": "专家级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.6,
+    "students": 11710,
+    "duration": "54-55 小时",
+    "lessons": 31,
+    "tags": [
+      "DevOps",
+      "专家级",
+      "免费",
+      "devops"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000625601?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=DevOps%20Linux%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%EF%BC%9A%E4%BB%8E%E7%94%A8%E6%88%B7%E5%88%B0%E5%86%85%E6%A0%B8%E8%B0%83%E4%BC%98",
+    "resourceUrl": "https://docs.docker.com/",
+    "updatedAt": "2026-02-19 03:07",
+    "featured": false,
+    "syllabus": [
+      "Linux系统管理精要",
+      "Shell脚本与自动化",
+      "Docker容器化深度",
+      "Kubernetes架构与运维",
+      "CI/CD流水线设计",
+      "GitOps与ArgoCD",
+      "Terraform基础设施即代码",
+      "监控告警体系",
+      "日志聚合与追踪",
+      "混沌工程与可靠性"
+    ],
+    "topics": [
+      "GitHub Actions",
+      "Jenkins",
+      "GitLab CI",
+      "Ansible",
+      "Pulumi"
+    ],
+    "faqs": [
+      {
+        "question": "DevOps和SRE的区别？",
+        "answer": "这是关于\"DevOps和SRE的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "K8s学习曲线多陡？",
+        "answer": "这是关于\"K8s学习曲线多陡\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是GitOps？",
+        "answer": "这是关于\"什么是GitOps\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Linux系统管理精要",
+        "duration": "89分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Linux系统管理精要的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Linux系统管理精要的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "Shell脚本与自动化",
+        "duration": "51分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Shell脚本与自动化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Shell脚本与自动化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "Docker容器化深度",
+        "duration": "64分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Docker容器化深度的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Docker容器化深度的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "Kubernetes架构与运维",
+        "duration": "47分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Kubernetes架构与运维的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Kubernetes架构与运维的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "CI/CD流水线设计",
+        "duration": "67分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解CI/CD流水线设计的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CI/CD流水线设计的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "GitOps与ArgoCD",
+        "duration": "87分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解GitOps与ArgoCD的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解GitOps与ArgoCD的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Terraform基础设施即代码",
+        "duration": "39分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Terraform基础设施即代码的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Terraform基础设施即代码的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "监控告警体系",
+        "duration": "41分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解监控告警体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解监控告警体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "日志聚合与追踪",
+        "duration": "42分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解日志聚合与追踪的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解日志聚合与追踪的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "混沌工程与可靠性",
+        "duration": "46分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解混沌工程与可靠性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解混沌工程与可靠性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "DevOps权威指南",
+        "author": "Mike Meyers",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解企业级DevOps",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "devops实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "GitHub Actions",
+        "purpose": "用于DevOps方向的GitHub Actions相关实践"
+      },
+      {
+        "name": "Jenkins",
+        "purpose": "用于DevOps方向的Jenkins相关实践"
+      },
+      {
+        "name": "GitLab CI",
+        "purpose": "用于DevOps方向的GitLab CI相关实践"
+      },
+      {
+        "name": "Ansible",
+        "purpose": "用于DevOps方向的Ansible相关实践"
+      },
+      {
+        "name": "Pulumi",
+        "purpose": "用于DevOps方向的Pulumi相关实践"
+      }
+    ]
+  }
+]

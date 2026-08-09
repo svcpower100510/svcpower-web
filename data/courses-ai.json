@@ -1,0 +1,1424 @@
+[
+  {
+    "id": "TH-1080",
+    "title": "AI/大模型实战精讲：Python AI入门：从线性回归到大模型原理",
+    "category": "ai",
+    "categoryLabel": "AI/大模型",
+    "description": "本课程系统讲解AI/大模型领域的Python AI入门：从线性回归到大模型原理，由Gabriel Avramescu主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "AI/大模型实战精讲：Python AI入门：从线性回归到大模型原理\n\n本课程由Gabriel Avramescu精心打造，系统讲解AI/大模型方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Gabriel Avramescu多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升AI/大模型能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对AI/大模型领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Gabriel Avramescu",
+    "platform": "Coursera",
+    "level": "中高级",
+    "price": 35,
+    "isFree": false,
+    "rating": 4.7,
+    "students": 40402,
+    "duration": "26-39 小时",
+    "lessons": 18,
+    "tags": [
+      "AI/大模型",
+      "中高级",
+      "付费",
+      "ai"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000633520?w=400&h=225&fit=crop",
+    "redirectUrl": "https://python.langchain.com/docs",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=AI%2F%E5%A4%A7%E6%A8%A1%E5%9E%8B%20Python%20AI%E5%85%A5%E9%97%A8%EF%BC%9A%E4%BB%8E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%88%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86",
+    "resourceUrl": "https://platform.openai.com/docs",
+    "updatedAt": "2026-05-03 14:25",
+    "featured": false,
+    "syllabus": [
+      "Python AI开发环境搭建",
+      "数学基础：线性代数/概率/优化",
+      "机器学习：监督/无监督/强化",
+      "深度学习：CNN/RNN/Transformer",
+      "PyTorch实战：从训练到部署",
+      "大语言模型原理",
+      "Prompt Engineering精通",
+      "RAG检索增强生成",
+      "LangChain与Agent开发",
+      "AI安全：越狱/提示注入/模型窃取"
+    ],
+    "topics": [
+      "HuggingFace",
+      "LoRA微调",
+      "QLoRA",
+      "vLLM推理",
+      "LangGraph"
+    ],
+    "faqs": [
+      {
+        "question": "学AI需要多强数学？",
+        "answer": "这是关于\"学AI需要多强数学\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "微调和大模型API选哪个？",
+        "answer": "这是关于\"微调和大模型API选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "AI会取代程序员吗？",
+        "answer": "这是关于\"AI会取代程序员吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python AI开发环境搭建",
+        "duration": "43分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Python AI开发环境搭建的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python AI开发环境搭建的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "数学基础：线性代数/概率/优化",
+        "duration": "66分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解数学基础：线性代数/概率/优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数学基础：线性代数/概率/优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "机器学习：监督/无监督/强化",
+        "duration": "82分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解机器学习：监督/无监督/强化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解机器学习：监督/无监督/强化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "深度学习：CNN/RNN/Transformer",
+        "duration": "84分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解深度学习：CNN/RNN/Transformer的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解深度学习：CNN/RNN/Transformer的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "PyTorch实战：从训练到部署",
+        "duration": "35分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解PyTorch实战：从训练到部署的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PyTorch实战：从训练到部署的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "大语言模型原理",
+        "duration": "35分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解大语言模型原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大语言模型原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Prompt Engineering精通",
+        "duration": "49分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Prompt Engineering精通的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Prompt Engineering精通的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "RAG检索增强生成",
+        "duration": "37分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解RAG检索增强生成的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解RAG检索增强生成的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "LangChain与Agent开发",
+        "duration": "63分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解LangChain与Agent开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解LangChain与Agent开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "AI安全：越狱/提示注入/模型窃取",
+        "duration": "41分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解AI安全：越狱/提示注入/模型窃取的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解AI安全：越狱/提示注入/模型窃取的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "AI/大模型权威指南",
+        "author": "Gabriel Avramescu",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解AI/大模型实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "ai实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "HuggingFace",
+        "purpose": "用于AI/大模型方向的HuggingFace相关实践"
+      },
+      {
+        "name": "LoRA微调",
+        "purpose": "用于AI/大模型方向的LoRA微调相关实践"
+      },
+      {
+        "name": "QLoRA",
+        "purpose": "用于AI/大模型方向的QLoRA相关实践"
+      },
+      {
+        "name": "vLLM推理",
+        "purpose": "用于AI/大模型方向的vLLM推理相关实践"
+      },
+      {
+        "name": "LangGraph",
+        "purpose": "用于AI/大模型方向的LangGraph相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1081",
+    "title": "AI/大模型实战精讲：LangChain + RAG 构建企业知识库",
+    "category": "ai",
+    "categoryLabel": "AI/大模型",
+    "description": "本课程系统讲解AI/大模型领域的LangChain + RAG 构建企业知识库，由泷羽Sec主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "AI/大模型实战精讲：LangChain + RAG 构建企业知识库\n\n本课程由泷羽Sec精心打造，系统讲解AI/大模型方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师泷羽Sec多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升AI/大模型能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对AI/大模型领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "泷羽Sec",
+    "platform": "B站",
+    "level": "中级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.5,
+    "students": 13178,
+    "duration": "17-28 小时",
+    "lessons": 32,
+    "tags": [
+      "AI/大模型",
+      "中级",
+      "免费",
+      "ai"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000641439?w=400&h=225&fit=crop",
+    "redirectUrl": "https://space.bilibili.com/3690972712012078",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=AI%2F%E5%A4%A7%E6%A8%A1%E5%9E%8B%20LangChain%20%2B%20RAG%20%E6%9E%84%E5%BB%BA%E4%BC%81%E4%B8%9A%E7%9F%A5%E8%AF%86%E5%BA%93",
+    "resourceUrl": "https://platform.openai.com/docs",
+    "updatedAt": "2026-06-08 12:03",
+    "featured": false,
+    "syllabus": [
+      "Python AI开发环境搭建",
+      "数学基础：线性代数/概率/优化",
+      "机器学习：监督/无监督/强化",
+      "深度学习：CNN/RNN/Transformer",
+      "PyTorch实战：从训练到部署",
+      "大语言模型原理",
+      "Prompt Engineering精通",
+      "RAG检索增强生成",
+      "LangChain与Agent开发",
+      "AI安全：越狱/提示注入/模型窃取"
+    ],
+    "topics": [
+      "HuggingFace",
+      "LoRA微调",
+      "QLoRA",
+      "vLLM推理",
+      "LangGraph"
+    ],
+    "faqs": [
+      {
+        "question": "学AI需要多强数学？",
+        "answer": "这是关于\"学AI需要多强数学\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "微调和大模型API选哪个？",
+        "answer": "这是关于\"微调和大模型API选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "AI会取代程序员吗？",
+        "answer": "这是关于\"AI会取代程序员吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python AI开发环境搭建",
+        "duration": "78分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解Python AI开发环境搭建的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python AI开发环境搭建的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "数学基础：线性代数/概率/优化",
+        "duration": "54分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解数学基础：线性代数/概率/优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数学基础：线性代数/概率/优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "机器学习：监督/无监督/强化",
+        "duration": "49分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解机器学习：监督/无监督/强化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解机器学习：监督/无监督/强化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "深度学习：CNN/RNN/Transformer",
+        "duration": "88分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解深度学习：CNN/RNN/Transformer的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解深度学习：CNN/RNN/Transformer的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "PyTorch实战：从训练到部署",
+        "duration": "63分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解PyTorch实战：从训练到部署的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PyTorch实战：从训练到部署的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "大语言模型原理",
+        "duration": "87分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解大语言模型原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大语言模型原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Prompt Engineering精通",
+        "duration": "42分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Prompt Engineering精通的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Prompt Engineering精通的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "RAG检索增强生成",
+        "duration": "61分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解RAG检索增强生成的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解RAG检索增强生成的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "LangChain与Agent开发",
+        "duration": "48分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解LangChain与Agent开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解LangChain与Agent开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "AI安全：越狱/提示注入/模型窃取",
+        "duration": "45分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解AI安全：越狱/提示注入/模型窃取的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解AI安全：越狱/提示注入/模型窃取的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "AI/大模型权威指南",
+        "author": "泷羽Sec",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解AI/大模型实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "ai实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "HuggingFace",
+        "purpose": "用于AI/大模型方向的HuggingFace相关实践"
+      },
+      {
+        "name": "LoRA微调",
+        "purpose": "用于AI/大模型方向的LoRA微调相关实践"
+      },
+      {
+        "name": "QLoRA",
+        "purpose": "用于AI/大模型方向的QLoRA相关实践"
+      },
+      {
+        "name": "vLLM推理",
+        "purpose": "用于AI/大模型方向的vLLM推理相关实践"
+      },
+      {
+        "name": "LangGraph",
+        "purpose": "用于AI/大模型方向的LangGraph相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1082",
+    "title": "企业级AI/大模型：LLM微调：LoRA/QLoRA/全参数微调实战",
+    "category": "ai",
+    "categoryLabel": "AI/大模型",
+    "description": "本课程系统讲解AI/大模型领域的LLM微调：LoRA/QLoRA/全参数微调实战，由小迪安全主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "企业级AI/大模型：LLM微调：LoRA/QLoRA/全参数微调实战\n\n本课程由小迪安全精心打造，系统讲解AI/大模型方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师小迪安全多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升AI/大模型能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对AI/大模型领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "小迪安全",
+    "platform": "Udemy",
+    "level": "专家级",
+    "price": 25,
+    "isFree": false,
+    "rating": 4.8,
+    "students": 49601,
+    "duration": "51-58 小时",
+    "lessons": 34,
+    "tags": [
+      "AI/大模型",
+      "专家级",
+      "付费",
+      "ai"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000649358?w=400&h=225&fit=crop",
+    "redirectUrl": "https://python.langchain.com/docs",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=AI%2F%E5%A4%A7%E6%A8%A1%E5%9E%8B%20LLM%E5%BE%AE%E8%B0%83%EF%BC%9ALoRA",
+    "resourceUrl": "https://platform.openai.com/docs",
+    "updatedAt": "2026-06-08 06:10",
+    "featured": false,
+    "syllabus": [
+      "Python AI开发环境搭建",
+      "数学基础：线性代数/概率/优化",
+      "机器学习：监督/无监督/强化",
+      "深度学习：CNN/RNN/Transformer",
+      "PyTorch实战：从训练到部署",
+      "大语言模型原理",
+      "Prompt Engineering精通",
+      "RAG检索增强生成",
+      "LangChain与Agent开发",
+      "AI安全：越狱/提示注入/模型窃取"
+    ],
+    "topics": [
+      "HuggingFace",
+      "LoRA微调",
+      "QLoRA",
+      "vLLM推理",
+      "LangGraph"
+    ],
+    "faqs": [
+      {
+        "question": "学AI需要多强数学？",
+        "answer": "这是关于\"学AI需要多强数学\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "微调和大模型API选哪个？",
+        "answer": "这是关于\"微调和大模型API选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "AI会取代程序员吗？",
+        "answer": "这是关于\"AI会取代程序员吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python AI开发环境搭建",
+        "duration": "79分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Python AI开发环境搭建的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python AI开发环境搭建的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "数学基础：线性代数/概率/优化",
+        "duration": "44分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解数学基础：线性代数/概率/优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数学基础：线性代数/概率/优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "机器学习：监督/无监督/强化",
+        "duration": "37分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解机器学习：监督/无监督/强化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解机器学习：监督/无监督/强化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "深度学习：CNN/RNN/Transformer",
+        "duration": "46分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解深度学习：CNN/RNN/Transformer的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解深度学习：CNN/RNN/Transformer的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "PyTorch实战：从训练到部署",
+        "duration": "61分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解PyTorch实战：从训练到部署的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PyTorch实战：从训练到部署的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "大语言模型原理",
+        "duration": "68分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解大语言模型原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大语言模型原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Prompt Engineering精通",
+        "duration": "89分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Prompt Engineering精通的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Prompt Engineering精通的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "RAG检索增强生成",
+        "duration": "51分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解RAG检索增强生成的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解RAG检索增强生成的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "LangChain与Agent开发",
+        "duration": "49分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解LangChain与Agent开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解LangChain与Agent开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "AI安全：越狱/提示注入/模型窃取",
+        "duration": "60分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解AI安全：越狱/提示注入/模型窃取的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解AI安全：越狱/提示注入/模型窃取的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "AI/大模型权威指南",
+        "author": "小迪安全",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解企业级AI/大模型",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "ai实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "HuggingFace",
+        "purpose": "用于AI/大模型方向的HuggingFace相关实践"
+      },
+      {
+        "name": "LoRA微调",
+        "purpose": "用于AI/大模型方向的LoRA微调相关实践"
+      },
+      {
+        "name": "QLoRA",
+        "purpose": "用于AI/大模型方向的QLoRA相关实践"
+      },
+      {
+        "name": "vLLM推理",
+        "purpose": "用于AI/大模型方向的vLLM推理相关实践"
+      },
+      {
+        "name": "LangGraph",
+        "purpose": "用于AI/大模型方向的LangGraph相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1083",
+    "title": "企业级AI/大模型：AI Agent开发：AutoGPT/CrewAI/LangGraph",
+    "category": "ai",
+    "categoryLabel": "AI/大模型",
+    "description": "本课程系统讲解AI/大模型领域的AI Agent开发：AutoGPT/CrewAI/LangGraph，由千锋网络安全主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "企业级AI/大模型：AI Agent开发：AutoGPT/CrewAI/LangGraph\n\n本课程由千锋网络安全精心打造，系统讲解AI/大模型方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师千锋网络安全多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升AI/大模型能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对AI/大模型领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "千锋网络安全",
+    "platform": "学堂在线",
+    "level": "高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.5,
+    "students": 39369,
+    "duration": "38-43 小时",
+    "lessons": 22,
+    "tags": [
+      "AI/大模型",
+      "高级",
+      "免费",
+      "ai"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000657277?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "githubUrl": "https://github.com/search?q=AI%2F%E5%A4%A7%E6%A8%A1%E5%9E%8B%20AI%20Agent%E5%BC%80%E5%8F%91%EF%BC%9AAutoGPT",
+    "resourceUrl": "https://platform.openai.com/docs",
+    "updatedAt": "2026-01-04 07:55",
+    "featured": false,
+    "syllabus": [
+      "Python AI开发环境搭建",
+      "数学基础：线性代数/概率/优化",
+      "机器学习：监督/无监督/强化",
+      "深度学习：CNN/RNN/Transformer",
+      "PyTorch实战：从训练到部署",
+      "大语言模型原理",
+      "Prompt Engineering精通",
+      "RAG检索增强生成",
+      "LangChain与Agent开发",
+      "AI安全：越狱/提示注入/模型窃取"
+    ],
+    "topics": [
+      "HuggingFace",
+      "LoRA微调",
+      "QLoRA",
+      "vLLM推理",
+      "LangGraph"
+    ],
+    "faqs": [
+      {
+        "question": "学AI需要多强数学？",
+        "answer": "这是关于\"学AI需要多强数学\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "微调和大模型API选哪个？",
+        "answer": "这是关于\"微调和大模型API选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "AI会取代程序员吗？",
+        "answer": "这是关于\"AI会取代程序员吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python AI开发环境搭建",
+        "duration": "55分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Python AI开发环境搭建的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python AI开发环境搭建的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "数学基础：线性代数/概率/优化",
+        "duration": "48分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解数学基础：线性代数/概率/优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数学基础：线性代数/概率/优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "机器学习：监督/无监督/强化",
+        "duration": "55分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解机器学习：监督/无监督/强化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解机器学习：监督/无监督/强化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "深度学习：CNN/RNN/Transformer",
+        "duration": "52分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解深度学习：CNN/RNN/Transformer的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解深度学习：CNN/RNN/Transformer的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "PyTorch实战：从训练到部署",
+        "duration": "71分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解PyTorch实战：从训练到部署的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PyTorch实战：从训练到部署的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "大语言模型原理",
+        "duration": "64分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解大语言模型原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大语言模型原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Prompt Engineering精通",
+        "duration": "77分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解Prompt Engineering精通的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Prompt Engineering精通的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "RAG检索增强生成",
+        "duration": "89分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解RAG检索增强生成的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解RAG检索增强生成的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "LangChain与Agent开发",
+        "duration": "87分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解LangChain与Agent开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解LangChain与Agent开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "AI安全：越狱/提示注入/模型窃取",
+        "duration": "46分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解AI安全：越狱/提示注入/模型窃取的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解AI安全：越狱/提示注入/模型窃取的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "AI/大模型权威指南",
+        "author": "千锋网络安全",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解企业级AI/大模型",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "ai实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "HuggingFace",
+        "purpose": "用于AI/大模型方向的HuggingFace相关实践"
+      },
+      {
+        "name": "LoRA微调",
+        "purpose": "用于AI/大模型方向的LoRA微调相关实践"
+      },
+      {
+        "name": "QLoRA",
+        "purpose": "用于AI/大模型方向的QLoRA相关实践"
+      },
+      {
+        "name": "vLLM推理",
+        "purpose": "用于AI/大模型方向的vLLM推理相关实践"
+      },
+      {
+        "name": "LangGraph",
+        "purpose": "用于AI/大模型方向的LangGraph相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1084",
+    "title": "从零开始学AI/大模型：多模态大模型：视觉/语音/跨模态应用",
+    "category": "ai",
+    "categoryLabel": "AI/大模型",
+    "description": "本课程系统讲解AI/大模型领域的多模态大模型：视觉/语音/跨模态应用，由老杨聊渗透主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学AI/大模型：多模态大模型：视觉/语音/跨模态应用\n\n本课程由老杨聊渗透精心打造，系统讲解AI/大模型方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师老杨聊渗透多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升AI/大模型能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对AI/大模型领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "老杨聊渗透",
+    "platform": "B站",
+    "level": "高级",
+    "price": 35,
+    "isFree": false,
+    "rating": 4.4,
+    "students": 25433,
+    "duration": "37-52 小时",
+    "lessons": 35,
+    "tags": [
+      "AI/大模型",
+      "高级",
+      "付费",
+      "ai"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000665196?w=400&h=225&fit=crop",
+    "redirectUrl": "https://python.langchain.com/docs",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=AI%2F%E5%A4%A7%E6%A8%A1%E5%9E%8B%20%E5%A4%9A%E6%A8%A1%E6%80%81%E5%A4%A7%E6%A8%A1%E5%9E%8B%EF%BC%9A%E8%A7%86%E8%A7%89",
+    "resourceUrl": "https://platform.openai.com/docs",
+    "updatedAt": "2026-04-07 07:50",
+    "featured": false,
+    "syllabus": [
+      "Python AI开发环境搭建",
+      "数学基础：线性代数/概率/优化",
+      "机器学习：监督/无监督/强化",
+      "深度学习：CNN/RNN/Transformer",
+      "PyTorch实战：从训练到部署",
+      "大语言模型原理",
+      "Prompt Engineering精通",
+      "RAG检索增强生成",
+      "LangChain与Agent开发",
+      "AI安全：越狱/提示注入/模型窃取"
+    ],
+    "topics": [
+      "HuggingFace",
+      "LoRA微调",
+      "QLoRA",
+      "vLLM推理",
+      "LangGraph"
+    ],
+    "faqs": [
+      {
+        "question": "学AI需要多强数学？",
+        "answer": "这是关于\"学AI需要多强数学\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "微调和大模型API选哪个？",
+        "answer": "这是关于\"微调和大模型API选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "AI会取代程序员吗？",
+        "answer": "这是关于\"AI会取代程序员吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python AI开发环境搭建",
+        "duration": "31分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Python AI开发环境搭建的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python AI开发环境搭建的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "数学基础：线性代数/概率/优化",
+        "duration": "71分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解数学基础：线性代数/概率/优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数学基础：线性代数/概率/优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "机器学习：监督/无监督/强化",
+        "duration": "64分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解机器学习：监督/无监督/强化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解机器学习：监督/无监督/强化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "深度学习：CNN/RNN/Transformer",
+        "duration": "57分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解深度学习：CNN/RNN/Transformer的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解深度学习：CNN/RNN/Transformer的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "PyTorch实战：从训练到部署",
+        "duration": "50分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解PyTorch实战：从训练到部署的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PyTorch实战：从训练到部署的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "大语言模型原理",
+        "duration": "47分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解大语言模型原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大语言模型原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Prompt Engineering精通",
+        "duration": "30分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Prompt Engineering精通的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Prompt Engineering精通的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "RAG检索增强生成",
+        "duration": "46分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解RAG检索增强生成的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解RAG检索增强生成的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "LangChain与Agent开发",
+        "duration": "46分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解LangChain与Agent开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解LangChain与Agent开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "AI安全：越狱/提示注入/模型窃取",
+        "duration": "58分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解AI安全：越狱/提示注入/模型窃取的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解AI安全：越狱/提示注入/模型窃取的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "AI/大模型权威指南",
+        "author": "老杨聊渗透",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解从零开始学AI/大模型",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "ai实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "HuggingFace",
+        "purpose": "用于AI/大模型方向的HuggingFace相关实践"
+      },
+      {
+        "name": "LoRA微调",
+        "purpose": "用于AI/大模型方向的LoRA微调相关实践"
+      },
+      {
+        "name": "QLoRA",
+        "purpose": "用于AI/大模型方向的QLoRA相关实践"
+      },
+      {
+        "name": "vLLM推理",
+        "purpose": "用于AI/大模型方向的vLLM推理相关实践"
+      },
+      {
+        "name": "LangGraph",
+        "purpose": "用于AI/大模型方向的LangGraph相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1085",
+    "title": "AI/大模型实战精讲：AI安全：提示注入/越狱/模型窃取防御",
+    "category": "ai",
+    "categoryLabel": "AI/大模型",
+    "description": "本课程系统讲解AI/大模型领域的AI安全：提示注入/越狱/模型窃取防御，由Jason Dion主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "AI/大模型实战精讲：AI安全：提示注入/越狱/模型窃取防御\n\n本课程由Jason Dion精心打造，系统讲解AI/大模型方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Jason Dion多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升AI/大模型能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对AI/大模型领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Jason Dion",
+    "platform": "MIT OCW",
+    "level": "中高级",
+    "price": 25,
+    "isFree": false,
+    "rating": 4.7,
+    "students": 18072,
+    "duration": "24-35 小时",
+    "lessons": 10,
+    "tags": [
+      "AI/大模型",
+      "中高级",
+      "付费",
+      "ai"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000673115?w=400&h=225&fit=crop",
+    "redirectUrl": "https://huggingface.co/docs",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=AI%2F%E5%A4%A7%E6%A8%A1%E5%9E%8B%20AI%E5%AE%89%E5%85%A8%EF%BC%9A%E6%8F%90%E7%A4%BA%E6%B3%A8%E5%85%A5",
+    "resourceUrl": "https://platform.openai.com/docs",
+    "updatedAt": "2026-04-25 09:57",
+    "featured": false,
+    "syllabus": [
+      "Python AI开发环境搭建",
+      "数学基础：线性代数/概率/优化",
+      "机器学习：监督/无监督/强化",
+      "深度学习：CNN/RNN/Transformer",
+      "PyTorch实战：从训练到部署",
+      "大语言模型原理",
+      "Prompt Engineering精通",
+      "RAG检索增强生成",
+      "LangChain与Agent开发",
+      "AI安全：越狱/提示注入/模型窃取"
+    ],
+    "topics": [
+      "HuggingFace",
+      "LoRA微调",
+      "QLoRA",
+      "vLLM推理",
+      "LangGraph"
+    ],
+    "faqs": [
+      {
+        "question": "学AI需要多强数学？",
+        "answer": "这是关于\"学AI需要多强数学\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "微调和大模型API选哪个？",
+        "answer": "这是关于\"微调和大模型API选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "AI会取代程序员吗？",
+        "answer": "这是关于\"AI会取代程序员吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "Python AI开发环境搭建",
+        "duration": "30分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Python AI开发环境搭建的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Python AI开发环境搭建的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "数学基础：线性代数/概率/优化",
+        "duration": "81分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解数学基础：线性代数/概率/优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数学基础：线性代数/概率/优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "机器学习：监督/无监督/强化",
+        "duration": "71分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解机器学习：监督/无监督/强化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解机器学习：监督/无监督/强化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "深度学习：CNN/RNN/Transformer",
+        "duration": "83分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解深度学习：CNN/RNN/Transformer的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解深度学习：CNN/RNN/Transformer的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "PyTorch实战：从训练到部署",
+        "duration": "86分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解PyTorch实战：从训练到部署的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解PyTorch实战：从训练到部署的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "大语言模型原理",
+        "duration": "72分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解大语言模型原理的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解大语言模型原理的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "Prompt Engineering精通",
+        "duration": "58分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Prompt Engineering精通的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Prompt Engineering精通的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "RAG检索增强生成",
+        "duration": "43分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解RAG检索增强生成的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解RAG检索增强生成的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "LangChain与Agent开发",
+        "duration": "43分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解LangChain与Agent开发的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解LangChain与Agent开发的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "AI安全：越狱/提示注入/模型窃取",
+        "duration": "83分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解AI安全：越狱/提示注入/模型窃取的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解AI安全：越狱/提示注入/模型窃取的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "AI/大模型权威指南",
+        "author": "Jason Dion",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解AI/大模型实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "ai实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "HuggingFace",
+        "purpose": "用于AI/大模型方向的HuggingFace相关实践"
+      },
+      {
+        "name": "LoRA微调",
+        "purpose": "用于AI/大模型方向的LoRA微调相关实践"
+      },
+      {
+        "name": "QLoRA",
+        "purpose": "用于AI/大模型方向的QLoRA相关实践"
+      },
+      {
+        "name": "vLLM推理",
+        "purpose": "用于AI/大模型方向的vLLM推理相关实践"
+      },
+      {
+        "name": "LangGraph",
+        "purpose": "用于AI/大模型方向的LangGraph相关实践"
+      }
+    ]
+  }
+]

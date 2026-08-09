@@ -1,0 +1,713 @@
+[
+  {
+    "id": "TH-1030",
+    "title": "密码学进阶之路：密码学基础：对称/非对称/哈希/数字签名",
+    "category": "crypto",
+    "categoryLabel": "密码学",
+    "description": "本课程系统讲解密码学领域的密码学基础：对称/非对称/哈希/数字签名，由泷羽Sec主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "密码学进阶之路：密码学基础：对称/非对称/哈希/数字签名\n\n本课程由泷羽Sec精心打造，系统讲解密码学方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师泷羽Sec多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升密码学能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对密码学领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "泷羽Sec",
+    "platform": "MIT OCW",
+    "level": "专家级",
+    "price": 45,
+    "isFree": false,
+    "rating": 4.6,
+    "students": 34903,
+    "duration": "52-54 小时",
+    "lessons": 26,
+    "tags": [
+      "密码学",
+      "专家级",
+      "付费",
+      "crypto"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000237570?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.cloudflare.com/learning/ssl/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "githubUrl": "https://github.com/search?q=%E5%AF%86%E7%A0%81%E5%AD%A6%20%E5%AF%86%E7%A0%81%E5%AD%A6%E5%9F%BA%E7%A1%80%EF%BC%9A%E5%AF%B9%E7%A7%B0",
+    "resourceUrl": "https://cryptopals.com/",
+    "updatedAt": "2026-08-10 09:02",
+    "featured": false,
+    "syllabus": [
+      "密码学数学基础：数论与群论",
+      "对称加密：AES/DES/ChaCha20",
+      "非对称加密：RSA/ECC/ElGamal",
+      "哈希函数：MD5/SHA/Keccak",
+      "数字签名与证书体系",
+      "TLS/SSL协议深度解析",
+      "区块链密码学：零知识证明",
+      "侧信道攻击与实现漏洞",
+      "后量子密码学入门",
+      "密码学在CTF中的应用"
+    ],
+    "topics": [
+      "OpenSSL",
+      "Cryptool",
+      "SageMath",
+      "Lattice攻击",
+      "Padding Oracle"
+    ],
+    "faqs": [
+      {
+        "question": "RSA和ECC哪个更安全？",
+        "answer": "这是关于\"RSA和ECC哪个更安全\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是量子计算威胁？",
+        "answer": "这是关于\"什么是量子计算威胁\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "TLS 1.3改了什么？",
+        "answer": "这是关于\"TLS 1.3改了什么\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "密码学数学基础：数论与群论",
+        "duration": "83分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解密码学数学基础：数论与群论的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解密码学数学基础：数论与群论的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "对称加密：AES/DES/ChaCha20",
+        "duration": "45分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解对称加密：AES/DES/ChaCha20的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解对称加密：AES/DES/ChaCha20的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "非对称加密：RSA/ECC/ElGamal",
+        "duration": "46分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解非对称加密：RSA/ECC/ElGamal的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解非对称加密：RSA/ECC/ElGamal的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "哈希函数：MD5/SHA/Keccak",
+        "duration": "37分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解哈希函数：MD5/SHA/Keccak的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解哈希函数：MD5/SHA/Keccak的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "数字签名与证书体系",
+        "duration": "63分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解数字签名与证书体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数字签名与证书体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "TLS/SSL协议深度解析",
+        "duration": "32分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解TLS/SSL协议深度解析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TLS/SSL协议深度解析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "区块链密码学：零知识证明",
+        "duration": "76分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解区块链密码学：零知识证明的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解区块链密码学：零知识证明的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "侧信道攻击与实现漏洞",
+        "duration": "46分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解侧信道攻击与实现漏洞的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解侧信道攻击与实现漏洞的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "后量子密码学入门",
+        "duration": "48分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解后量子密码学入门的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解后量子密码学入门的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "密码学在CTF中的应用",
+        "duration": "87分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解密码学在CTF中的应用的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解密码学在CTF中的应用的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "密码学权威指南",
+        "author": "泷羽Sec",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解密码学进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "crypto实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "OpenSSL",
+        "purpose": "用于密码学方向的OpenSSL相关实践"
+      },
+      {
+        "name": "Cryptool",
+        "purpose": "用于密码学方向的Cryptool相关实践"
+      },
+      {
+        "name": "SageMath",
+        "purpose": "用于密码学方向的SageMath相关实践"
+      },
+      {
+        "name": "Lattice攻击",
+        "purpose": "用于密码学方向的Lattice攻击相关实践"
+      },
+      {
+        "name": "Padding Oracle",
+        "purpose": "用于密码学方向的Padding Oracle相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1031",
+    "title": "密码学进阶之路：TLS/SSL 协议深度解析与中间人攻击",
+    "category": "crypto",
+    "categoryLabel": "密码学",
+    "description": "本课程系统讲解密码学领域的TLS/SSL 协议深度解析与中间人攻击，由暗月MOON主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "密码学进阶之路：TLS/SSL 协议深度解析与中间人攻击\n\n本课程由暗月MOON精心打造，系统讲解密码学方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师暗月MOON多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升密码学能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对密码学领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "暗月MOON",
+    "platform": "PortSwigger",
+    "level": "初级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.6,
+    "students": 46836,
+    "duration": "9-24 小时",
+    "lessons": 33,
+    "tags": [
+      "密码学",
+      "初级",
+      "免费",
+      "crypto"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000245489?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=%E5%AF%86%E7%A0%81%E5%AD%A6%20TLS",
+    "resourceUrl": "https://cryptopals.com/",
+    "updatedAt": "2026-02-15 02:41",
+    "featured": false,
+    "syllabus": [
+      "密码学数学基础：数论与群论",
+      "对称加密：AES/DES/ChaCha20",
+      "非对称加密：RSA/ECC/ElGamal",
+      "哈希函数：MD5/SHA/Keccak",
+      "数字签名与证书体系",
+      "TLS/SSL协议深度解析",
+      "区块链密码学：零知识证明",
+      "侧信道攻击与实现漏洞",
+      "后量子密码学入门",
+      "密码学在CTF中的应用"
+    ],
+    "topics": [
+      "OpenSSL",
+      "Cryptool",
+      "SageMath",
+      "Lattice攻击",
+      "Padding Oracle"
+    ],
+    "faqs": [
+      {
+        "question": "RSA和ECC哪个更安全？",
+        "answer": "这是关于\"RSA和ECC哪个更安全\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是量子计算威胁？",
+        "answer": "这是关于\"什么是量子计算威胁\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "TLS 1.3改了什么？",
+        "answer": "这是关于\"TLS 1.3改了什么\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "密码学数学基础：数论与群论",
+        "duration": "71分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解密码学数学基础：数论与群论的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解密码学数学基础：数论与群论的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "对称加密：AES/DES/ChaCha20",
+        "duration": "49分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解对称加密：AES/DES/ChaCha20的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解对称加密：AES/DES/ChaCha20的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "非对称加密：RSA/ECC/ElGamal",
+        "duration": "74分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解非对称加密：RSA/ECC/ElGamal的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解非对称加密：RSA/ECC/ElGamal的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "哈希函数：MD5/SHA/Keccak",
+        "duration": "50分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解哈希函数：MD5/SHA/Keccak的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解哈希函数：MD5/SHA/Keccak的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "数字签名与证书体系",
+        "duration": "77分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解数字签名与证书体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数字签名与证书体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "TLS/SSL协议深度解析",
+        "duration": "75分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解TLS/SSL协议深度解析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TLS/SSL协议深度解析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "区块链密码学：零知识证明",
+        "duration": "36分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解区块链密码学：零知识证明的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解区块链密码学：零知识证明的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "侧信道攻击与实现漏洞",
+        "duration": "86分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解侧信道攻击与实现漏洞的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解侧信道攻击与实现漏洞的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "后量子密码学入门",
+        "duration": "84分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解后量子密码学入门的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解后量子密码学入门的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "密码学在CTF中的应用",
+        "duration": "37分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解密码学在CTF中的应用的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解密码学在CTF中的应用的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "密码学权威指南",
+        "author": "暗月MOON",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解密码学进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "crypto实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "OpenSSL",
+        "purpose": "用于密码学方向的OpenSSL相关实践"
+      },
+      {
+        "name": "Cryptool",
+        "purpose": "用于密码学方向的Cryptool相关实践"
+      },
+      {
+        "name": "SageMath",
+        "purpose": "用于密码学方向的SageMath相关实践"
+      },
+      {
+        "name": "Lattice攻击",
+        "purpose": "用于密码学方向的Lattice攻击相关实践"
+      },
+      {
+        "name": "Padding Oracle",
+        "purpose": "用于密码学方向的Padding Oracle相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1032",
+    "title": "从零开始学密码学：区块链安全：智能合约审计与重入攻击",
+    "category": "crypto",
+    "categoryLabel": "密码学",
+    "description": "本课程系统讲解密码学领域的区块链安全：智能合约审计与重入攻击，由Zaid Sabih主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学密码学：区块链安全：智能合约审计与重入攻击\n\n本课程由Zaid Sabih精心打造，系统讲解密码学方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Zaid Sabih多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升密码学能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对密码学领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Zaid Sabih",
+    "platform": "Coursera",
+    "level": "中高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.8,
+    "students": 29093,
+    "duration": "25-32 小时",
+    "lessons": 6,
+    "tags": [
+      "密码学",
+      "中高级",
+      "免费",
+      "crypto"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000253408?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "githubUrl": "https://github.com/search?q=%E5%AF%86%E7%A0%81%E5%AD%A6%20%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%EF%BC%9A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E5%AE%A1%E8%AE%A1%E4%B8%8E%E9%87%8D%E5%85%A5%E6%94%BB%E5%87%BB",
+    "resourceUrl": "https://cryptopals.com/",
+    "updatedAt": "2026-07-17 05:33",
+    "featured": false,
+    "syllabus": [
+      "密码学数学基础：数论与群论",
+      "对称加密：AES/DES/ChaCha20",
+      "非对称加密：RSA/ECC/ElGamal",
+      "哈希函数：MD5/SHA/Keccak",
+      "数字签名与证书体系",
+      "TLS/SSL协议深度解析",
+      "区块链密码学：零知识证明",
+      "侧信道攻击与实现漏洞",
+      "后量子密码学入门",
+      "密码学在CTF中的应用"
+    ],
+    "topics": [
+      "OpenSSL",
+      "Cryptool",
+      "SageMath",
+      "Lattice攻击",
+      "Padding Oracle"
+    ],
+    "faqs": [
+      {
+        "question": "RSA和ECC哪个更安全？",
+        "answer": "这是关于\"RSA和ECC哪个更安全\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是量子计算威胁？",
+        "answer": "这是关于\"什么是量子计算威胁\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "TLS 1.3改了什么？",
+        "answer": "这是关于\"TLS 1.3改了什么\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "密码学数学基础：数论与群论",
+        "duration": "50分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解密码学数学基础：数论与群论的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解密码学数学基础：数论与群论的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "对称加密：AES/DES/ChaCha20",
+        "duration": "53分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解对称加密：AES/DES/ChaCha20的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解对称加密：AES/DES/ChaCha20的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "非对称加密：RSA/ECC/ElGamal",
+        "duration": "70分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解非对称加密：RSA/ECC/ElGamal的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解非对称加密：RSA/ECC/ElGamal的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "哈希函数：MD5/SHA/Keccak",
+        "duration": "64分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解哈希函数：MD5/SHA/Keccak的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解哈希函数：MD5/SHA/Keccak的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "数字签名与证书体系",
+        "duration": "72分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解数字签名与证书体系的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解数字签名与证书体系的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "TLS/SSL协议深度解析",
+        "duration": "45分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解TLS/SSL协议深度解析的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解TLS/SSL协议深度解析的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "区块链密码学：零知识证明",
+        "duration": "38分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解区块链密码学：零知识证明的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解区块链密码学：零知识证明的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "侧信道攻击与实现漏洞",
+        "duration": "44分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解侧信道攻击与实现漏洞的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解侧信道攻击与实现漏洞的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "后量子密码学入门",
+        "duration": "42分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解后量子密码学入门的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解后量子密码学入门的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "密码学在CTF中的应用",
+        "duration": "46分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解密码学在CTF中的应用的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解密码学在CTF中的应用的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "密码学权威指南",
+        "author": "Zaid Sabih",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解从零开始学密码学",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "crypto实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "OpenSSL",
+        "purpose": "用于密码学方向的OpenSSL相关实践"
+      },
+      {
+        "name": "Cryptool",
+        "purpose": "用于密码学方向的Cryptool相关实践"
+      },
+      {
+        "name": "SageMath",
+        "purpose": "用于密码学方向的SageMath相关实践"
+      },
+      {
+        "name": "Lattice攻击",
+        "purpose": "用于密码学方向的Lattice攻击相关实践"
+      },
+      {
+        "name": "Padding Oracle",
+        "purpose": "用于密码学方向的Padding Oracle相关实践"
+      }
+    ]
+  }
+]

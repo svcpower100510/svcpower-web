@@ -1,0 +1,1187 @@
+[
+  {
+    "id": "TH-1058",
+    "title": "前端开发进阶之路：React 18 全家桶：Hooks/Redux/Next.js",
+    "category": "frontend",
+    "categoryLabel": "前端开发",
+    "description": "本课程系统讲解前端开发领域的React 18 全家桶：Hooks/Redux/Next.js，由湖科大教书匠主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "前端开发进阶之路：React 18 全家桶：Hooks/Redux/Next.js\n\n本课程由湖科大教书匠精心打造，系统讲解前端开发方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师湖科大教书匠多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升前端开发能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对前端开发领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "湖科大教书匠",
+    "platform": "FreeCodeCamp",
+    "level": "中高级",
+    "price": 25,
+    "isFree": false,
+    "rating": 4.9,
+    "students": 7210,
+    "duration": "29-34 小时",
+    "lessons": 12,
+    "tags": [
+      "前端开发",
+      "中高级",
+      "付费",
+      "frontend"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000459302?w=400&h=225&fit=crop",
+    "redirectUrl": "https://react.dev/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "githubUrl": "https://github.com/search?q=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%20React%2018%20%E5%85%A8%E5%AE%B6%E6%A1%B6%EF%BC%9AHooks",
+    "resourceUrl": "https://react.dev/",
+    "updatedAt": "2026-03-03 19:13",
+    "featured": false,
+    "syllabus": [
+      "HTML5语义化与可访问性",
+      "CSS3高级：Grid/Flex/Container",
+      "CSS动画与性能优化",
+      "React 18并发特性",
+      "Vue 3 Composition API",
+      "状态管理：Redux/Pinia",
+      "前端路由与SSR",
+      "性能优化：Core Web Vitals",
+      "微前端架构",
+      "跨端开发：React Native/Flutter"
+    ],
+    "topics": [
+      "Next.js",
+      "Nuxt",
+      "Web Components",
+      "PWA",
+      "Service Worker"
+    ],
+    "faqs": [
+      {
+        "question": "React和Vue选哪个？",
+        "answer": "这是关于\"React和Vue选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是SSR/SSG？",
+        "answer": "这是关于\"什么是SSR/SSG\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "前端架构师做什么？",
+        "answer": "这是关于\"前端架构师做什么\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "HTML5语义化与可访问性",
+        "duration": "83分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解HTML5语义化与可访问性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解HTML5语义化与可访问性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "CSS3高级：Grid/Flex/Container",
+        "duration": "63分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解CSS3高级：Grid/Flex/Container的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS3高级：Grid/Flex/Container的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "CSS动画与性能优化",
+        "duration": "38分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解CSS动画与性能优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS动画与性能优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "React 18并发特性",
+        "duration": "85分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解React 18并发特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解React 18并发特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Vue 3 Composition API",
+        "duration": "44分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解Vue 3 Composition API的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Vue 3 Composition API的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "状态管理：Redux/Pinia",
+        "duration": "66分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解状态管理：Redux/Pinia的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解状态管理：Redux/Pinia的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "前端路由与SSR",
+        "duration": "36分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解前端路由与SSR的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解前端路由与SSR的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "性能优化：Core Web Vitals",
+        "duration": "77分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解性能优化：Core Web Vitals的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解性能优化：Core Web Vitals的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "微前端架构",
+        "duration": "84分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解微前端架构的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解微前端架构的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "跨端开发：React Native/Flutter",
+        "duration": "76分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解跨端开发：React Native/Flutter的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解跨端开发：React Native/Flutter的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "前端开发权威指南",
+        "author": "湖科大教书匠",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解前端开发进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "frontend实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Next.js",
+        "purpose": "用于前端开发方向的Next.js相关实践"
+      },
+      {
+        "name": "Nuxt",
+        "purpose": "用于前端开发方向的Nuxt相关实践"
+      },
+      {
+        "name": "Web Components",
+        "purpose": "用于前端开发方向的Web Components相关实践"
+      },
+      {
+        "name": "PWA",
+        "purpose": "用于前端开发方向的PWA相关实践"
+      },
+      {
+        "name": "Service Worker",
+        "purpose": "用于前端开发方向的Service Worker相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1059",
+    "title": "前端开发核心原理与实战：Vue 3 + Pinia + Vite 企业级开发",
+    "category": "frontend",
+    "categoryLabel": "前端开发",
+    "description": "本课程系统讲解前端开发领域的Vue 3 + Pinia + Vite 企业级开发，由阮一峰主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "前端开发核心原理与实战：Vue 3 + Pinia + Vite 企业级开发\n\n本课程由阮一峰精心打造，系统讲解前端开发方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师阮一峰多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升前端开发能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对前端开发领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "阮一峰",
+    "platform": "FreeCodeCamp",
+    "level": "初级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.5,
+    "students": 27654,
+    "duration": "14-27 小时",
+    "lessons": 26,
+    "tags": [
+      "前端开发",
+      "初级",
+      "免费",
+      "frontend"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000467221?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "githubUrl": "https://github.com/search?q=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%20Vue%203%20%2B%20Pinia%20%2B%20Vite%20%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%BC%80%E5%8F%91",
+    "resourceUrl": "https://react.dev/",
+    "updatedAt": "2026-08-07 09:07",
+    "featured": false,
+    "syllabus": [
+      "HTML5语义化与可访问性",
+      "CSS3高级：Grid/Flex/Container",
+      "CSS动画与性能优化",
+      "React 18并发特性",
+      "Vue 3 Composition API",
+      "状态管理：Redux/Pinia",
+      "前端路由与SSR",
+      "性能优化：Core Web Vitals",
+      "微前端架构",
+      "跨端开发：React Native/Flutter"
+    ],
+    "topics": [
+      "Next.js",
+      "Nuxt",
+      "Web Components",
+      "PWA",
+      "Service Worker"
+    ],
+    "faqs": [
+      {
+        "question": "React和Vue选哪个？",
+        "answer": "这是关于\"React和Vue选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是SSR/SSG？",
+        "answer": "这是关于\"什么是SSR/SSG\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "前端架构师做什么？",
+        "answer": "这是关于\"前端架构师做什么\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "HTML5语义化与可访问性",
+        "duration": "45分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解HTML5语义化与可访问性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解HTML5语义化与可访问性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "CSS3高级：Grid/Flex/Container",
+        "duration": "37分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解CSS3高级：Grid/Flex/Container的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS3高级：Grid/Flex/Container的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "CSS动画与性能优化",
+        "duration": "40分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解CSS动画与性能优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS动画与性能优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "React 18并发特性",
+        "duration": "45分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解React 18并发特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解React 18并发特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Vue 3 Composition API",
+        "duration": "47分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解Vue 3 Composition API的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Vue 3 Composition API的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "状态管理：Redux/Pinia",
+        "duration": "79分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解状态管理：Redux/Pinia的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解状态管理：Redux/Pinia的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "前端路由与SSR",
+        "duration": "53分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解前端路由与SSR的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解前端路由与SSR的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "性能优化：Core Web Vitals",
+        "duration": "33分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解性能优化：Core Web Vitals的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解性能优化：Core Web Vitals的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "微前端架构",
+        "duration": "66分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解微前端架构的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解微前端架构的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "跨端开发：React Native/Flutter",
+        "duration": "59分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解跨端开发：React Native/Flutter的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解跨端开发：React Native/Flutter的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "前端开发权威指南",
+        "author": "阮一峰",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解前端开发核心原理与实战",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "frontend实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Next.js",
+        "purpose": "用于前端开发方向的Next.js相关实践"
+      },
+      {
+        "name": "Nuxt",
+        "purpose": "用于前端开发方向的Nuxt相关实践"
+      },
+      {
+        "name": "Web Components",
+        "purpose": "用于前端开发方向的Web Components相关实践"
+      },
+      {
+        "name": "PWA",
+        "purpose": "用于前端开发方向的PWA相关实践"
+      },
+      {
+        "name": "Service Worker",
+        "purpose": "用于前端开发方向的Service Worker相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1060",
+    "title": "前端开发大师课：CSS3高级：Grid/Flex/动画/响应式设计",
+    "category": "frontend",
+    "categoryLabel": "前端开发",
+    "description": "本课程系统讲解前端开发领域的CSS3高级：Grid/Flex/动画/响应式设计，由尤雨溪主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "前端开发大师课：CSS3高级：Grid/Flex/动画/响应式设计\n\n本课程由尤雨溪精心打造，系统讲解前端开发方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师尤雨溪多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升前端开发能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对前端开发领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "尤雨溪",
+    "platform": "edX",
+    "level": "中高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.3,
+    "students": 11955,
+    "duration": "29-31 小时",
+    "lessons": 20,
+    "tags": [
+      "前端开发",
+      "中高级",
+      "免费",
+      "frontend"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000475140?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "githubUrl": "https://github.com/search?q=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%20CSS3%E9%AB%98%E7%BA%A7%EF%BC%9AGrid",
+    "resourceUrl": "https://react.dev/",
+    "updatedAt": "2026-05-12 14:36",
+    "featured": false,
+    "syllabus": [
+      "HTML5语义化与可访问性",
+      "CSS3高级：Grid/Flex/Container",
+      "CSS动画与性能优化",
+      "React 18并发特性",
+      "Vue 3 Composition API",
+      "状态管理：Redux/Pinia",
+      "前端路由与SSR",
+      "性能优化：Core Web Vitals",
+      "微前端架构",
+      "跨端开发：React Native/Flutter"
+    ],
+    "topics": [
+      "Next.js",
+      "Nuxt",
+      "Web Components",
+      "PWA",
+      "Service Worker"
+    ],
+    "faqs": [
+      {
+        "question": "React和Vue选哪个？",
+        "answer": "这是关于\"React和Vue选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是SSR/SSG？",
+        "answer": "这是关于\"什么是SSR/SSG\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "前端架构师做什么？",
+        "answer": "这是关于\"前端架构师做什么\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "HTML5语义化与可访问性",
+        "duration": "57分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解HTML5语义化与可访问性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解HTML5语义化与可访问性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "CSS3高级：Grid/Flex/Container",
+        "duration": "39分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解CSS3高级：Grid/Flex/Container的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS3高级：Grid/Flex/Container的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "CSS动画与性能优化",
+        "duration": "36分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解CSS动画与性能优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS动画与性能优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "React 18并发特性",
+        "duration": "44分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解React 18并发特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解React 18并发特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Vue 3 Composition API",
+        "duration": "63分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解Vue 3 Composition API的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Vue 3 Composition API的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "状态管理：Redux/Pinia",
+        "duration": "52分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解状态管理：Redux/Pinia的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解状态管理：Redux/Pinia的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "前端路由与SSR",
+        "duration": "66分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解前端路由与SSR的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解前端路由与SSR的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "性能优化：Core Web Vitals",
+        "duration": "81分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解性能优化：Core Web Vitals的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解性能优化：Core Web Vitals的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "微前端架构",
+        "duration": "72分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解微前端架构的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解微前端架构的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "跨端开发：React Native/Flutter",
+        "duration": "75分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解跨端开发：React Native/Flutter的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解跨端开发：React Native/Flutter的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "前端开发权威指南",
+        "author": "尤雨溪",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解前端开发大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "frontend实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Next.js",
+        "purpose": "用于前端开发方向的Next.js相关实践"
+      },
+      {
+        "name": "Nuxt",
+        "purpose": "用于前端开发方向的Nuxt相关实践"
+      },
+      {
+        "name": "Web Components",
+        "purpose": "用于前端开发方向的Web Components相关实践"
+      },
+      {
+        "name": "PWA",
+        "purpose": "用于前端开发方向的PWA相关实践"
+      },
+      {
+        "name": "Service Worker",
+        "purpose": "用于前端开发方向的Service Worker相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1061",
+    "title": "前端开发实战精讲：前端性能优化：Core Web Vitals实战",
+    "category": "frontend",
+    "categoryLabel": "前端开发",
+    "description": "本课程系统讲解前端开发领域的前端性能优化：Core Web Vitals实战，由阮一峰主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "前端开发实战精讲：前端性能优化：Core Web Vitals实战\n\n本课程由阮一峰精心打造，系统讲解前端开发方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师阮一峰多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升前端开发能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对前端开发领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "阮一峰",
+    "platform": "慕课网",
+    "level": "中级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.3,
+    "students": 39140,
+    "duration": "20-20 小时",
+    "lessons": 12,
+    "tags": [
+      "前端开发",
+      "中级",
+      "免费",
+      "frontend"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000483059?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%20%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9ACore%20Web%20Vitals%E5%AE%9E%E6%88%98",
+    "resourceUrl": "https://react.dev/",
+    "updatedAt": "2026-04-26 06:00",
+    "featured": false,
+    "syllabus": [
+      "HTML5语义化与可访问性",
+      "CSS3高级：Grid/Flex/Container",
+      "CSS动画与性能优化",
+      "React 18并发特性",
+      "Vue 3 Composition API",
+      "状态管理：Redux/Pinia",
+      "前端路由与SSR",
+      "性能优化：Core Web Vitals",
+      "微前端架构",
+      "跨端开发：React Native/Flutter"
+    ],
+    "topics": [
+      "Next.js",
+      "Nuxt",
+      "Web Components",
+      "PWA",
+      "Service Worker"
+    ],
+    "faqs": [
+      {
+        "question": "React和Vue选哪个？",
+        "answer": "这是关于\"React和Vue选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是SSR/SSG？",
+        "answer": "这是关于\"什么是SSR/SSG\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "前端架构师做什么？",
+        "answer": "这是关于\"前端架构师做什么\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "HTML5语义化与可访问性",
+        "duration": "52分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解HTML5语义化与可访问性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解HTML5语义化与可访问性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "CSS3高级：Grid/Flex/Container",
+        "duration": "72分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解CSS3高级：Grid/Flex/Container的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS3高级：Grid/Flex/Container的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "CSS动画与性能优化",
+        "duration": "32分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解CSS动画与性能优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS动画与性能优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "React 18并发特性",
+        "duration": "40分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解React 18并发特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解React 18并发特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Vue 3 Composition API",
+        "duration": "30分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解Vue 3 Composition API的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Vue 3 Composition API的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "状态管理：Redux/Pinia",
+        "duration": "70分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解状态管理：Redux/Pinia的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解状态管理：Redux/Pinia的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "前端路由与SSR",
+        "duration": "52分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解前端路由与SSR的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解前端路由与SSR的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "性能优化：Core Web Vitals",
+        "duration": "72分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解性能优化：Core Web Vitals的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解性能优化：Core Web Vitals的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "微前端架构",
+        "duration": "75分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解微前端架构的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解微前端架构的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "跨端开发：React Native/Flutter",
+        "duration": "86分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解跨端开发：React Native/Flutter的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解跨端开发：React Native/Flutter的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "前端开发权威指南",
+        "author": "阮一峰",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解前端开发实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "frontend实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Next.js",
+        "purpose": "用于前端开发方向的Next.js相关实践"
+      },
+      {
+        "name": "Nuxt",
+        "purpose": "用于前端开发方向的Nuxt相关实践"
+      },
+      {
+        "name": "Web Components",
+        "purpose": "用于前端开发方向的Web Components相关实践"
+      },
+      {
+        "name": "PWA",
+        "purpose": "用于前端开发方向的PWA相关实践"
+      },
+      {
+        "name": "Service Worker",
+        "purpose": "用于前端开发方向的Service Worker相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1062",
+    "title": "前端开发进阶之路：Web Components 与微前端架构",
+    "category": "frontend",
+    "categoryLabel": "前端开发",
+    "description": "本课程系统讲解前端开发领域的Web Components 与微前端架构，由小迪安全主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "前端开发进阶之路：Web Components 与微前端架构\n\n本课程由小迪安全精心打造，系统讲解前端开发方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师小迪安全多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升前端开发能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对前端开发领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "小迪安全",
+    "platform": "Udemy",
+    "level": "初级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.4,
+    "students": 32705,
+    "duration": "11-22 小时",
+    "lessons": 6,
+    "tags": [
+      "前端开发",
+      "初级",
+      "免费",
+      "frontend"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000490978?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%20Web%20Components%20%E4%B8%8E%E5%BE%AE%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84",
+    "resourceUrl": "https://react.dev/",
+    "updatedAt": "2026-01-06 06:51",
+    "featured": false,
+    "syllabus": [
+      "HTML5语义化与可访问性",
+      "CSS3高级：Grid/Flex/Container",
+      "CSS动画与性能优化",
+      "React 18并发特性",
+      "Vue 3 Composition API",
+      "状态管理：Redux/Pinia",
+      "前端路由与SSR",
+      "性能优化：Core Web Vitals",
+      "微前端架构",
+      "跨端开发：React Native/Flutter"
+    ],
+    "topics": [
+      "Next.js",
+      "Nuxt",
+      "Web Components",
+      "PWA",
+      "Service Worker"
+    ],
+    "faqs": [
+      {
+        "question": "React和Vue选哪个？",
+        "answer": "这是关于\"React和Vue选哪个\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是SSR/SSG？",
+        "answer": "这是关于\"什么是SSR/SSG\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "前端架构师做什么？",
+        "answer": "这是关于\"前端架构师做什么\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "HTML5语义化与可访问性",
+        "duration": "30分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解HTML5语义化与可访问性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解HTML5语义化与可访问性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "CSS3高级：Grid/Flex/Container",
+        "duration": "59分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解CSS3高级：Grid/Flex/Container的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS3高级：Grid/Flex/Container的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "CSS动画与性能优化",
+        "duration": "84分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解CSS动画与性能优化的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解CSS动画与性能优化的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "React 18并发特性",
+        "duration": "34分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解React 18并发特性的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解React 18并发特性的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "Vue 3 Composition API",
+        "duration": "36分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解Vue 3 Composition API的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解Vue 3 Composition API的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "状态管理：Redux/Pinia",
+        "duration": "34分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解状态管理：Redux/Pinia的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解状态管理：Redux/Pinia的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "前端路由与SSR",
+        "duration": "86分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解前端路由与SSR的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解前端路由与SSR的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "性能优化：Core Web Vitals",
+        "duration": "52分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解性能优化：Core Web Vitals的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解性能优化：Core Web Vitals的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "微前端架构",
+        "duration": "66分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解微前端架构的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解微前端架构的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "跨端开发：React Native/Flutter",
+        "duration": "72分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解跨端开发：React Native/Flutter的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解跨端开发：React Native/Flutter的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "前端开发权威指南",
+        "author": "小迪安全",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解前端开发进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "frontend实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Next.js",
+        "purpose": "用于前端开发方向的Next.js相关实践"
+      },
+      {
+        "name": "Nuxt",
+        "purpose": "用于前端开发方向的Nuxt相关实践"
+      },
+      {
+        "name": "Web Components",
+        "purpose": "用于前端开发方向的Web Components相关实践"
+      },
+      {
+        "name": "PWA",
+        "purpose": "用于前端开发方向的PWA相关实践"
+      },
+      {
+        "name": "Service Worker",
+        "purpose": "用于前端开发方向的Service Worker相关实践"
+      }
+    ]
+  }
+]

@@ -1,0 +1,4922 @@
+[
+  {
+    "id": "TH-1008",
+    "title": "企业级渗透测试：Kali Linux 从零到实战：信息收集到提权完整流程",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的Kali Linux 从零到实战：信息收集到提权完整流程，由Martin Voelk主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "企业级渗透测试：Kali Linux 从零到实战：信息收集到提权完整流程\n\n本课程由Martin Voelk精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Martin Voelk多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Martin Voelk",
+    "platform": "学堂在线",
+    "level": "中级",
+    "price": 5,
+    "isFree": false,
+    "rating": 4.8,
+    "students": 23516,
+    "duration": "21-32 小时",
+    "lessons": 34,
+    "tags": [
+      "渗透测试",
+      "中级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000063352?w=400&h=225&fit=crop",
+    "redirectUrl": "https://tryhackme.com/",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20Kali%20Linux%20%E4%BB%8E%E9%9B%B6%E5%88%B0%E5%AE%9E%E6%88%98%EF%BC%9A%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%88%B0%E6%8F%90%E6%9D%83%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-05-28 08:15",
+    "featured": true,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "44分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "85分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "82分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "81分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "34分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "68分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "55分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "48分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "73分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "31分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Martin Voelk",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解企业级渗透测试",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1009",
+    "title": "渗透测试进阶之路：Metasploit Framework 深度利用与模块开发",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的Metasploit Framework 深度利用与模块开发，由老杨聊渗透主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试进阶之路：Metasploit Framework 深度利用与模块开发\n\n本课程由老杨聊渗透精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师老杨聊渗透多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "老杨聊渗透",
+    "platform": "MIT OCW",
+    "level": "中高级",
+    "price": 15,
+    "isFree": false,
+    "rating": 4.8,
+    "students": 43767,
+    "duration": "30-34 小时",
+    "lessons": 24,
+    "tags": [
+      "渗透测试",
+      "中高级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000071271?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.metasploit.com/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20Metasploit%20Framework%20%E6%B7%B1%E5%BA%A6%E5%88%A9%E7%94%A8%E4%B8%8E%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-06-05 09:01",
+    "featured": true,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "78分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "64分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "72分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "73分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "32分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "78分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "42分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "67分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "45分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "79分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "老杨聊渗透",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解渗透测试进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1010",
+    "title": "渗透测试大师课：Nmap 高级扫描与 NSE 脚本编写",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的Nmap 高级扫描与 NSE 脚本编写，由Zaid Sabih主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试大师课：Nmap 高级扫描与 NSE 脚本编写\n\n本课程由Zaid Sabih精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Zaid Sabih多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Zaid Sabih",
+    "platform": "Coursera",
+    "level": "中高级",
+    "price": 55,
+    "isFree": false,
+    "rating": 4.9,
+    "students": 7821,
+    "duration": "24-38 小时",
+    "lessons": 25,
+    "tags": [
+      "渗透测试",
+      "中高级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000079190?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.kali.org/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20Nmap%20%E9%AB%98%E7%BA%A7%E6%89%AB%E6%8F%8F%E4%B8%8E%20NSE%20%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-03-11 11:41",
+    "featured": true,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "53分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "61分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "58分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "66分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "89分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "50分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "60分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "51分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "72分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "75分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Zaid Sabih",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解渗透测试大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1011",
+    "title": "渗透测试进阶之路：SQLMap 自动化注入与绕过 WAF 技术",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的SQLMap 自动化注入与绕过 WAF 技术，由svcliny主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试进阶之路：SQLMap 自动化注入与绕过 WAF 技术\n\n本课程由svcliny精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师svcliny多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "svcliny",
+    "platform": "TryHackMe",
+    "level": "中级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.6,
+    "students": 3264,
+    "duration": "21-27 小时",
+    "lessons": 28,
+    "tags": [
+      "渗透测试",
+      "中级",
+      "免费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000087109?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20SQLMap%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B3%A8%E5%85%A5%E4%B8%8E%E7%BB%95%E8%BF%87%20WAF%20%E6%8A%80%E6%9C%AF",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-02-20 21:21",
+    "featured": true,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "31分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "45分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "78分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "47分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "79分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "89分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "81分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "33分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "89分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "66分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "svcliny",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解渗透测试进阶之路",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1012",
+    "title": "渗透测试大师课：内网渗透：域环境横向移动与黄金票据",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的内网渗透：域环境横向移动与黄金票据，由MS08067实验室主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试大师课：内网渗透：域环境横向移动与黄金票据\n\n本课程由MS08067实验室精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师MS08067实验室多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "MS08067实验室",
+    "platform": "Udemy",
+    "level": "中级",
+    "price": 25,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 14344,
+    "duration": "21-31 小时",
+    "lessons": 14,
+    "tags": [
+      "渗透测试",
+      "中级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000095028?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.metasploit.com/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%EF%BC%9A%E5%9F%9F%E7%8E%AF%E5%A2%83%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8%E4%B8%8E%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-07-21 18:34",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "55分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "45分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "89分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "40分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "88分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "55分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "52分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "60分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "82分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "78分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "MS08067实验室",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解渗透测试大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1013",
+    "title": "渗透测试核心原理与实战：社会工程学实战：钓鱼邮件与 SET 工具包",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的社会工程学实战：钓鱼邮件与 SET 工具包，由周亚金教授主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试核心原理与实战：社会工程学实战：钓鱼邮件与 SET 工具包\n\n本课程由周亚金教授精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师周亚金教授多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "周亚金教授",
+    "platform": "MIT OCW",
+    "level": "高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.7,
+    "students": 50234,
+    "duration": "43-47 小时",
+    "lessons": 6,
+    "tags": [
+      "渗透测试",
+      "高级",
+      "免费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000102947?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6%E5%AE%9E%E6%88%98%EF%BC%9A%E9%92%93%E9%B1%BC%E9%82%AE%E4%BB%B6%E4%B8%8E%20SET%20%E5%B7%A5%E5%85%B7%E5%8C%85",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-08-16 00:08",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "62分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "50分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "81分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "68分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "39分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "64分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "57分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "78分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "60分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "87分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "周亚金教授",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解渗透测试核心原理与实战",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1014",
+    "title": "渗透测试核心原理与实战：无线网络渗透：WPA2/WPA3 破解与 Evil Twin",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的无线网络渗透：WPA2/WPA3 破解与 Evil Twin，由Gabriel Avramescu主讲，覆盖从理论到实战的完整链路。适合中高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试核心原理与实战：无线网络渗透：WPA2/WPA3 破解与 Evil Twin\n\n本课程由Gabriel Avramescu精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Gabriel Avramescu多年实战经验总结\n\n【适合人群】\n• 中高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Gabriel Avramescu",
+    "platform": "MIT OCW",
+    "level": "中高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.4,
+    "students": 47110,
+    "duration": "29-28 小时",
+    "lessons": 12,
+    "tags": [
+      "渗透测试",
+      "中高级",
+      "免费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000110866?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%EF%BC%9AWPA2",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-05-26 17:13",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "30分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "71分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "51分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "73分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "89分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "64分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "85分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "60分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "76分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "87分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Gabriel Avramescu",
+        "type": "book",
+        "difficulty": "中高级"
+      },
+      {
+        "title": "深入理解渗透测试核心原理与实战",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1015",
+    "title": "从零开始学渗透测试：云环境渗透测试：AWS/Azure/GCP 攻击面",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的云环境渗透测试：AWS/Azure/GCP 攻击面，由Nathan House主讲，覆盖从理论到实战的完整链路。适合入门学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学渗透测试：云环境渗透测试：AWS/Azure/GCP 攻击面\n\n本课程由Nathan House精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Nathan House多年实战经验总结\n\n【适合人群】\n• 入门水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Nathan House",
+    "platform": "Udemy",
+    "level": "入门",
+    "price": 15,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 40083,
+    "duration": "8-16 小时",
+    "lessons": 6,
+    "tags": [
+      "渗透测试",
+      "入门",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000118785?w=400&h=225&fit=crop",
+    "redirectUrl": "https://tryhackme.com/",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E4%BA%91%E7%8E%AF%E5%A2%83%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%EF%BC%9AAWS",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-07-16 11:27",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "84分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "54分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "80分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "87分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "35分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "47分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "75分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "63分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "78分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "75分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Nathan House",
+        "type": "book",
+        "difficulty": "入门"
+      },
+      {
+        "title": "深入理解从零开始学渗透测试",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1016",
+    "title": "渗透测试大师课：Active Directory 攻防：从域用户到域管",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的Active Directory 攻防：从域用户到域管，由千锋网络安全主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试大师课：Active Directory 攻防：从域用户到域管\n\n本课程由千锋网络安全精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师千锋网络安全多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "千锋网络安全",
+    "platform": "B站",
+    "level": "专家级",
+    "price": 65,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 22250,
+    "duration": "55-58 小时",
+    "lessons": 31,
+    "tags": [
+      "渗透测试",
+      "专家级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000126704?w=400&h=225&fit=crop",
+    "redirectUrl": "https://tryhackme.com/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20Active%20Directory%20%E6%94%BB%E9%98%B2%EF%BC%9A%E4%BB%8E%E5%9F%9F%E7%94%A8%E6%88%B7%E5%88%B0%E5%9F%9F%E7%AE%A1",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-05-01 04:00",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "86分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "43分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "40分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "49分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "37分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "85分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "59分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "46分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "65分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "38分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "千锋网络安全",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解渗透测试大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1017",
+    "title": "渗透测试大师课：红队全链路：C2框架(Cobalt Strike/Sliver)实战",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的红队全链路：C2框架(Cobalt Strike/Sliver)实战，由Atul Tiwari主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试大师课：红队全链路：C2框架(Cobalt Strike/Sliver)实战\n\n本课程由Atul Tiwari精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Atul Tiwari多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Atul Tiwari",
+    "platform": "极客时间",
+    "level": "中级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.8,
+    "students": 45357,
+    "duration": "20-34 小时",
+    "lessons": 30,
+    "tags": [
+      "渗透测试",
+      "中级",
+      "免费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000134623?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E7%BA%A2%E9%98%9F%E5%85%A8%E9%93%BE%E8%B7%AF%EF%BC%9AC2%E6%A1%86%E6%9E%B6(Cobalt%20Strike",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-08-16 19:04",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "72分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "53分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "79分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "79分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "47分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "54分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "59分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "30分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "54分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "57分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Atul Tiwari",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解渗透测试大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1108",
+    "title": "企业级渗透测试：Kali Linux 从零到实战：信息收集到提权完整流程",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的Kali Linux 从零到实战：信息收集到提权完整流程，由凌曦安全主讲，覆盖从理论到实战的完整链路。适合中级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "企业级渗透测试：Kali Linux 从零到实战：信息收集到提权完整流程\n\n本课程由凌曦安全精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师凌曦安全多年实战经验总结\n\n【适合人群】\n• 中级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "凌曦安全",
+    "platform": "Coursera",
+    "level": "中级",
+    "price": 15,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 9103,
+    "duration": "22-23 小时",
+    "lessons": 19,
+    "tags": [
+      "渗透测试",
+      "中级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000855252?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.metasploit.com/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20Kali%20Linux%20%E4%BB%8E%E9%9B%B6%E5%88%B0%E5%AE%9E%E6%88%98%EF%BC%9A%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%88%B0%E6%8F%90%E6%9D%83%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-03-27 21:33",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "62分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "81分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "64分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "48分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "50分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "74分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "61分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "44分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "31分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "50分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "凌曦安全",
+        "type": "book",
+        "difficulty": "中级"
+      },
+      {
+        "title": "深入理解企业级渗透测试",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1109",
+    "title": "渗透测试大师课：Metasploit Framework 深度利用与模块开发",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的Metasploit Framework 深度利用与模块开发，由凌曦安全主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试大师课：Metasploit Framework 深度利用与模块开发\n\n本课程由凌曦安全精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师凌曦安全多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "凌曦安全",
+    "platform": "B站",
+    "level": "高级",
+    "price": 5,
+    "isFree": false,
+    "rating": 4.7,
+    "students": 44336,
+    "duration": "36-48 小时",
+    "lessons": 29,
+    "tags": [
+      "渗透测试",
+      "高级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000863171?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.kali.org/",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20Metasploit%20Framework%20%E6%B7%B1%E5%BA%A6%E5%88%A9%E7%94%A8%E4%B8%8E%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-04-17 10:27",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "81分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "44分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "55分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "47分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "32分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "75分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "74分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "33分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "58分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "79分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "凌曦安全",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解渗透测试大师课",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1110",
+    "title": "从零开始学渗透测试：Nmap 高级扫描与 NSE 脚本编写",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的Nmap 高级扫描与 NSE 脚本编写，由千锋网络安全主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学渗透测试：Nmap 高级扫描与 NSE 脚本编写\n\n本课程由千锋网络安全精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师千锋网络安全多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "千锋网络安全",
+    "platform": "学堂在线",
+    "level": "专家级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.7,
+    "students": 13314,
+    "duration": "53-62 小时",
+    "lessons": 31,
+    "tags": [
+      "渗透测试",
+      "专家级",
+      "免费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000871090?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wNvziEDL",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20Nmap%20%E9%AB%98%E7%BA%A7%E6%89%AB%E6%8F%8F%E4%B8%8E%20NSE%20%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-01-20 07:07",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "82分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "82分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "82分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "85分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "64分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "85分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "81分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "87分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "64分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "71分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "千锋网络安全",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解从零开始学渗透测试",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1111",
+    "title": "渗透测试实战精讲：SQLMap 自动化注入与绕过 WAF 技术",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的SQLMap 自动化注入与绕过 WAF 技术，由小迪安全主讲，覆盖从理论到实战的完整链路。适合初级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试实战精讲：SQLMap 自动化注入与绕过 WAF 技术\n\n本课程由小迪安全精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师小迪安全多年实战经验总结\n\n【适合人群】\n• 初级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "小迪安全",
+    "platform": "极客时间",
+    "level": "初级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.6,
+    "students": 48061,
+    "duration": "11-21 小时",
+    "lessons": 6,
+    "tags": [
+      "渗透测试",
+      "初级",
+      "免费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000879009?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.bilibili.com/video/BV1iW411f7Z4",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Lx411S7QT",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20SQLMap%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B3%A8%E5%85%A5%E4%B8%8E%E7%BB%95%E8%BF%87%20WAF%20%E6%8A%80%E6%9C%AF",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-05-11 21:08",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "35分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "75分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "87分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "58分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "43分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "83分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "38分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "48分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "48分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "74分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "小迪安全",
+        "type": "book",
+        "difficulty": "初级"
+      },
+      {
+        "title": "深入理解渗透测试实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1112",
+    "title": "渗透测试核心原理与实战：内网渗透：域环境横向移动与黄金票据",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的内网渗透：域环境横向移动与黄金票据，由Jason Dion主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试核心原理与实战：内网渗透：域环境横向移动与黄金票据\n\n本课程由Jason Dion精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Jason Dion多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Jason Dion",
+    "platform": "Coursera",
+    "level": "高级",
+    "price": 15,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 28316,
+    "duration": "43-42 小时",
+    "lessons": 14,
+    "tags": [
+      "渗透测试",
+      "高级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000886928?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.metasploit.com/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F%EF%BC%9A%E5%9F%9F%E7%8E%AF%E5%A2%83%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8%E4%B8%8E%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-01-25 06:59",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "52分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "75分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "70分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "65分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "74分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "35分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "55分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "32分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "49分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "33分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Jason Dion",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解渗透测试核心原理与实战",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1113",
+    "title": "渗透测试实战精讲：社会工程学实战：钓鱼邮件与 SET 工具包",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的社会工程学实战：钓鱼邮件与 SET 工具包，由Nathan House主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试实战精讲：社会工程学实战：钓鱼邮件与 SET 工具包\n\n本课程由Nathan House精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Nathan House多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Nathan House",
+    "platform": "TryHackMe",
+    "level": "高级",
+    "price": 45,
+    "isFree": false,
+    "rating": 4.6,
+    "students": 19879,
+    "duration": "40-48 小时",
+    "lessons": 24,
+    "tags": [
+      "渗透测试",
+      "高级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000894847?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.metasploit.com/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1at41167x7",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6%E5%AE%9E%E6%88%98%EF%BC%9A%E9%92%93%E9%B1%BC%E9%82%AE%E4%BB%B6%E4%B8%8E%20SET%20%E5%B7%A5%E5%85%B7%E5%8C%85",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-07-14 03:04",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "86分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "42分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "36分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "67分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "35分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "65分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "60分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "72分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "31分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "73分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Nathan House",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解渗透测试实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1114",
+    "title": "企业级渗透测试：无线网络渗透：WPA2/WPA3 破解与 Evil Twin",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的无线网络渗透：WPA2/WPA3 破解与 Evil Twin，由凌曦安全主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "企业级渗透测试：无线网络渗透：WPA2/WPA3 破解与 Evil Twin\n\n本课程由凌曦安全精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师凌曦安全多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "凌曦安全",
+    "platform": "MIT OCW",
+    "level": "高级",
+    "price": 25,
+    "isFree": false,
+    "rating": 4.5,
+    "students": 1842,
+    "duration": "40-41 小时",
+    "lessons": 34,
+    "tags": [
+      "渗透测试",
+      "高级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000902766?w=400&h=225&fit=crop",
+    "redirectUrl": "https://tryhackme.com/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E6%B8%97%E9%80%8F%EF%BC%9AWPA2",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-07-16 00:44",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "59分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "36分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "84分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "42分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "87分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "56分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "40分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "35分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "87分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "68分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "凌曦安全",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解企业级渗透测试",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1115",
+    "title": "渗透测试实战精讲：云环境渗透测试：AWS/Azure/GCP 攻击面",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的云环境渗透测试：AWS/Azure/GCP 攻击面，由Atul Tiwari主讲，覆盖从理论到实战的完整链路。适合高级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试实战精讲：云环境渗透测试：AWS/Azure/GCP 攻击面\n\n本课程由Atul Tiwari精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Atul Tiwari多年实战经验总结\n\n【适合人群】\n• 高级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Atul Tiwari",
+    "platform": "Udemy",
+    "level": "高级",
+    "price": 0,
+    "isFree": true,
+    "rating": 4.9,
+    "students": 26905,
+    "duration": "37-44 小时",
+    "lessons": 22,
+    "tags": [
+      "渗透测试",
+      "高级",
+      "免费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000910685?w=400&h=225&fit=crop",
+    "redirectUrl": "https://space.bilibili.com/3690972712012078",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xx411x7mD",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E4%BA%91%E7%8E%AF%E5%A2%83%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%EF%BC%9AAWS",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-02-04 16:19",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "40分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "44分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "42分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "60分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "36分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "52分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "34分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "66分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "73分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "38分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Atul Tiwari",
+        "type": "book",
+        "difficulty": "高级"
+      },
+      {
+        "title": "深入理解渗透测试实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1116",
+    "title": "从零开始学渗透测试：Active Directory 攻防：从域用户到域管",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的Active Directory 攻防：从域用户到域管，由凌曦安全主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "从零开始学渗透测试：Active Directory 攻防：从域用户到域管\n\n本课程由凌曦安全精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师凌曦安全多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "凌曦安全",
+    "platform": "Udemy",
+    "level": "专家级",
+    "price": 45,
+    "isFree": false,
+    "rating": 4.8,
+    "students": 3240,
+    "duration": "48-62 小时",
+    "lessons": 30,
+    "tags": [
+      "渗透测试",
+      "专家级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000918604?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.kali.org/",
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1J4411W7s6",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20Active%20Directory%20%E6%94%BB%E9%98%B2%EF%BC%9A%E4%BB%8E%E5%9F%9F%E7%94%A8%E6%88%B7%E5%88%B0%E5%9F%9F%E7%AE%A1",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-03-21 12:49",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "78分钟",
+        "lessons": 10,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "59分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "50分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "66分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "89分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "44分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "48分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "40分钟",
+        "lessons": 7,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "50分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "51分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "凌曦安全",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解从零开始学渗透测试",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  },
+  {
+    "id": "TH-1117",
+    "title": "渗透测试实战精讲：红队全链路：C2框架(Cobalt Strike/Sliver)实战",
+    "category": "penetration",
+    "categoryLabel": "渗透测试",
+    "description": "本课程系统讲解渗透测试领域的红队全链路：C2框架(Cobalt Strike/Sliver)实战，由Mike Meyers主讲，覆盖从理论到实战的完整链路。适合专家级学习者，学完后能独立解决真实场景问题。",
+    "longDescription": "渗透测试实战精讲：红队全链路：C2框架(Cobalt Strike/Sliver)实战\n\n本课程由Mike Meyers精心打造，系统讲解渗透测试方向的核心知识。\n\n【课程亮点】\n• 覆盖10个核心章节，从入门到精通\n• 每个知识点配套实战练习和真实案例\n• 定期更新，紧跟行业最新趋势\n• 提供完整源码和实验环境\n• 讲师Mike Meyers多年实战经验总结\n\n【适合人群】\n• 专家级水平的学习者\n• 希望系统提升渗透测试能力的开发者\n• 准备相关方向面试的求职者\n• 想从理论转向实战的技术人员\n\n【学习收获】\n完成本课程后，你将能够独立应对渗透测试领域的真实场景问题，掌握行业最佳实践，具备解决复杂技术难题的能力。",
+    "instructor": "Mike Meyers",
+    "platform": "极客时间",
+    "level": "专家级",
+    "price": 45,
+    "isFree": false,
+    "rating": 4.9,
+    "students": 46485,
+    "duration": "50-56 小时",
+    "lessons": 13,
+    "tags": [
+      "渗透测试",
+      "专家级",
+      "付费",
+      "penetration"
+    ],
+    "cover": "https://images.unsplash.com/photo-1500000926523?w=400&h=225&fit=crop",
+    "redirectUrl": "https://www.kali.org/",
+    "bilibiliUrl": "https://space.bilibili.com/3690972712012078",
+    "githubUrl": "https://github.com/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%20%E7%BA%A2%E9%98%9F%E5%85%A8%E9%93%BE%E8%B7%AF%EF%BC%9AC2%E6%A1%86%E6%9E%B6(Cobalt%20Strike",
+    "resourceUrl": "https://www.kali.org/",
+    "updatedAt": "2026-03-13 13:16",
+    "featured": false,
+    "syllabus": [
+      "渗透测试方法论与法律法规",
+      "信息收集：被动与主动侦察",
+      "漏洞扫描与Nessus实战",
+      "漏洞利用与Metasploit",
+      "提权技术：Windows/Linux",
+      "内网渗透与横向移动",
+      "域环境攻防实战",
+      "持久化与后渗透",
+      "免杀技术与绕过AV",
+      "报告撰写与沟通技巧"
+    ],
+    "topics": [
+      "Kali Linux工具集",
+      "Nmap脚本引擎",
+      "Metasploit模块开发",
+      "Cobalt Strike使用",
+      "Mimikatz凭证窃取",
+      "PowerSploit框架"
+    ],
+    "faqs": [
+      {
+        "question": "渗透测试合法吗？",
+        "answer": "这是关于\"渗透测试合法吗\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "Kali和Parrot的区别？",
+        "answer": "这是关于\"Kali和Parrot的区别\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "什么是红队演练？",
+        "answer": "这是关于\"什么是红队演练\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      },
+      {
+        "question": "如何学习内网渗透？",
+        "answer": "这是关于\"如何学习内网渗透\"的详细解答。本课程会在对应章节中深入讲解，配合实战练习帮助你彻底掌握。"
+      }
+    ],
+    "chapterDetails": [
+      {
+        "chapter": 1,
+        "title": "渗透测试方法论与法律法规",
+        "duration": "52分钟",
+        "lessons": 4,
+        "summary": "本章深入讲解渗透测试方法论与法律法规的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解渗透测试方法论与法律法规的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 2,
+        "title": "信息收集：被动与主动侦察",
+        "duration": "58分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解信息收集：被动与主动侦察的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解信息收集：被动与主动侦察的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 3,
+        "title": "漏洞扫描与Nessus实战",
+        "duration": "85分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解漏洞扫描与Nessus实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞扫描与Nessus实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 4,
+        "title": "漏洞利用与Metasploit",
+        "duration": "40分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解漏洞利用与Metasploit的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解漏洞利用与Metasploit的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 5,
+        "title": "提权技术：Windows/Linux",
+        "duration": "83分钟",
+        "lessons": 3,
+        "summary": "本章深入讲解提权技术：Windows/Linux的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解提权技术：Windows/Linux的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 6,
+        "title": "内网渗透与横向移动",
+        "duration": "52分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解内网渗透与横向移动的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解内网渗透与横向移动的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 7,
+        "title": "域环境攻防实战",
+        "duration": "68分钟",
+        "lessons": 5,
+        "summary": "本章深入讲解域环境攻防实战的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解域环境攻防实战的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 8,
+        "title": "持久化与后渗透",
+        "duration": "63分钟",
+        "lessons": 6,
+        "summary": "本章深入讲解持久化与后渗透的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解持久化与后渗透的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 9,
+        "title": "免杀技术与绕过AV",
+        "duration": "75分钟",
+        "lessons": 8,
+        "summary": "本章深入讲解免杀技术与绕过AV的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解免杀技术与绕过AV的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      },
+      {
+        "chapter": 10,
+        "title": "报告撰写与沟通技巧",
+        "duration": "66分钟",
+        "lessons": 9,
+        "summary": "本章深入讲解报告撰写与沟通技巧的核心概念与实践技巧，包含理论讲解、代码演示和课后练习。",
+        "keypoints": [
+          "理解报告撰写与沟通技巧的基本原理",
+          "掌握相关工具和命令的使用",
+          "能够独立完成实战练习",
+          "了解常见陷阱和最佳实践"
+        ]
+      }
+    ],
+    "readingList": [
+      {
+        "title": "渗透测试权威指南",
+        "author": "Mike Meyers",
+        "type": "book",
+        "difficulty": "专家级"
+      },
+      {
+        "title": "深入理解渗透测试实战精讲",
+        "author": "业内专家",
+        "type": "article",
+        "difficulty": "高级"
+      },
+      {
+        "title": "penetration实战手册",
+        "author": "TechHub团队",
+        "type": "ebook",
+        "difficulty": "初级"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Kali Linux工具集",
+        "purpose": "用于渗透测试方向的Kali Linux工具集相关实践"
+      },
+      {
+        "name": "Nmap脚本引擎",
+        "purpose": "用于渗透测试方向的Nmap脚本引擎相关实践"
+      },
+      {
+        "name": "Metasploit模块开发",
+        "purpose": "用于渗透测试方向的Metasploit模块开发相关实践"
+      },
+      {
+        "name": "Cobalt Strike使用",
+        "purpose": "用于渗透测试方向的Cobalt Strike使用相关实践"
+      },
+      {
+        "name": "Mimikatz凭证窃取",
+        "purpose": "用于渗透测试方向的Mimikatz凭证窃取相关实践"
+      },
+      {
+        "name": "PowerSploit框架",
+        "purpose": "用于渗透测试方向的PowerSploit框架相关实践"
+      }
+    ]
+  }
+]

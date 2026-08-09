@@ -1,1 +1,40 @@
-
+{
+  "total": 120,
+  "free": 60,
+  "paid": 60,
+  "byCategory": {
+    "web-security": 16,
+    "penetration": 20,
+    "ctf": 9,
+    "reverse": 5,
+    "crypto": 3,
+    "redblue": 5,
+    "malware": 3,
+    "compliance": 4,
+    "forensics": 2,
+    "python": 7,
+    "javascript": 4,
+    "frontend": 5,
+    "backend": 5,
+    "database": 5,
+    "devops": 7,
+    "ai": 6,
+    "system-design": 3,
+    "network": 3,
+    "os": 2,
+    "git": 3,
+    "career": 3
+  },
+  "priceDistribution": {
+    "0": 60,
+    "5": 11,
+    "15": 7,
+    "25": 10,
+    "35": 8,
+    "45": 9,
+    "55": 2,
+    "65": 8,
+    "75": 3,
+    "90": 2
+  }
+}
