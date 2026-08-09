@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B站 API — TechHub Pro API</title>
+<title>课程 API — TechHub Pro API</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 40px 24px; line-height: 1.8; color: #1a1f2e; background: #f8fafc; }
   h1 { font-size: 2rem; border-bottom: 3px solid #00d4ff; padding-bottom: 12px; }
@@ -54,26 +54,50 @@
   </ul>
 </nav>
 
-<h1>B站 API</h1>
+<h1>课程 API</h1>
 <p class="meta">TechHub Pro v4.0 · 最后更新: 2026-08-09 · 作者: svcliny</p>
 
 
-<h2>B站 API</h2>
+<h2>课程 API</h2>
+<h3>获取课程列表</h3>
 <div class="endpoint">
   <span class="method badge-get">GET</span>
-  <span class="url">/api/bilibili</span>
+  <span class="url">/api/courses?category=python&price=paid</span>
 </div>
-<p>返回精选 B站教程视频（12个），全部为真实 BV 号链接，点击直接播放。</p>
-<h3>响应字段</h3>
 <table>
-  <tr><th>字段</th><th>说明</th></tr>
-  <tr><td>bvid</td><td>B站视频 BV 号</td></tr>
-  <tr><td>title</td><td>视频标题</td></tr>
-  <tr><td>up</td><td>UP主名称</td></tr>
-  <tr><td>views</td><td>播放量</td></tr>
-  <tr><td>danmaku</td><td>弹幕数</td></tr>
-  <tr><td>url</td><td>完整播放链接</td></tr>
+  <tr><th>参数</th><th>类型</th><th>说明</th></tr>
+  <tr><td>category</td><td>string</td><td>分类过滤：python/javascript/web-security 等</td></tr>
+  <tr><td>price</td><td>string</td><td>free=免费 | paid=付费 | 留空=全部</td></tr>
+  <tr><td>sort</td><td>string</td><td>rating=按评分 | price_asc | price_desc</td></tr>
 </table>
+<h3>响应示例</h3>
+<pre><code>[{
+  "id": "TH-1000",
+  "title": "Python从入门到精通",
+  "category": "python",
+  "price": 0,
+  "isFree": true,
+  "rating": 4.8,
+  "redirectUrl": "https://www.bilibili.com/video/BV1xx411x7mD"
+}]</code></pre>
+<h3>获取单门课程</h3>
+<div class="endpoint">
+  <span class="method badge-get">GET</span>
+  <span class="url">/api/courses/{id}</span>
+</div>
+<h3>创建课程</h3>
+<div class="endpoint">
+  <span class="method badge-post">POST</span>
+  <span class="url">/api/courses</span>
+</div>
+<pre><code>{
+  "id": "TH-2000",
+  "title": "新课程",
+  "category": "ai",
+  "price": 45,
+  "isFree": false,
+  "description": "..."
+}</code></pre>
 
 <footer>
   <p>© 2026 svcliny (方). All Rights Reserved. · Apache License 2.0</p>

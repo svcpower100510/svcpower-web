@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B站 API — TechHub Pro API</title>
+<title>支付 API — TechHub Pro API</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 40px 24px; line-height: 1.8; color: #1a1f2e; background: #f8fafc; }
   h1 { font-size: 2rem; border-bottom: 3px solid #00d4ff; padding-bottom: 12px; }
@@ -54,26 +54,38 @@
   </ul>
 </nav>
 
-<h1>B站 API</h1>
+<h1>支付 API</h1>
 <p class="meta">TechHub Pro v4.0 · 最后更新: 2026-08-09 · 作者: svcliny</p>
 
 
-<h2>B站 API</h2>
+<h2>支付 API — 三轮核验</h2>
+<h3>支付验证</h3>
 <div class="endpoint">
-  <span class="method badge-get">GET</span>
-  <span class="url">/api/bilibili</span>
+  <span class="method badge-post">POST</span>
+  <span class="url">/api/payment/verify</span>
 </div>
-<p>返回精选 B站教程视频（12个），全部为真实 BV 号链接，点击直接播放。</p>
-<h3>响应字段</h3>
+<h3>请求体</h3>
+<pre><code>{
+  "orderId": "TH-20260809120000-ABC123",
+  "courseId": "TH-1005",
+  "amount": 45,
+  "timestamp": 1754726400000,
+  "signature": "a3f2b1c0d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0"
+}</code></pre>
+<h3>三轮核验流程</h3>
 <table>
-  <tr><th>字段</th><th>说明</th></tr>
-  <tr><td>bvid</td><td>B站视频 BV 号</td></tr>
-  <tr><td>title</td><td>视频标题</td></tr>
-  <tr><td>up</td><td>UP主名称</td></tr>
-  <tr><td>views</td><td>播放量</td></tr>
-  <tr><td>danmaku</td><td>弹幕数</td></tr>
-  <tr><td>url</td><td>完整播放链接</td></tr>
+  <tr><th>轮次</th><th>校验内容</th><th>失败原因</th></tr>
+  <tr><td>第1轮</td><td>金额/课程ID/订单号格式/15分钟超时</td><td>金额不匹配/订单号非法/超时</td></tr>
+  <tr><td>第2轮</td><td>HMAC-SHA256 签名校验 + 订单去重</td><td>签名失败/重放攻击</td></tr>
+  <tr><td>第3轮</td><td>服务端幂等 + DB确认 + 线程锁</td><td>订单已确认/处理中</td></tr>
 </table>
+<h3>响应</h3>
+<pre><code>// 成功
+{"ok": true, "round": 3, "redirectUrl": "https://..."}
+
+// 失败
+{"ok": false, "round": 2, "reason": "签名校验失败"}</code></pre>
+<div class="warning">⚠️ 每个订单号只能使用一次。重复提交将返回 round=3 错误。</div>
 
 <footer>
   <p>© 2026 svcliny (方). All Rights Reserved. · Apache License 2.0</p>

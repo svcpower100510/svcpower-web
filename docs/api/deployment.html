@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B站 API — TechHub Pro API</title>
+<title>部署指南 — TechHub Pro API</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 40px 24px; line-height: 1.8; color: #1a1f2e; background: #f8fafc; }
   h1 { font-size: 2rem; border-bottom: 3px solid #00d4ff; padding-bottom: 12px; }
@@ -54,25 +54,35 @@
   </ul>
 </nav>
 
-<h1>B站 API</h1>
+<h1>部署指南</h1>
 <p class="meta">TechHub Pro v4.0 · 最后更新: 2026-08-09 · 作者: svcliny</p>
 
 
-<h2>B站 API</h2>
-<div class="endpoint">
-  <span class="method badge-get">GET</span>
-  <span class="url">/api/bilibili</span>
-</div>
-<p>返回精选 B站教程视频（12个），全部为真实 BV 号链接，点击直接播放。</p>
-<h3>响应字段</h3>
+<h2>部署指南</h2>
+<h3>方案A：纯前端（推荐）</h3>
+<p>Cloudflare Pages 全球 CDN，零运维。</p>
+<pre><code>git push → Cloudflare 自动构建 → 全球边缘节点</code></pre>
+<h3>方案B：前端 + Java 后端</h3>
+<pre><code># 服务器：Ubuntu 22.04 LTS
+apt install openjdk-17-jdk
+git clone https://github.com/svcpower100510/svcpower-web.git
+cd svcpower-web
+./compile.sh
+nohup ./run.sh 8080 &</code></pre>
+<h3>方案C：Docker 部署</h3>
+<pre><code>FROM openjdk:17-alpine
+WORKDIR /app
+COPY . .
+RUN chmod +x compile.sh run.sh
+RUN ./compile.sh
+EXPOSE 8080
+CMD ["./run.sh", "8080"]</code></pre>
+<h3>环境变量</h3>
 <table>
-  <tr><th>字段</th><th>说明</th></tr>
-  <tr><td>bvid</td><td>B站视频 BV 号</td></tr>
-  <tr><td>title</td><td>视频标题</td></tr>
-  <tr><td>up</td><td>UP主名称</td></tr>
-  <tr><td>views</td><td>播放量</td></tr>
-  <tr><td>danmaku</td><td>弹幕数</td></tr>
-  <tr><td>url</td><td>完整播放链接</td></tr>
+  <tr><th>变量</th><th>默认值</th><th>说明</th></tr>
+  <tr><td>PORT</td><td>8080</td><td>HTTP 服务端口</td></tr>
+  <tr><td>HMAC_SECRET</td><td>内置密钥</td><td>支付签名密钥（生产环境应外部注入）</td></tr>
+  <tr><td>DB_PATH</td><td>techhub.db</td><td>SQLite 数据库路径</td></tr>
 </table>
 
 <footer>

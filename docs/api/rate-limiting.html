@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B站 API — TechHub Pro API</title>
+<title>限流策略 — TechHub Pro API</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 40px 24px; line-height: 1.8; color: #1a1f2e; background: #f8fafc; }
   h1 { font-size: 2rem; border-bottom: 3px solid #00d4ff; padding-bottom: 12px; }
@@ -54,26 +54,26 @@
   </ul>
 </nav>
 
-<h1>B站 API</h1>
+<h1>限流策略</h1>
 <p class="meta">TechHub Pro v4.0 · 最后更新: 2026-08-09 · 作者: svcliny</p>
 
 
-<h2>B站 API</h2>
-<div class="endpoint">
-  <span class="method badge-get">GET</span>
-  <span class="url">/api/bilibili</span>
-</div>
-<p>返回精选 B站教程视频（12个），全部为真实 BV 号链接，点击直接播放。</p>
-<h3>响应字段</h3>
+<h2>速率限制</h2>
+<p>为防止滥用，API 实施了速率限制策略。</p>
 <table>
-  <tr><th>字段</th><th>说明</th></tr>
-  <tr><td>bvid</td><td>B站视频 BV 号</td></tr>
-  <tr><td>title</td><td>视频标题</td></tr>
-  <tr><td>up</td><td>UP主名称</td></tr>
-  <tr><td>views</td><td>播放量</td></tr>
-  <tr><td>danmaku</td><td>弹幕数</td></tr>
-  <tr><td>url</td><td>完整播放链接</td></tr>
+  <tr><th>端点类型</th><th>限制</th><th>窗口</th></tr>
+  <tr><td>公开 GET</td><td>100 req/min</td><td>滑动窗口</td></tr>
+  <tr><td>搜索</td><td>30 req/min</td><td>固定窗口</td></tr>
+  <tr><td>支付验证</td><td>10 req/min</td><td>固定窗口</td></tr>
+  <tr><td>静态资源</td><td>不限</td><td>-</td></tr>
 </table>
+<h3>超限响应</h3>
+<pre><code>HTTP/1.1 429 Too Many Requests
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 60
+
+{"error": "RATE_LIMITED", "retryAfter": 45}</code></pre>
 
 <footer>
   <p>© 2026 svcliny (方). All Rights Reserved. · Apache License 2.0</p>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B站 API — TechHub Pro API</title>
+<title>错误码 — TechHub Pro API</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 40px 24px; line-height: 1.8; color: #1a1f2e; background: #f8fafc; }
   h1 { font-size: 2rem; border-bottom: 3px solid #00d4ff; padding-bottom: 12px; }
@@ -54,25 +54,22 @@
   </ul>
 </nav>
 
-<h1>B站 API</h1>
+<h1>错误码</h1>
 <p class="meta">TechHub Pro v4.0 · 最后更新: 2026-08-09 · 作者: svcliny</p>
 
 
-<h2>B站 API</h2>
-<div class="endpoint">
-  <span class="method badge-get">GET</span>
-  <span class="url">/api/bilibili</span>
-</div>
-<p>返回精选 B站教程视频（12个），全部为真实 BV 号链接，点击直接播放。</p>
-<h3>响应字段</h3>
+<h2>错误码参考</h2>
 <table>
-  <tr><th>字段</th><th>说明</th></tr>
-  <tr><td>bvid</td><td>B站视频 BV 号</td></tr>
-  <tr><td>title</td><td>视频标题</td></tr>
-  <tr><td>up</td><td>UP主名称</td></tr>
-  <tr><td>views</td><td>播放量</td></tr>
-  <tr><td>danmaku</td><td>弹幕数</td></tr>
-  <tr><td>url</td><td>完整播放链接</td></tr>
+  <tr><th>HTTP</th><th>错误码</th><th>说明</th><th>处理建议</th></tr>
+  <tr><td>400</td><td>BAD_REQUEST</td><td>请求参数错误</td><td>检查参数格式</td></tr>
+  <tr><td>400</td><td>INVALID_SIGNATURE</td><td>签名校验失败</td><td>重新计算签名</td></tr>
+  <tr><td>400</td><td>AMOUNT_MISMATCH</td><td>金额不匹配</td><td>核对课程价格</td></tr>
+  <tr><td>400</td><td>ORDER_TIMEOUT</td><td>订单超时</td><td>重新创建订单</td></tr>
+  <tr><td>400</td><td>REPLAY_ATTACK</td><td>重放攻击</td><td>使用新订单号</td></tr>
+  <tr><td>403</td><td>FORBIDDEN</td><td>禁止访问</td><td>检查路径遍历</td></tr>
+  <tr><td>404</td><td>NOT_FOUND</td><td>资源不存在</td><td>检查ID是否正确</td></tr>
+  <tr><td>429</td><td>RATE_LIMITED</td><td>请求过于频繁</td><td>降低请求频率</td></tr>
+  <tr><td>500</td><td>SERVER_ERROR</td><td>服务器内部错误</td><td>联系管理员</td></tr>
 </table>
 
 <footer>

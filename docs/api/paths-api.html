@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B站 API — TechHub Pro API</title>
+<title>学习路线 API — TechHub Pro API</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 40px 24px; line-height: 1.8; color: #1a1f2e; background: #f8fafc; }
   h1 { font-size: 2rem; border-bottom: 3px solid #00d4ff; padding-bottom: 12px; }
@@ -54,26 +54,30 @@
   </ul>
 </nav>
 
-<h1>B站 API</h1>
+<h1>学习路线 API</h1>
 <p class="meta">TechHub Pro v4.0 · 最后更新: 2026-08-09 · 作者: svcliny</p>
 
 
-<h2>B站 API</h2>
+<h2>学习路线 API</h2>
 <div class="endpoint">
   <span class="method badge-get">GET</span>
-  <span class="url">/api/bilibili</span>
+  <span class="url">/api/paths</span>
 </div>
-<p>返回精选 B站教程视频（12个），全部为真实 BV 号链接，点击直接播放。</p>
-<h3>响应字段</h3>
-<table>
-  <tr><th>字段</th><th>说明</th></tr>
-  <tr><td>bvid</td><td>B站视频 BV 号</td></tr>
-  <tr><td>title</td><td>视频标题</td></tr>
-  <tr><td>up</td><td>UP主名称</td></tr>
-  <tr><td>views</td><td>播放量</td></tr>
-  <tr><td>danmaku</td><td>弹幕数</td></tr>
-  <tr><td>url</td><td>完整播放链接</td></tr>
-</table>
+<p>返回 5 条学习路线：前端、后端、全栈、网络安全、AI 工程师。</p>
+<h3>路线结构</h3>
+<pre><code>{
+  "id": "cybersec",
+  "title": "网络安全路线",
+  "duration": "12-18个月",
+  "steps": [
+    "网络+Linux基础",
+    "Web安全+OWASP",
+    "渗透测试+工具链",
+    "红蓝对抗+应急响应",
+    "CTF+证书(OSCP/CISSP)"
+  ],
+  "url": "https://roadmap.sh/cyber-security"
+}</code></pre>
 
 <footer>
   <p>© 2026 svcliny (方). All Rights Reserved. · Apache License 2.0</p>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>B站 API — TechHub Pro API</title>
+<title>TechHub Pro API 文档 — TechHub Pro API</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 960px; margin: 0 auto; padding: 40px 24px; line-height: 1.8; color: #1a1f2e; background: #f8fafc; }
   h1 { font-size: 2rem; border-bottom: 3px solid #00d4ff; padding-bottom: 12px; }
@@ -54,26 +54,32 @@
   </ul>
 </nav>
 
-<h1>B站 API</h1>
+<h1>TechHub Pro API 文档</h1>
 <p class="meta">TechHub Pro v4.0 · 最后更新: 2026-08-09 · 作者: svcliny</p>
 
 
-<h2>B站 API</h2>
+<h2>欢迎使用 TechHub Pro API</h2>
+<p>TechHub Pro 提供完整的 RESTful API，支持课程管理、支付核验、搜索、数据统计等功能。</p>
 <div class="endpoint">
   <span class="method badge-get">GET</span>
-  <span class="url">/api/bilibili</span>
+  <span class="url">/api/health</span>
+  <p>健康检查端点，返回服务状态和版本信息。</p>
 </div>
-<p>返回精选 B站教程视频（12个），全部为真实 BV 号链接，点击直接播放。</p>
-<h3>响应字段</h3>
+<h3>基础信息</h3>
 <table>
-  <tr><th>字段</th><th>说明</th></tr>
-  <tr><td>bvid</td><td>B站视频 BV 号</td></tr>
-  <tr><td>title</td><td>视频标题</td></tr>
-  <tr><td>up</td><td>UP主名称</td></tr>
-  <tr><td>views</td><td>播放量</td></tr>
-  <tr><td>danmaku</td><td>弹幕数</td></tr>
-  <tr><td>url</td><td>完整播放链接</td></tr>
+  <tr><th>项目</th><th>值</th></tr>
+  <tr><td>Base URL</td><td>https://techhub-svcliny.pages.dev/api</td></tr>
+  <tr><td>协议</td><td>HTTPS only</td></tr>
+  <tr><td>数据格式</td><td>JSON (UTF-8)</td></tr>
+  <tr><td>认证方式</td><td>HMAC-SHA256 签名</td></tr>
+  <tr><td>速率限制</td><td>100 req/min/IP</td></tr>
 </table>
+<h3>响应格式</h3>
+<pre><code>{
+  "status": "ok",
+  "version": "4.0.0",
+  "data": { ... }
+}</code></pre>
 
 <footer>
   <p>© 2026 svcliny (方). All Rights Reserved. · Apache License 2.0</p>
