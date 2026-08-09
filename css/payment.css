@@ -1,0 +1,162 @@
+/* TechHub Pro v5.0 — 支付弹窗样式（2026-08 更新收款码） */
+
+.pay-overlay {
+  position:fixed; inset:0; z-index:9998;
+  background:rgba(0,0,0,0.7); backdrop-filter:blur(6px);
+  display:flex; align-items:center; justify-content:center;
+  padding:20px; animation:fadeIn .25s ease;
+}
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+.pay-modal, .course-detail {
+  background:var(--card); border-radius:18px;
+  border:1px solid var(--border);
+  width:100%; max-width:460px; max-height:90vh; overflow-y:auto;
+  padding:28px 24px 22px; position:relative;
+  animation:slideUp .3s cubic-bezier(.16,1,.3,1);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+@keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+.pay-close {
+  position:absolute; top:12px; right:14px;
+  width:32px; height:32px; border-radius:50%;
+  font-size:1.4rem; color:var(--text3);
+  display:flex; align-items:center; justify-content:center;
+  transition:all .2s;
+}
+.pay-close:hover { background:var(--bg3); color:var(--text); }
+
+.pay-header { text-align:center; margin-bottom:8px; }
+.pay-header h3 { font-size:1.2rem; font-weight:800; }
+.pay-course { display:block; font-size:0.85rem; color:var(--text2); margin-top:4px; }
+
+.pay-amount {
+  text-align:center; font-size:2.4rem; font-weight:900;
+  color:var(--accent); margin:16px 0 6px;
+}
+.pay-amount b { font-size:2.6rem; }
+
+.pay-order {
+  text-align:center; font-size:0.78rem; color:var(--text3);
+  margin-bottom:18px;
+}
+.pay-order code {
+  background:var(--bg3); padding:2px 8px; border-radius:4px;
+  font-family:monospace; color:var(--text2);
+}
+
+/* 支付方式 */
+.pay-methods { display:flex; gap:8px; margin-bottom:18px; }
+.pay-method {
+  flex:1; padding:10px; border-radius:10px;
+  background:var(--bg3); color:var(--text2);
+  font-size:0.9rem; font-weight:600; transition:all .2s;
+  border:1px solid transparent;
+}
+.pay-method:hover { color:var(--text); }
+.pay-method.active {
+  background:rgba(7,193,96,0.15); color:var(--accent3);
+  border-color:rgba(7,193,96,0.4);
+}
+
+/* 二维码区域 */
+.pay-qrcode-area { text-align:center; margin-bottom:18px; }
+.qrcode-img-wrap {
+  display:inline-block; padding:10px;
+  background:#fff; border-radius:12px;
+  margin-bottom:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.2);
+  min-width:200px; min-height:200px;
+  position:relative;
+}
+.qrcode-img-wrap svg, .qrcode-img-wrap img {
+  display:block; width:220px; height:220px;
+  border-radius:8px;
+}
+.qrcode-img-wrap.loading::before {
+  content:'⏳ 加载中...';
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  font-size:0.85rem; color:#666;
+}
+.qrcode-img-wrap.error::before {
+  content:'⚠️ 二维码加载失败，请联系作者';
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  font-size:0.8rem; color:#e74c3c;
+  white-space:nowrap;
+}
+.pay-hint { font-size:0.92rem; color:var(--text); margin-bottom:4px; }
+.pay-hint b { color:var(--accent); }
+.pay-hint-sub { font-size:0.78rem; color:var(--text3); margin-bottom:2px; }
+
+/* 三轮核验状态 */
+.pay-verify-steps { margin-bottom:18px; }
+.verify-step {
+  display:flex; align-items:center; gap:10px;
+  padding:8px 12px; border-radius:8px;
+  font-size:0.85rem; color:var(--text3);
+  margin-bottom:6px; transition:all .3s;
+}
+.verify-step .dot {
+  width:10px; height:10px; border-radius:50%;
+  background:var(--bg3); border:2px solid var(--text3);
+  transition:all .3s;
+}
+.verify-step.done { color:var(--success); background:rgba(7,193,96,0.08); }
+.verify-step.done .dot { background:var(--success); border-color:var(--success); }
+.verify-step.fail { color:var(--danger); background:rgba(239,68,68,0.08); }
+.verify-step.fail .dot { background:var(--danger); border-color:var(--danger); }
+
+/* 按钮 */
+.pay-actions { display:flex; gap:10px; margin-bottom:14px; }
+.btn-pay-confirm {
+  flex:2; padding:13px; border-radius:10px; font-weight:700; font-size:1rem;
+  background:var(--grad); color:#fff; transition:all .2s;
+}
+.btn-pay-confirm:hover:not(:disabled) { filter:brightness(1.1); transform:scale(1.01); }
+.btn-pay-confirm:disabled { opacity:0.6; cursor:wait; }
+.btn-pay-cancel {
+  flex:1; padding:13px; border-radius:10px; font-weight:600;
+  background:var(--bg3); color:var(--text2); transition:all .2s;
+}
+.btn-pay-cancel:hover { color:var(--text); }
+
+.pay-footer {
+  display:flex; justify-content:space-between;
+  font-size:0.75rem; color:var(--text3);
+  padding-top:12px; border-top:1px solid var(--border);
+}
+
+/* 课程详情弹窗 */
+.course-detail { max-width:560px; }
+.course-detail h2 { font-size:1.2rem; font-weight:800; margin-bottom:12px; padding-right:30px; }
+.detail-meta { display:flex; gap:14px; flex-wrap:wrap; font-size:0.82rem; color:var(--text3); margin-bottom:14px; }
+.detail-body { font-size:0.9rem; color:var(--text2); line-height:1.7; margin-bottom:16px; }
+.detail-body p { margin-bottom:8px; }
+.detail-links { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px; }
+.detail-links a {
+  padding:6px 14px; border-radius:8px; font-size:0.82rem;
+  background:var(--bg3); color:var(--text2); font-weight:600;
+}
+.detail-links a:hover { color:var(--accent); }
+.detail-actions { text-align:center; }
+.detail-actions button { padding:12px 32px; border-radius:10px; font-weight:700; font-size:1rem; }
+
+/* 安全提示栏 */
+.security-bar {
+  display:flex; gap:16px; flex-wrap:wrap;
+  padding:10px 16px; margin-bottom:20px;
+  background:rgba(7,193,96,0.08); border:1px solid rgba(7,193,96,0.2);
+  border-radius:10px; font-size:0.82rem; color:var(--success);
+}
+.security-bar span { display:flex; align-items:center; gap:4px; }
+
+/* 响应式 */
+@media (max-width:500px) {
+  .pay-modal, .course-detail { padding:22px 16px 18px; }
+  .pay-amount { font-size:2rem; }
+  .qrcode-img-wrap svg, .qrcode-img-wrap img { width:180px; height:180px; }
+  .pay-methods { flex-direction:column; }
+}
