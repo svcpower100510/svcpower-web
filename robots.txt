@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /server/
+Disallow: /data/
+Disallow: /test-all.js
+Disallow: /compile.sh
+Disallow: /run.sh
+
+Sitemap: https://techhub-svcliny.pages.dev/sitemap.xml
