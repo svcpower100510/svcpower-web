@@ -1,0 +1,282 @@
+/* ============================================================
+   TechHub Pro v6.0 — 认证系统样式
+   ============================================================ */
+
+/* ========== 用户面板 ========== */
+.user-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-width: 280px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: none;
+}
+.user-panel.open { display: block; }
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+.user-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; font-weight: 700; color: #fff;
+}
+.user-name { font-weight: 600; font-size: 1rem; }
+.vip-badge { font-size: 0.75rem; background: linear-gradient(90deg, #ffd700, #ffaa00); color: #333; padding: 1px 6px; border-radius: 4px; margin-left: 6px; }
+.user-email { font-size: 0.8rem; color: var(--text-muted); }
+.vip-days { font-size: 0.8rem; color: var(--gold); margin-top: 2px; }
+
+.user-stats {
+  display: flex; gap: 1rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.user-stats .stat { text-align: center; flex: 1; }
+.stat-num { display: block; font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 0.75rem; color: var(--text-muted); }
+
+.user-actions { display: flex; gap: 8px; }
+
+/* ========== 认证弹窗 ========== */
+.auth-modal {
+  max-width: 420px;
+  padding: 2rem;
+}
+.auth-modal h2 { text-align: center; margin-bottom: 1.5rem; }
+.auth-tabs {
+  display: flex; gap: 8px; margin-bottom: 1.5rem;
+}
+.auth-tabs button {
+  flex: 1; padding: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+.auth-tabs button.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.auth-form { display: flex; flex-direction: column; gap: 12px; }
+.auth-form input {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0,212,255,0.1);
+}
+.remember { font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+
+.pwd-strength { margin-top: 4px; }
+.strength-bar {
+  height: 6px; border-radius: 3px; background: var(--border); overflow: hidden; margin-bottom: 4px;
+}
+.strength-bar div { height: 100%; transition: width 0.3s, background 0.3s; border-radius: 3px; }
+.pwd-strength span { font-size: 0.8rem; color: var(--text-muted); }
+
+.auth-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between;
+  font-size: 0.8rem; color: var(--text-muted);
+}
+.auth-footer a { color: var(--primary); text-decoration: none; }
+
+/* ========== 新闻滚动条 ========== */
+.news-ticker {
+  position: relative;
+  overflow: hidden;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+}
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 60s linear infinite;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.ticker-track span { padding: 0 20px; }
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ========== 新闻区域 ========== */
+.news-section { padding: 4rem 0; }
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+.news-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.news-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,212,255,0.1);
+}
+.news-cat {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: var(--primary);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+.news-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.news-summary { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 6px; }
+.news-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); }
+
+/* ========== VIP区域 ========== */
+.vip-section {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, transparent, rgba(255,215,0,0.03), transparent);
+}
+.vip-container { max-width: 800px; margin: 0 auto; }
+.vip-header { text-align: center; margin-bottom: 2rem; }
+.vip-cards {
+  display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;
+}
+.vip-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+}
+.vip-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+.vip-card.popular { border-color: var(--gold); box-shadow: 0 0 20px rgba(255,215,0,0.1); }
+.popular-badge {
+  position: absolute; top: -12px; right: -12px;
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  color: #333; font-size: 0.75rem; font-weight: 700;
+  padding: 4px 10px; border-radius: 12px;
+}
+.vip-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.vip-price { font-size: 2.5rem; font-weight: 800; color: var(--gold); margin: 1rem 0; }
+.vip-price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+.vip-card ul { text-align: left; list-style: none; padding: 0; margin: 1rem 0; }
+.vip-card ul li { padding: 6px 0; font-size: 0.9rem; }
+
+/* ========== VIP弹窗 ========== */
+.vip-modal { max-width: 680px; padding: 2rem; }
+.vip-plans { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+
+/* ========== 按钮变体 ========== */
+.btn-gold {
+  background: linear-gradient(135deg, #ffd700, #ffaa00);
+  color: #333; border: none; font-weight: 600;
+}
+.btn-gold:hover { background: linear-gradient(135deg, #ffaa00, #ffd700); }
+.btn-success { background: #00cc66; color: #fff; border: none; }
+.btn-success:hover { background: #00bb55; }
+
+/* ========== 课程标签 ========== */
+.tag-vip { background: linear-gradient(135deg, #ffd700, #ff8c00); color: #333; }
+.tag-free { background: #00cc66; color: #fff; }
+.tag-hot { background: #ff4444; color: #fff; }
+.tag-ok { background: #00aaff; color: #fff; }
+
+/* ========== 价格筛选 ========== */
+.price-tabs {
+  display: flex; gap: 8px; margin: 1rem 0; flex-wrap: wrap;
+}
+.price-tab {
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.price-tab.active, .price-tab:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* ========== 搜索栏 ========== */
+.search-bar { margin: 1rem 0; }
+.search-bar input {
+  width: 100%; max-width: 500px;
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+.search-bar input:focus { outline: none; border-color: var(--primary); }
+
+/* ========== 分类标签 ========== */
+.category-tabs {
+  display: flex; gap: 6px; flex-wrap: wrap; margin: 1rem 0;
+}
+.cat-tab {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.cat-tab.active, .cat-tab:hover {
+  background: var(--primary); color: #fff; border-color: var(--primary);
+}
+.cat-count {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 0 6px;
+  font-size: 0.7rem;
+  margin-left: 4px;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+  .vip-cards { flex-direction: column; align-items: center; }
+  .news-container { grid-template-columns: 1fr; }
+  .user-panel { right: -10px; min-width: 260px; }
+}
