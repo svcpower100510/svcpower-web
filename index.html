@@ -2,258 +2,162 @@
 <html lang="zh-CN" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TechHub Pro v6.0 — 愿行无止之境svcliny的科技区精品课程付费平台，200门课程，统一付费9.9~19.9元，VIP畅听全部">
-<meta name="keywords" content="编程课程,Python,Java,AI,前端,后端,DevOps,网络安全,svcliny,愿行无止之境">
-<meta name="author" content="svcliny (方)">
-<meta name="robots" content="index,follow">
-<meta property="og:title" content="TechHub Pro — 科技区精品课程付费平台">
-<meta property="og:description" content="200门精品课程，9.9~19.9元统一付费，VIP畅听全部">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://techhub-svcliny.pages.dev">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="csrf-token" content="techhub-pro-v6-2026">
-<title>TechHub Pro v6.0 — 愿行无止之境 svcliny</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="TechHub Pro v6.0 正式版 — 愿行无止之境 svcliny 科技区精品课程付费平台，200门付费课程，VIP畅听全部">
+<meta name="author" content="svcliny">
+<meta name="keywords" content="编程课程,付费课程,Python,AI,Java,前端,后端,DevOps,科技区,svcliny">
+<meta name="copyright" content="© 2026 svcliny (方). All Rights Reserved.">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<title>TechHub Pro — 科技区精品课程付费平台 · svcliny</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/payment.css">
 <link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/payment.css">
 </head>
 <body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
-<!-- 导航栏 -->
-<header class="navbar" id="navbar">
-  <div class="nav-container">
-    <a href="#" class="nav-logo">
-      <span class="logo-icon">🚀</span>
-      <span class="logo-text">TechHub <span class="logo-pro">Pro</span></span>
-      <span class="logo-version">v6.0</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#home">首页</a>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="#home" aria-label="TechHub Pro 首页">🚀 TechHub Pro</a>
+    <div class="nav-links">
+      <a href="#home" class="active">首页</a>
       <a href="#courses">课程宝库</a>
-      <a href="#news">科技新闻</a>
       <a href="#resources">干货资源</a>
-      <a href="#roadmaps">学习路线</a>
-      <a href="#rankings">含金量排行</a>
-      <a href="#github">GitHub</a>
+      <a href="#roadmap">学习路线</a>
+      <a href="#ranking">含金量排行</a>
+      <a href="#github">GitHub精选</a>
       <a href="#bilibili">B站推荐</a>
-      <a href="#vip" id="vipNavLink">VIP</a>
-    </nav>
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" title="切换主题">🌙</button>
-      <button class="user-btn" id="userBtn" title="用户中心">👤</button>
-      <button class="menu-toggle" id="menuToggle">☰</button>
+      <a href="#news">科技新闻</a>
     </div>
+    <button id="theme-toggle" title="切换主题" aria-label="切换深色/浅色主题">🌙</button>
+    <button id="user-btn" title="用户中心" aria-label="用户登录/注册">👤</button>
   </div>
-</header>
+</nav>
 
-<!-- 用户面板（默认隐藏，登录后显示） -->
-<div class="user-panel" id="userPanel">
-  <button class="btn btn-primary" onclick="openAuthModal('login')">登录 / 注册</button>
-</div>
+<main>
 
-<!-- Hero区域 -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <canvas class="hero-canvas" id="heroCanvas"></canvas>
-  <div class="hero-container">
-    <div class="hero-badge">🚀 TechHub Pro v6.0 Beta</div>
-    <h1 class="hero-title">
-      科技区精选 · <span class="gradient-text">持续更新中</span>
-    </h1>
-    <p class="hero-subtitle">
-      掌握核心技术，开启高薪之路<br>
-      <span class="hero-tags">Python · AI · Java · 前端 · 后端 · DevOps · 网络安全 · Rust · Go</span>
-    </p>
-    <div class="hero-stats" id="heroStats"></div>
+  <div class="container">
+    <span class="hero-badge">v6.0 正式版 · 科技区精选 · 持续更新中</span>
+    <h1>掌握核心技术<br>开启高薪之路</h1>
+    <p>精选全网最优质编程课程，从入门到架构师。Python · AI · Java · 前端 · 后端 · DevOps · 系统设计 · 网络安全</p>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num" id="stat-courses">0</div><div class="stat-label">精品课程</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-cats">0</div><div class="stat-label">技术方向</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-rating">0</div><div class="stat-label">平均评分</div></div>
+      <div class="stat-item"><div class="stat-num" id="stat-rate">0</div><div class="stat-label">完课率</div></div>
+    </div>
     <div class="hero-actions">
-      <a href="#courses" class="btn btn-primary btn-lg">🔥 浏览课程</a>
-      <a href="#roadmaps" class="btn btn-outline btn-lg">🗺️ 查看学习路线</a>
-      <a href="#vip" class="btn btn-gold btn-lg">👑 VIP畅听全部</a>
-    </div>
-  </div>
-  <!-- 新闻滚动条 -->
-  <div class="news-ticker" id="newsTicker"></div>
-</section>
-
-<!-- 科技新闻 -->
-<section class="news-section" id="news">
-  <div class="section-header">
-    <h2>📰 科技新闻速递</h2>
-    <p>每日精选全球科技资讯，紧跟技术前沿</p>
-  </div>
-  <div class="news-container" id="newsContainer"></div>
-</section>
-
-<!-- 课程宝库 -->
-<section class="courses-section" id="courses">
-  <div class="section-header">
-    <h2>📚 课程宝库</h2>
-    <p>高质量付费课程，统一定价9.9~19.9元，VIP畅听全部200门</p>
-  </div>
-
-  <!-- 搜索栏 -->
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="🔍 搜索课程名称或关键词...">
-  </div>
-
-  <!-- 分类标签 -->
-  <div class="category-tabs" id="categoryTabs"></div>
-
-  <!-- 价格筛选 -->
-  <div class="price-tabs">
-    <button class="price-tab active" data-range="all" onclick="filterByPrice('all')">全部价格</button>
-    <button class="price-tab" data-range="low" onclick="filterByPrice('low')">¥9.9-12.9</button>
-    <button class="price-tab" data-range="mid" onclick="filterByPrice('mid')">¥13.9-15.9</button>
-    <button class="price-tab" data-range="high" onclick="filterByPrice('high')">¥16.9-19.9</button>
-  </div>
-
-  <!-- 课程网格 -->
-  <div class="courses-grid" id="coursesGrid"></div>
-</section>
-
-<!-- VIP区域 -->
-<section class="vip-section" id="vip">
-  <div class="vip-container">
-    <div class="vip-header">
-      <h2>👑 VIP会员</h2>
-      <p>一次开通，畅听全部200门课程</p>
-    </div>
-    <div class="vip-cards">
-      <div class="vip-card">
-        <h3>月度VIP</h3>
-        <div class="vip-price">¥99<span>/月</span></div>
-        <ul>
-          <li>✅ 全部200门课程畅听</li>
-          <li>✅ 优先客服支持</li>
-          <li>✅ 新課优先体验</li>
-        </ul>
-        <button class="btn btn-primary btn-lg" onclick="openVIPModal()">开通月付</button>
-      </div>
-      <div class="vip-card popular">
-        <div class="popular-badge">🔥 省¥689</div>
-        <h3>年度VIP</h3>
-        <div class="vip-price">¥499<span>/年</span></div>
-        <ul>
-          <li>✅ 全部200门课程畅听</li>
-          <li>✅ 优先客服支持</li>
-          <li>✅ 新課优先体验</li>
-          <li>✅ 专属进阶内容</li>
-          <li>✅ 线下活动优先</li>
-        </ul>
-        <button class="btn btn-gold btn-lg" onclick="openVIPModal()">开通年付</button>
-      </div>
+      <a class="btn-primary" href="#courses">🔥 浏览课程</a>
+      <a class="btn-ghost" href="#roadmap">🗺️ 查看学习路线</a>
     </div>
   </div>
 </section>
 
-<!-- 干货资源 -->
-<section class="resources-section" id="resources">
-  <div class="section-header">
-    <h2>📦 干货资源（免费）</h2>
-    <p>精选免费优质学习资源，永久开放</p>
+<!-- COURSES -->
+<section id="courses">
+  <div class="container">
+    <h2 class="section-title">📚 课程宝库</h2>
+    <p class="section-desc">高质量付费课程，统一价格 ¥9.9~19.9，扫码支付后立即解锁。VIP会员畅听全部200门课程。</p>
+    <div id="category-tabs"></div>
+    <div id="price-tabs"></div>
+    <div class="courses-grid" id="courses-grid"></div>
   </div>
-  <div class="resources-grid" id="resourcesGrid"></div>
 </section>
 
-<!-- 学习路线 -->
-<section class="roadmaps-section" id="roadmaps">
-  <div class="section-header">
-    <h2>🗺️ 学习路线</h2>
-    <p>科学规划学习路径，从零到一系统性成长</p>
+<!-- RESOURCES -->
+<section id="resources">
+  <div class="container">
+    <h2 class="section-title">📦 干货资源（免费）</h2>
+    <p class="section-desc">精选免费优质学习资源，永久开放，新窗口打开。</p>
+    <div class="res-grid" id="resources-grid"></div>
   </div>
-  <div class="roadmaps-grid" id="roadmapsGrid"></div>
 </section>
 
-<!-- 含金量排行 -->
-<section class="rankings-section" id="rankings">
-  <div class="section-header">
-    <h2>🏆 技术含金量排行</h2>
-    <p>基于就业薪资、市场需求、未来趋势综合评分</p>
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="container">
+    <h2 class="section-title">🗺️ 学习路线</h2>
+    <p class="section-desc">科学规划学习路径，从零到一系统性成长，关联 roadmap.sh 详细路线图。</p>
+    <div class="road-grid" id="roadmap-grid"></div>
   </div>
-  <div class="rankings-list" id="rankingsList"></div>
 </section>
 
-<!-- GitHub精选 -->
-<section class="github-section" id="github">
-  <div class="section-header">
-    <h2>⭐ GitHub精选仓库</h2>
-    <p>全球顶级开源项目，star数见证质量</p>
+<!-- RANKING -->
+<section id="ranking">
+  <div class="container">
+    <h2 class="section-title">🏆 技术含金量排行</h2>
+    <p class="section-desc">基于就业薪资、市场需求、未来趋势综合评分，关联官方文档入口。</p>
+    <div class="rank-list" id="ranking-list"></div>
   </div>
-  <div class="github-grid" id="githubGrid"></div>
 </section>
 
-<!-- B站推荐 -->
-<section class="bilibili-section" id="bilibili">
-  <div class="section-header">
-    <h2>📺 B站优质教程</h2>
-    <p>中文编程教学首选，免费高质量视频</p>
+<!-- GITHUB -->
+<section id="github">
+  <div class="container">
+    <h2 class="section-title">⭐ GitHub精选仓库</h2>
+    <p class="section-desc">全球顶级开源项目，点击卡片新窗口打开真实仓库地址。</p>
+    <div class="gh-grid" id="github-grid"></div>
   </div>
-  <div class="bilibili-grid" id="bilibiliGrid"></div>
 </section>
 
-<!-- 页脚 -->
-<footer class="site-footer" id="siteFooter">
-  <div class="footer-main">
-    <div class="footer-brand">
-      <h3>🚀 TechHub Pro</h3>
-      <p>愿行无止之境 — 技术成长永无止境</p>
-      <p class="version">v6.0 Beta | 200门课程 | 50条科技新闻</p>
-    </div>
+<!-- BILIBILI -->
+<section id="bilibili">
+  <div class="container">
+    <h2 class="section-title">📺 B站优质教程</h2>
+    <p class="section-desc">中文编程教学首选，全部接入真实B站视频链接（BV号），点击直接播放。</p>
+    <div class="bili-grid" id="bilibili-grid"></div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="container">
+    <h2 class="section-title">📰 科技新闻</h2>
+    <p class="section-desc">每日精选科技圈重要动态，覆盖 AI / 前端 / 后端 / 安全 / 云原生 / 开源 / 硬件 / 行业。</p>
+    <div class="news-list" id="news-list"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="brand" style="justify-content:center;display:flex;">🚀 TechHub Pro</div>
     <div class="footer-links">
-      <div><h4>课程</h4><a href="#courses">全部课程</a><a href="#vip">VIP会员</a><a href="#roadmaps">学习路线</a></div>
-      <div><h4>资源</h4><a href="#resources">干货资源</a><a href="#github">GitHub精选</a><a href="#bilibili">B站教程</a></div>
-      <div><h4>联系</h4><a href="mailto:vhkex@outlook.com">邮箱 vhkex@outlook.com</a><a href="https://github.com/svcpower100510/svcpower-web" target="_blank" rel="noopener">GitHub @svcpower100510</a><a href="https://b23.tv/Sjdb2WI" target="_blank" rel="noopener">B站主页</a></div>
+      <a href="https://github.com/svcpower100510/svcpower-web" target="_blank" rel="noopener">GitHub 仓库</a>
+      <a href="https://b23.tv/Sjdb2WI" target="_blank" rel="noopener">B站主页</a>
+      <a href="mailto:vhkex@outlook.com">联系作者</a>
+      <a href="#courses">课程列表</a>
+      <a href="#resources">免费资源</a>
     </div>
-  </div>
-  <div class="footer-copy">
-    <p>© 2026 svcliny (方). All Rights Reserved. | Apache License 2.0</p>
-    <p>本站由 svcliny 个人维护 · B站科技区 · GitHub: @svcpower</p>
-    <p class="disclaimer">付费课程购买后永久有效，支持扫码支付，虚拟商品一经售出概不退换</p>
+    <div class="footer-copy">
+      © 2026 <b>svcliny (方)</b>. All Rights Reserved. 保留所有权利。<br>
+      Apache License 2.0 开源协议 · 技术栈：原生 JS + Java 11 + SQLite + Cloudflare Pages<br>
+      域名：techhub-svcliny.pages.dev · 作者：愿行无止之境 svcliny
+    </div>
   </div>
 </footer>
 
-<!-- 弹窗容器 -->
-<div class="modal" id="courseDetailModal"></div>
-<div class="modal" id="paymentModal"></div>
-<div class="modal" id="vipModal"></div>
-<div class="modal" id="authModal"></div>
+<!-- 用户面板 -->
+<aside class="user-panel" id="user-panel" aria-label="用户面板"></aside>
 
-<!-- JavaScript -->
+<!-- JS 加载（顺序严格：config→data→auth→payment→main→animations） -->
+<script src="js/config.js"></script>
 <script src="js/data.js"></script>
 <script src="js/auth.js"></script>
 <script src="js/payment.js"></script>
-<script src="js/animations.js"></script>
 <script src="js/main.js"></script>
+<script src="js/animations.js"></script>
 
-<!-- 版权保护 -->
 <script>
-  // 禁止右键菜单（全局）
-  document.addEventListener('contextmenu', function(e) {
-    var t = e.target;
-    if (t && t.closest && t.closest('.course-card, .course-detail, .vip-section, .resource-card, .github-card')) {
-      e.preventDefault();
-      if (window.showToast) showToast('内容受版权保护', 'warning');
-      return false;
-    }
-  });
-  // 禁止复制（>100字符）
-  document.addEventListener('copy', function(e) {
-    try {
-      if (window.getSelection().toString().length > 100) {
-        e.preventDefault();
-        if (window.showToast) showToast('课程内容禁止复制', 'warning');
-      }
-    } catch(_) {}
-  });
-  // 禁止拖拽图片
-  document.addEventListener('dragstart', function(e) { e.preventDefault(); });
-  // 控制台警告
-  console.log('%c⚠️ 警告：这是svcliny的个人网站', 'color:red;font-size:24px;font-weight:bold;');
-  console.log('%c请勿尝试破解或篡改内容。如需授权请联系 vhkex@outlook.com', 'color:orange;font-size:14px;');
-  console.log('%c© 2026 svcliny (方). All Rights Reserved.', 'color:#888;font-size:12px;');
+// 滚动进度条
+(function(){var s=document.getElementById('scroll-progress');if(!s)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;s.style.width=(h>0?(window.scrollY/h*100):0)+'%';},{passive:true});})();
 </script>
-
 </body>
 </html>
