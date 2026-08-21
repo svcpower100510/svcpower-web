@@ -1,776 +1,110 @@
-// ============================================================
-//  TechHub Pro v6.0 — 主逻辑（用户系统 + 支付 + 渲染 + 跳转）
-// ============================================================
-
-(function () {
+// main.js - 核心逻辑与UI渲染（TechHub Pro v6.0 正式版）
+(function (global) {
   'use strict';
+  const C = global.TechHubConfig, D = global.TechHubData, $ = function (s) { return document.querySelector(s); }, $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  const Auth = global.TechHubAuth, Pay = global.TechHubPay;
+  const ESC = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); };
 
-  // ========== 配置 ==========
-  const CONFIG = {
-    apiBase: '',  // 留空走本地数据
-    paymentNote: '愿行无止之境svcliny',
-    brandColor: '#00d4ff',
-    freeQuota: 100,
-  };
+  // ---------- 工具 ----------
+  function toast(msg, type) { if (Pay && Pay.toast) Pay.toast(msg, type); else console.log(msg); }
+  function fmtPrice(p) { return '¥' + (p == null ? '0' : Number(p).toFixed(1)); }
+  function renderStars(r) { let s = ''; for (let i = 0; i < 5; i++) s += i < Math.round(r) ? '★' : '☆'; return s; }
 
-  // ========== 全局状态 ==========
-  let currentUser = null;
-  let currentFilter = 'all';
-  let currentPriceFilter = 'all';
-  let searchQuery = '';
-  let retryCount = 0;
-  const MAX_RETRY = 5;
-
-  // ========== 初始化 ==========
-  document.addEventListener('DOMContentLoaded', function () {
-    initTheme();
-    initUserSystem();
-    renderAll();
-    bindEvents();
-    startSecurityMonitor();
-    injectCopyright();
-    initNewsTicker();
-  });
-
-  // ========== 主题 ==========
-  function initTheme() {
-    const saved = localStorage.getItem('techhub_theme_v6');
-    const theme = saved || 'dark';
-    document.documentElement.setAttribute('data-theme', theme);
-    updateThemeIcon(theme);
-  }
-  function toggleTheme() {
-    const cur = document.documentElement.getAttribute('data-theme');
-    const next = cur === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('techhub_theme_v6', next);
-    updateThemeIcon(next);
-  }
-  function updateThemeIcon(t) {
-    const btn = document.getElementById('themeToggle');
-    if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+  // ---------- 导航高亮 ----------
+  function initNav() {
+    const links = $$('.nav-links a[href^="#"]');
+    links.forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); const id = a.getAttribute('href').slice(1); const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); links.forEach(function (x) { x.classList.remove('active'); }); a.classList.add('active'); }); });
+    window.addEventListener('scroll', function () { let cur = ''; ['home','courses','resources','roadmap','ranking','github','bilibili','news'].forEach(function (id) { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < 120) cur = id; }); if (cur) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); }); }, { passive: true });
   }
 
-  // ========== 用户系统 ==========
-  function initUserSystem() {
-    const user = TechHubAuth.getCurrentUser();
-    if (user) {
-      currentUser = user;
-      updateUserPanel(user);
-    }
-    checkSecurity();
-  }
+  // ---------- 主题切换 ----------
+  function initTheme() { const btn = $('#theme-toggle'); if (!btn) return; const set = function (t) { document.documentElement.setAttribute('data-theme', t); try { localStorage.setItem('th_theme', t); } catch (e) {} }; const saved = (function () { try { return localStorage.getItem('th_theme'); } catch (e) { return null; } })(); set(saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')); btn.addEventListener('click', function () { set(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); }); }
 
-  function checkSecurity() {
-    const issues = TechHubAuth.securityCheck();
-    issues.forEach(issue => {
-      if (issue.type === 'warning') showToast(issue.msg, 'warning');
-      else showToast(issue.msg, 'info');
-    });
-  }
-
-  function updateUserPanel(user) {
-    const panel = document.getElementById('userPanel');
-    if (!panel) return;
-    const vipBadge = user.isVIP && new Date(user.vipExpiresAt) > new Date()
-      ? '<span class="vip-badge">👑 VIP</span>' : '';
-    const vipDays = TechHubAuth.getVIPDaysRemaining();
-    panel.innerHTML = `
-      <div class="user-info">
-        <div class="user-avatar">${user.username[0].toUpperCase()}</div>
-        <div class="user-details">
-          <div class="user-name">${escapeHtml(user.username)} ${vipBadge}</div>
-          <div class="user-email">${escapeHtml(user.email)}</div>
-          ${vipDays > 0 ? `<div class="vip-days">VIP剩余 ${vipDays} 天</div>` : ''}
-        </div>
-      </div>
-      <div class="user-stats">
-        <div class="stat"><span class="stat-num">${user.purchasedCourses.length}</span><span class="stat-label">已购课程</span></div>
-        <div class="stat"><span class="stat-num">¥${user.purchasedCourses.length > 0 ? '已付费' : '0'}</span><span class="stat-label">累计消费</span></div>
-      </div>
-      <div class="user-actions">
-        <button class="btn btn-primary btn-sm" onclick="openVIPModal()">${user.isVIP ? '续费VIP' : '开通VIP'}</button>
-        <button class="btn btn-outline btn-sm" onclick="logout()">退出登录</button>
-      </div>
-    `;
-  }
-
-  // ========== 渲染 ==========
-  function renderAll() {
-    renderCourses();
-    renderResources();
-    renderGitHub();
-    renderBilibili();
-    renderRankings();
-    renderRoadmaps();
-    renderNews();
-    renderCategories();
-    updateStats();
-  }
-
-  function renderCategories() {
-    const container = document.getElementById('categoryTabs');
-    if (!container) return;
-    const cats = TechHubData.categories;
-    container.innerHTML = cats.map(c =>
-      `<button class="cat-tab ${currentFilter === c.id ? 'active' : ''}" data-cat="${c.id}" onclick="filterByCategory('${c.id}')">${c.icon} ${c.name} <span class="cat-count">${c.count}</span></button>`
-    ).join('');
-  }
-
-  function renderCourses() {
-    const container = document.getElementById('coursesGrid');
-    if (!container) return;
-    let courses = TechHubData.courses.slice();
-
-    // 分类筛选
-    if (currentFilter !== 'all') courses = courses.filter(c => c.cat === currentFilter);
-    // 价格筛选
-    if (currentPriceFilter === 'low') courses = courses.filter(c => c.price <= 12.9);
-    else if (currentPriceFilter === 'mid') courses = courses.filter(c => c.price > 12.9 && c.price <= 15.9);
-    else if (currentPriceFilter === 'high') courses = courses.filter(c => c.price > 15.9);
-    // 搜索
-    if (searchQuery) {
-      const q = searchQuery.toLowerCase();
-      courses = courses.filter(c => c.title.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q));
-    }
-
-    container.innerHTML = courses.map(c => {
-      const access = TechHubAuth.canAccessCourse(c.id);
-      const btnText = access.allowed ? '▶ 开始学习' : `购买 ¥${c.price}`;
-      const btnClass = access.allowed ? 'btn-success' : 'btn-primary';
-      const vipTag = access.reason === 'vip' ? '<span class="tag tag-vip">VIP免费</span>' : '';
-      const freeTag = access.reason === 'free_quota' ? '<span class="tag tag-free">免费额度</span>' : '';
-      const purchasedTag = access.reason === 'purchased' ? '<span class="tag tag-ok">已购</span>' : '';
-      const hotTag = c.hot ? '<span class="tag tag-hot">🔥热销</span>' : '';
-
-      return `
-      <div class="course-card" data-id="${c.id}" data-cat="${c.cat}">
-        <div class="course-header">
-          <span class="course-icon">${getCategoryIcon(c.cat)}</span>
-          <div class="course-tags">${hotTag}${vipTag}${freeTag}${purchasedTag}</div>
-        </div>
-        <h3 class="course-title">${escapeHtml(c.title)}</h3>
-        <p class="course-desc">${escapeHtml(c.desc)}</p>
-        <div class="course-meta">
-          <span>⭐ ${c.rating}</span>
-          <span>👥 ${formatNum(c.students)}人</span>
-          <span>💰 ¥${c.price}</span>
-        </div>
-        <div class="course-actions">
-          <button class="btn btn-outline btn-sm" onclick="showCourseDetail(${c.id})">详情</button>
-          <button class="btn ${btnClass} btn-sm" onclick="handleCourseAction(${c.id})">${btnText}</button>
-        </div>
-      </div>`;
+  // ---------- 渲染：课程 ----------
+  function renderCourses(list) {
+    const box = $('#courses-grid'); if (!box) return;
+    if (!list.length) { box.innerHTML = '<div class="empty">暂无符合条件的课程</div>'; return; }
+    box.innerHTML = list.map(function (c) {
+      const tags = (c.tags || []).map(function (t) { return '<span class="tag">' + ESC(t) + '</span>'; }).join('');
+      return '<div class="course-card" data-id="' + c.id + '">'
+        + '<div class="course-head"><span class="course-cat">' + ESC(c.category) + '</span>' + (c.hot ? '<span class="badge hot">热销</span>' : '') + (c.new ? '<span class="badge new">新课</span>' : '') + (c.recommend ? '<span class="badge rec">推荐</span>' : '') + '</div>'
+        + '<div class="course-title">' + ESC(c.title) + '</div>'
+        + '<div class="course-desc">' + ESC(c.description) + '</div>'
+        + '<div class="course-tags">' + tags + '</div>'
+        + '<div class="course-meta"><span class="stars">' + renderStars(c.rating) + '</span><span class="students">' + ESC(c.students) + ' 已学</span></div>'
+        + '<div class="course-foot"><span class="price">' + fmtPrice(c.price) + '</span><div class="course-actions"><button class="btn-detail" data-id="' + c.id + '">详情</button><button class="btn-buy" data-id="' + c.id + '">购买</button></div></div>'
+        + '</div>';
     }).join('');
+    bindCourseBtns();
+  }
+  function bindCourseBtns() {
+    $$('.btn-detail').forEach(function (b) { b.onclick = function () { var c = findCourse(+b.dataset.id); if (c) showCourseDetail(c); }; });
+    $$('.btn-buy').forEach(function (b) { b.onclick = function () { var c = findCourse(+b.dataset.id); if (c) Pay.pay(c); }; });
+  }
+  function findCourse(id) { return (D.courses || []).find(function (c) { return c.id === id; }); }
 
-    // 入场动画
-    observeElements(container.querySelectorAll('.course-card'));
+  function showCourseDetail(c) {
+    var acc = Auth.canAccess(c.id); var act = acc.ok ? ('<a class="btn-primary" href="' + (c.redirectUrl || '') + '" target="_blank" rel="noopener">开始学习 →</a>') : ('<button class="btn-primary" id="dtl-buy">立即购买 ' + fmtPrice(c.price) + '</button>');
+    var html = '<div class="detail"><div class="detail-head"><span class="course-cat">' + ESC(c.category) + '</span><h2>' + ESC(c.title) + '</h2><div class="detail-sub">' + renderStars(c.rating) + ' <span>' + ESC(c.students) + ' 已学</span> · <span>讲师：' + ESC(c.teacher) + '</span> · <span>平台：' + ESC(c.platform) + '</span></div></div>'
+      + '<div class="detail-desc">' + ESC(c.description) + '</div>'
+      + '<div class="detail-actions">' + act + '<button class="btn-ghost" id="dtl-close">关闭</button></div>'
+      + '<div class="detail-links"><a href="' + ESC(c.bilibiliUrl || '#') + '" target="_blank" rel="noopener" class="ext-link">▶ 在B站观看相关教程</a><a href="' + ESC(c.githubUrl || '#') + '" target="_blank" rel="noopener" class="ext-link">🐙 查看GitHub相关仓库</a></div></div>';
+    var m = document.createElement('div'); m.className = 'th-modal-mask'; m.style.position='fixed'; m.innerHTML = '<div class="th-modal detail-modal" role="dialog">'+html+'</div>'; document.body.appendChild(m);
+    m.onclick = function(e){ if(e.target===m){ m.remove(); } }; document.getElementById('dtl-close').onclick=function(){ m.remove(); };
+    var buy=m.querySelector('#dtl-buy'); if(buy) buy.onclick=function(){ m.remove(); Pay.pay(c); };
   }
 
-  function renderNews() {
-    const container = document.getElementById('newsContainer');
-    if (!container) return;
-    const news = TechHubData.techNews.slice(0, 20); // 首页显示20条
-    container.innerHTML = news.map(n => `
-      <div class="news-item" onclick="window.open('${n.url}','_blank','noopener')">
-        <div class="news-cat">${n.cat}</div>
-        <div class="news-title">${escapeHtml(n.title)}</div>
-        <div class="news-summary">${escapeHtml(n.summary)}</div>
-        <div class="news-meta"><span>${n.date}</span><span>${n.source}</span></div>
-      </div>
-    `).join('');
+  // ---------- 分类筛选 ----------
+  function initCategoryFilter() {
+    var wrap = $('#category-tabs'); if (!wrap || !D.categories) return;
+    var tabs = [{name:'全部',key:''}].concat(D.categories.map(function(c){ return {name:c.name,key:c.name,count:c.count}; }));
+    wrap.innerHTML = tabs.map(function(t){ return '<button class="cat-tab'+(t.key===''?' active':'')+'" data-cat="'+ESC(t.key)+'">'+ESC(t.name)+(t.count?'<i>'+t.count+'</i>':'')+'</button>'; }).join('');
+    var priceWrap=$('#price-tabs'); if(priceWrap) priceWrap.innerHTML='<button class="price-tab active" data-p="all">全部价格</button><button class="price-tab" data-p="low">¥9.9</button><button class="price-tab" data-p="mid">¥10~15</button><button class="price-tab" data-p="high">¥15~19.9</button>';
+    var curCat='', curPrice='all';
+    function apply(){ var list=D.courses.slice(); if(curCat) list=list.filter(function(c){return c.category===curCat;}); if(curPrice==='low') list=list.filter(function(c){return c.price<=9.9;}); else if(curPrice==='mid') list=list.filter(function(c){return c.price>9.9&&c.price<=15;}); else if(curPrice==='high') list=list.filter(function(c){return c.price>15;}); renderCourses(list); }
+    wrap.onclick=function(e){ var b=e.target.closest('.cat-tab'); if(!b) return; wrap.querySelectorAll('.cat-tab').forEach(function(x){x.classList.remove('active');}); b.classList.add('active'); curCat=b.dataset.cat; apply(); };
+    if(priceWrap) priceWrap.onclick=function(e){ var b=e.target.closest('.price-tab'); if(!b) return; priceWrap.querySelectorAll('.price-tab').forEach(function(x){x.classList.remove('active');}); b.classList.add('active'); curPrice=b.dataset.p; apply(); };
   }
 
-  function renderResources() {
-    const container = document.getElementById('resourcesGrid');
-    if (!container) return;
-    container.innerHTML = TechHubData.resources.map(r => `
-      <a class="resource-card" href="${r.url}" target="_blank" rel="noopener">
-        <div class="resource-icon">${r.icon}</div>
-        <div class="resource-name">${escapeHtml(r.name)}</div>
-        <div class="resource-desc">${escapeHtml(r.desc)}</div>
-        <span class="resource-tag tag-${r.tag === '必看' ? 'hot' : 'free'}">${r.tag}</span>
-      </a>
-    `).join('');
+  // ---------- 资源/排行/GitHub/B站/新闻/路线 渲染 ----------
+  function renderResources() { var b=$('#resources-grid'); if(!b||!D.resources) return; b.innerHTML=D.resources.map(function(r){return '<a class="res-card" href="'+ESC(r.url)+'" target="_blank" rel="noopener"><div class="res-icon">'+ESC(r.icon||'📦')+'</div><div class="res-name">'+ESC(r.name)+'</div><div class="res-desc">'+ESC(r.desc)+'</div>'+(r.badge?'<span class="res-badge">'+ESC(r.badge)+'</span>':'')+'</a>'; }).join(''); }
+  function renderRankings() { var b=$('#ranking-list'); if(!b||!D.rankings) return; b.innerHTML=D.rankings.map(function(r){return '<div class="rank-item"><span class="rank-no">'+(r.rank<10?'0'+r.rank:r.rank)+'</span><div class="rank-main"><div class="rank-name">'+ESC(r.name)+'<span class="rank-score">'+r.score+'</span></div><div class="rank-desc">'+ESC(r.desc)+'</div><div class="rank-bar"><i style="width:'+r.score+'%"></i></div></div><a class="rank-go" href="'+ESC(r.url||'#')+'" target="_blank" rel="noopener" aria-label="查看">↗</a></div>'; }).join(''); }
+  function renderGithub() { var b=$('#github-grid'); if(!b||!D.githubRepos) return; b.innerHTML=D.githubRepos.map(function(g){return '<a class="gh-card" href="'+ESC(g.url)+'" target="_blank" rel="noopener"><div class="gh-top"><span class="gh-name">📦 '+ESC(g.name)+'</span><span class="gh-lang">'+ESC(g.lang)+'</span></div><div class="gh-desc">'+ESC(g.desc)+'</div><div class="gh-meta"><span>⭐ '+ESC(g.stars)+'</span><span class="gh-tag">'+ESC(g.tag)+'</span></div></a>'; }).join(''); }
+  function renderBilibili() { var b=$('#bilibili-grid'); if(!b||!D.bilibiliVideos) return; b.innerHTML=D.bilibiliVideos.map(function(v){return '<a class="bili-card" href="'+ESC(v.url)+'" target="_blank" rel="noopener"><div class="bili-icon">📺</div><div class="bili-title">'+ESC(v.title)+'</div><div class="bili-meta"><span>👤 '+ESC(v.teacher)+'</span><span>▶ '+ESC(v.plays)+'</span><span>💬 '+ESC(v.danmaku)+'</span></div></a>'; }).join(''); }
+  function renderRoadmaps() { var b=$('#roadmap-grid'); if(!b||!D.roadmaps) return; b.innerHTML=D.roadmaps.map(function(r){return '<div class="road-card"><div class="road-head"><span class="road-icon">'+ESC(r.icon||'🗺️')+'</span><div><div class="road-title">'+ESC(r.title)+'</div><div class="road-months">⏱ '+ESC(r.months)+'</div></div><a class="road-go" href="https://roadmap.sh/" target="_blank" rel="noopener">路线图 ↗</a></div><ol class="road-steps">'+(r.steps||[]).map(function(s,idx){return '<li><b>阶段'+(idx+1)+'</b><span>'+ESC(s.t)+'</span><small>'+ESC(s.d)+'</small></li>';}).join('')+'</ol></div>'; }).join(''); }
+  function renderNews() { var b=$('#news-list'); if(!b||!D.techNews) return; b.innerHTML=D.techNews.slice(0,24).map(function(n){return '<a class="news-item" href="'+ESC(n.url||'#news')+'" target="_blank" rel="noopener"><span class="news-cat">'+ESC(n.category)+'</span><span class="news-title">'+ESC(n.title)+'</span><span class="news-date">'+ESC(n.date||'')+'</span></a>'; }).join(''); }
+
+  // ---------- 统计数字动画 ----------
+  function animateStats() { var stats=[['stat-courses',D.courses.length],['stat-cats',D.categories.length],['stat-rating',(function(){var s=D.courses.reduce(function(a,c){return a+c.rating;},0)/D.courses.length;return s.toFixed(1);})()],['stat-rate','98%']]; stats.forEach(function(p){var el=document.getElementById(p[0]);if(!el)return;if(p[1]==='98%'){el.textContent='98%';return;}var n=+p[1],cur=0,step=Math.max(1,Math.ceil(n/40));var t=setInterval(function(){cur+=step;if(cur>=n){cur=n;clearInterval(t);}el.textContent=cur;},30);}); }
+
+  // ---------- 用户面板 ----------
+  function refreshUserPanel() { var u=Auth.currentUser(); var panel=$('#user-panel'); if(!panel) return; if(!u){ panel.innerHTML='<div class="up-name">游客用户</div><div class="up-sub">未登录</div><button class="btn-primary" id="up-login">登录 / 注册</button>'; document.getElementById('up-login').onclick=function(){ UI.openLogin(); }; } else { var purchased=Auth.getPurchased().length; var vip=Auth.isVIP(); panel.innerHTML='<div class="up-name">'+(vip?'👑 ':'🧑‍💻 ')+ESC(u.username)+'</div><div class="up-sub">'+(vip?'VIP会员 · 畅听全部课程':'普通用户')+'</div><div class="up-stats"><div><b>'+purchased+'</b><span>已购</span></div><div><b>'+(vip?'∞':(C.user.freeQuota-Auth.getUsedFree()))+'</b><span>免费额度</span></div></div><button class="btn-ghost" id="up-logout">退出登录</button>'; document.getElementById('up-logout').onclick=function(){ Auth.logout(); refreshUserPanel(); toast('已退出登录'); }; } }
+
+  // ---------- 登录/注册弹窗 ----------
+  var UI = { openLogin: function (msg) { var html='<div class="auth"><div class="auth-tabs"><button class="active" data-tab="login">登录</button><button data-tab="reg">注册</button></div>'
+    +'<div class="auth-msg" id="auth-msg">'+(msg||'')+'</div>'
+    +'<div class="auth-pane" id="pane-login"><input id="l-id" placeholder="邮箱或用户名" autocomplete="username"><input id="l-pw" type="password" placeholder="密码" autocomplete="current-password"><button class="btn-primary" id="l-sub">登录</button></div>'
+    +'<div class="auth-pane hidden" id="pane-reg"><input id="r-mail" placeholder="邮箱" autocomplete="email"><input id="r-name" placeholder="用户名" autocomplete="username"><input id="r-pw" type="password" placeholder="密码（大小写+数字+特殊字符，≥8位）" autocomplete="new-password"><div class="pw-tip" id="pw-tip"></div><button class="btn-primary" id="r-sub">注册</button></div></div>';
+    Pay && Pay._open ? 0 : 0; var m=document.createElement('div'); m.id='th-auth-modal'; m.innerHTML='<div class="th-modal-mask"></div><div class="th-modal auth-modal" role="dialog">'+html+'</div>'; document.body.appendChild(m); m.querySelector('.th-modal-mask').onclick=function(){m.remove();}; m.querySelectorAll('.auth-tabs button').forEach(function(b){b.onclick=function(){m.querySelectorAll('.auth-tabs button').forEach(function(x){x.classList.remove('active');});b.classList.add('active');m.querySelector('pane-login').classList.toggle('hidden',b.dataset.tab!=='login');m.querySelector('pane-reg').classList.toggle('hidden',b.dataset.tab!=='reg');};}); m.querySelector('r-pw').addEventListener('input',function(){var t=Auth.passwordStrength(this.value);m.querySelector('pw-tip').textContent=t.msg;m.querySelector('pw-tip').className='pw-tip '+(t.ok?'ok':'bad');}); m.querySelector('l-sub').onclick=function(){var r=Auth.login(m.querySelector('l-id').value.trim(),m.querySelector('r-pw').value);m.querySelector('auth-msg').textContent=r.msg;if(r.ok){m.remove();refreshUserPanel();toast('登录成功','success');}}; m.querySelector('r-sub').onclick=function(){var r=Auth.register(m.querySelector('r-mail').value.trim(),m.querySelector('r-name').value.trim(),m.querySelector('r-pw').value);m.querySelector('auth-msg').textContent=r.msg;if(r.ok){m.querySelector('auth-msg').className='auth-msg ok';m.querySelector('pane-login').classList.remove('hidden');m.querySelector('pane-reg').classList.add('hidden');m.querySelectorAll('.auth-tabs button').forEach(function(x){x.classList.toggle('active',x.dataset.tab==='login');});}}; }, openReg: function(msg){ UI.openLogin(msg); setTimeout(function(){var b=document.querySelector('.auth-tabs button[data-tab="reg"]');if(b)b.click();},0); } };
+  global.TechHubUI = UI;
+
+  // ---------- 入场动画 ----------
+  function initAnimations() { if (!('IntersectionObserver' in window)) return; var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}});},{threshold:0.12}); $$('.course-card,.res-card,.rank-item,.gh-card,.bili-card,.road-card,.news-item,.stat-item').forEach(function(el){el.classList.add('anim');io.observe(el);}); }
+
+  // ---------- 数字增长动画（Hero）----------
+  function initHeroNumbers() { animateStats(); }
+
+  // ---------- 版权保护 ----------
+  function initCopyright() { document.addEventListener('contextmenu',function(e){var t=e.target;if(t&&t.closest&&t.closest('.course-card,.detail'))e.preventDefault();}); console.log('%c⚠ TechHub Pro © 2026 svcliny (方). All Rights Reserved.','color:#07c160;font-size:14px;font-weight:bold;'); console.log('%c未经授权复制/篡改课程内容将被记录。','color:#999;'); }
+
+  // ---------- 初始化 ----------
+  function init() {
+    if (!D || !D.courses) { console.error('TechHubData 未加载'); return; }
+    renderCourses(D.courses); initCategoryFilter(); renderResources(); renderRankings(); renderGithub(); renderBilibili(); renderRoadmaps(); renderNews();
+    initNav(); initTheme(); initAnimations(); initHeroNumbers(); initCopyright(); refreshUserPanel();
+    var userBtn=$('#user-btn'); if(userBtn) userBtn.onclick=function(){ UI.openLogin(); };
+    var loginCta=$('#login-cta'); if(loginCta) loginCta.onclick=function(){ UI.openLogin(); };
+    window.addEventListener('scroll',function(){var n=document.querySelector('.navbar');if(n)n.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
   }
-
-  function renderGitHub() {
-    const container = document.getElementById('githubGrid');
-    if (!container) return;
-    container.innerHTML = TechHubData.githubRepos.map(r => `
-      <a class="github-card" href="${r.url}" target="_blank" rel="noopener">
-        <div class="gh-icon">📦</div>
-        <div class="gh-name">${escapeHtml(r.name)}</div>
-        <div class="gh-desc">${escapeHtml(r.desc)}</div>
-        <div class="gh-meta"><span>⭐ ${r.stars}</span><span>🔤 ${r.lang}</span><span>🏷️ ${r.tag}</span></div>
-      </a>
-    `).join('');
-  }
-
-  function renderBilibili() {
-    const container = document.getElementById('bilibiliGrid');
-    if (!container) return;
-    container.innerHTML = TechHubData.bilibiliVideos.map(v => `
-      <a class="bili-card" href="${v.url}" target="_blank" rel="noopener">
-        <div class="bili-icon">📺</div>
-        <div class="bili-title">${escapeHtml(v.title)}</div>
-        <div class="bili-author">👤 ${escapeHtml(v.author)}</div>
-        <div class="bili-meta"><span>▶️ ${v.views}</span><span>💬 ${v.danmaku}</span></div>
-      </a>
-    `).join('');
-  }
-
-  function renderRankings() {
-    const container = document.getElementById('rankingsList');
-    if (!container) return;
-    container.innerHTML = TechHubData.rankings.map(r => `
-      <div class="rank-item">
-        <div class="rank-num">${r.rank}</div>
-        <div class="rank-name">${escapeHtml(r.name)}</div>
-        <div class="rank-bar"><div class="rank-fill" style="width:${r.score}%"></div></div>
-        <div class="rank-score">${r.score}</div>
-        <a class="rank-link" href="${r.url}" target="_blank" rel="noopener">↗</a>
-      </div>
-    `).join('');
-  }
-
-  function renderRoadmaps() {
-    const container = document.getElementById('roadmapsGrid');
-    if (!container) return;
-    container.innerHTML = TechHubData.roadmaps.map(r => `
-      <div class="roadmap-card">
-        <div class="roadmap-header"><span class="roadmap-icon">${r.icon}</span><h3>${escapeHtml(r.title)}</h3><span class="roadmap-time">⏱️ ${r.months}</span></div>
-        <div class="roadmap-steps">
-          ${r.steps.map((s, i) => `<div class="step"><div class="step-num">${i + 1}</div><div class="step-content"><div class="step-title">${s.phase}</div><div class="step-desc">${escapeHtml(s.desc)}</div></div></div>`).join('')}
-        </div>
-        <a class="btn btn-outline btn-sm" href="${r.url}" target="_blank" rel="noopener">查看详细路线 ↗</a>
-      </div>
-    `).join('');
-  }
-
-  function updateStats() {
-    const totalCourses = TechHubData.courses.length;
-    const avgRating = (TechHubData.courses.reduce((s, c) => s + c.rating, 0) / totalCourses).toFixed(1);
-    const totalStudents = TechHubData.courses.reduce((s, c) => s + c.students, 0);
-    const el = document.getElementById('heroStats');
-    if (el) {
-      el.innerHTML = `
-        <div class="stat-item"><div class="stat-value">${totalCourses}</div><div class="stat-label">精品课程</div></div>
-        <div class="stat-item"><div class="stat-value">${TechHubData.categories.length}</div><div class="stat-label">技术方向</div></div>
-        <div class="stat-item"><div class="stat-value">${avgRating}</div><div class="stat-label">平均评分</div></div>
-        <div class="stat-item"><div class="stat-value">${(totalStudents / 10000).toFixed(0)}万+</div><div class="stat-label">累计学员</div></div>
-      `;
-    }
-  }
-
-  // ========== 课程操作 ==========
-  global.handleCourseAction = function (courseId) {
-    const course = TechHubData.courses.find(c => c.id === courseId);
-    if (!course) return;
-    const access = TechHubAuth.canAccessCourse(courseId);
-
-    if (access.allowed) {
-      // 直接跳转学习
-      showToast(`正在打开：${course.title}`, 'success');
-      setTimeout(() => window.open(course.url, '_blank', 'noopener'), 800);
-      return;
-    }
-
-    // 需要付费 → 打开支付
-    openPaymentModal(course);
-  };
-
-  global.showCourseDetail = function (courseId) {
-    const course = TechHubData.courses.find(c => c.id === courseId);
-    if (!course) return;
-    const access = TechHubAuth.canAccessCourse(courseId);
-    const modal = document.getElementById('courseDetailModal');
-    if (!modal) return;
-    modal.innerHTML = `
-      <div class="modal-backdrop" onclick="closeModal('courseDetailModal')"></div>
-      <div class="modal-content modal-lg">
-        <button class="modal-close" onclick="closeModal('courseDetailModal')">✕</button>
-        <div class="detail-header">
-          <span class="detail-icon">${getCategoryIcon(course.cat)}</span>
-          <h2>${escapeHtml(course.title)}</h2>
-        </div>
-        <p class="detail-desc">${escapeHtml(course.desc)}</p>
-        <div class="detail-meta">
-          <span>⭐ ${course.rating}</span>
-          <span>👥 ${formatNum(course.students)}人已学</span>
-          <span>💰 ¥${course.price}</span>
-          <span>🏷️ ${getCategoryName(course.cat)}</span>
-        </div>
-        <div class="detail-tags">${course.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        <div class="detail-actions">
-          ${access.allowed
-            ? `<button class="btn btn-success" onclick="handleCourseAction(${course.id});closeModal('courseDetailModal')">▶ 开始学习</button>`
-            : `<button class="btn btn-primary" onclick="openPaymentModal(TechHubData.courses.find(c=>c.id===${course.id}));closeModal('courseDetailModal')">立即购买 ¥${course.price}</button>`
-          }
-          <button class="btn btn-outline" onclick="closeModal('courseDetailModal')">关闭</button>
-        </div>
-      </div>
-    `;
-    modal.classList.add('active');
-  };
-
-  // ========== 支付弹窗 ==========
-  global.openPaymentModal = async function (course) {
-    if (!currentUser) { showToast('请先登录后再购买', 'warning'); openAuthModal('login'); return; }
-
-    const isVIPUpgrade = course.isVIP === true;
-    const amount = isVIPUpgrade ? course.amount : course.price;
-    const order = await TechHubPayment.createOrder(course.id || 'vip', amount, isVIPUpgrade);
-
-    const modal = document.getElementById('paymentModal');
-    if (!modal) return;
-    const payInfo = TechHubPayment.getPaymentInfo();
-
-    modal.innerHTML = `
-      <div class="modal-backdrop" onclick="closeModal('paymentModal')"></div>
-      <div class="modal-content payment-modal">
-        <button class="modal-close" onclick="closeModal('paymentModal')">✕</button>
-        <div class="pay-header">
-          <h2>💳 ${isVIPUpgrade ? '开通VIP' : '课程购买'}</h2>
-          <div class="pay-course">${escapeHtml(course.title || (isVIPUpgrade ? 'VIP会员' : ''))}</div>
-          <div class="pay-amount">¥<span id="payAmount">${amount}</span></div>
-          <div class="pay-order">订单号：<code>${order.orderId}</code></div>
-        </div>
-        <div class="pay-methods">
-          <div class="pay-tabs">
-            <button class="pay-tab active" data-method="wechat" onclick="switchPayMethod('wechat')">微信支付</button>
-            <button class="pay-tab" data-method="alipay" onclick="switchPayMethod('alipay')">支付宝</button>
-            <button class="pay-tab" data-method="bank" onclick="switchPayMethod('bank')">银行转账</button>
-          </div>
-          <div class="pay-qr-area">
-            <div class="qr-container" id="qrContainer">
-              <img id="qrImage" src="${payInfo.qrCodes.wechat}" alt="收款码" onerror="handleQRError(this)">
-              <div class="qr-fallback" id="qrFallback" style="display:none">
-                <canvas id="qrCanvas" width="240" height="240"></canvas>
-              </div>
-            </div>
-            <div class="pay-tips">
-              <p>📱 请使用对应App扫码支付</p>
-              <p>💰 应付金额：<strong>¥${amount}</strong></p>
-              <p>📝 备注请填订单号后4位：<strong>${order.orderId.slice(-4)}</strong></p>
-              <p>👤 收款人：${payInfo.name}</p>
-            </div>
-          </div>
-        </div>
-        <div class="pay-verify" id="payVerify">
-          <div class="verify-step" id="step1">① 订单完整性校验中...</div>
-          <div class="verify-step" id="step2">② 签名校验等待中...</div>
-          <div class="verify-step" id="step3">③ 服务端确认等待中...</div>
-        </div>
-        <div class="pay-actions">
-          <button class="btn btn-primary btn-lg" id="confirmPayBtn" onclick="confirmPayment('${order.orderId}')">我已完成支付</button>
-          <button class="btn btn-outline" onclick="closeModal('paymentModal')">取消</button>
-        </div>
-        <div class="pay-footer">
-          <span>🔒 三轮安全核验</span>
-          <span>⏱️ 15分钟超时</span>
-          <span>🔑 HMAC-SHA256加密</span>
-        </div>
-      </div>
-    `;
-    modal.classList.add('active');
-
-    // 保存当前订单到全局
-    global.__currentOrder = order;
-  };
-
-  global.switchPayMethod = function (method) {
-    document.querySelectorAll('.pay-tab').forEach(t => t.classList.remove('active'));
-    document.querySelector(`.pay-tab[data-method="${method}"]`).classList.add('active');
-    const payInfo = TechHubPayment.getPaymentInfo();
-    const img = document.getElementById('qrImage');
-    if (method === 'wechat') img.src = payInfo.qrCodes.wechat;
-    else if (method === 'alipay') img.src = payInfo.qrCodes.alipay;
-    else if (method === 'bank') img.src = payInfo.qrCodes.bank;
-  };
-
-  global.handleQRError = function (img) {
-    // 降级链
-    const fallbacks = [
-      img.src.replace('/assets/', '/assets/qrcode-'),
-      'assets/qrcode-wechat.png',
-      'https://cdn.jsdelivr.net/gh/svcpower100510/svcpower-web@main/assets/qrcode-wechat.png',
-    ];
-    let idx = 0;
-    function tryNext() {
-      if (idx >= fallbacks.length) {
-        // 全部失败 → 显示SVG Canvas二维码
-        img.style.display = 'none';
-        document.getElementById('qrFallback').style.display = 'block';
-        drawSVGQR();
-        return;
-      }
-      img.src = fallbacks[idx++];
-    }
-    img.onerror = tryNext;
-    tryNext();
-  };
-
-  function drawSVGQR() {
-    const canvas = document.getElementById('qrCanvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, 240, 240);
-    // 简易图案（视觉占位，非真实二维码）
-    ctx.fillStyle = '#000';
-    for (let i = 0; i < 20; i++) {
-      for (let j = 0; j < 20; j++) {
-        if ((i * 7 + j * 13 + 3) % 5 < 2) {
-          ctx.fillRect(i * 12 + 6, j * 12 + 6, 10, 10);
-        }
-      }
-    }
-    // 中心logo区域
-    ctx.fillStyle = '#07C160';
-    ctx.beginPath(); ctx.arc(120, 120, 20, 0, Math.PI * 2); ctx.fill();
-    ctx.fillStyle = '#fff'; ctx.font = '20px sans-serif'; ctx.textAlign = 'center';
-    ctx.fillText('✓', 120, 127);
-  }
-
-  global.confirmPayment = async function (orderId) {
-    const btn = document.getElementById('confirmPayBtn');
-    btn.disabled = true; btn.textContent = '核验中...';
-
-    // 更新核验状态UI
-    document.getElementById('step1').textContent = '① ✅ 订单完整性校验通过';
-    document.getElementById('step1').className = 'verify-step passed';
-    await sleep(500);
-    document.getElementById('step2').textContent = '② ✅ 签名校验通过';
-    document.getElementById('step2').className = 'verify-step passed';
-    await sleep(500);
-    document.getElementById('step3').textContent = '③ ✅ 服务端确认通过';
-    document.getElementById('step3').className = 'verify-step passed';
-
-    const result = await TechHubPayment.confirmPayment(orderId);
-
-    if (result.success) {
-      showToast('支付成功！正在跳转...', 'success');
-      setTimeout(() => {
-        closeModal('paymentModal');
-        renderAll();
-        const course = TechHubData.courses.find(c => c.id === global.__currentOrder.courseId);
-        if (course) window.open(course.url, '_blank', 'noopener');
-      }, 1500);
-    } else {
-      btn.disabled = false; btn.textContent = '重试支付确认';
-      showToast(result.message || '支付核验失败', 'error');
-    }
-  };
-
-  // ========== VIP ==========
-  global.openVIPModal = function () {
-    if (!currentUser) { showToast('请先登录', 'warning'); openAuthModal('login'); return; }
-    const modal = document.getElementById('vipModal');
-    if (!modal) return;
-    modal.innerHTML = `
-      <div class="modal-backdrop" onclick="closeModal('vipModal')"></div>
-      <div class="modal-content vip-modal">
-        <button class="modal-close" onclick="closeModal('vipModal')">✕</button>
-        <div class="vip-header">
-          <h2>👑 开通VIP会员</h2>
-          <p>畅听全部 ${TechHubData.courses.length} 门课程</p>
-        </div>
-        <div class="vip-plans">
-          <div class="vip-plan" onclick="selectVIPPlan(1)">
-            <h3>月度VIP</h3>
-            <div class="vip-price">¥99<span>/月</span></div>
-            <ul><li>✅ 全部课程畅听</li><li>✅ 优先客服</li></ul>
-            <button class="btn btn-primary" id="vip1">选择月付</button>
-          </div>
-          <div class="vip-plan popular" onclick="selectVIPPlan(12)">
-            <div class="popular-badge">省83元</div>
-            <h3>年度VIP</h3>
-            <div class="vip-price">¥499<span>/年</span></div>
-            <ul><li>✅ 全部课程畅听</li><li>✅ 优先客服</li><li>✅ 专属内容</li><li>✅ 线下活动</li></ul>
-            <button class="btn btn-success" id="vip12">选择年付</button>
-          </div>
-        </div>
-      </div>
-    `;
-    modal.classList.add('active');
-  };
-
-  global.selectVIPPlan = async function (months) {
-    const amount = months === 1 ? 99 : 499;
-    const order = await TechHubPayment.createOrder('vip', amount, true);
-    closeModal('vipModal');
-    openPaymentModal({ id: 'vip', title: `${months === 1 ? '月度' : '年度'}VIP会员`, price: amount, isVIP: true, amount });
-  };
-
-  // ========== 认证弹窗 ==========
-  global.openAuthModal = function (mode) {
-    const modal = document.getElementById('authModal');
-    if (!modal) return;
-    const isLogin = mode === 'login';
-    modal.innerHTML = `
-      <div class="modal-backdrop" onclick="closeModal('authModal')"></div>
-      <div class="modal-content auth-modal">
-        <button class="modal-close" onclick="closeModal('authModal')">✕</button>
-        <h2>${isLogin ? '🔑 登录' : '📝 注册'}</h2>
-        <div class="auth-tabs">
-          <button class="${isLogin ? 'active' : ''}" onclick="openAuthModal('login')">登录</button>
-          <button class="${!isLogin ? 'active' : ''}" onclick="openAuthModal('register')">注册</button>
-        </div>
-        ${isLogin ? `
-          <form class="auth-form" onsubmit="return doLogin(event)">
-            <input type="email" id="loginEmail" placeholder="邮箱地址" required>
-            <input type="password" id="loginPwd" placeholder="密码" required minlength="8">
-            <label class="remember"><input type="checkbox" id="rememberMe"> 7天内免登录</label>
-            <button type="submit" class="btn btn-primary btn-lg">登录</button>
-          </form>
-        ` : `
-          <form class="auth-form" onsubmit="return doRegister(event)">
-            <input type="email" id="regEmail" placeholder="邮箱地址" required>
-            <input type="text" id="regName" placeholder="用户名（2-20字符）" required minlength="2" maxlength="20">
-            <input type="password" id="regPwd" placeholder="密码（含大小写+数字+特殊字符）" required minlength="8">
-            <div class="pwd-strength" id="pwdStrength"></div>
-            <button type="submit" class="btn btn-primary btn-lg">注册</button>
-          </form>
-        `}
-        <div class="auth-footer">
-          <span>© 2026 svcliny</span>
-          <a href="mailto:vhkex@outlook.com">联系作者</a>
-        </div>
-      </div>
-    `;
-    modal.classList.add('active');
-
-    // 密码强度监听
-    const regPwd = document.getElementById('regPwd');
-    if (regPwd) regPwd.addEventListener('input', updatePwdStrength);
-  };
-
-  function updatePwdStrength() {
-    const pwd = document.getElementById('regPwd').value;
-    const el = document.getElementById('pwdStrength');
-    if (!el) return;
-    const errors = TechHubAuth.validatePassword(pwd);
-    const score = 5 - errors.length;
-    const colors = ['#ff4444', '#ff8800', '#ffaa00', '#88cc00', '#00cc44', '#00ff44'];
-    el.innerHTML = `<div class="strength-bar"><div style="width:${score * 20}%;background:${colors[score]}"></div></div><span>${errors.length === 0 ? '密码强度：强' : '需改进：' + errors[0]}</span>`;
-  }
-
-  global.doRegister = async function (e) {
-    e.preventDefault();
-    const email = document.getElementById('regEmail').value.trim();
-    const name = document.getElementById('regName').value.trim();
-    const pwd = document.getElementById('regPwd').value;
-    const result = await TechHubAuth.register(email, name, pwd);
-    if (result.success) {
-      showToast('注册成功！请登录', 'success');
-      setTimeout(() => openAuthModal('login'), 1000);
-    } else {
-      showToast(result.message, 'error');
-    }
-    return false;
-  };
-
-  global.doLogin = async function (e) {
-    e.preventDefault();
-    const email = document.getElementById('loginEmail').value.trim();
-    const pwd = document.getElementById('loginPwd').value;
-    const remember = document.getElementById('rememberMe')?.checked || false;
-    const result = await TechHubAuth.login(email, pwd, remember);
-    if (result.success) {
-      showToast('登录成功！', 'success');
-      currentUser = TechHubAuth.getCurrentUser();
-      updateUserPanel(currentUser);
-      closeModal('authModal');
-      renderAll();
-    } else {
-      showToast(result.message, 'error');
-    }
-    return false;
-  };
-
-  global.logout = function () {
-    TechHubAuth.logout();
-    currentUser = null;
-    document.getElementById('userPanel').innerHTML = `
-      <button class="btn btn-primary" onclick="openAuthModal('login')">登录 / 注册</button>
-    `;
-    renderAll();
-    showToast('已退出登录', 'info');
-  };
-
-  // ========== 筛选 ==========
-  global.filterByCategory = function (cat) {
-    currentFilter = cat;
-    renderCategories();
-    renderCourses();
-  };
-
-  global.filterByPrice = function (range) {
-    currentPriceFilter = range;
-    document.querySelectorAll('.price-tab').forEach(t => t.classList.remove('active'));
-    document.querySelector(`.price-tab[data-range="${range}"]`).classList.add('active');
-    renderCourses();
-  };
-
-  global.searchCourses = function (q) {
-    searchQuery = q;
-    renderCourses();
-  };
-
-  // ========== 弹窗通用 ==========
-  global.closeModal = function (id) {
-    const m = document.getElementById(id);
-    if (m) m.classList.remove('active');
-  };
-
-  // ========== Toast ==========
-  function showToast(msg, type) {
-    const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
-    const t = document.createElement('div');
-    t.className = `toast toast-${type || 'info'}`;
-    t.textContent = `${icons[type] || ''} ${msg}`;
-    document.body.appendChild(t);
-    setTimeout(() => t.classList.add('show'), 50);
-    setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 3500);
-  }
-  global.showToast = showToast;
-
-  // ========== 新闻滚动 ==========
-  function initNewsTicker() {
-    const ticker = document.getElementById('newsTicker');
-    if (!ticker) return;
-    const headlines = TechHubData.techNews.slice(0, 10).map(n => n.title);
-    ticker.innerHTML = `<div class="ticker-track"><span>${headlines.join(' &nbsp;◆&nbsp; ')}</span><span>${headlines.join(' &nbsp;◆&nbsp; ')}</span></div>`;
-  }
-
-  // ========== 版权保护 ==========
-  function injectCopyright() {
-    // 页脚已在 index.html 中静态渲染，此处仅做校验
-    const footer = document.getElementById('siteFooter');
-    if (footer && !footer.innerHTML.trim()) {
-      footer.innerHTML = '<div class="footer-copy"><p>© 2026 svcliny (方). All Rights Reserved.</p></div>';
-    }
-  }
-
-  // 全局版权保护（与主 HTML 内联脚本互补）
-  document.addEventListener('contextmenu', function(e) {
-    const t = e.target;
-    if (t && t.closest && t.closest('.course-card, .course-detail, .vip-section, .resource-card')) {
-      e.preventDefault();
-      if (window.showToast) showToast('内容受版权保护', 'warning');
-      return false;
-    }
-  });
-  document.addEventListener('copy', function(e) {
-    try {
-      if (window.getSelection().toString().length > 100) {
-        e.preventDefault();
-        if (window.showToast) showToast('课程内容禁止复制', 'warning');
-      }
-    } catch(_) {}
-  });
-  document.addEventListener('dragstart', function(e) { e.preventDefault(); });
-
-  // ========== 安全监控 ==========
-  function startSecurityMonitor() {
-    // 每60秒检查会话状态
-    setInterval(() => {
-      const issues = TechHubAuth.securityCheck();
-      issues.forEach(i => { if (i.type === 'warning') showToast(i.msg, 'warning'); });
-    }, 60000);
-
-    // 防DevTools敏感操作
-    document.addEventListener('keydown', (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') {
-        e.preventDefault(); showToast('开发者工具受限', 'warning');
-      }
-      if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
-        e.preventDefault(); showToast('查看源代码受限', 'warning');
-      }
-    });
-
-    // 控制台警告
-    console.log('%c⚠️ 警告', 'color:red;font-size:20px;font-weight:bold;');
-    console.log('%c这是svcliny的个人网站，请勿尝试破解或篡改内容。\n如需授权请联系 vhkex@outlook.com', 'color:orange;font-size:14px;');
-  }
-
-  // ========== 事件绑定 ==========
-  function bindEvents() {
-    // 主题切换
-    const themeBtn = document.getElementById('themeToggle');
-    if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
-
-    // 搜索
-    const searchInput = document.getElementById('searchInput');
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => searchCourses(e.target.value.trim()));
-    }
-
-    // 价格筛选
-    document.querySelectorAll('.price-tab').forEach(tab => {
-      tab.addEventListener('click', () => filterByPrice(tab.dataset.range));
-    });
-
-    // 导航滚动
-    document.querySelectorAll('nav a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    // 移动端菜单
-    const menuBtn = document.getElementById('menuToggle');
-    if (menuBtn) menuBtn.addEventListener('click', () => {
-      document.querySelector('nav').classList.toggle('open');
-    });
-  }
-
-  // ========== 入场动画 ==========
-  function observeElements(elements) {
-    if (!('IntersectionObserver' in window)) return;
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    elements.forEach(el => obs.observe(el));
-  }
-
-  // ========== 工具函数 ==========
-  function escapeHtml(s) {
-    const div = document.createElement('div');
-    div.textContent = String(s);
-    return div.innerHTML;
-  }
-  function formatNum(n) {
-    if (n >= 10000) return (n / 10000).toFixed(1) + '万';
-    return n.toLocaleString();
-  }
-  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-  function getCategoryIcon(cat) {
-    const map = { web: '🌐', python: '🐍', java: '☕', javascript: '📜', frontend: '🎨', backend: '⚙️', ai: '🤖', database: '🗄️', devops: '☁️', security: '🛡️', algorithm: '🧩', mobile: '📱', game: '🎮', blockchain: '⛓️', data: '📊', linux: '🐧', rust: '🦀', go: '🚀', career: '💼', beginner: '🌱', hardware: '🔧' };
-    return map[cat] || '📚';
-  }
-  function getCategoryName(cat) {
-    const c = TechHubData.categories.find(x => x.id === cat);
-    return c ? c.name : cat;
-  }
-
-  // ========== 导航栏用户区 ==========
-  const userBtn = document.getElementById('userBtn');
-  if (userBtn) {
-    userBtn.addEventListener('click', () => {
-      if (currentUser) {
-        document.getElementById('userPanel').classList.toggle('open');
-      } else {
-        openAuthModal('login');
-      }
-    });
-  }
-
-})();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})(typeof window !== 'undefined' ? window : globalThis);

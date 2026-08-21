@@ -1,307 +1,96 @@
-// ============================================================
-//  TechHub Pro v6.0 — 用户认证与安全系统
-//  注册/登录/会话管理/防暴力破解/防批量注册
-// ============================================================
-
+// auth.js - 用户认证与安全系统（TechHub Pro v6.0 正式版）
 (function (global) {
   'use strict';
+  const C = global.TechHubConfig, SK = C.storageKeys;
+  const $ = function (s) { return document.querySelector(s); };
+  function randId() { return 'U-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8); }
+  function hash(str) { let h = 0x811c9dc5; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = (h * 0x01000193) >>> 0; } return h.toString(16); }
 
-  const STORAGE_KEY = 'techhub_users_v6';
-  const SESSION_KEY = 'techhub_session_v6';
-  const ATTEMPT_KEY = 'techhub_login_attempts_v6';
-  const REGISTER_KEY = 'techhub_register_attempts_v6';
+  // ---------- 本地用户存储（localStorage 模拟，生产可替换为后端API） ----------
+  function getUsers() { try { return JSON.parse(localStorage.getItem(SK.users) || '{}'); } catch (e) { return {}; } }
+  function saveUsers(u) { localStorage.setItem(SK.users, JSON.stringify(u)); }
+  function getSessions() { try { return JSON.parse(localStorage.getItem(SK.sessions) || '{}'); } catch (e) { return {}; } }
+  function saveSessions(s) { localStorage.setItem(SK.sessions, JSON.stringify(s)); }
+  function regLog() { try { return JSON.parse(localStorage.getItem(SK.regLog) || '[]'); } catch (e) { return []; } }
+  function saveRegLog(a) { localStorage.setItem(SK.regLog, JSON.stringify(a.slice(-200))); }
+  function loginFail() { try { return JSON.parse(localStorage.getItem(SK.loginFail) || '{}'); } catch (e) { return {}; } }
+  function saveLoginFail(o) { localStorage.setItem(SK.loginFail, JSON.stringify(o)); }
 
-  // ---------- 工具函数 ----------
-  function sha256(str) {
-    // 使用Web Crypto API（现代浏览器）
-    if (global.crypto && global.crypto.subtle) {
-      return global.crypto.subtle.digest('SHA-256', new TextEncoder().encode(str))
-        .then(buf => Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join(''));
-    }
-    // 降级：简单hash（仅用于无subtle环境）
-    let h = 0;
-    for (let i = 0; i < str.length; i++) { h = (h << 5) - h + str.charCodeAt(i); h |= 0; }
-    return Promise.resolve(('00000000' + (h >>> 0).toString(16)).slice(-8));
-  }
-
-  function getUsers() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
-    catch { return {}; }
-  }
-  function setUsers(u) { localStorage.setItem(STORAGE_KEY, JSON.stringify(u)); }
-
-  function getSession() {
-    try { return JSON.parse(localStorage.getItem(SESSION_KEY)) || null; }
-    catch { return null; }
-  }
-  function setSession(s) { localStorage.setItem(SESSION_KEY, JSON.stringify(s)); }
-  function clearSession() { localStorage.removeItem(SESSION_KEY); }
-
-  // ---------- 防暴力破解 ----------
-  function getAttempts(key) { return JSON.parse(localStorage.getItem(key)) || { count: 0, firstTry: 0, lockedUntil: 0 }; }
-  function setAttempts(key, a) { localStorage.setItem(key, JSON.stringify(a)); }
-  function clearAttempts(key) { localStorage.removeItem(key); }
-
-  function checkRateLimit(key, maxAttempts, lockoutMs) {
-    const a = getAttempts(key);
-    const now = Date.now();
-    if (a.lockedUntil > now) {
-      const remain = Math.ceil((a.lockedUntil - now) / 60000);
-      return { allowed: false, message: `尝试次数过多，请${remain}分钟后再试` };
-    }
-    if (now - a.firstTry > lockoutMs) { return { allowed: true, reset: true }; }
-    return { allowed: true };
-  }
-
-  function recordFailedAttempt(key, maxAttempts, lockoutMs) {
-    const a = getAttempts(key);
-    const now = Date.now();
-    if (now - a.firstTry > lockoutMs) { a.count = 1; a.firstTry = now; }
-    else { a.count++; }
-    if (a.count >= maxAttempts) { a.lockedUntil = now + lockoutMs; }
-    setAttempts(key, a);
-  }
-
-  // ---------- 密码策略 ----------
-  function validatePassword(pwd) {
-    const errors = [];
-    if (pwd.length < 8) errors.push('密码至少8位');
-    if (!/[A-Z]/.test(pwd)) errors.push('需包含大写字母');
-    if (!/[a-z]/.test(pwd)) errors.push('需包含小写字母');
-    if (!/[0-9]/.test(pwd)) errors.push('需包含数字');
-    if (!/[^A-Za-z0-9]/.test(pwd)) errors.push('需包含特殊字符');
-    return errors;
+  // ---------- 密码强度 ----------
+  function passwordStrength(pw) {
+    if (!pw || pw.length < 8) return { ok: false, msg: '密码至少8位' };
+    if (!/[A-Z]/.test(pw)) return { ok: false, msg: '需含大写字母' };
+    if (!/[a-z]/.test(pw)) return { ok: false, msg: '需含小写字母' };
+    if (!/[0-9]/.test(pw)) return { ok: false, msg: '需含数字' };
+    if (!/[^A-Za-z0-9]/.test(pw)) return { ok: false, msg: '需含特殊字符' };
+    return { ok: true, msg: '强度良好' };
   }
 
   // ---------- 注册 ----------
-  async function register(email, username, password) {
-    // 速率限制：每个IP/浏览器每小时最多注册3次
-    const regCheck = checkRateLimit(REGISTER_KEY, 3, 3600000);
-    if (regCheck.reset) clearAttempts(REGISTER_KEY);
-    if (!regCheck.allowed) return { success: false, message: regCheck.message };
-
-    // 邮箱格式
-    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRe.test(email)) return { success: false, message: '邮箱格式不正确' };
-
-    // 用户名
-    if (username.length < 2 || username.length > 20) return { success: false, message: '用户名2-20个字符' };
-
-    // 密码强度
-    const pwdErrors = validatePassword(password);
-    if (pwdErrors.length) return { success: false, message: pwdErrors[0] };
-
-    // 检查重复
+  function register(email, username, password) {
+    const res = { ok: false, msg: '' };
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { res.msg = '邮箱格式不正确'; return res; }
+    if (!username || username.length < 2) { res.msg = '用户名至少2位'; return res; }
+    const ps = passwordStrength(password); if (!ps.ok) { res.msg = ps.msg; return res; }
+    // 防批量注册：每小时限 N 次
+    const now = Date.now(), hour = 3600 * 1000;
+    let log = regLog().filter(function (t) { return now - t < hour; });
+    if (log.length >= C.user.registerPerHour) { res.msg = '注册过于频繁，请1小时后再试'; return res; }
     const users = getUsers();
-    if (users[email]) return { success: false, message: '该邮箱已注册' };
-
-    // 防批量：邮箱域名黑名单（临时邮箱）
-    const disposableDomains = ['10minutemail.com', 'tempmail.io', 'guerrillamail.com', 'mailinator.com', 'yopmail.com'];
-    const domain = email.split('@')[1];
-    if (disposableDomains.includes(domain)) return { success: false, message: '不支持临时邮箱注册' };
-
-    // 创建用户
-    const pwdHash = await sha256(password + '_techhub_salt_v6');
-    const userId = 'U' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
-    users[email] = {
-      id: userId,
-      email: email,
-      username: username,
-      passwordHash: pwdHash,
-      createdAt: new Date().toISOString(),
-      isVIP: false,
-      vipExpiresAt: null,
-      purchasedCourses: [],
-      freeQuotaUsed: 0,
-      lastLoginAt: null,
-      loginCount: 0,
-      ipHistory: [],
-    };
-    setUsers(users);
-
-    // 记录注册成功（清除失败计数）
-    clearAttempts(REGISTER_KEY);
-
-    return { success: true, message: '注册成功！请登录', userId: userId };
+    if (Object.values(users).some(function (u) { return u.email === email; })) { res.msg = '该邮箱已注册'; return res; }
+    if (Object.values(users).some(function (u) { return u.username === username; })) { res.msg = '该用户名已被使用'; return res; }
+    const id = randId();
+    users[id] = { id: id, email: email, username: username, passwordHash: hash(password), vip: false, vipUntil: null, purchased: [], registeredAt: now, freeUsed: 0 };
+    saveUsers(users); log.push(now); saveRegLog(log);
+    res.ok = true; res.msg = '注册成功，请登录'; return res;
   }
 
   // ---------- 登录 ----------
-  async function login(email, password, remember) {
-    const loginCheck = checkRateLimit(ATTEMPT_KEY, 5, 30 * 60000); // 5次/30分钟
-    if (!loginCheck.allowed) return { success: false, message: loginCheck.message };
-
-    const users = getUsers();
-    const user = users[email];
-
-    if (!user) {
-      recordFailedAttempt(ATTEMPT_KEY, 5, 30 * 60000);
-      return { success: false, message: '邮箱或密码错误' };
+  function login(identifier, password) {
+    const res = { ok: false, msg: '' };
+    const fail = loginFail(); const key = identifier.toLowerCase();
+    if (fail[key] && fail[key].count >= C.user.maxLoginAttempts && Date.now() - fail[key].last < C.user.lockMinutes * 60 * 1000) {
+      res.msg = '尝试次数过多，已临时锁定，请' + C.user.lockMinutes + '分钟后再试'; return res;
     }
-
-    const pwdHash = await sha256(password + '_techhub_salt_v6');
-    if (pwdHash !== user.passwordHash) {
-      recordFailedAttempt(ATTEMPT_KEY, 5, 30 * 60000);
-      return { success: false, message: '邮箱或Password错误' };
+    const users = getUsers(); const u = Object.values(users).find(function (x) {
+      return x.email === identifier || x.username === identifier;
+    });
+    if (!u || u.passwordHash !== hash(password)) {
+      if (!fail[key]) fail[key] = { count: 0, last: 0 }; fail[key].count++; fail[key].last = Date.now(); saveLoginFail(fail);
+      res.msg = '账号或密码错误'; return res;
     }
-
-    // 登录成功
-    clearAttempts(ATTEMPT_KEY);
-    user.lastLoginAt = new Date().toISOString();
-    user.loginCount++;
-    setUsers(users);
-
-    const session = {
-      email: email,
-      username: user.username,
-      userId: user.id,
-      isVIP: user.isVIP,
-      vipExpiresAt: user.vipExpiresAt,
-      loginTime: Date.now(),
-      expiresAt: remember ? Date.now() + 7 * 86400000 : Date.now() + 86400000, // 7天 or 1天
-      token: await sha256(user.id + Date.now() + '_session_salt'),
-    };
-    setSession(session);
-
-    return { success: true, message: '登录成功！', session: session };
+    delete fail[key]; saveLoginFail(fail);
+    const sess = { userId: u.id, username: u.username, email: u.email, vip: !!u.vip, loginAt: Date.now() };
+    const sessions = getSessions(); sessions[u.id] = sess; saveSessions(sessions);
+    localStorage.setItem(SK.user, JSON.stringify(sess));
+    res.ok = true; res.msg = '登录成功'; res.user = sess; return res;
   }
+  function logout() { const s = currentUser(); if (s) { const sessions = getSessions(); delete sessions[s.userId]; saveSessions(sessions); } localStorage.removeItem(SK.user); }
+  function currentUser() { try { return JSON.parse(localStorage.getItem(SK.user) || 'null'); } catch (e) { return null; } }
+  function isVIP() { const s = currentUser(); if (!s) return false; if (s.vip) { if (s.vipUntil && s.vipUntil < Date.now()) { s.vip = false; localStorage.setItem(SK.user, JSON.stringify(s)); return false; } return true; } return false; }
 
-  // ---------- 登出 ----------
-  function logout() {
-    clearSession();
-    return { success: true };
+  // ---------- 购买/权限 ----------
+  function canAccess(courseId) {
+    const s = currentUser(); if (isVIP()) return { ok: true, reason: 'vip' };
+    const purchased = getPurchased();
+    if (purchased.indexOf(courseId) >= 0) return { ok: true, reason: 'purchased' };
+    if (!s) return { ok: false, reason: 'login', msg: '请先登录' };
+    const used = getUsedFree();
+    if (used < C.user.freeQuota) return { ok: true, reason: 'free' };
+    return { ok: false, reason: 'upgrade', msg: '免费额度已用完，升级VIP畅听全部课程' };
   }
-
-  // ---------- VIP 管理 ----------
-  function isVIP() {
-    const s = getSession();
-    if (!s || !s.isVIP) return false;
-    if (s.vipExpiresAt && new Date(s.vipExpiresAt) < new Date()) return false;
-    return true;
+  function getPurchased() { const s = currentUser(); if (!s) return []; const u = getUsers()[s.userId]; return u ? u.purchased || [] : []; }
+  function getUsedFree() { const s = currentUser(); if (!s) return 0; const u = getUsers()[s.userId]; return u ? u.freeUsed || 0 : 0; }
+  function addPurchase(courseId) {
+    const s = currentUser(); if (!s) return; const users = getUsers(); const u = users[s.userId];
+    if (!u) return; if (!u.purchased) u.purchased = []; if (u.purchased.indexOf(courseId) < 0) u.purchased.push(courseId);
+    saveUsers(users); const sessions = getSessions(); if (sessions[s.userId]) { sessions[s.userId].purchased = u.purchased; saveSessions(sessions); }
   }
+  function useFreeSlot(courseId) { const s = currentUser(); if (!s) return; const users = getUsers(); const u = users[s.userId]; if (!u) return; u.freeUsed = (u.freeUsed || 0) + 1; saveUsers(users); }
 
-  function getVIPDaysRemaining() {
-    const s = getSession();
-    if (!s || !s.vipExpiresAt) return 0;
-    const days = Math.ceil((new Date(s.vipExpiresAt) - new Date()) / 86400000);
-    return Math.max(0, days);
-  }
-
-  // ---------- 课程访问权限 ----------
-  function canAccessCourse(courseId) {
-    const s = getSession();
-    const users = getUsers();
-
-    // VIP 畅听所有
-    if (s && s.isVIP) {
-      if (!s.vipExpiresAt || new Date(s.vipExpiresAt) > new Date()) return { allowed: true, reason: 'vip' };
-    }
-
-    // 已购买
-    if (s) {
-      const user = users[s.email];
-      if (user && user.purchasedCourses.includes(courseId)) return { allowed: true, reason: 'purchased' };
-    }
-
-    // 普通用户免费额度（前100门按ID排序）
-    if (s) {
-      const user = users[s.email];
-      if (user) {
-        const freeCourses = TechHubData.courses
-          .slice()
-          .sort((a, b) => a.id - b.id)
-          .slice(0, 100)
-          .map(c => c.id);
-        if (freeCourses.includes(courseId) && user.purchasedCourses.length < 100) {
-          return { allowed: true, reason: 'free_quota' };
-        }
-      }
-    }
-
-    return { allowed: false, reason: 'need_purchase' };
-  }
-
-  // ---------- 购买课程 ----------
-  async function purchaseCourse(courseId) {
-    const s = getSession();
-    if (!s) return { success: false, message: '请先登录' };
-
-    const users = getUsers();
-    const user = users[s.email];
-    if (!user) return { success: false, message: '用户不存在' };
-
-    if (user.purchasedCourses.includes(courseId)) return { success: false, message: '已购买该课程' };
-
-    // VIP不需要单独购买
-    if (isVIP()) {
-      user.purchasedCourses.push(courseId);
-      setUsers(users);
-      return { success: true, message: 'VIP自动解锁！', vip: true };
-    }
-
-    user.purchasedCourses.push(courseId);
-    setUsers(users);
-    return { success: true, message: '购买成功！' };
-  }
-
-  // ---------- 升级VIP ----------
-  function upgradeVIP(months) {
-    const s = getSession();
-    if (!s) return { success: false, message: '请先登录' };
-
-    const users = getUsers();
-    const user = users[s.email];
-    if (!user) return { success: false, message: '用户不存在' };
-
-    const now = new Date();
-    let baseDate = (user.vipExpiresAt && new Date(user.vipExpiresAt) > now) ? new Date(user.vipExpiresAt) : now;
-    baseDate.setMonth(baseDate.getMonth() + months);
-
-    user.isVIP = true;
-    user.vipExpiresAt = baseDate.toISOString();
-    setUsers(users);
-
-    s.isVIP = true;
-    s.vipExpiresAt = user.vipExpiresAt;
-    setSession(s);
-
-    return { success: true, message: `VIP已激活，${months}个月后到期`, expiresAt: user.vipExpiresAt };
-  }
-
-  // ---------- 当前用户信息 ----------
-  function getCurrentUser() {
-    const s = getSession();
-    if (!s) return null;
-    if (s.expiresAt < Date.now()) { clearSession(); return null; }
-    const users = getUsers();
-    return users[s.email] || null;
-  }
-
-  // ---------- 安全检查 ----------
-  function securityCheck() {
-    const issues = [];
-    const s = getSession();
-    if (!s) return issues;
-
-    // 会话即将过期
-    const remainMs = s.expiresAt - Date.now();
-    if (remainMs < 3600000) issues.push({ type: 'warning', msg: '会话即将过期，请重新登录' });
-
-    // VIP即将到期
-    if (s.isVIP && s.vipExpiresAt) {
-      const vipRemain = new Date(s.vipExpiresAt) - new Date();
-      if (vipRemain < 3 * 86400000) issues.push({ type: 'info', msg: 'VIP即将到期，请及时续费' });
-    }
-
-    return issues;
-  }
-
-  // ---------- 导出 ----------
   global.TechHubAuth = {
-    register, login, logout,
-    isVIP, getVIPDaysRemaining,
-    canAccessCourse, purchaseCourse, upgradeVIP,
-    getCurrentUser, getSession, securityCheck,
-    validatePassword,
+    register: register, login: login, logout: logout, currentUser: currentUser,
+    isVIP: isVIP, canAccess: canAccess, addPurchase: addPurchase, useFreeSlot: useFreeSlot,
+    getPurchased: getPurchased, getUsedFree: getUsedFree, passwordStrength: passwordStrength
   };
-
-})(window);
+})(typeof window !== 'undefined' ? window : globalThis);
