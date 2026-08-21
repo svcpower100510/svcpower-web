@@ -1,117 +1,154 @@
-/**
- * TechHub Pro v4.0 — 动画与视觉效果
- * Canvas粒子 + 数字增长 + 滚动入场 + 3D倾斜 + 鼠标光晕
- */
+// ============================================================
+//  TechHub Pro v6.0 — 动画与视觉效果
+// ============================================================
+
 (function () {
   'use strict';
 
-  // ========== Canvas 粒子背景 ==========
-  function initParticles() {
-    const canvas = document.getElementById('particles-canvas');
+  // ========== Hero Canvas 粒子背景 ==========
+  function initHeroCanvas() {
+    const canvas = document.getElementById('heroCanvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    let w, h, particles = [];
-    const DENSITY = 80;
+    let particles = [];
+    let mouseX = 0, mouseY = 0;
+    let rafId;
 
     function resize() {
-      w = canvas.width = canvas.offsetWidth * devicePixelRatio;
-      h = canvas.height = canvas.offsetHeight * devicePixelRatio;
+      canvas.width = canvas.offsetWidth * devicePixelRatio;
+      canvas.height = canvas.offsetHeight * devicePixelRatio;
     }
-    function init() {
-      resize();
-      particles = Array.from({ length: DENSITY }, () => ({
-        x: Math.random() * w, y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
-        r: Math.random() * 1.5 + 0.5,
-        a: Math.random() * 0.5 + 0.2,
-      }));
-    }
-    function tick() {
-      ctx.clearRect(0, 0, w, h);
-      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-      const stroke = isDark ? 'rgba(0,200,255,' : 'rgba(0,120,200,';
-      for (const p of particles) {
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0 || p.x > w) p.vx *= -1;
-        if (p.y < 0 || p.y > h) p.vy *= -1;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r * devicePixelRatio, 0, Math.PI * 2);
-        ctx.fillStyle = stroke + p.a + ')';
-        ctx.fill();
+    resize();
+    window.addEventListener('resize', resize);
+
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouseX = (e.clientX - rect.left) * devicePixelRatio;
+      mouseY = (e.clientY - rect.top) * devicePixelRatio;
+    });
+
+    const PARTICLE_COUNT = 80;
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.3 * devicePixelRatio,
+          vy: (Math.random() - 0.5) * 0.3 * devicePixelRatio,
+          r: (Math.random() * 2 + 1) * devicePixelRatio,
+          alpha: Math.random() * 0.5 + 0.2,
+        });
       }
-      // 连线
+    }
+    initParticles();
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+      const linkColor = isDark ? '0,180,216' : '0,100,180';
+
+      // 画连线
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
-          const d = Math.sqrt(dx * dx + dy * dy);
-          if (d < 120 * devicePixelRatio) {
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 150 * devicePixelRatio) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = stroke + (0.15 * (1 - d / (120 * devicePixelRatio))) + ')';
+            ctx.strokeStyle = `rgba(${linkColor},${0.15 * (1 - dist / (150 * devicePixelRatio))})`;
             ctx.lineWidth = 0.5 * devicePixelRatio;
             ctx.stroke();
           }
         }
       }
-      requestAnimationFrame(tick);
+
+      // 画粒子
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+        // 鼠标吸引
+        const mx = mouseX - p.x, my = mouseY - p.y;
+        const mDist = Math.sqrt(mx * mx + my * my);
+        if (mDist < 100 * devicePixelRatio) {
+          p.x += mx * 0.01; p.y += my * 0.01;
+        }
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${linkColor},${p.alpha})`;
+        ctx.fill();
+      });
+
+      rafId = requestAnimationFrame(draw);
     }
-    window.addEventListener('resize', resize);
-    init();
-    tick();
+    draw();
+
+    // 主题切换时重绘
+    document.getElementById('themeToggle')?.addEventListener('click', () => {
+      setTimeout(() => { ctx.clearRect(0, 0, canvas.width, canvas.height); }, 50);
+    });
   }
 
   // ========== 数字增长动画 ==========
   function animateNumbers() {
-    const targets = document.querySelectorAll('[data-count]');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(en => {
-        if (!en.isIntersecting) return;
-        const el = en.target;
-        const goal = +el.dataset.count;
-        const dur = 1500;
-        const start = performance.now();
-        const tick = (now) => {
-          const t = Math.min(1, (now - start) / dur);
-          const eased = 1 - Math.pow(1 - t, 3);
-          el.textContent = Math.floor(goal * eased).toLocaleString();
-          if (t < 1) requestAnimationFrame(tick);
-          else el.textContent = goal.toLocaleString();
-        };
-        requestAnimationFrame(tick);
-        obs.unobserve(el);
-      });
-    }, { threshold: 0.4 });
-    targets.forEach(t => obs.observe(t));
+    document.querySelectorAll('.stat-value').forEach(el => {
+      const target = parseFloat(el.textContent);
+      if (isNaN(target)) return;
+      const suffix = el.textContent.replace(/[\d.]/g, '');
+      let current = 0;
+      const increment = target / 60;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = (target >= 100 ? Math.floor(current) : current.toFixed(1)) + suffix;
+      }, 16);
+    });
   }
 
-  // ========== 滚动入场 ==========
-  function scrollReveal() {
-    const els = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(en => {
-        if (en.isIntersecting) {
-          en.target.classList.add('revealed');
-          obs.unobserve(en.target);
+  // ========== IntersectionObserver 入场 ==========
+  function initScrollAnimations() {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.course-card, .resource-card, .github-card, .bili-card, .roadmap-card, .rank-item, .news-item')
+        .forEach(el => el.classList.add('visible'));
+      return;
+    }
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 50);
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
-    els.forEach(el => obs.observe(el));
+    }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.course-card, .resource-card, .github-card, .bili-card, .roadmap-card, .rank-item, .news-item, .vip-card')
+      .forEach(el => obs.observe(el));
   }
 
-  // ========== 3D 卡片倾斜 ==========
-  function tiltCards() {
-    document.querySelectorAll('.course-card, .bili-card, .gh-card').forEach(card => {
-      let raf = null;
-      card.addEventListener('mousemove', e => {
-        const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(() => {
-          card.style.transform = `perspective(800px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateZ(0)`;
-        });
+  // ========== 导航栏滚动效果 ==========
+  function initNavbarScroll() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const cur = window.scrollY;
+      if (cur > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+      lastScroll = cur;
+    }, { passive: true });
+  }
+
+  // ========== 3D卡片倾斜 ==========
+  function init3DTilt() {
+    document.querySelectorAll('.course-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(1000px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg) translateY(-4px)`;
       });
       card.addEventListener('mouseleave', () => {
         card.style.transform = '';
@@ -120,50 +157,55 @@
   }
 
   // ========== 鼠标光晕 ==========
-  function mouseGlow() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
+  function initCursorGlow() {
+    if (matchMedia('(pointer: coarse)').matches) return; // 移动端跳过
     const glow = document.createElement('div');
-    glow.className = 'mouse-glow';
-    hero.appendChild(glow);
-    let raf = null, tx = 0, ty = 0;
-    hero.addEventListener('mousemove', e => {
-      const r = hero.getBoundingClientRect();
-      tx = e.clientX - r.left; ty = e.clientY - r.top;
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        glow.style.transform = `translate(${tx - 200}px, ${ty - 200}px)`;
-      });
+    glow.style.cssText = `position:fixed;width:300px;height:300px;border-radius:50%;pointer-events:none;z-index:9998;mix-blend-mode:screen;opacity:0;transition:opacity 0.3s;background:radial-gradient(circle,rgba(0,180,216,0.08) 0%,transparent 70%);`;
+    document.body.appendChild(glow);
+    let visible = false;
+    document.addEventListener('mousemove', (e) => {
+      glow.style.left = e.clientX - 150 + 'px';
+      glow.style.top = e.clientY - 150 + 'px';
+      if (!visible) { glow.style.opacity = '1'; visible = true; }
     });
-    hero.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
-    hero.addEventListener('mouseenter', () => { glow.style.opacity = '1'; });
+    document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; visible = false; });
   }
 
-  // ========== 滚动进度条 ==========
-  function scrollProgress() {
-    const bar = document.createElement('div');
-    bar.className = 'scroll-progress';
-    document.body.appendChild(bar);
-    let raf = null;
-    window.addEventListener('scroll', () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const s = (window.scrollY / (document.body.scrollHeight - innerHeight)) * 100;
-        bar.style.width = s + '%';
+  // ========== 排行条动画 ==========
+  function animateRankBars() {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target.querySelector('.rank-fill');
+          if (bar) {
+            const w = bar.style.width;
+            bar.style.width = '0%';
+            setTimeout(() => bar.style.width = w, 100);
+          }
+          obs.unobserve(entry.target);
+        }
       });
-    }, { passive: true });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.rank-item').forEach(el => obs.observe(el));
   }
 
-  // ========== 启动 ==========
-  function init() {
-    initParticles();
-    animateNumbers();
-    scrollReveal();
-    tiltCards();
-    mouseGlow();
-    scrollProgress();
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else { init(); }
+  // ========== 初始化 ==========
+  document.addEventListener('DOMContentLoaded', () => {
+    initHeroCanvas();
+    initScrollAnimations();
+    initNavbarScroll();
+    initCursorGlow();
+    animateRankBars();
+
+    // 延迟初始化3D（等卡片渲染完）
+    setTimeout(init3DTilt, 500);
+    setTimeout(animateNumbers, 300);
+  });
+
+  // 暴露重绘方法供外部调用
+  window.TechHubAnim = {
+    reinit: () => { initScrollAnimations(); setTimeout(init3DTilt, 200); },
+    animateNumbers, animateRankBars,
+  };
+
 })();
