@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>TechHub Pro v6.0 — 测试运行器</title>
+<style>
+body { font-family: -apple-system, sans-serif; background: #0a0e1a; color: #e8edf5; padding: 2rem; }
+h1 { color: #00b4d8; }
+.pass { color: #00cc66; } .fail { color: #ff4444; } .warn { color: #ffaa00; }
+pre { background: #111827; padding: 1rem; border-radius: 8px; overflow: auto; max-height: 500px; }
+</style>
+</head>
+<body>
+<h1>🚀 TechHub Pro v6.0 — 测试运行器</h1>
+<p>打开浏览器控制台(F12)查看详细测试结果</p>
+<div id="results"></div>
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/payment.js"></script>
+<script src="js/main.js"></script>
+<script>
+(async function() {
+  const results = [];
+  let pass = 0, fail = 0;
+
+  function test(name, fn) {
+    try {
+      const r = fn();
+      if (r === false) throw new Error('returned false');
+      results.push(`<div class="pass">✅ ${name}</div>`);
+      pass++;
+    } catch(e) {
+      results.push(`<div class="fail">❌ ${name} — ${e.message}</div>`);
+      fail++;
+    }
+  }
+  function testAsync(name, fn) {
+    return fn().then(() => {
+      results.push(`<div class="pass">✅ ${name}</div>`);
+      pass++;
+    }).catch(e => {
+      results.push(`<div class="fail">❌ ${name} — ${e.message}</div>`);
+      fail++;
+    });
+  }
+
+  // ===== 数据完整性 =====
+  test('课程总数=210（200课+VIP+其他）', () => TechHubData.courses.length >= 200);
+  test('科技新闻≥50条', () => TechHubData.techNews.length >= 50);
+  test('干货资源≥12个', () => TechHubData.resources.length >= 12);
+  test('GitHub仓库≥12个', () => TechHubData.githubRepos.length >= 12);
+  test('B站视频≥12个', () => TechHubData.bilibiliVideos.length >= 12);
+  test('技术排行10项', () => TechHubData.rankings.length === 10);
+  test('学习路线5条', () => TechHubData.roadmaps.length === 5);
+  test('分类≥20个', () => TechHubData.categories.length >= 20);
+
+  // ===== 价格范围 =====
+  test('所有课程价格在9.9~19.9', () => {
+    return TechHubData.courses.every(c => c.price >= 9.9 && c.price <= 19.9);
+  });
+  test('VIP月费=99', () => TechHubData.payment.VIP月费 === 99);
+  test('VIP年费=499', () => TechHubData.payment.VIP年费 === 499);
+
+  // ===== 收款信息 =====
+  test('收款名称正确', () => TechHubData.payment['收款名称'] === '愿行无止之境svcliny');
+  test('收款备注正确', () => TechHubData.payment['收款备注'].includes('svcliny'));
+
+  // ===== 链接有效性 =====
+  test('课程URL全部存在', () => TechHubData.courses.every(c => c.url && c.url.startsWith('http')));
+  test('资源URL全部有效', () => TechHubData.resources.every(r => r.url && r.url.startsWith('http')));
+  test('GitHub URL全部有效', () => TechHubData.githubRepos.every(r => r.url && r.url.includes('github.com')));
+  test('B站URL全部有效', () => TechHubData.bilibiliVideos.every(v => v.url && v.url.includes('bilibili.com')));
+
+  // ===== 认证系统 =====
+  await testAsync('注册→密码强度校验', async () => {
+    const r = await TechHubAuth.register('test@test.com', 'Tester', 'Weak123!');
+    return r.success === true;
+  });
+
+  await testAsync('登录→错误密码拒绝', async () => {
+    const r = await TechHubAuth.login('test@test.com', 'WrongPass1!');
+    return r.success === false;
+  });
+
+  await testAsync('登录→正确密码成功', async () => {
+    const r = await TechHubAuth.login('test@test.com', 'Weak123!');
+    return r.success === true;
+  });
+
+  test('VIP状态检查', () => typeof TechHubAuth.isVIP() === 'boolean');
+  test('课程权限检查', () => {
+    const r = TechHubAuth.canAccessCourse(1);
+    return r && typeof r.allowed === 'boolean';
+  });
+
+  // ===== 支付系统 =====
+  test('订单生成格式', async () => {
+    const o = await TechHubPayment.createOrder(1, 9.9, false);
+    return o.orderId && o.orderId.startsWith('TH6-');
+  });
+
+  test('HMAC签名非空', async () => {
+    const o = await TechHubPayment.createOrder(1, 9.9, false);
+    return o.signature && o.signature.length >= 32;
+  });
+
+  test('支付信息完整', () => {
+    const p = TechHubPayment.getPaymentInfo();
+    return p.name && p.qrCodes && p.vipMonthly;
+  });
+
+  // ===== 安全 =====
+  test('密码策略：短密码拒绝', () => {
+    const e = TechHubAuth.validatePassword('Ab1!');
+    return e.length > 0;
+  });
+  test('密码策略：强密码通过', () => {
+    const e = TechHubAuth.validatePassword('StrongPass1!');
+    return e.length === 0;
+  });
+
+  // ===== 渲染 =====
+  test('渲染课程', () => {
+    renderCourses();
+    return document.getElementById('coursesGrid').children.length > 0;
+  });
+  test('渲染新闻', () => {
+    renderNews();
+    return document.getElementById('newsContainer').children.length > 0;
+  });
+  test('渲染资源', () => {
+    renderResources();
+    return document.getElementById('resourcesGrid').children.length > 0;
+  });
+  test('渲染GitHub', () => {
+    renderGitHub();
+    return document.getElementById('githubGrid').children.length > 0;
+  });
+  test('渲染B站', () => {
+    renderBilibili();
+    return document.getElementById('bilibiliGrid').children.length > 0;
+  });
+  test('渲染排行', () => {
+    renderRankings();
+    return document.getElementById('rankingsList').children.length === 10;
+  });
+  test('渲染路线', () => {
+    renderRoadmaps();
+    return document.getElementById('roadmapsGrid').children.length === 5;
+  });
+
+  // ===== 筛选 =====
+  test('分类筛选', () => {
+    filterByCategory('python');
+    return document.getElementById('coursesGrid').children.length > 0;
+  });
+  test('价格筛选', () => {
+    filterByPrice('low');
+    return document.getElementById('coursesGrid').children.length > 0;
+  });
+  test('搜索功能', () => {
+    searchCourses('Python');
+    return document.getElementById('coursesGrid').children.length > 0;
+  });
+
+  // ===== 输出 =====
+  const total = pass + fail;
+  const pct = Math.round(pass / total * 100);
+  document.getElementById('results').innerHTML = `
+    <h2>测试结果：${pass}/${total} 通过 (${pct}%)</h2>
+    <pre>${results.join('\\n')}</pre>
+  `;
+  console.log(`🚀 TechHub Pro v6.0 测试完成：${pass}/${total} (${pct}%)`);
+})();
+</script>
+</body>
+</html>

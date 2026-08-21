@@ -1,13 +1,13 @@
 #!/bin/bash
-# TechHub Pro v4.0 启动脚本
-# 用法: ./run.sh [port]
-PORT=${1:-8080}
-echo "🚀 启动 TechHub Pro 服务器 (端口 $PORT)..."
-echo "   控制台命令: stats | courses | reload | quit"
+# TechHub Pro v6.0 — 启动脚本
+cd "$(dirname "$0")"
+
+CP="bin"
+if [ -f "lib/sqlite-jdbc.jar" ]; then CP="bin:lib/sqlite-jdbc.jar"; fi
+
+echo "🚀 启动 TechHub Pro v6.0..."
+echo "   访问：http://localhost:8080"
+echo "   API文档：http://localhost:8080/api/health"
 echo ""
-if [ -f "lib/sqlite-jdbc.jar" ]; then
-  CP=".:lib/sqlite-jdbc.jar"
-else
-  CP="."
-fi
-java -cp "$CP" Application $PORT
+
+java -cp "$CP" Application "$@"

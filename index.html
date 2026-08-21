@@ -1,235 +1,259 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="dark">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="TechHub Pro — 愿行无止之境 svcliny 的科技区精品课程平台，120门网络安全/编程/AI课程，免费+付费。" />
-<meta name="author" content="svcliny" />
-<meta name="keywords" content="网络安全,渗透测试,Web安全,CTF,Python,JavaScript,AI大模型,DevOps,系统架构,svcliny" />
-<meta name="robots" content="index,follow" />
-<meta property="og:title" content="TechHub Pro — svcliny 科技区精品课程" />
-<meta property="og:description" content="120门课程，网络安全为主体，50%免费50%付费，三轮核验安全支付。" />
-<meta property="og:url" content="https://techhub-svcliny.pages.dev" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://techhub-svcliny.pages.dev https://cdn.jsdelivr.net; frame-src 'none'; object-src 'none';" />
-<meta http-equiv="X-Content-Type-Options" content="nosniff" />
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-<title>TechHub Pro — 愿行无止之境 svcliny 的科技区精品课程</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E" />
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/animations.css" />
-<link rel="stylesheet" href="css/payment.css" />
-<link rel="stylesheet" href="css/utilities.css" />
-<link rel="canonical" href="https://techhub-svcliny.pages.dev/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TechHub Pro v6.0 — 愿行无止之境svcliny的科技区精品课程付费平台，200门课程，统一付费9.9~19.9元，VIP畅听全部">
+<meta name="keywords" content="编程课程,Python,Java,AI,前端,后端,DevOps,网络安全,svcliny,愿行无止之境">
+<meta name="author" content="svcliny (方)">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="TechHub Pro — 科技区精品课程付费平台">
+<meta property="og:description" content="200门精品课程，9.9~19.9元统一付费，VIP畅听全部">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://techhub-svcliny.pages.dev">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="csrf-token" content="techhub-pro-v6-2026">
+<title>TechHub Pro v6.0 — 愿行无止之境 svcliny</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/payment.css">
+<link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
 
-<!-- 滚动进度条 -->
-<div class="scroll-progress" aria-hidden="true"></div>
-
 <!-- 导航栏 -->
 <header class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a class="brand" href="#top">
-      <span class="brand-logo">🛡️</span>
-      <span class="brand-name">TechHub <em>Pro</em></span>
+  <div class="nav-container">
+    <a href="#" class="nav-logo">
+      <span class="logo-icon">🚀</span>
+      <span class="logo-text">TechHub <span class="logo-pro">Pro</span></span>
+      <span class="logo-version">v6.0</span>
     </a>
-    <nav class="nav">
-      <a href="#courses">课程</a>
-      <a href="#bilibili">B站精选</a>
+    <nav class="nav-links">
+      <a href="#home">首页</a>
+      <a href="#courses">课程宝库</a>
+      <a href="#news">科技新闻</a>
+      <a href="#resources">干货资源</a>
+      <a href="#roadmaps">学习路线</a>
+      <a href="#rankings">含金量排行</a>
       <a href="#github">GitHub</a>
-      <a href="#resources">干货</a>
-      <a href="#rankings">排行</a>
-      <a href="#paths">路线</a>
+      <a href="#bilibili">B站推荐</a>
+      <a href="#vip" id="vipNavLink">VIP</a>
     </nav>
     <div class="nav-actions">
-      <button id="theme-toggle" class="icon-btn" title="切换主题" aria-label="切换主题">☀️</button>
-      <a class="btn-contact" href="mailto:vhkex@outlook.com" title="联系作者">📧 联系</a>
-      <button class="hamburger" id="hamburger" aria-label="菜单">☰</button>
+      <button class="theme-toggle" id="themeToggle" title="切换主题">🌙</button>
+      <button class="user-btn" id="userBtn" title="用户中心">👤</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
     </div>
   </div>
 </header>
 
-<!-- Hero -->
-<section class="hero" id="top">
-  <canvas id="particles-canvas" aria-hidden="true"></canvas>
-  <div class="hero-inner">
-    <div class="hero-badge">🛡️ 三轮核验 · 安全支付 · 永久有效</div>
+<!-- 用户面板（默认隐藏，登录后显示） -->
+<div class="user-panel" id="userPanel">
+  <button class="btn btn-primary" onclick="openAuthModal('login')">登录 / 注册</button>
+</div>
+
+<!-- Hero区域 -->
+<section class="hero" id="home">
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <div class="hero-container">
+    <div class="hero-badge">🚀 TechHub Pro v6.0 Beta</div>
     <h1 class="hero-title">
-      科技区 <span class="grad">精品课程</span><br/>
-      由 <em>svcliny</em> 精心打造
+      科技区精选 · <span class="gradient-text">持续更新中</span>
     </h1>
-    <p class="hero-sub">
-      120 门课程 · 网络安全为主体 · 50% 免费 · 50% 付费 · 付费后自动跳转学习
+    <p class="hero-subtitle">
+      掌握核心技术，开启高薪之路<br>
+      <span class="hero-tags">Python · AI · Java · 前端 · 后端 · DevOps · 网络安全 · Rust · Go</span>
     </p>
-    <div class="hero-stats">
-      <div><b data-count="120">0</b><span>门课程</span></div>
-      <div><b data-count="60">0</b><span>免费课程</span></div>
-      <div><b data-count="60">0</b><span>付费课程</span></div>
-      <div><b data-count="21">0</b><span>技术分类</span></div>
-    </div>
-    <div class="hero-cta">
-      <a class="btn-primary" href="#courses">📚 浏览课程</a>
-      <a class="btn-ghost" href="https://b23.tv/Sjdb2WI" target="_blank" rel="noopener">▶ B站主页</a>
-    </div>
-    <div class="hero-floats">
-      <div class="float-card fc1">🔒 三轮核验支付</div>
-      <div class="float-card fc2">📡 全球CDN加速</div>
-      <div class="float-card fc3">🧩 模块化架构</div>
+    <div class="hero-stats" id="heroStats"></div>
+    <div class="hero-actions">
+      <a href="#courses" class="btn btn-primary btn-lg">🔥 浏览课程</a>
+      <a href="#roadmaps" class="btn btn-outline btn-lg">🗺️ 查看学习路线</a>
+      <a href="#vip" class="btn btn-gold btn-lg">👑 VIP畅听全部</a>
     </div>
   </div>
+  <!-- 新闻滚动条 -->
+  <div class="news-ticker" id="newsTicker"></div>
 </section>
 
-<!-- 课程 -->
-<section class="section" id="courses">
-  <div class="section-head">
+<!-- 科技新闻 -->
+<section class="news-section" id="news">
+  <div class="section-header">
+    <h2>📰 科技新闻速递</h2>
+    <p>每日精选全球科技资讯，紧跟技术前沿</p>
+  </div>
+  <div class="news-container" id="newsContainer"></div>
+</section>
+
+<!-- 课程宝库 -->
+<section class="courses-section" id="courses">
+  <div class="section-header">
     <h2>📚 课程宝库</h2>
-    <span id="result-count" class="result-count">加载中...</span>
+    <p>高质量付费课程，统一定价9.9~19.9元，VIP畅听全部200门</p>
   </div>
 
-  <div class="filter-bar">
-    <div class="filter-group" id="filter-categories" aria-label="分类筛选"></div>
-    <div class="filter-group" id="filter-price" aria-label="价格筛选"></div>
-    <div class="filter-search">
-      <input id="search-input" type="search" placeholder="🔍 搜索课程 / 讲师 / 关键词..." aria-label="搜索" />
-      <select id="sort-select" aria-label="排序">
-        <option value="default">默认排序</option>
-        <option value="rating">按评分</option>
-        <option value="priceAsc">价格↑</option>
-        <option value="priceDesc">价格↓</option>
-      </select>
+  <!-- 搜索栏 -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="🔍 搜索课程名称或关键词...">
+  </div>
+
+  <!-- 分类标签 -->
+  <div class="category-tabs" id="categoryTabs"></div>
+
+  <!-- 价格筛选 -->
+  <div class="price-tabs">
+    <button class="price-tab active" data-range="all" onclick="filterByPrice('all')">全部价格</button>
+    <button class="price-tab" data-range="low" onclick="filterByPrice('low')">¥9.9-12.9</button>
+    <button class="price-tab" data-range="mid" onclick="filterByPrice('mid')">¥13.9-15.9</button>
+    <button class="price-tab" data-range="high" onclick="filterByPrice('high')">¥16.9-19.9</button>
+  </div>
+
+  <!-- 课程网格 -->
+  <div class="courses-grid" id="coursesGrid"></div>
+</section>
+
+<!-- VIP区域 -->
+<section class="vip-section" id="vip">
+  <div class="vip-container">
+    <div class="vip-header">
+      <h2>👑 VIP会员</h2>
+      <p>一次开通，畅听全部200门课程</p>
+    </div>
+    <div class="vip-cards">
+      <div class="vip-card">
+        <h3>月度VIP</h3>
+        <div class="vip-price">¥99<span>/月</span></div>
+        <ul>
+          <li>✅ 全部200门课程畅听</li>
+          <li>✅ 优先客服支持</li>
+          <li>✅ 新課优先体验</li>
+        </ul>
+        <button class="btn btn-primary btn-lg" onclick="openVIPModal()">开通月付</button>
+      </div>
+      <div class="vip-card popular">
+        <div class="popular-badge">🔥 省¥689</div>
+        <h3>年度VIP</h3>
+        <div class="vip-price">¥499<span>/年</span></div>
+        <ul>
+          <li>✅ 全部200门课程畅听</li>
+          <li>✅ 优先客服支持</li>
+          <li>✅ 新課优先体验</li>
+          <li>✅ 专属进阶内容</li>
+          <li>✅ 线下活动优先</li>
+        </ul>
+        <button class="btn btn-gold btn-lg" onclick="openVIPModal()">开通年付</button>
+      </div>
     </div>
   </div>
-
-  <div class="courses-grid" id="courses-grid">
-    <div class="loading">⏳ 正在加载课程数据...</div>
-  </div>
-</section>
-
-<!-- B站精选 -->
-<section class="section alt" id="bilibili">
-  <div class="section-head">
-    <h2>▶ B站精选教程</h2>
-    <a class="more" href="https://b23.tv/Sjdb2WI" target="_blank" rel="noopener">访问主页 →</a>
-  </div>
-  <div class="bilibili-grid" id="bilibili-list"></div>
-</section>
-
-<!-- GitHub精选 -->
-<section class="section" id="github">
-  <div class="section-head">
-    <h2>📦 GitHub 精选仓库</h2>
-    <a class="more" href="https://github.com/svcpower100510/svcpower-web" target="_blank" rel="noopener">GitHub主页 →</a>
-  </div>
-  <div class="github-grid" id="github-list"></div>
 </section>
 
 <!-- 干货资源 -->
-<section class="section alt" id="resources">
-  <div class="section-head"><h2>🧰 干货资源</h2></div>
-  <div class="resources-grid" id="resources-list"></div>
-</section>
-
-<!-- 技术排行 -->
-<section class="section" id="rankings">
-  <div class="section-head"><h2>🏆 技术含金量排行</h2></div>
-  <div class="rankings-grid" id="rankings-list"></div>
+<section class="resources-section" id="resources">
+  <div class="section-header">
+    <h2>📦 干货资源（免费）</h2>
+    <p>精选免费优质学习资源，永久开放</p>
+  </div>
+  <div class="resources-grid" id="resourcesGrid"></div>
 </section>
 
 <!-- 学习路线 -->
-<section class="section alt" id="paths">
-  <div class="section-head"><h2>🗺️ 学习路线</h2></div>
-  <div class="paths-grid" id="paths-list"></div>
+<section class="roadmaps-section" id="roadmaps">
+  <div class="section-header">
+    <h2>🗺️ 学习路线</h2>
+    <p>科学规划学习路径，从零到一系统性成长</p>
+  </div>
+  <div class="roadmaps-grid" id="roadmapsGrid"></div>
 </section>
 
-<!-- 支付说明 -->
-<section class="section" id="payment-info">
-  <div class="section-head"><h2>🔐 安全支付说明</h2></div>
-  <div class="pay-info-grid">
-    <div class="pay-info-card">
-      <h3>三轮核验机制</h3>
-      <ol>
-        <li><b>订单完整性</b>：金额/课程/防篡改/防重复购买</li>
-        <li><b>签名校验</b>：HMAC-SHA256 + 防重放攻击（15分钟窗口）</li>
-        <li><b>服务端确认</b>：幂等检查 + 订单状态验证 + 最多5次重试</li>
-      </ol>
-    </div>
-    <div class="pay-info-card">
-      <h3>收款方式</h3>
-      <p>唯一有效收款码：<b>愿行无止之境 svcliny</b></p>
-      <p>支持微信支付 / 支付宝 / 银行转账</p>
-      <p>付费后 <b>自动跳转</b> 至对应学习页面</p>
-      <p>联系邮箱：<a href="mailto:vhkex@outlook.com">vhkex@outlook.com</a></p>
-    </div>
-    <div class="pay-info-card">
-      <h3>版权声明</h3>
-      <p>© 2026 svcliny (方). All Rights Reserved.</p>
-      <p>Apache License 2.0 开源协议</p>
-      <p>虚拟商品一经售出概不退换</p>
-      <p>禁止任何形式的破解/盗版/转载</p>
-    </div>
+<!-- 含金量排行 -->
+<section class="rankings-section" id="rankings">
+  <div class="section-header">
+    <h2>🏆 技术含金量排行</h2>
+    <p>基于就业薪资、市场需求、未来趋势综合评分</p>
   </div>
+  <div class="rankings-list" id="rankingsList"></div>
+</section>
+
+<!-- GitHub精选 -->
+<section class="github-section" id="github">
+  <div class="section-header">
+    <h2>⭐ GitHub精选仓库</h2>
+    <p>全球顶级开源项目，star数见证质量</p>
+  </div>
+  <div class="github-grid" id="githubGrid"></div>
+</section>
+
+<!-- B站推荐 -->
+<section class="bilibili-section" id="bilibili">
+  <div class="section-header">
+    <h2>📺 B站优质教程</h2>
+    <p>中文编程教学首选，免费高质量视频</p>
+  </div>
+  <div class="bilibili-grid" id="bilibiliGrid"></div>
 </section>
 
 <!-- 页脚 -->
-<footer class="footer">
-  <div class="footer-inner">
+<footer class="site-footer" id="siteFooter">
+  <div class="footer-main">
     <div class="footer-brand">
-      <span class="brand-logo">🛡️</span>
-      <div>
-        <b>TechHub Pro</b>
-        <p>© <span id="copyright-year">2026</span> svcliny (方). All Rights Reserved.</p>
-        <p>Apache License 2.0 · 基于 Cloudflare Pages 全球部署</p>
-      </div>
+      <h3>🚀 TechHub Pro</h3>
+      <p>愿行无止之境 — 技术成长永无止境</p>
+      <p class="version">v6.0 Beta | 200门课程 | 50条科技新闻</p>
     </div>
     <div class="footer-links">
-      <div>
-        <h4>导航</h4>
-        <a href="#courses">课程</a>
-        <a href="#bilibili">B站</a>
-        <a href="#github">GitHub</a>
-        <a href="#resources">干货</a>
-      </div>
-      <div>
-        <h4>联系</h4>
-        <a href="mailto:vhkex@outlook.com">📧 邮箱</a>
-        <a href="https://github.com/svcpower100510/svcpower-web" target="_blank" rel="noopener">📦 GitHub</a>
-        <a href="https://b23.tv/Sjdb2WI" target="_blank" rel="noopener">▶ B站</a>
-      </div>
-      <div>
-        <h4>法律</h4>
-        <a href="#" id="footer-license">📜 许可证</a>
-        <a href="#" id="footer-copyright">⚖️ 版权声明</a>
-        <a href="#" id="footer-privacy">🔒 隐私政策</a>
-      </div>
+      <div><h4>课程</h4><a href="#courses">全部课程</a><a href="#vip">VIP会员</a><a href="#roadmaps">学习路线</a></div>
+      <div><h4>资源</h4><a href="#resources">干货资源</a><a href="#github">GitHub精选</a><a href="#bilibili">B站教程</a></div>
+      <div><h4>联系</h4><a href="mailto:vhkex@outlook.com">邮箱 vhkex@outlook.com</a><a href="https://github.com/svcpower100510/svcpower-web" target="_blank" rel="noopener">GitHub @svcpower100510</a><a href="https://b23.tv/Sjdb2WI" target="_blank" rel="noopener">B站主页</a></div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>技术栈：原生JS + Java 11 + SQLite + Cloudflare Pages</span>
-    <span>域名：techhub-svcliny.pages.dev</span>
+  <div class="footer-copy">
+    <p>© 2026 svcliny (方). All Rights Reserved. | Apache License 2.0</p>
+    <p>本站由 svcliny 个人维护 · B站科技区 · GitHub: @svcpower</p>
+    <p class="disclaimer">付费课程购买后永久有效，支持扫码支付，虚拟商品一经售出概不退换</p>
   </div>
 </footer>
 
-<!-- 数据加载 & 应用脚本 -->
+<!-- 弹窗容器 -->
+<div class="modal" id="courseDetailModal"></div>
+<div class="modal" id="paymentModal"></div>
+<div class="modal" id="vipModal"></div>
+<div class="modal" id="authModal"></div>
+
+<!-- JavaScript -->
 <script src="js/data.js"></script>
-<script src="js/api-client.js"></script>
+<script src="js/auth.js"></script>
 <script src="js/payment.js"></script>
-<script src="js/main.js"></script>
 <script src="js/animations.js"></script>
-<script src="js/analytics.js"></script>
-<script src="js/seo.js"></script>
+<script src="js/main.js"></script>
+
+<!-- 版权保护 -->
 <script>
-  // 数据就绪后触发渲染（main.js 监听）
-  document.addEventListener('techhub:rerender', () => {
-    if (window.TechHubApp && window.TechHubApp.dataReady()) {
-      // 触发 main.js 的 renderCourses
-      const ev = new Event('DOMContentLoaded');
-      // 简单刷新：重新调用渲染
-      location.hash = location.hash; // 触发
+  // 禁止右键菜单（全局）
+  document.addEventListener('contextmenu', function(e) {
+    var t = e.target;
+    if (t && t.closest && t.closest('.course-card, .course-detail, .vip-section, .resource-card, .github-card')) {
+      e.preventDefault();
+      if (window.showToast) showToast('内容受版权保护', 'warning');
+      return false;
     }
   });
+  // 禁止复制（>100字符）
+  document.addEventListener('copy', function(e) {
+    try {
+      if (window.getSelection().toString().length > 100) {
+        e.preventDefault();
+        if (window.showToast) showToast('课程内容禁止复制', 'warning');
+      }
+    } catch(_) {}
+  });
+  // 禁止拖拽图片
+  document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+  // 控制台警告
+  console.log('%c⚠️ 警告：这是svcliny的个人网站', 'color:red;font-size:24px;font-weight:bold;');
+  console.log('%c请勿尝试破解或篡改内容。如需授权请联系 vhkex@outlook.com', 'color:orange;font-size:14px;');
+  console.log('%c© 2026 svcliny (方). All Rights Reserved.', 'color:#888;font-size:12px;');
 </script>
+
 </body>
 </html>

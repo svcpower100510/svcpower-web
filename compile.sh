@@ -1,48 +1,53 @@
 #!/bin/bash
-# TechHub Pro v4.0 编译脚本
-set -e
-echo "╔════════════════════════════════════╗"
-echo "║   TechHub Pro v4.0 编译脚本         ║"
-echo "╚════════════════════════════════════╝"
+# TechHub Pro v6.0 — 编译脚本
+echo "=========================================="
+echo "  TechHub Pro v6.0 Beta — 编译脚本"
+echo "  愿行无止之境 svcliny"
+echo "=========================================="
 echo ""
-JAVAC=$(which javac || true)
-if [ -z "$JAVAC" ]; then
-  echo "⚠️  未找到 javac，跳过 Java 编译"
-  echo "    本地开发请安装 JDK 11+"
-  echo "    或使用 ./run.sh 直接运行"
-  exit 0
+
+# 检查JDK
+if ! command -v javac &> /dev/null; then
+    echo "❌ 未找到 javac (JDK)"
+    echo "   请安装 JDK 11+ 后重试"
+    exit 1
 fi
-JAVA_VER=$($JAVAC -version 2>&1 | head -1)
-echo "✅ 编译器: $JAVA_VER"
-# 收集所有 Java 文件
-JAVA_FILES=$(find server -name "*.java" 2>/dev/null | tr '\n' ' ')
-if [ -z "$JAVA_FILES" ]; then
-  echo "⚠️  未找到 Java 源文件"
-  exit 0
-fi
-# 检查 sqlite-jdbc
-if [ -f "lib/sqlite-jdbc.jar" ]; then
-  CP=".:lib/sqlite-jdbc.jar"
-  echo "✅ 找到 sqlite-jdbc.jar"
-else
-  CP="."
-  echo "⚠️  未找到 lib/sqlite-jdbc.jar (运行时需下载)"
-fi
+
+echo "✅ JDK: $(javac -version 2>&1)"
 echo ""
-echo "📦 编译中..."
-$JAVAC -encoding UTF-8 -cp "$CP" -d . $JAVA_FILES 2>&1
-if [ $? -eq 0 ]; then
-  echo ""
-  echo "✅ 编译成功！"
-  echo ""
-  echo "启动方式:"
-  echo "  java -cp \"$CP\" Application [port]"
-  echo ""
-  echo "测试:"
-  echo "  curl http://localhost:8080/api/health"
-  echo "  curl http://localhost:8080/api/courses | head"
+
+# 下载SQLite JDBC（如果不存在）
+if [ ! -f "lib/sqlite-jdbc.jar" ]; then
+    echo "📦 下载 SQLite JDBC..."
+    mkdir -p lib
+    curl -L -o lib/sqlite-jdbc.jar "https://github.com/xerial/sqlite-jdbc/releases/download/3.43.2.2/sqlite-jdbc-3.43.2.2.jar" 2>/dev/null \
+        || echo "⚠️ 无法下载 SQLite JDBC，将使用无DB模式"
+fi
+
+# 编译
+echo ""
+echo "🔨 编译 Java 文件..."
+mkdir -p bin
+
+CP="bin"
+if [ -f "lib/sqlite-jdbc.jar" ]; then CP="bin:lib/sqlite-jdbc.jar"; fi
+
+cd server
+javac -d ../bin -cp "$CP" *.java 2>&1
+RESULT=$?
+cd ..
+
+if [ $RESULT -eq 0 ]; then
+    echo ""
+    echo "✅ 编译成功！"
+    echo ""
+    echo "启动服务器："
+    echo "  java -cp \"$CP\" Application"
+    echo ""
+    echo "或直接运行："
+    echo "  ./run.sh"
 else
-  echo ""
-  echo "❌ 编译失败，请检查上方错误信息"
-  exit 1
+    echo ""
+    echo "❌ 编译失败，请检查错误信息"
+    exit 1
 fi
