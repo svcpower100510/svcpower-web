@@ -1,526 +1,570 @@
-/**
- * TechHub Pro v4.0 — HTTP 服务器
- * 多线程 + REST API + 静态文件 + CORS + 安全头
- */
 import java.io.*;
 import java.net.*;
 import java.nio.file.*;
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.logging.*;
 import java.text.SimpleDateFormat;
-import java.util.TimeZone;
 
+/**
+ * TechHub Pro v6.0 — HTTP服务器 + REST API
+ * 支持：静态文件服务 + 12个API端点 + CORS + 安全头
+ */
 public class TechHubServer {
+    private static final Logger logger = Logger.getLogger("TechHubServer");
     private final int port;
-    private ServerSocket serverSocket;
     private final ExecutorService pool;
-    private volatile boolean running = false;
+    private final Map<String, String> mimeTypes = new HashMap<>();
+    private final Map<String, Session> sessions = new ConcurrentHashMap<>();
+    private final Map<String, Order> pendingOrders = new ConcurrentHashMap<>();
+    private final Map<String, User> users = new ConcurrentHashMap<>();
+    private ServerSocket serverSocket;
+    private volatile boolean running = true;
 
-    // 路由表
-    private final Map<String, RequestHandler> getRoutes = new HashMap<>();
-    private final Map<String, RequestHandler> postRoutes = new HashMap<>();
-
-    // 数据
-    private List<Course> courses = new ArrayList<>();
-    private List<Resource> resources = new ArrayList<>();
-    private List<Ranking> rankings = new ArrayList<>();
-    private List<GithubRepo> github = new ArrayList<>();
-    private List<BiliVideo> bilibili = new ArrayList<>();
-    private List<LearningPath> paths = new ArrayList<>();
-
-    // 统计
-    private long totalRequests = 0;
-    private long paidOrders = 0;
-    private long freeAccess = 0;
-
-    // MIME
-    private static final Map<String, String> MIME = new HashMap<>();
-    static {
-        MIME.put("html", "text/html; charset=utf-8");
-        MIME.put("css", "text/css; charset=utf-8");
-        MIME.put("js", "application/javascript; charset=utf-8");
-        MIME.put("json", "application/json; charset=utf-8");
-        MIME.put("png", "image/png");
-        MIME.put("jpg", "image/jpeg");
-        MIME.put("svg", "image/svg+xml");
-        MIME.put("ico", "image/x-icon");
-        MIME.put("woff", "font/woff");
-        MIME.put("woff2", "font/woff2");
-        MIME.put("txt", "text/plain; charset=utf-8");
-        MIME.put("md", "text/markdown; charset=utf-8");
+    // ========== 数据模型 ==========
+    static class User {
+        String email, username, passwordHash;
+        boolean isVIP;
+        long vipExpiresAt;
+        Set<String> purchasedCourses = ConcurrentHashMap.newKeySet();
+        long createdAt, lastLoginAt;
+        int loginCount;
     }
-
-    // 线程安全格式化
-    private static final SimpleDateFormat GMT_FMT;
-    static {
-        GMT_FMT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z");
-        GMT_FMT.setTimeZone(TimeZone.getTimeZone("GMT"));
+    static class Session {
+        String email, token;
+        long expiresAt;
+        boolean isVIP;
     }
-
-    @FunctionalInterface
-    interface RequestHandler {
-        void handle(HttpRequest req, HttpResponse res) throws IOException;
+    static class Order {
+        String orderId, courseId;
+        double amount;
+        long timestamp;
+        String signature, status;
+        int retryCount;
+        boolean isVIPOrder;
     }
 
     public TechHubServer(int port) {
         this.port = port;
-        this.pool = Executors.newFixedThreadPool(
-            Runtime.getRuntime().availableProcessors() * 4,
-            r -> { Thread t = new Thread(r, "techhub-worker"); t.setDaemon(true); return t; }
-        );
-        initRoutes();
-        loadData();
+        this.pool = Executors.newFixedThreadPool(20, r -> {
+            Thread t = new Thread(r, "http-worker");
+            t.setDaemon(true);
+            return t;
+        });
+        initMimeTypes();
+        loadUsers();
+        logger.info("TechHubServer initialized on port " + port);
     }
 
-    private void initRoutes() {
-        // GET
-        getRoutes.put("/api/courses", this::handleGetCourses);
-        getRoutes.put("/api/resources", this::handleGetResources);
-        getRoutes.put("/api/rankings", this::handleGetRankings);
-        getRoutes.put("/api/github", this::handleGetGithub);
-        getRoutes.put("/api/bilibili", this::handleGetBilibili);
-        getRoutes.put("/api/paths", this::handleGetPaths);
-        getRoutes.put("/api/stats", this::handleGetStats);
-        getRoutes.put("/api/health", this::handleHealth);
-        getRoutes.put("/api/search", this::handleSearch);
-
-        // POST
-        postRoutes.put("/api/payment/verify", this::handlePaymentVerify);
-        postRoutes.put("/api/courses", this::handleCreateCourse);
+    private void initMimeTypes() {
+        mimeTypes.put(".html", "text/html; charset=utf-8");
+        mimeTypes.put(".css", "text/css; charset=utf-8");
+        mimeTypes.put(".js", "application/javascript; charset=utf-8");
+        mimeTypes.put(".json", "application/json; charset=utf-8");
+        mimeTypes.put(".png", "image/png");
+        mimeTypes.put(".jpg", "image/jpeg");
+        mimeTypes.put(".svg", "image/svg+xml");
+        mimeTypes.put(".ico", "image/x-icon");
     }
 
-    private void loadData() {
-        System.out.println("[INFO] 初始化数据...");
-        DatabaseUtil.init();
-        courses = CourseService.getAllCourses();
-        resources = DataStore.getResources();
-        rankings = DataStore.getRankings();
-        github = DataStore.getGithub();
-        bilibili = DataStore.getBilibili();
-        paths = DataStore.getPaths();
-        System.out.println("[INFO] 已加载 " + courses.size() + " 门课程");
-        System.out.println("[INFO] 资源: " + resources.size() + " | GitHub: " + github.size() +
-            + " | B站: " + bilibili.size() + " | 排行: " + rankings.size());
+    private void loadUsers() {
+        // 从持久化文件加载（简化版，实际可用SQLite）
+        File f = new File("techhub_users.dat");
+        if (f.exists()) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f))) {
+                Map<String, User> loaded = (Map<String, User>) ois.readObject();
+                users.putAll(loaded);
+                logger.info("Loaded " + users.size() + " users");
+            } catch (Exception e) {
+                logger.warning("Failed to load users: " + e.getMessage());
+            }
+        }
     }
 
-    public void reloadData() {
-        loadData();
-        System.out.println("[INFO] 数据已重新加载");
+    private void saveUsers() {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("techhub_users.dat"))) {
+            oos.writeObject(users);
+        } catch (Exception e) {
+            logger.warning("Failed to save users: " + e.getMessage());
+        }
     }
 
     public void start() {
         try {
             serverSocket = new ServerSocket(port);
-            running = true;
-            System.out.println("[INFO] ✅ 服务器已启动: http://localhost:" + port);
-            System.out.println("[INFO] API 文档: http://localhost:" + port + "/api/health");
+            logger.info("Server listening on http://localhost:" + port);
             while (running) {
                 try {
                     Socket client = serverSocket.accept();
-                    pool.execute(() -> handleClient(client));
-                } catch (IOException e) {
-                    if (running) System.err.println("[ERROR] accept: " + e.getMessage());
+                    pool.submit(() -> handleClient(client));
+                } catch (SocketException e) {
+                    if (running) logger.warning("Socket error: " + e.getMessage());
                 }
             }
         } catch (IOException e) {
-            System.err.println("[FATAL] 无法绑定端口 " + port + ": " + e.getMessage());
+            logger.severe("Failed to start server: " + e.getMessage());
         }
     }
 
-    public void stop() {
-        running = false;
-        try { if (serverSocket != null && !serverSocket.isClosed()) serverSocket.close(); } catch (IOException ignored) {}
-        pool.shutdownNow();
-    }
+    private void handleClient(Socket client) {
+        try {
+            BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            OutputStream out = client.getOutputStream();
+            String line = in.readLine();
+            if (line == null) { client.close(); return; }
 
-    // ========== 客户端处理 ==========
-    private void handleClient(Socket socket) {
-        try (socket; InputStream in = socket.getInputStream();
-             OutputStream out = socket.getOutputStream()) {
-            HttpRequest req = HttpRequest.parse(in);
-            if (req == null) return;
-            totalRequests++;
+            String[] requestLine = line.split(" ");
+            if (requestLine.length < 2) { client.close(); return; }
+            String method = requestLine[0];
+            String path = requestLine[1];
 
-            HttpResponse res = new HttpResponse(out);
+            // 解析headers
+            Map<String, String> headers = new HashMap<>();
+            String h;
+            while ((h = in.readLine()) != null && !h.isEmpty()) {
+                int idx = h.indexOf(':');
+                if (idx > 0) headers.put(h.substring(0, idx).trim().toLowerCase(), h.substring(idx+1).trim());
+            }
 
-            // CORS 预检
-            if ("OPTIONS".equals(req.method)) {
-                res.setHeader("Access-Control-Allow-Origin", "*");
-                res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-                res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-                res.setHeader("Access-Control-Max-Age", "86400");
-                res.send(204, "");
-                return;
+            // 读取body
+            String body = "";
+            if ("POST".equals(method) || "PUT".equals(method)) {
+                int contentLength = Integer.parseInt(headers.getOrDefault("content-length", "0"));
+                if (contentLength > 0) {
+                    char[] buf = new char[contentLength];
+                    in.read(buf, 0, contentLength);
+                    body = new String(buf);
+                }
             }
 
             // 路由
-            Map<String, RequestHandler> routes = "POST".equals(req.method) ? postRoutes : getRoutes;
-            String path = req.path;
-            // 尝试精确匹配
-            RequestHandler handler = routes.get(path);
-            // 尝试前缀匹配（带ID）
-            if (handler == null) {
-                if (path.startsWith("/api/courses/") && path.length() > 14) {
-                    handleGetCourseById(req, res, path.substring(14));
-                    return;
-                }
-                // 静态文件
-                handleStatic(req, res, path);
-                return;
+            if (path.equals("/api/courses") && "GET".equals(method)) {
+                sendJson(out, getCoursesJson());
+            } else if (path.equals("/api/courses/featured") && "GET".equals(method)) {
+                sendJson(out, getFeaturedCoursesJson());
+            } else if (path.equals("/api/resources") && "GET".equals(method)) {
+                sendJson(out, getResourcesJson());
+            } else if (path.equals("/api/rankings") && "GET".equals(method)) {
+                sendJson(out, getRankingsJson());
+            } else if (path.equals("/api/github") && "GET".equals(method)) {
+                sendJson(out, getGithubJson());
+            } else if (path.equals("/api/bilibili") && "GET".equals(method)) {
+                sendJson(out, getBilibiliJson());
+            } else if (path.equals("/api/roadmaps") && "GET".equals(method)) {
+                sendJson(out, getRoadmapsJson());
+            } else if (path.equals("/api/news") && "GET".equals(method)) {
+                sendJson(out, getNewsJson());
+            } else if (path.equals("/api/search") && "GET".equals(method)) {
+                String q = headers.getOrDefault("x-search-query", "");
+                sendJson(out, searchCourses(q));
+            } else if (path.equals("/api/auth/register") && "POST".equals(method)) {
+                sendJson(out, handleRegister(body));
+            } else if (path.equals("/api/auth/login") && "POST".equals(method)) {
+                sendJson(out, handleLogin(body));
+            } else if (path.equals("/api/auth/logout") && "POST".equals(method)) {
+                sendJson(out, handleLogout(headers));
+            } else if (path.equals("/api/auth/me") && "GET".equals(method)) {
+                sendJson(out, handleGetMe(headers));
+            } else if (path.equals("/api/payment/create") && "POST".equals(method)) {
+                sendJson(out, handleCreateOrder(body));
+            } else if (path.equals("/api/payment/verify") && "POST".equals(method)) {
+                sendJson(out, handleVerifyPayment(body));
+            } else if (path.equals("/api/payment/confirm") && "POST".equals(method)) {
+                sendJson(out, handleConfirmPayment(body));
+            } else if (path.equals("/api/vip/upgrade") && "POST".equals(method)) {
+                sendJson(out, handleVIPUpgrade(body, headers));
+            } else if (path.equals("/api/stats") && "GET".equals(method)) {
+                sendJson(out, getStatsJson());
+            } else if (path.equals("/api/health") && "GET".equals(method)) {
+                sendJson(out, "{\"status\":\"ok\",\"version\":\"6.0\",\"time\":" + System.currentTimeMillis() + "}");
+            } else if ("GET".equals(method)) {
+                serveStatic(client, out, path);
+            } else {
+                send404(out);
             }
-            handler.handle(req, res);
-
         } catch (Exception e) {
-            System.err.println("[ERROR] 处理异常: " + e.getMessage());
+            logger.warning("Request error: " + e.getMessage());
+        } finally {
+            try { client.close(); } catch (Exception ignored) {}
         }
     }
 
-    // ========== API 处理器 ==========
-    private void handleGetCourses(HttpRequest req, HttpResponse res) {
-        String cat = req.getParam("category");
-        String price = req.getParam("price");
-        List<Course> list = new ArrayList<>(courses);
-        if (cat != null && !cat.isEmpty()) {
-            list.removeIf(c -> !c.category.equals(cat));
-        }
-        if ("free".equals(price)) list.removeIf(c -> !c.isFree);
-        else if ("paid".equals(price)) list.removeIf(Course::isFree);
-
-        res.json(200, Course.toJsonArray(list));
-    }
-
-    private void handleGetCourseById(HttpRequest req, HttpResponse res, String id) {
-        Optional<Course> c = courses.stream().filter(x -> x.id.equals(id)).findFirst();
-        if (c.isPresent()) res.json(200, c.get().toJson());
-        else res.json(404, "{\"error\":\"课程不存在\"}");
-    }
-
-    private void handleCreateCourse(HttpRequest req, HttpResponse res) {
+    // ========== API Handlers ==========
+    private String handleRegister(String body) {
         try {
-            Course c = Course.fromJson(req.body);
-            courses.add(c);
-            CourseService.saveCourse(c);
-            res.json(201, c.toJson());
+            Map<String,String> data = parseJson(body);
+            String email = data.get("email");
+            String username = data.get("username");
+            String password = data.get("password");
+
+            if (email == null || !email.matches("^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$")) {
+                return jsonError("邮箱格式不正确");
+            }
+            if (username == null || username.length() < 2 || username.length() > 20) {
+                return jsonError("用户名2-20个字符");
+            }
+            if (password == null || password.length() < 8) {
+                return jsonError("密码至少8位");
+            }
+            if (!password.matches(".*[A-Z].*") || !password.matches(".*[0-9].*") || !password.matches(".*[^A-Za-z0-9].*")) {
+                return jsonError("密码需包含大写字母、数字和特殊字符");
+            }
+            if (users.containsKey(email)) {
+                return jsonError("该邮箱已注册");
+            }
+
+            User u = new User();
+            u.email = email;
+            u.username = username;
+            u.passwordHash = hashPassword(password);
+            u.createdAt = System.currentTimeMillis();
+            users.put(email, u);
+            saveUsers();
+
+            logger.info("New user registered: " + email);
+            return jsonSuccess("注册成功", "{\"email\":\"" + email + "\"}");
         } catch (Exception e) {
-            res.json(400, "{\"error\":\"" + e.getMessage() + "\"}");
+            return jsonError("注册失败: " + e.getMessage());
         }
     }
 
-    private void handleGetResources(HttpRequest req, HttpResponse res) {
-        res.json(200, Resource.toJsonArray(resources));
-    }
-
-    private void handleGetRankings(HttpRequest req, HttpResponse res) {
-        res.json(200, Ranking.toJsonArray(rankings));
-    }
-
-...
-
-    private void handleGetGithub(HttpRequest req, HttpResponse res) {
-        res.json(200, GithubRepo.toJsonArray(github));
-    }
-
-    private void handleGetBilibili(HttpRequest req, HttpResponse res) {
-        res.json(200, BiliVideo.toJsonArray(bilibili));
-    }
-
-    private void handleGetPaths(HttpRequest req, HttpResponse res) {
-        res.json(200, LearningPath.toJsonArray(paths));
-    }
-
-    private void handleGetStats(HttpRequest req, HttpResponse res) {
-        StringBuilder sb = new StringBuilder("{");
-        sb.append("\"totalCourses\":").append(courses.size()).append(",");
-        sb.append("\"freeCourses\":").append(courses.stream().filter(Course::isFree).count()).append(",");
-        sb.append("\"paidCourses\":").append(courses.stream().filter(c -> !c.isFree).count()).append(",");
-        sb.append("\"totalRequests\":").append(totalRequests).append(",");
-        sb.append("\"paidOrders\":").append(paidOrders).append(",");
-        sb.append("\"freeAccess\":").append(freeAccess).append(",");
-        sb.append("\"categories\":{");
-        Map<String, Long> cats = new HashMap<>();
-        for (Course c : courses) cats.merge(c.category, 1L, Long::sum);
-        boolean first = true;
-        for (Map.Entry<String, Long> e : cats.entrySet()) {
-            if (!first) sb.append(",");
-            sb.append("\"").append(e.getKey()).append("\":").append(e.getValue());
-            first = false;
-        }
-        sb.append("},");
-        sb.append("\"priceDist\":{");
-        Map<Integer, Long> pd = new HashMap<>();
-        for (Course c : courses) pd.merge(c.price, 1L, Long::sum);
-        first = true;
-        for (Map.Entry<Integer, Long> e : pd.entrySet()) {
-            if (!first) sb.append(",");
-            sb.append(e.getKey()).append(":").append(e.getValue());
-            first = false;
-        }
-        sb.append("},");
-        sb.append("\"uptime\":\"").append(formatUptime()).append("\",");
-        sb.append("\"version\":\"4.0.0\"");
-        sb.append("}");
-        res.json(200, sb.toString());
-    }
-
-    private void handleHealth(HttpRequest req, HttpResponse res) {
-        String json = "{\"status\":\"ok\",\"service\":\"TechHub Pro\",\"version\":\"4.0.0\","
-            + "\"author\":\"svcliny\",\"email\":\"vhkex@outlook.com\","
-            + "\"github\":\"https://github.com/svcpower100510/svcpower-web\","
-            + "\"bilibili\":\"https://b23.tv/Sjdb2WI\","
-            + "\"courses\":" + courses.size() + ","
-            + "\"uptime\":\"" + formatUptime() + "\"}";
-        res.json(200, json);
-    }
-
-    private void handleSearch(HttpRequest req, HttpResponse res) {
-        String q = req.getParam("q");
-        if (q == null || q.isEmpty()) { res.json(400, "{\"error\":\"缺少参数 q\"}"); return; }
-        String ql = q.toLowerCase();
-        List<Course> results = new ArrayList<>();
-        for (Course c : courses) {
-            if (c.title.toLowerCase().contains(ql)
-                || c.description.toLowerCase().contains(ql)
-                || (c.instructor != null && c.instructor.toLowerCase().contains(ql))
-                || c.category.toLowerCase().contains(ql)) {
-                results.add(c);
-            }
-        }
-        res.json(200, Course.toJsonArray(results));
-    }
-
-    private void handlePaymentVerify(HttpRequest req, HttpResponse res) {
+    private String handleLogin(String body) {
         try {
-            Map<String, Object> payload = parseJsonMap(req.body);
-            String orderId = (String) payload.get("orderId");
-            String courseId = (String) payload.get("courseId");
-            Object amt = payload.get("amount");
-            Number amount = (amt instanceof Number) ? (Number) amt : Double.parseDouble(amt.toString());
-            Number ts = (Number) payload.get("timestamp");
-            String signature = (String) payload.get("signature");
+            Map<String,String> data = parseJson(body);
+            String email = data.get("email");
+            String password = data.get("password");
+            boolean remember = "true".equals(data.get("remember"));
 
-            // 三轮核验
-            Course course = courses.stream().filter(c -> c.id.equals(courseId)).findFirst().orElse(null);
-            if (course == null) { res.json(400, "{\"ok\":false,\"reason\":\"课程不存在\"}"); return; }
-
-            // 轮1
-            if (amount.intValue() != course.price) {
-                res.json(400, "{\"ok\":false,\"reason\":\"金额不匹配\",\"round\":1}"); return;
-            }
-            if (orderId == null || !orderId.matches("^TH-\\d{12}-\\w{6,8}$")) {
-                res.json(400, "{\"ok\":false,\"reason\":\"订单号非法\",\"round\":1}"); return;
-            }
-            long now = System.currentTimeMillis();
-            if (ts != null && now - ts.longValue() > 15 * 60 * 1000) {
-                res.json(400, "{\"ok\":false,\"reason\":\"订单超时\",\"round\":1}"); return;
+            User u = users.get(email);
+            if (u == null || !u.passwordHash.equals(hashPassword(password))) {
+                return jsonError("邮箱或密码错误");
             }
 
-            // 轮2: 签名
-            if (signature == null || signature.isEmpty()) {
-                res.json(400, "{\"ok\":false,\"reason\":\"缺少签名\",\"round\":2}"); return;
-            }
-            String expected = PaymentService.sign(orderId + "|" + courseId + "|" + amount + "|" + ts);
-            if (!signature.equals(expected) && !signature.equals("DEV-" + expected.substring(0, 8))) {
-                res.json(400, "{\"ok\":false,\"reason\":\"签名校验失败\",\"round\":2}"); return;
-            }
+            String token = generateToken();
+            Session s = new Session();
+            s.email = email;
+            s.token = token;
+            s.expiresAt = System.currentTimeMillis() + (remember ? 7 : 1) * 86400000L;
+            s.isVIP = u.isVIP && u.vipExpiresAt > System.currentTimeMillis();
+            sessions.put(token, s);
 
-            // 轮3: 幂等 + 确认
-            synchronized (this) {
-                if (PaymentService.isOrderUsed(orderId)) {
-                    res.json(400, "{\"ok\":false,\"reason\":\"订单已使用\",\"round\":3}"); return;
-                }
-                PaymentService.markOrderUsed(orderId);
-                paidOrders++;
-            }
+            u.lastLoginAt = System.currentTimeMillis();
+            u.loginCount++;
+            saveUsers();
 
-            res.json(200, "{\"ok\":true,\"round\":3,\"redirectUrl\":\""
-                + (course.redirectUrl != null ? course.redirectUrl : "") + "\"}");
-
+            return jsonSuccess("登录成功", "{\"token\":\"" + token + "\",\"isVIP\":" + s.isVIP + ",\"username\":\"" + u.username + "\"}");
         } catch (Exception e) {
-            res.json(500, "{\"ok\":false,\"reason\":\"服务器内部错误: " + e.getMessage() + "\"}");
+            return jsonError("登录失败: " + e.getMessage());
         }
     }
 
-    // ========== 静态文件 ==========
-    private void handleStatic(HttpRequest req, HttpResponse res, String path) {
-        // 安全：禁止目录遍历
-        if (path.contains("..") || path.contains("//")) {
-            res.send(403, "Forbidden");
-            return;
-        }
-        if (path.equals("/")) path = "/index.html";
+    private String handleLogout(Map<String,String> headers) {
+        String token = headers.getOrDefault("authorization", "").replace("Bearer ", "");
+        sessions.remove(token);
+        return jsonSuccess("已退出", "{}");
+    }
 
-        // SPA fallback
-        String filePath = "." + path;
-        File f = new File(filePath);
-        if (!f.exists() || !f.isFile()) {
-            // 尝试 index.html
-            f = new File("./index.html");
-            if (!f.exists()) { res.send(404, "Not Found"); return; }
-            filePath = "./index.html";
-        }
+    private String handleGetMe(Map<String,String> headers) {
+        String token = headers.getOrDefault("authorization", "").replace("Bearer ", "");
+        Session s = sessions.get(token);
+        if (s == null) return jsonError("未登录");
+        User u = users.get(s.email);
+        if (u == null) return jsonError("用户不存在");
+        boolean vip = u.isVIP && u.vipExpiresAt > System.currentTimeMillis();
+        return "{\"success\":true,\"user\":{\"email\":\"" + u.email + "\",\"username\":\"" + u.username + "\",\"isVIP\":" + vip + ",\"purchasedCount\":" + u.purchasedCourses.size() + "}}";
+    }
 
+    private String handleCreateOrder(String body) {
         try {
-            byte[] data = Files.readAllBytes(f.toPath());
-            String ext = filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();
-            res.setHeader("Content-Type", MIME.getOrDefault(ext, "application/octet-stream"));
-            res.setHeader("Cache-Control", "no-cache");
-            res.setHeader("X-Content-Type-Options", "nosniff");
-            res.setHeader("X-Frame-Options", "SAMEORIGIN");
-            res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
-            res.send(200, data);
-        } catch (IOException e) {
-            res.send(500, "Internal Server Error");
+            Map<String,String> data = parseJson(body);
+            String courseId = data.get("courseId");
+            double amount = Double.parseDouble(data.getOrDefault("amount", "0"));
+            boolean isVIP = "true".equals(data.getOrDefault("isVIP", "false"));
+
+            if (amount < 9.9 || amount > 499) return jsonError("金额异常");
+
+            String orderId = "TH6-" + Long.toString(System.currentTimeMillis(), 36).toUpperCase() + "-" + UUID.randomUUID().toString().substring(0,6).toUpperCase();
+            String signData = orderId + "|" + courseId + "|" + amount + "|" + System.currentTimeMillis();
+            String signature = hmacSign(signData, "TechHub-Pro-v6-2026-svcliny-secret-key");
+
+            Order o = new Order();
+            o.orderId = orderId;
+            o.courseId = courseId;
+            o.amount = amount;
+            o.timestamp = System.currentTimeMillis();
+            o.signature = signature;
+            o.status = "pending";
+            o.isVIPOrder = isVIP;
+            pendingOrders.put(orderId, o);
+
+            return jsonSuccess("订单创建成功", "{\"orderId\":\"" + orderId + "\",\"signature\":\"" + signature + "\",\"amount\":" + amount + "}");
+        } catch (Exception e) {
+            return jsonError("创建订单失败: " + e.getMessage());
         }
     }
 
-    // ========== 工具 ==========
-    private Map<String, Object> parseJsonMap(String json) {
-        Map<String, Object> map = new LinkedHashMap<>();
-        if (json == null || json.trim().isEmpty()) return map;
-        json = json.trim();
-        if (!json.startsWith("{") || !json.endsWith("}")) return map;
-        json = json.substring(1, json.length() - 1).trim();
-        // 简单解析（够用，不依赖外部库）
-        StringBuilder key = new StringBuilder();
-        StringBuilder val = new StringBuilder();
-        boolean inKey = true, inString = false, escape = false;
-        for (int i = 0; i < json.length(); i++) {
-            char c = json.charAt(i);
-            if (escape) { (inKey ? key : val).append(c); escape = false; continue; }
-            if (c == '\\') { escape = true; continue; }
-            if (c == '"') { inString = !inString; continue; }
-            if (!inString) {
-                if (c == ':' && inKey) { inKey = false; continue; }
-                if (c == ',' && !inKey) {
-                    map.put(unquote(key.toString().trim()), parseValue(val.toString().trim()));
-                    key.setLength(0); val.setLength(0); inKey = true; continue;
-                }
+    private String handleVerifyPayment(String body) {
+        try {
+            Map<String,String> data = parseJson(body);
+            String orderId = data.get("orderId");
+            String signature = data.get("signature");
+            double amount = Double.parseDouble(data.getOrDefault("amount", "0"));
+
+            Order o = pendingOrders.get(orderId);
+            if (o == null) return jsonError("订单不存在");
+
+            // Round 1: 完整性
+            if (Math.abs(System.currentTimeMillis() - o.timestamp) > 15 * 60 * 1000) {
+                return jsonError("订单已超时");
             }
-            (inKey ? key : val).append(c);
-        }
-        if (key.length() > 0) map.put(unquote(key.toString().trim()), parseValue(val.toString().trim()));
-        return map;
-    }
-    private Object parseValue(String v) {
-        v = v.trim();
-        if (v.equals("true")) return Boolean.TRUE;
-        if (v.equals("false")) return Boolean.FALSE;
-        if (v.equals("null")) return null;
-        if (v.startsWith("\"") && v.endsWith("\"")) return v.substring(1, v.length() - 1);
-        try { return Integer.parseInt(v); } catch (Exception ignored) {}
-        try { return Double.parseDouble(v); } catch (Exception ignored) {}
-        return v;
-    }
-    private String unquote(String s) {
-        if (s.startsWith("\"") && s.endsWith("\"")) return s.substring(1, s.length() - 1);
-        return s;
-    }
+            if (o.retryCount > 5) return jsonError("重试次数超限，订单锁定");
 
-    private String formatUptime() {
-        RuntimeMXBean rb = ManagementFactory.getRuntimeMXBean();
-        long ms = rb.getUptime();
-        long s = ms / 1000, m = s / 60, h = m / 60, d = h / 24;
-        return d + "d " + (h % 24) + "h " + (m % 60) + "m";
-    }
+            // Round 2: 签名
+            String expectedSign = o.signature;
+            if (!expectedSign.equals(signature)) {
+                o.retryCount++;
+                return jsonError("签名校验失败");
+            }
 
-    public void printStats() {
-        System.out.println("─── TechHub Pro 运行统计 ───");
-        System.out.println("总请求: " + totalRequests);
-        System.out.println("付费订单: " + paidOrders);
-        System.out.println("课程总数: " + courses.size());
-        System.out.println("运行时间: " + formatUptime());
-    }
-
-    public void printCourses() {
-        System.out.println("─── 课程列表 (前20) ───");
-        int n = 0;
-        for (Course c : courses) {
-            if (n++ >= 20) break;
-            System.out.printf("  %s | %-30s | ¥%3d | %s%n", c.id, c.title.substring(0, Math.min(30, c.title.length())), c.price, c.isFree ? "免费" : "付费");
+            // Round 3: 服务端确认
+            o.status = "verified";
+            return jsonSuccess("核验通过", "{\"round\":3}");
+        } catch (Exception e) {
+            return jsonError("核验失败: " + e.getMessage());
         }
     }
 
-    // ========== HTTP 请求/响应 ==========
-    static class HttpRequest {
-        String method, path, query;
-        Map<String, String> headers = new LinkedHashMap<>();
-        Map<String, String> params = new LinkedHashMap<>();
-        String body = "";
+    private String handleConfirmPayment(String body) {
+        try {
+            Map<String,String> data = parseJson(body);
+            String orderId = data.get("orderId");
+            Order o = pendingOrders.get(orderId);
+            if (o == null) return jsonError("订单不存在");
 
-        static HttpRequest parse(InputStream in) throws IOException {
-            BufferedReader r = new BufferedReader(new InputStreamReader(in));
-            String line = r.readLine();
-            if (line == null) return null;
-            String[] parts = line.split(" ");
-            if (parts.length < 2) return null;
-            HttpRequest req = new HttpRequest();
-            req.method = parts[0].toUpperCase();
-            String url = parts[1];
-            int qIdx = url.indexOf('?');
-            if (qIdx >= 0) {
-                req.path = url.substring(0, qIdx);
-                req.query = url.substring(qIdx + 1);
-                for (String kv : req.query.split("&")) {
-                    String[] p = kv.split("=", 2);
-                    req.params.put(p[0], p.length > 1 ? p[1] : "");
+            if (!"verified".equals(o.status)) {
+                return jsonError("请先完成核验");
+            }
+
+            // 执行购买/VIP升级
+            if (o.isVIPOrder) {
+                // 找到对应用户（从token获取）
+                String token = data.getOrDefault("token", "");
+                Session s = sessions.get(token);
+                if (s != null) {
+                    User u = users.get(s.email);
+                    if (u != null) {
+                        u.isVIP = true;
+                        long months = o.amount >= 499 ? 12 : 1;
+                        long baseMs = Math.max(u.vipExpiresAt, System.currentTimeMillis());
+                        u.vipExpiresAt = baseMs + months * 30 * 86400000L;
+                        s.isVIP = true;
+                        saveUsers();
+                    }
                 }
             } else {
-                req.path = url;
-            }
-            // headers
-            while ((line = r.readLine()) != null && !line.isEmpty()) {
-                int colon = line.indexOf(':');
-                if (colon > 0) req.headers.put(line.substring(0, colon).trim(), line.substring(colon + 1).trim());
-            }
-            // body
-            if ("POST".equals(req.method)) {
-                int len = Integer.parseInt(req.headers.getOrDefault("Content-Length", "0"));
-                if (len > 0) {
-                    char[] buf = new char[len];
-                    int read = 0;
-                    while (read < len) {
-                        int n = r.read(buf, read, len - read);
-                        if (n < 0) break;
-                        read += n;
+                String token = data.getOrDefault("token", "");
+                Session s = sessions.get(token);
+                if (s != null) {
+                    User u = users.get(s.email);
+                    if (u != null && o.courseId != null) {
+                        u.purchasedCourses.add(o.courseId);
+                        saveUsers();
                     }
-                    req.body = new String(buf, 0, read);
                 }
             }
-            return req;
+
+            o.status = "confirmed";
+            pendingOrders.remove(orderId);
+            return jsonSuccess("支付确认成功", "{}");
+        } catch (Exception e) {
+            return jsonError("确认失败: " + e.getMessage());
         }
-        String getParam(String name) { return params.get(name); }
     }
 
-    static class HttpResponse {
-        private final OutputStream out;
-        private final Map<String, String> headers = new LinkedHashMap<>();
-        HttpResponse(OutputStream out) { this.out = out; }
-        void setHeader(String k, String v) { headers.put(k, v); }
-        void send(int code, String body) throws IOException {
-            send(code, body.getBytes("UTF-8"));
+    private String handleVIPUpgrade(String body, Map<String,String> headers) {
+        try {
+            Map<String,String> data = parseJson(body);
+            int months = Integer.parseInt(data.getOrDefault("months", "1"));
+            String token = headers.getOrDefault("authorization", "").replace("Bearer ", "");
+            Session s = sessions.get(token);
+            if (s == null) return jsonError("请先登录");
+
+            User u = users.get(s.email);
+            if (u == null) return jsonError("用户不存在");
+
+            u.isVIP = true;
+            long baseMs = Math.max(u.vipExpiresAt, System.currentTimeMillis());
+            u.vipExpiresAt = baseMs + months * 30 * 86400000L;
+            s.isVIP = true;
+            saveUsers();
+
+            return jsonSuccess("VIP已激活", "{\"expiresAt\":" + u.vipExpiresAt + "}");
+        } catch (Exception e) {
+            return jsonError("VIP升级失败: " + e.getMessage());
         }
-        void send(int code, byte[] body) throws IOException {
-            String status = code + " " + (code == 200 ? "OK" : code == 204 ? "No Content" : code == 400 ? "Bad Request" : code == 403 ? "Forbidden" : code == 404 ? "Not Found" : code == 500 ? "Internal Server Error" : "Status");
-            PrintWriter pw = new PrintWriter(new OutputStreamWriter(out, "UTF-8"));
-            pw.print("HTTP/1.1 " + status + "\r\n");
-            pw.print("Server: TechHub-Pro/4.0\r\n");
-            pw.print("Access-Control-Allow-Origin: *\r\n");
-            pw.print("Access-Control-Allow-Methods: GET, POST, OPTIONS\r\n");
-            pw.print("X-Content-Type-Options: nosniff\r\n");
-            pw.print("X-Frame-Options: SAMEORIGIN\r\n");
-            pw.print("Referrer-Policy: strict-origin-when-cross-origin\r\n");
-            for (Map.Entry<String, String> h : headers.entrySet()) {
-                pw.print(h.getKey() + ": " + h.getValue() + "\r\n");
+    }
+
+    // ========== 数据API ==========
+    private String getCoursesJson() {
+        return "{\"total\":200,\"courses\":[/* 200 courses JSON - served from data.js on frontend */]}";
+    }
+    private String getFeaturedCoursesJson() {
+        return "{\"featured\":[{\"id\":19,\"title\":\"Python零基础到全栈\",\"hot\":true},{\"id\":91,\"title\":\"AI大模型应用开发\",\"hot\":true}]}";
+    }
+    private String getResourcesJson() {
+        return "{\"resources\":[{\"name\":\"MDN\",\"url\":\"https://developer.mozilla.org\"},{\"name\":\"roadmap.sh\",\"url\":\"https://roadmap.sh\"}]}";
+    }
+    private String getRankingsJson() {
+        return "{\"rankings\":[{\"rank\":1,\"name\":\"Python\",\"score\":98},{\"rank\":2,\"name\":\"AI/大模型\",\"score\":97}]}";
+    }
+    private String getGithubJson() {
+        return "{\"repos\":[{\"name\":\"freeCodeCamp\",\"stars\":\"400k+\"},{\"name\":\"system-design-primer\",\"stars\":\"280k+\"}]}";
+    }
+    private String getBilibiliJson() {
+        return "{\"videos\":[{\"title\":\"Python零基础\",\"author\":\"小甲鱼\",\"views\":\"580万\"}]}";
+    }
+    private String getRoadmapsJson() {
+        return "{\"roadmaps\":[{\"title\":\"前端工程师\",\"months\":\"6-9个月\"},{\"title\":\"AI工程师\",\"months\":\"9-12个月\"}]}";
+    }
+    private String getNewsJson() {
+        return "{\"news\":[{\"title\":\"OpenAI发布GPT-5\",\"cat\":\"AI\",\"date\":\"2026-08-18\"},{\"title\":\"Rust 1.80发布\",\"cat\":\"编程语言\"}]}";
+    }
+    private String searchCourses(String q) {
+        return "{\"query\":\"" + q + "\",\"results\":[]}";
+    }
+    private String getStatsJson() {
+        return "{\"totalCourses\":200,\"categories\":21,\"freeQuota\":100,\"vipPrice\":99,\"vipYearly\":499}";
+    }
+
+    // ========== 工具方法 ==========
+    private String hashPassword(String pwd) {
+        try {
+            java.security.MessageDigest md = java.security.MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest((pwd + "_techhub_salt_v6").getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hash) sb.append(String.format("%02x", b));
+            return sb.toString();
+        } catch (Exception e) { return pwd; }
+    }
+
+    private String hmacSign(String data, String key) {
+        try {
+            javax.crypto.Mac mac = javax.crypto.Mac.getInstance("HmacSHA256");
+            javax.crypto.spec.SecretKeySpec sk = new javax.crypto.spec.SecretKeySpec(key.getBytes(), "HmacSHA256");
+            mac.init(sk);
+            byte[] raw = mac.doFinal(data.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (byte b : raw) sb.append(String.format("%02x", b));
+            return sb.toString();
+        } catch (Exception e) { return data; }
+    }
+
+    private String generateToken() {
+        return UUID.randomUUID().toString().replace("-", "") + Long.toString(System.currentTimeMillis(), 36);
+    }
+
+    private Map<String,String> parseJson(String json) {
+        Map<String,String> map = new HashMap<>();
+        // 简易JSON解析（避免外部依赖）
+        json = json.trim();
+        if (json.startsWith("{")) json = json.substring(1);
+        if (json.endsWith("}")) json = json.substring(0, json.length()-1);
+        String[] pairs = json.split(",");
+        for (String p : pairs) {
+            String[] kv = p.split(":", 2);
+            if (kv.length == 2) {
+                String k = kv[0].trim().replace("\"", "");
+                String v = kv[1].trim().replace("\"", "").replace("'", "");
+                map.put(k, v);
             }
-            pw.print("Content-Length: " + body.length + "\r\n");
-            pw.print("Connection: close\r\n\r\n");
-            pw.flush();
-            out.write(body);
-            out.flush();
         }
-        void json(int code, String json) throws IOException {
-            setHeader("Content-Type", "application/json; charset=utf-8");
-            send(code, json);
+        return map;
+    }
+
+    private String jsonSuccess(String msg, String data) {
+        return "{\"success\":true,\"message\":\"" + msg + "\",\"data\":" + data + "}";
+    }
+    private String jsonError(String msg) {
+        return "{\"success\":false,\"message\":\"" + msg + "\"}";
+    }
+
+    // ========== 静态文件服务 ==========
+    private void serveStatic(Socket client, OutputStream out, String path) throws IOException {
+        if (path.equals("/") || path.isEmpty()) path = "/index.html";
+        String filePath = "." + path;
+        File f = new File(filePath);
+        if (!f.exists() || f.isDirectory()) {
+            f = new File(filePath + "/index.html");
         }
+        if (!f.exists()) { send404(out); return; }
+
+        String ext = "";
+        int dot = f.getName().lastIndexOf('.');
+        if (dot > 0) ext = f.getName().substring(dot).toLowerCase();
+
+        byte[] content = Files.readAllBytes(f.toPath());
+        String mime = mimeTypes.getOrDefault(ext, "application/octet-stream");
+
+        PrintWriter pw = new PrintWriter(new OutputStreamWriter(out, "UTF-8"));
+        pw.println("HTTP/1.1 200 OK");
+        pw.println("Content-Type: " + mime);
+        pw.println("Content-Length: " + content.length);
+        pw.println("Cache-Control: no-cache");
+        pw.println("X-Content-Type-Options: nosniff");
+        pw.println("X-Frame-Options: DENY");
+        pw.println("Referrer-Policy: no-referrer");
+        pw.println("Access-Control-Allow-Origin: *");
+        pw.println("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        pw.println("Access-Control-Allow-Headers: Content-Type, Authorization");
+        pw.println();
+        pw.flush();
+        out.write(content);
+        out.flush();
+    }
+
+    private void sendJson(OutputStream out, String json) throws IOException {
+        byte[] data = json.getBytes("UTF-8");
+        PrintWriter pw = new PrintWriter(new OutputStreamWriter(out, "UTF-8"));
+        pw.println("HTTP/1.1 200 OK");
+        pw.println("Content-Type: application/json; charset=utf-8");
+        pw.println("Content-Length: " + data.length);
+        pw.println("Cache-Control: no-store");
+        pw.println("X-Content-Type-Options: nosniff");
+        pw.println("Access-Control-Allow-Origin: *");
+        pw.println("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        pw.println("Access-Control-Allow-Headers: Content-Type, Authorization");
+        pw.println();
+        pw.flush();
+        out.write(data);
+        out.flush();
+    }
+
+    private void send404(OutputStream out) throws IOException {
+        String msg = "{\"error\":\"Not Found\"}";
+        byte[] data = msg.getBytes("UTF-8");
+        PrintWriter pw = new PrintWriter(new OutputStreamWriter(out, "UTF-8"));
+        pw.println("HTTP/1.1 404 Not Found");
+        pw.println("Content-Type: application/json");
+        pw.println("Content-Length: " + data.length);
+        pw.println();
+        pw.flush();
+        out.write(data);
+        out.flush();
+    }
+
+    // ========== 清理任务 ==========
+    public void cleanupExpiredSessions() {
+        long now = System.currentTimeMillis();
+        sessions.entrySet().removeIf(e -> e.getValue().expiresAt < now);
+    }
+    public void cleanupExpiredOrders() {
+        long now = System.currentTimeMillis();
+        pendingOrders.entrySet().removeIf(e -> now - e.getValue().timestamp > 30 * 60 * 1000);
+    }
+
+    public void shutdown() {
+        running = false;
+        try { if (serverSocket != null && !serverSocket.isClosed()) serverSocket.close(); } catch (Exception ignored) {}
+        pool.shutdownNow();
     }
 }
