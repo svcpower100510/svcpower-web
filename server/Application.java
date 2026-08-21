@@ -1,48 +1,41 @@
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.logging.*;
+// Application.java - TechHub Pro v6.0 正式版 启动类
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
-/**
- * TechHub Pro v6.0 — Java后端启动类
- * 功能：HTTP服务器 + REST API + 用户认证 + 支付核验
- */
 public class Application {
-    private static final Logger logger = Logger.getLogger("TechHubPro");
-    private static final int PORT = 8080;
-    private static TechHubServer server;
+    private static final String VERSION = "6.0.0";
+    private static int port = 8080;
+    private static String webRoot = ".";
+    private static String dbPath = "techhub.db";
 
-    public static void main(String[] args) {
-        int port = PORT;
-        if (args.length > 0) {
-            try { port = Integer.parseInt(args[0]); } catch (Exception e) {}
+    public static void main(String[] args) throws IOException {
+        for (int i = 0; i < args.length; i++) {
+            if ("--port".equals(args[i]) && i + 1 < args.length) port = Integer.parseInt(args[++i]);
+            else if ("--web".equals(args[i]) && i + 1 < args.length) webRoot = args[++i];
+            else if ("--db".equals(args[i]) && i + 1 < args.length) dbPath = args[++i];
         }
-
-        logger.info("========================================");
-        logger.info("  TechHub Pro v6.0 Beta");
-        logger.info("  愿行无止之境 svcliny");
-        logger.info("  端口: " + port);
-        logger.info("========================================");
-
-        server = new TechHubServer(port);
-        server.start();
-
-        // 优雅关闭
+        // 优先读取 techhub.properties
+        File propFile = new File("techhub.properties");
+        if (propFile.exists()) {
+            Properties p = new Properties();
+            try (InputStream in = new FileInputStream(propFile)) { p.load(in); }
+            if (p.getProperty("port") != null) port = Integer.parseInt(p.getProperty("port"));
+            if (p.getProperty("webroot") != null) webRoot = p.getProperty("webroot");
+            if (p.getProperty("db") != null) dbPath = p.getProperty("db");
+        }
+        System.out.println("[TechHub Pro] v" + VERSION + " starting...");
+        System.out.println("[TechHub Pro] port=" + port + " webroot=" + webRoot + " db=" + dbPath);
+        DatabaseUtil.init(dbPath);
+        CourseService.seedIfEmpty();
+        TechHubServer server = new TechHubServer(port, webRoot);
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            logger.info("正在关闭服务器...");
-            server.shutdown();
-            DatabaseUtil.closeAll();
-            logger.info("服务器已关闭");
-        }, "shutdown-hook"));
-
-        // 定时任务：清理过期会话/订单
-        ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
-        scheduler.scheduleAtFixedRate(() -> {
-            server.cleanupExpiredSessions();
-            server.cleanupExpiredOrders();
-        }, 5, 5, TimeUnit.MINUTES);
+            System.out.println("[TechHub Pro] shutting down...");
+            DatabaseUtil.close();
+            server.stop();
+        }));
+        server.start();
     }
-
-    public static TechHubServer getServer() { return server; }
 }
