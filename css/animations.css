@@ -1,78 +1,9 @@
-/* ============================================================
-   TechHub Pro v6.0 — 动画效果
-   ============================================================ */
-
-/* 入场动画 */
-.course-card, .resource-card, .github-card, .bili-card,
-.roadmap-card, .rank-item, .news-item, .vip-card {
-  opacity: 0; transform: translateY(30px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.course-card.visible, .resource-card.visible, .github-card.visible,
-.bili-card.visible, .roadmap-card.visible, .rank-item.visible,
-.news-item.visible, .vip-card.visible {
-  opacity: 1; transform: translateY(0);
-}
-
-/* Hover效果 */
-.course-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary);
-  box-shadow: 0 8px 30px rgba(0,212,255,0.15);
-}
-.vip-card:hover { transform: translateY(-6px); }
-
-/* 按钮动画 */
-.btn {
-  position: relative; overflow: hidden;
-  transition: all 0.25s;
-}
-.btn::after {
-  content: ''; position: absolute;
-  top:50%; left:50%; width:0; height:0;
-  background: rgba(255,255,255,0.2);
-  border-radius: 50%; transform: translate(-50%,-50%);
-  transition: width 0.4s, height 0.4s;
-}
-.btn:active::after { width: 200px; height: 200px; }
-
-/* 导航栏滚动效果 */
-.navbar.scrolled {
-  background: rgba(10,14,39,0.95);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-}
-
-/* 3D卡片倾斜 */
-.course-card { transform-style: preserve-3d; perspective: 1000px; }
-
-/* 滚动进度条 */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-
-/* 骨架屏 */
-@keyframes shimmer {
-  0% { background-position: -468px 0; }
-  100% { background-position: 468px 0; }
-}
-.skeleton {
-  background: linear-gradient(90deg, var(--card-bg) 0%, var(--border) 50%, var(--card-bg) 100%);
-  background-size: 800px 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: 8px;
-}
-
-/* 脉冲动画（VIP badge） */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-.popular-badge { animation: pulse 2s infinite; }
-
-/* 数字增长动画 */
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.stat-value { animation: countUp 0.6s ease forwards; }
+/* animations.css - 动画效果（TechHub Pro v6.0 正式版）*/
+.anim{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.in-view{opacity:1;transform:none;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.04);}}
+.hero-badge{animation:pulse 3s ease-in-out infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.pay-qr-loading::after{content:"";display:inline-block;width:18px;height:18px;border:2px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite;margin-left:8px;vertical-align:middle;}
+.th-modal.open{display:block;}
+.scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent));z-index:60;transition:width .15s;width:0;}

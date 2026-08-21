@@ -1,119 +1,39 @@
-/* ============================================================
-   TechHub Pro v6.0 — 支付弹窗样式
-   ============================================================ */
-
-.modal {
-  position: fixed; inset: 0; z-index: 9999;
-  display: none; align-items: center; justify-content: center;
-  padding: 1rem;
-}
-.modal.active { display: flex; }
-.modal-backdrop {
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(4px);
-}
-.modal-content {
-  position: relative; z-index: 1;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2rem;
-  max-width: 480px; width: 100%;
-  max-height: 90vh; overflow-y: auto;
-  animation: modalIn 0.3s ease;
-}
-.modal-content.modal-lg { max-width: 600px; }
-@keyframes modalIn { from { opacity:0; transform:translateY(20px) scale(0.95);} to { opacity:1; transform:none;} }
-
-.modal-close {
-  position: absolute; top: 12px; right: 12px;
-  width: 36px; height: 36px;
-  border: none; border-radius: 50%;
-  background: var(--bg); color: var(--text);
-  font-size: 1.1rem; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  z-index: 10;
-}
-.modal-close:hover { background: var(--danger); color: #fff; }
-
-/* ========== 支付弹窗 ========== */
-.payment-modal { max-width: 440px; }
-.pay-header { text-align: center; margin-bottom: 1.5rem; }
-.pay-header h2 { margin-bottom: 0.5rem; }
-.pay-course { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
-.pay-amount { font-size: 2.5rem; font-weight: 800; color: var(--primary); }
-.pay-order { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
-.pay-order code { background: var(--bg); padding: 2px 6px; border-radius: 4px; }
-
-.pay-methods { margin-bottom: 1rem; }
-.pay-tabs { display: flex; gap: 6px; margin-bottom: 1rem; }
-.pay-tab {
-  flex: 1; padding: 8px;
-  border:1px solid var(--border);
-  background: transparent; color: var(--text);
-  border-radius: 8px; cursor: pointer; font-size: 0.85rem;
-  transition: all 0.2s;
-}
-.pay-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
-
-.pay-qr-area {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 1rem; padding: 1rem;
-  background: var(--bg); border-radius: 12px;
-}
-.qr-container {
-  width: 260px; height: 260px;
-  background: #fff; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  padding: 10px;
-}
-.qr-container img { max-width: 100%; max-height: 100%; }
-.pay-tips { text-align: center; font-size: 0.82rem; line-height: 1.8; }
-.pay-tips strong { color: var(--primary); }
-
-.pay-verify { margin: 1rem 0; }
-.verify-step {
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 0.82rem;
-  margin-bottom: 4px;
-  background: var(--bg);
-  color: var(--text-muted);
-  transition: all 0.3s;
-}
-.verify-step.passed { background: rgba(0,204,102,0.1); color: #00cc66; }
-.verify-step.failed { background: rgba(255,68,68,0.1); color: #ff4444; }
-
-.pay-actions { display: flex; gap: 8px; margin-top: 1rem; }
-.pay-actions .btn { flex: 1; }
-.pay-footer {
-  display: flex; justify-content: space-around;
-  margin-top: 1rem; padding-top: 1rem;
-  border-top: 1px solid var(--border);
-  font-size: 0.72rem; color: var(--text-muted);
-}
-
-/* ========== 课程详情弹窗 ========== */
-.detail-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
-.detail-icon { font-size: 2rem; }
-.detail-desc { line-height: 1.7; margin-bottom: 1rem; }
-.detail-meta { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
-.detail-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.detail-actions { display: flex; gap: 8px; }
-
-/* ========== Toast ========== */
-.toast {
-  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
-  padding: 12px 24px; border-radius: 8px;
-  background: var(--card-bg); color: var(--text);
-  border:1px solid var(--border);
-  font-size: 0.9rem; z-index: 10000;
-  opacity: 0; transition: all 0.3s;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-.toast-success { border-color: #00cc66; }
-.toast-error { border-color: #ff4444; }
-.toast-warning { border-color: #ffaa00; }
-.toast-info { border-color: #00aaff; }
+/* payment.css - 支付弹窗样式（TechHub Pro v6.0 正式版）*/
+.th-modal-mask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;display:flex;align-items:center;justify-content:center;padding:16px;}
+.th-modal{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;max-width:440px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:var(--shadow);}
+.th-modal-close{position:absolute;top:10px;right:12px;background:none;border:none;color:var(--muted);font-size:1.6rem;cursor:pointer;line-height:1;}
+.pay-title{font-size:1.15rem;font-weight:900;text-align:center;margin-bottom:14px;}
+.pay-course{font-weight:800;font-size:1.02rem;display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.pay-tag{background:rgba(7,193,96,.14);color:var(--primary);font-size:.7rem;padding:2px 7px;border-radius:5px;}
+.pay-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:.9rem;border-bottom:1px dashed var(--border);}
+.pay-row code{background:var(--bg2);padding:2px 8px;border-radius:5px;font-size:.78rem;color:var(--primary);}
+.pay-price{font-size:1.4rem;color:var(--primary);font-weight:900;}
+.pay-tip{background:rgba(240,168,104,.1);border:1px solid rgba(240,168,104,.3);color:var(--warn);padding:9px 12px;border-radius:8px;font-size:.82rem;margin:12px 0;line-height:1.5;}
+.pay-tip b{color:var(--text);}
+.pay-qr{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center;min-height:240px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin-bottom:12px;}
+.pay-qr-img{max-width:200px;width:100%;border-radius:8px;background:#fff;padding:8px;}
+.pay-qr-loading{color:var(--muted);font-size:.85rem;}.pay-qr-name{font-weight:800;}.pay-qr-acc{color:var(--muted);font-size:.75rem;}
+.pay-fallback{text-align:center;color:var(--muted);font-size:.88rem;line-height:1.8;}
+.pay-fallback-icon{font-size:2rem;margin-bottom:6px;}
+.pay-methods{display:flex;gap:8px;margin-bottom:14px;}.pay-m-btn{flex:1;background:var(--bg2);border:1px solid var(--border);color:var(--muted);padding:8px;border-radius:8px;cursor:pointer;font-weight:600;transition:.2s;}
+.pay-m-btn.active,.pay-m-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
+.pay-verify{display:flex;gap:6px;margin-bottom:14px;}.pv-step{flex:1;text-align:center;font-size:.72rem;padding:6px 4px;border-radius:6px;background:var(--bg2);color:var(--muted);border:1px solid var(--border);}
+.pv-step.done{background:rgba(7,193,96,.14);color:var(--primary);border-color:rgba(7,193,96,.3);}
+.pay-confirm{width:100%;background:var(--primary);color:#fff;border:none;padding:12px;border-radius:10px;font-weight:800;font-size:1rem;cursor:pointer;transition:.2s;}
+.pay-confirm:hover{background:var(--primary2);}.pay-confirm:disabled{opacity:.6;cursor:not-allowed;}
+.pay-note{text-align:center;color:var(--muted);font-size:.72rem;margin-top:10px;}
+.pay-success{text-align:center;padding:20px 0;}.pay-success-t{font-size:1.4rem;font-weight:900;color:var(--primary);margin:10px 0 6px;}
+.pay-success-d{color:var(--muted);margin-bottom:12px;}.pay-order{font-size:.78rem;color:var(--muted);margin-bottom:16px;}
+.pay-go{display:inline-block;background:var(--primary);color:#fff;padding:10px 22px;border-radius:10px;font-weight:800;}
+/* Toast */
+.th-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--card);border:1px solid var(--border);color:var(--text);padding:11px 22px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transition:.3s;z-index:200;pointer-events:none;font-weight:600;}
+.th-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}.th-toast.error{border-color:var(--danger);color:var(--danger);}.th-toast.success{border-color:var(--primary);color:var(--primary);}
+/* Auth */
+.auth-modal{max-width:400px;}.auth-tabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid var(--border);padding-bottom:8px;}
+.auth-tabs button{flex:1;background:none;border:none;color:var(--muted);padding:8px;font-weight:700;cursor:pointer;border-radius:8px;font-size:.95rem;}
+.auth-tabs button.active{background:var(--primary);color:#fff;}
+.auth-pane input{width:100%;padding:10px 12px;margin-bottom:10px;border-radius:8px;border:1px solid var(--border);background:var(--bg2);color:var(--text);font-size:.92rem;}
+.auth-pane input:focus{outline:none;border-color:var(--primary);}
+.auth-pane .btn-primary{width:100%;}.pw-tip{font-size:.78rem;margin-bottom:10px;}.pw-tip.ok{color:var(--primary);}.pw-tip.bad{color:var(--danger);}
+.auth-msg{font-size:.82rem;color:var(--danger);margin-bottom:10px;min-height:1.2em;text-align:center;}.auth-msg.ok{color:var(--primary);}
+.auth-pane.hidden{display:none;}
